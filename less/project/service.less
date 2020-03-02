@@ -1,0 +1,117 @@
+.services {
+  &-btn
+  {
+    text-align: center;
+    border-top: 1px dashed #bdc3c6;
+    padding: 14px 0;
+  }
+  &-list {
+    border-top: 1px dashed #bdc3c6;
+    border-bottom: 1px dashed #bdc3c6;
+    margin-top: 35px;
+    padding: 20px 0 1px;
+    margin-bottom: 27px;
+    & .list
+    {
+      padding-bottom: 37px;
+    }
+    .item {
+      text-align: center;
+      cursor: pointer;
+      position: relative;
+      padding-top: 39px;
+      & .img-container {
+        position: relative;
+        height: 105px;
+        width: 100%;
+        & img {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          right: 0;
+          left: 0;
+          margin: auto;
+        }
+      }
+      & .descr {
+        font-size: 13px;
+        line-height: 15px;
+        color: @navy;
+      }
+      & .city-list {
+        display: none;
+        width: 100%;
+        min-width: 188px;
+        //width: 200px;
+        border-radius: 5px;
+        box-shadow: @box_shadow;
+        position: absolute;
+        top: -10px;
+        left: -3px;
+        padding: 14px;
+        padding-right: 10px;
+        z-index: 10;
+        text-align: left;
+        background: white;
+        & ul {
+          margin: 0;
+          & li {
+            padding: 8px 0;
+            margin: 0;
+            & span {
+              transition: 0.3s;
+              font-size: 13px;
+              line-height: 15px;
+              color: @navy;
+            }
+            & .gerb {
+              display: inline-block;
+              float: right;
+            }
+            &:hover span {
+              color: @cyan;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.app-block
+{
+  margin-top: 35px;
+  margin-bottom: 28px;
+  & .img-container
+  {
+    position: relative;
+    line-height: 0;
+    & .qr
+    {
+      position: absolute;
+      bottom: 15px;
+      &.qr-ios
+      {
+        left: 17px;
+      }
+      &.qr-and
+      {
+        right: 17px;
+      }
+    }
+
+  }
+  & .app-btn
+  {
+    margin-top: 20px;
+    &.ios-btn
+    {
+      margin-left: 32px;
+    }
+    &.and-btn
+    {
+      margin-right: 28px;
+      float: right;
+    }
+  }
+}

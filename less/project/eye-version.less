@@ -1,0 +1,30 @@
+.eye-version {
+  display: flex;
+  align-items: center;
+  position: relative;
+  border-radius: 50px;
+  border: 2px solid @colorPrimary3;
+  padding: 6px 15px;
+  transition: @transMid;
+
+  &__text {
+    font-size: 13px;
+    color: @colorPrimary3;
+    margin-left: 10px;
+    transition: @transMid;
+  }
+
+  @media (min-width: @hoverW) {
+    &:hover {
+      background: @colorPrimary3;
+      .eye-version__text {
+        color: #fff;
+      }
+      .icon-eye-svg {
+        * {
+          stroke: #fff;
+        }
+      }
+    }
+  }
+}

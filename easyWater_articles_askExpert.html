@@ -1,0 +1,727 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>SwissAm</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/slick/slick-theme.css" rel="stylesheet" type="text/css" media="all"/>
+    <link rel="stylesheet" href="css/foundation/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="css/foundation/daterangepicker.css"/>
+    <link href="css/slick/slick.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="css/foundation/selectric.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
+</head>
+<body>
+
+<div class="overlay"></div>
+<!--a id="back-top" href="#top"></a-->
+<nav class="navbar">
+    <div class="wrapper">
+        <div class="header">
+            <div class="header-top">
+                <a class="logo" href="#"><img src="img/logo.png"></a>
+                <div class="search-menu">
+                    <input class="search__input">
+                    <a href="#" class="search-icon"><img src="img/icon_search.png"> </a>
+                </div>
+                <a class="eye-version" href="#"><img src="img/eye.png"><span>Версия для слабовидящих</span></a>
+                <ul class="header-soc-list">
+                    <li>
+                        <a href="#">
+                            <img src="img/vk-b.png">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/fb-b.png">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/tw-b.png">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/inst-w.png">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/yt-b.png">
+                        </a>
+                    </li>
+                </ul>
+                <a class="header-phone" href="tel:+7 (495) 514 02 11">+7 (495) 514 02 11</a>
+            </div>
+            <div class="header-btm">
+                <div class="mobile-menu">
+                    <div class="mobile-header">
+                        <a class="logo" href="#"><img src="img/logo.png"></a>
+                        <a class="eye-version_mob" href="#"><img src="img/eye-mob.png"></a>
+                        <a href="#" class="mobile-close"><img src="img/close.png"> </a>
+                    </div>
+                    <div class="menu-content">
+                        <ul class="header-left-menu">
+                            <li><a href="programms.html">Абонентам</a></li>
+                            <li><a href="programms.html">Услуги</a></li>
+                            <li><a href="programms.html">Доступная вода</a></li>
+                        </ul>
+                        <ul class="header-menu">
+                            <li><a href="programms.html">О компании</a></li>
+                            <li><a href="about_qa.html">Устойчивое развитие</a></li>
+                            <li><a href="about_qa.html">Закупки</a></li>
+                            <li><a href="about_qa.html">Пресс-центр</a></li>
+                            <li><a href="about_qa.html">Карьера</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="all-sites">
+                    <a href="#">Все сайты Росводоканал</a>
+                </div>
+                <div class="mobile-toggle">
+                    <div class="btn_mob">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</nav>
+<div class="page-top">
+    <div class="wrapper">
+        <p class="subtitle">Доступная вода</p>
+        <h1>Спросите у эксперта</h1>
+    </div>
+</div>
+<div class="page-content">
+    <div class="wrapper">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="content__left-col">
+                    <ul class="left-menu">
+                        <li class="active title">Доступная вода</li>
+                        <li><a href="#">Мифы и факты о воде</a></li>
+                        <li><a href="#">Полезно знать</a></li>
+                        <li><a href="#">Спросите у эксперта</a></li>
+                    </ul>
+                    <div class="subscribe">
+                        <form>
+                            <p class="subscribe__title">Подписка на новости</p>
+
+                            <input class="subscribe__input" placeholder="Ваш email">
+                            <!--<a href="#" class="search-icon"><img src="img/icons_mainPage/mail.png"> </a>-->
+                            <a href="#" class="btn subscribe-button blue-btn">Подписаться</a>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <p class="top-title">Задайте свой вопрос</p>
+                <form class="form gray-bg ask-question">
+                    <textarea id="msg"></textarea>
+                    <div class="btns">
+                        <div class="row">
+                            <div class="col-md-9  col-sm-8">
+                                <label class="register-info">
+                                    Чтобы задать вопрос эксперту необходимо <a class="register-link"
+                                                                               href="#register-modal"
+                                                                               data-toggle="modal">Зарегистрироваться</a>
+                                    или <a class="register-link" href="#register-modal"
+                                           data-toggle="modal">Авторизоваться</a>
+                                </label>
+                            </div>
+                            <div class="col-md-3 col-sm-4">
+                                <a href="#" class="btn form__btn disabled">Отправить</a>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+                <h2 class="qa-h2">Список вопросов</h2>
+                <div class="questions__form-list">
+                    <ul>
+                        <li>
+                            <div class="question">
+                                <a href="#">
+                                    <p>Можно ли пить воду из-под крана?</p>
+                                    <span class="answers-count">1 ответ</span>
+                                </a>
+                            </div>
+                            <div class="hidden-block">
+                                <div class="answer">
+                                    <div class="message question-message">
+                                        <div class="top">
+                                            <span class="name">Сергеева Алена</span>
+                                            <span class="date">23.01.19</span>
+                                        </div>
+                                        <div class="mess-content">
+                                            <p>
+                                                А как узнать, какая вода течет именно у меня дома?
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="message answer-message">
+                                        <div class="top">
+                                            <span class="date">23.01.19</span>
+                                            <span class="name">Raven</span>
+
+                                        </div>
+                                        <div class="mess-content">
+                                            <p>Самая распространенная жалоба на качество воды — накипь в чайнике и
+                                                меловой
+                                                привкус воды — свидетельствует о высокой жесткости воды, или,
+                                                по-простому, о
+                                                слишком высоком содержании минералов кальция и магния. Эта проблема
+                                                актуальна
+                                                для большей части России. Впрочем, что касается влияния на здоровье
+                                                человека, то
+                                                здесь единого мнения нет.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="answer-form__block">
+                                    <div class="top">
+                                        <span class="date">Ваш комментарий</span>
+                                        <span class="name">Сергей Темилов</span>
+
+                                    </div>
+                                    <form class="form answer-form">
+                                        <textarea id="comment"></textarea>
+                                        <a href="#" class="btn form__btn">Отправить</a>
+                                    </form>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="question">
+                                <a href="#">
+                                    <p>А как узнать, какая вода течет именно у меня дома?</p>
+                                    <span class="answers-count">3 ответа</span>
+                                </a>
+                            </div>
+                            <div class="hidden-block">
+                                <div class="answer">
+                                    <div class="message question-message">
+                                        <div class="top">
+                                            <span class="name">Сергеева Алена</span>
+                                            <span class="date">23.01.19</span>
+                                        </div>
+                                        <div class="mess-content">
+                                            <p>
+                                                А как узнать, какая вода течет именно у меня дома?
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="message answer-message">
+                                        <div class="top">
+                                            <span class="date">23.01.19</span>
+                                            <span class="name">Дмитрий Крамар</span>
+
+                                        </div>
+                                        <div class="mess-content">
+                                            <p>
+                                                Без специальных приборов — практически никак. Для того чтобы узнать
+                                                точный
+                                                химический и биологический состав воды, которая течет именно у вас на
+                                                кухне
+                                                или
+                                                в ванной, нужно сдать образец в СЭС или аккредитованную лабораторию.</p>
+                                        </div>
+                                    </div>
+                                    <div class="message answer-message">
+                                        <div class="top">
+                                            <span class="date">23.01.19</span>
+                                            <span class="name">Елена Соболевская</span>
+
+                                        </div>
+                                        <div class="mess-content">
+                                            <p>
+                                                На глаз и на вкус можно заметить только крупные нерастворимые примеси
+                                                (например,
+                                                песок и ржавчину) и чрезмерное содержание растворенных веществ
+                                                (например,
+                                                хлора
+                                                или железа).
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="message answer-message">
+                                        <div class="top">
+                                            <span class="date">23.01.19</span>
+                                            <span class="name">Raven</span>
+
+                                        </div>
+                                        <div class="mess-content">
+                                            <p>Самая распространенная жалоба на качество воды — накипь в чайнике и
+                                                меловой
+                                                привкус воды — свидетельствует о высокой жесткости воды, или,
+                                                по-простому, о
+                                                слишком высоком содержании минералов кальция и магния. Эта проблема
+                                                актуальна
+                                                для большей части России. Впрочем, что касается влияния на здоровье
+                                                человека, то
+                                                здесь единого мнения нет.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="answer-form__block">
+                                    <div class="top">
+                                        <span class="date">Ваш комментарий</span>
+                                        <span class="name">Сергей Темилов</span>
+
+                                    </div>
+                                    <form class="form answer-form">
+                                        <textarea id="comment"></textarea>
+                                        <a href="#" class="btn form__btn">Отправить</a>
+                                    </form>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="question">
+                                <a href="#">
+                                    <p>А как узнать, какая вода течет именно у меня дома?</p>
+                                    <span class="answers-count">3 ответа</span>
+                                </a>
+                            </div>
+                            <div class="hidden-block">
+                                <div class="answer">
+                                    <div class="message question-message">
+                                        <div class="top">
+                                            <span class="name">Сергеева Алена</span>
+                                            <span class="date">23.01.19</span>
+                                        </div>
+                                        <div class="mess-content">
+                                            <p>
+                                                А как узнать, какая вода течет именно у меня дома?
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="message answer-message">
+                                        <div class="top">
+                                            <span class="date">23.01.19</span>
+                                            <span class="name">Дмитрий Крамар</span>
+
+                                        </div>
+                                        <div class="mess-content">
+                                            <p>
+                                                Без специальных приборов — практически никак. Для того чтобы узнать
+                                                точный
+                                                химический и биологический состав воды, которая течет именно у вас на
+                                                кухне
+                                                или
+                                                в ванной, нужно сдать образец в СЭС или аккредитованную лабораторию.</p>
+                                        </div>
+                                    </div>
+                                    <div class="message answer-message">
+                                        <div class="top">
+                                            <span class="date">23.01.19</span>
+                                            <span class="name">Елена Соболевская</span>
+
+                                        </div>
+                                        <div class="mess-content">
+                                            <p>
+                                                На глаз и на вкус можно заметить только крупные нерастворимые примеси
+                                                (например,
+                                                песок и ржавчину) и чрезмерное содержание растворенных веществ
+                                                (например,
+                                                хлора
+                                                или железа).
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="message answer-message">
+                                        <div class="top">
+                                            <span class="date">23.01.19</span>
+                                            <span class="name">Raven</span>
+
+                                        </div>
+                                        <div class="mess-content">
+                                            <p>Самая распространенная жалоба на качество воды — накипь в чайнике и
+                                                меловой
+                                                привкус воды — свидетельствует о высокой жесткости воды, или,
+                                                по-простому, о
+                                                слишком высоком содержании минералов кальция и магния. Эта проблема
+                                                актуальна
+                                                для большей части России. Впрочем, что касается влияния на здоровье
+                                                человека, то
+                                                здесь единого мнения нет.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="answer-form__block">
+                                    <div class="top">
+                                        <span class="date">Ваш комментарий</span>
+                                        <span class="name">Сергей Темилов</span>
+
+                                    </div>
+                                    <form class="form answer-form">
+                                        <textarea id="comment"></textarea>
+                                        <a href="#" class="btn form__btn">Отправить</a>
+                                    </form>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="question">
+                                <a href="#">
+                                    <p>А как узнать, какая вода течет именно у меня дома?</p>
+                                    <span class="answers-count">3 ответа</span>
+                                </a>
+                            </div>
+                            <div class="hidden-block">
+                                <div class="answer">
+                                    <div class="message question-message">
+                                        <div class="top">
+                                            <span class="name">Сергеева Алена</span>
+                                            <span class="date">23.01.19</span>
+                                        </div>
+                                        <div class="mess-content">
+                                            <p>
+                                                А как узнать, какая вода течет именно у меня дома?
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="message answer-message">
+                                        <div class="top">
+                                            <span class="date">23.01.19</span>
+                                            <span class="name">Дмитрий Крамар</span>
+
+                                        </div>
+                                        <div class="mess-content">
+                                            <p>
+                                                Без специальных приборов — практически никак. Для того чтобы узнать
+                                                точный
+                                                химический и биологический состав воды, которая течет именно у вас на
+                                                кухне
+                                                или
+                                                в ванной, нужно сдать образец в СЭС или аккредитованную лабораторию.</p>
+                                        </div>
+                                    </div>
+                                    <div class="message answer-message">
+                                        <div class="top">
+                                            <span class="date">23.01.19</span>
+                                            <span class="name">Елена Соболевская</span>
+
+                                        </div>
+                                        <div class="mess-content">
+                                            <p>
+                                                На глаз и на вкус можно заметить только крупные нерастворимые примеси
+                                                (например,
+                                                песок и ржавчину) и чрезмерное содержание растворенных веществ
+                                                (например,
+                                                хлора
+                                                или железа).
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="message answer-message">
+                                        <div class="top">
+                                            <span class="date">23.01.19</span>
+                                            <span class="name">Raven</span>
+
+                                        </div>
+                                        <div class="mess-content">
+                                            <p>Самая распространенная жалоба на качество воды — накипь в чайнике и
+                                                меловой
+                                                привкус воды — свидетельствует о высокой жесткости воды, или,
+                                                по-простому, о
+                                                слишком высоком содержании минералов кальция и магния. Эта проблема
+                                                актуальна
+                                                для большей части России. Впрочем, что касается влияния на здоровье
+                                                человека, то
+                                                здесь единого мнения нет.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="answer-form__block">
+                                    <div class="top">
+                                        <span class="date">Ваш комментарий</span>
+                                        <span class="name">Сергей Темилов</span>
+
+                                    </div>
+                                    <form class="form answer-form">
+                                        <textarea id="comment"></textarea>
+                                        <a href="#" class="btn form__btn">Отправить</a>
+                                    </form>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="question">
+                                <a href="#">
+                                    <p>А как узнать, какая вода течет именно у меня дома?</p>
+                                    <span class="answers-count">3 ответа</span>
+                                </a>
+                            </div>
+                            <div class="hidden-block">
+                                <div class="answer">
+                                    <div class="message question-message">
+                                        <div class="top">
+                                            <span class="name">Сергеева Алена</span>
+                                            <span class="date">23.01.19</span>
+                                        </div>
+                                        <div class="mess-content">
+                                            <p>
+                                                А как узнать, какая вода течет именно у меня дома?
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="message answer-message">
+                                        <div class="top">
+                                            <span class="date">23.01.19</span>
+                                            <span class="name">Дмитрий Крамар</span>
+
+                                        </div>
+                                        <div class="mess-content">
+                                            <p>
+                                                Без специальных приборов — практически никак. Для того чтобы узнать
+                                                точный
+                                                химический и биологический состав воды, которая течет именно у вас на
+                                                кухне
+                                                или
+                                                в ванной, нужно сдать образец в СЭС или аккредитованную лабораторию.</p>
+                                        </div>
+                                    </div>
+                                    <div class="message answer-message">
+                                        <div class="top">
+                                            <span class="date">23.01.19</span>
+                                            <span class="name">Елена Соболевская</span>
+
+                                        </div>
+                                        <div class="mess-content">
+                                            <p>
+                                                На глаз и на вкус можно заметить только крупные нерастворимые примеси
+                                                (например,
+                                                песок и ржавчину) и чрезмерное содержание растворенных веществ
+                                                (например,
+                                                хлора
+                                                или железа).
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="message answer-message">
+                                        <div class="top">
+                                            <span class="date">23.01.19</span>
+                                            <span class="name">Raven</span>
+
+                                        </div>
+                                        <div class="mess-content">
+                                            <p>Самая распространенная жалоба на качество воды — накипь в чайнике и
+                                                меловой
+                                                привкус воды — свидетельствует о высокой жесткости воды, или,
+                                                по-простому, о
+                                                слишком высоком содержании минералов кальция и магния. Эта проблема
+                                                актуальна
+                                                для большей части России. Впрочем, что касается влияния на здоровье
+                                                человека, то
+                                                здесь единого мнения нет.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="answer-form__block">
+                                    <div class="top">
+                                        <span class="date">Ваш комментарий</span>
+                                        <span class="name">Сергей Темилов</span>
+
+                                    </div>
+                                    <form class="form answer-form">
+                                        <textarea id="comment"></textarea>
+                                        <a href="#" class="btn form__btn">Отправить</a>
+                                    </form>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
+                </div>
+                <div class="pagination">
+                    <ul class="pages">
+                        <li><a href="#">1</a></li>
+                        <li class="active"><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                    </ul>
+                    <div class="btns">
+                        <a href="#" class="page-btn"> <img src="img/page-prev.png"></a>
+                        <a href="#" class="page-btn"><img src="img/pate-next.png"> </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="footer-top">
+        <div class="wrapper">
+            <div class="row list">
+                <div class="col-md-3 col-sm-6 col-xs-12 footer-col">
+                    <p class="footer-subtitle">Абонентам</p>
+                    <ul class="footer-menu">
+
+                        <li><a href="#">Нормативно-правовая база</a></li>
+                        <li><a href="#">Ответы на вопросы</a></li>
+                        <li><a href="#">Противодействие коррупции</a></li>
+                        <li><a href="#">Обратная связь</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col col-md-3 col-xs-12 col-sm-6">
+                    <p class="footer-subtitle">Пресс-центр</p>
+                    <ul class="footer-menu">
+
+                        <li><a href="#">Новости компании</a></li>
+                        <li><a href="#">Подписка на новости</a></li>
+                        <li><a href="#">Контакты для СМИ</a></li>
+                    </ul>
+                </div>
+
+
+                <div class="col-md-3 col-sm-6 col-xs-12 footer-col ">
+                    <p class="footer-subtitle">Контакты</p>
+                    <ul class="footer-menu">
+                        <li>
+                            <p>
+                                121059, Москва, Бережковская набережная, д.38, стр.1
+                            </p>
+                        </li>
+                        <li>
+                            <a href="tel:+7 (495) 514-02-11">+7 (495) 514-02-11</a>
+                        </li>
+                        <li>
+                            <a href="mailto:info@rosvodokanal.ru">info@rosvodokanal.ru</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12 footer-col soc-col">
+                    <a class="main-link" href="tel:8-800-250-17-47">8-800-250-17-47</a>
+                    <span class="hot-info">Горячая линия</span>
+                    <ul class="soc-list">
+                        <li>
+                            <a href="#">
+                                <img src="img/icon_vk.png">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/icon_fb.png">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/icon_inst.png">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/icon_yt.png">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="footer-btm">
+        <div class="wrapper">
+            <ul class="footer-info">
+                <li class="copy-li"><p class="copy-text"><span class="copy">&copy;</span>Росводоканал, 2019</p></li>
+                <li class="politic-li"><a href="#">Политика конфиденциальности</a></li>
+                <li><a href="#">Карта сайта</a></li>
+                <li class="siluet-li">
+                    <p class="siluet">
+                        <a target="_blank" href="http://siluetstudio.com"> Веб-студия «Силуэт»: создание
+                            сайтов</a>
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+
+<div id="register-modal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Заголовок модального окна -->
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><img
+                src="img/form-close.png"></button>
+                <ul class="modal__tabs">
+                    <li data-tab="registration" class="modal-tab">Регистрация</li>
+                    <li data-tab="auth" class="modal-tab">Авторизация</li>
+                </ul>
+            </div>
+            <!-- Основное содержимое модального окна -->
+            <div class="modal-body">
+                <div class="auth-content__tabs">
+                    <div data-tab="registration" class="modal-tab-content">
+                        <form class="form white-bg">
+                            <label for="name2">Ваше имя<span>*</span></label>
+                            <input class="modal-input" id="name2">
+
+                            <label for="email">E-mail<span>*</span></label>
+                            <input class="modal-input" id="email">
+
+                            <label for="pswd">Пароль<span>*</span></label>
+                            <input class="modal-input" id="pswd">
+
+                            <label for="pswd2">Подтвердите пароль <span>*</span></label>
+                            <input class="modal-input" id="pswd2">
+
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                <div class="checkbox__text">Я принимаю <a href="#">Политику
+                                    конфиденциальности</a></div>
+                            </label>
+                            <div class="btns">
+                                <a href="#" class="btn btn-modal">Отправить</a>
+                            </div>
+                        </form>
+                    </div>
+                    <div data-tab="auth" class="modal-tab-content">
+                        <form class="form white-bg">
+                            <label for="email">E-mail<span>*</span></label>
+                            <input class="modal-input" id="email">
+
+                            <label for="pswd">Пароль<span>*</span></label>
+                            <input class="modal-input" id="pswd">
+                            <a href="#" class="forget-link">Забыли пароль?</a>
+                            <div class="btns">
+                                <a href="#" class="btn btn-modal">Войти</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/jquery.justified.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-progressbar.min.js"></script>
+<script src="js/jquery.maskedinput.js"></script>
+<script type="text/javascript" src="css/fancybox/jquery.fancybox.js"></script>
+<script src="js/jquery.scrollbar.js"></script>
+<script src="js/jquery.justifiedGallery.js"></script>
+<script src="js/justifiedGallery.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/truncate.js"></script>
+<script src="js/jquery.selectric.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/jquery.timepicker.min.js"></script>
+<script src="js/daterangepicker.js"></script>
+<script src="js/truncate.min.js"></script>
+<script src="js/jquery-ready.js"></script>
+</body>
+</html>

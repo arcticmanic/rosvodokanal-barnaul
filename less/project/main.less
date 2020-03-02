@@ -1,0 +1,414 @@
+.main {
+  &-tabs {
+    padding: 42px 0 40px;
+    & .col-md-2-5 {
+      padding-right: 10px;
+      padding-left: 10px;
+    }
+    & .tab {
+      position: relative;
+      height: 350px;
+      & .icon {
+        position: absolute;
+        top: 30px;
+        left: 28px;
+      }
+      &-text {
+        position: absolute;
+        top: 160px;
+        left: 22px;
+        & p {
+          color: white;
+          font-size: 15px;
+          margin: 0;
+          line-height: 20px;
+          &.title {
+            font-size: 18px;
+            font-weight: 600;
+            margin: 0;
+            margin-bottom: 14px;
+          }
+        }
+      }
+      & .trans-btn {
+        position: absolute;
+        bottom: 30px;
+        left: 25px;
+      }
+      & > a {
+        display: block;
+      }
+    }
+  }
+  &-numbers {
+    padding: 52px 0;
+
+    & .number {
+      text-align: center;
+      & .img-container {
+        height: 100px;
+        margin-bottom: 11px;
+      }
+      & .count {
+        font-size: 40px;
+        font-weight: 600;
+        color: @navy;
+        margin: 0;
+        margin-bottom: 20px;
+      }
+      & .descr {
+        font-size: 13px;
+        line-height: 15px;
+        color: @navy;
+        margin: 0;
+      }
+    }
+    &.info-numbers {
+      padding: 52px 0 0;
+      margin: 47px 0;
+      border-top: 1px dashed #bdc3c6;
+      border-bottom: 1px dashed #bdc3c6;
+
+      & .number {
+        margin-bottom: 96px;
+        .img-container {
+          margin-bottom: 6px;
+        }
+        .count {
+          margin-bottom: 20px;
+        }
+
+      }
+      .list .col-md-3:nth-child(n+4) .number {
+        margin-bottom: 51px;
+      }
+    }
+  }
+  &-new {
+    .news__item {
+      position: relative;
+      margin-bottom: 59px !important;
+      & .info {
+        position: absolute;
+        bottom: 0;
+        padding-left: 25px;
+        padding-bottom: 16px;
+        padding-top: 23px;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.14);
+        & .date {
+          line-height: 0;
+          & p {
+            font-size: 12px;
+
+          }
+        }
+        & .title p {
+          font-weight: 600;
+        }
+        & .date p,
+        & .title p {
+          color: white;
+        }
+      }
+    }
+
+  }
+  &-news {
+    padding: 50px 0 30px;
+    &.volun-news {
+      padding-top: 0;
+       .main-new .city
+       {
+         position: absolute;
+         top: 28px;
+         left: -3px;
+         background: #00a2dd;
+         border-radius: 5px;
+         padding: 12px 16px;
+         height: 30px;
+         & span
+         {
+           font-size: 15px;
+         }
+       }
+      .news__item {
+        margin-bottom: 40px;
+        .city {
+          background: #00a2dd;
+        }
+      }
+    }
+    & .h2-main {
+      margin-bottom: 27px;
+    }
+    .news__item {
+      margin-bottom: 52px;
+    }
+    & .more-btn {
+      float: right;
+      font-size: 13px;
+      margin-top: 10px;
+      margin-right: 10px;
+    }
+  }
+  &-map {
+    background: @navy;
+    padding: 74px 0 83px;
+    & .h3-main {
+      color: white;
+      margin-bottom: 8px;
+      margin-top: 9px;
+    }
+    & .map-col {
+      padding-right: 0;
+    }
+    & .map-container {
+      position: relative;
+      line-height: 0;
+    }
+    & .regions-map {
+      & .region {
+        position: absolute;
+        cursor: pointer;
+        transition: 0.5s;
+        &:hover {
+          filter: grayscale(1) contrast(10);
+        }
+        &.active-region, &.hover-region {
+          filter: grayscale(1) contrast(10);
+        }
+      }
+      #archangelsk {
+        top: 109px;
+        left: 142px;
+      }
+      #barnaul {
+        left: 262px;
+        bottom: 43px;
+      }
+      #omsk {
+        left: 229px;
+        bottom: 87px;
+      }
+      #tumen {
+        top: 229px;
+        left: 262px;
+      }
+      #voronezh {
+        top: 185px;
+        left: 66px;
+      }
+      #krasnodar {
+        left: 22px;
+        bottom: 131px;
+      }
+      #orenburg {
+        left: 120px;
+        bottom: 109px;
+      }
+    }
+    & .regions-list {
+      margin: 0;
+      padding-left: 38px;
+      & > li {
+        margin-bottom: 5px;
+        position: relative;
+        padding-left: 12px;
+        &:before {
+          content: url("../img/plus-blue.png");
+          left: -10px;
+          position: absolute
+        }
+        &.active-region {
+          &:before {
+            content: url("../img/minus-blue.png");
+            top: -3px;
+          }
+        }
+        & a.city {
+          font-size: 14px;
+          font-weight: 800;
+          color: @cyan;
+          transition: 0.5s;
+          cursor: pointer;
+        }
+        &:hover {
+          & a.city {
+            color: white;
+          }
+        }
+        & .hide-block {
+          display: none;
+          margin-top: 13px;
+          padding-left: 20px;
+          margin-bottom: 19px;
+          & ul {
+            & li {
+              color: white;
+              font-size: 13px;
+              line-height: 17px;
+              margin-bottom: 2px;
+              position: relative;
+              &:before {
+                position: absolute;
+                left: -20px;
+                top: -1px;
+                content: '•';
+                color: @cyan;
+              }
+            }
+          }
+        }
+        &.active-region, &.hover-region {
+          & a.city {
+            color: white;
+          }
+        }
+      }
+    }
+  }
+  &-about {
+    padding: 61px 0 30px;
+    &__hot {
+      height: 100%;
+      background: @cyan;
+      border-radius: 5px;
+      padding: 50px 43px 30px;
+      & .trans-btn {
+        margin-top: 14px;
+        position: relative;
+        left: -9px;
+      }
+      & .hot {
+        &-subtitle {
+          font-size: 15px;
+          font-weight: 600;
+          margin: 0;
+          margin-bottom: 24px;
+        }
+        &-text {
+          font-size: 13px;
+          line-height: 20px;
+        }
+        &-phone {
+          font-size: 31px;
+          font-weight: 600;
+          color: white;
+          margin-bottom: 9px;
+          display: block;
+        }
+        &-email {
+          font-size: 18px;
+          font-weight: 600;
+          color: white;
+          margin-bottom: 26px;
+          display: block;
+        }
+      }
+      & p {
+        color: white;
+      }
+    }
+    &__slider {
+      padding-bottom: 0;
+      &-block {
+        background: #f4f4f4;
+        border-radius: 5px;
+        padding: 35px 7px 17px;
+        & .slick-dots {
+          text-align: center;
+          margin-left: -13%;
+          bottom: -14px;
+          & li {
+            width: 8px;
+            & button {
+              width: 7px;
+              &:before {
+                opacity: 1;
+                color: @cyan;
+                width: 7px;
+              }
+            }
+            &.slick-active button:before {
+              opacity: 1;
+              color: @cyan;
+              border: 2px solid @cyan;
+              border-radius: 50px;
+              width: 7px;
+              height: 7px;
+              top: 7px;
+              content: "";
+            }
+          }
+        }
+        & .slide {
+          &-subtitle {
+            font-size: 15px;
+            color: @cyan;
+            font-weight: 600;
+          }
+          &-title {
+            color: @navy;
+            font-size: 30px;
+            font-weight: 300;
+            margin-bottom: 10px;
+          }
+          &-text {
+            margin-bottom: 25px;
+            & p {
+              font-size: 15px;
+              line-height: 25px;
+              margin-top: 0;
+            }
+
+          }
+        }
+      }
+
+    }
+  }
+  &-clients {
+    padding: 65px 0 80px;
+    & .h2-main {
+      margin-bottom: 50px;
+    }
+    & .clients-slider {
+      &-block {
+        position: relative;
+      }
+      &__navigate {
+        & .left {
+          position: absolute;
+          left: -13px;
+          top: 71px;
+        }
+        & .right {
+          position: absolute;
+          right: -13px;
+          top: 71px;
+        }
+      }
+      & .slide {
+        //margin-right: 7px;
+        & .img-container {
+          height: 170px;
+          background: #f4f5f8;
+          width: 170px;
+          position: relative;
+          margin: auto;
+          & img {
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: auto;
+            top: 0;
+            bottom: 0;
+            max-width: 90%;
+            max-height: 90%;
+          }
+        }
+      }
+    }
+  }
+}

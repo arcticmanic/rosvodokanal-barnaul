@@ -1,0 +1,79 @@
+.more-myth
+{
+  padding: 49px 0 65px;
+  background: @cyan;
+  & h2
+  {
+    color:white;
+    margin-bottom: 40px;
+  }
+  & .img-container {
+    border-radius: 5px;
+    position: relative;
+    line-height: 0;
+  }
+  & .title-block {
+    position: absolute;
+    background: @navy;
+    left: -5px;
+    bottom: 17px;
+    width: 87%;
+    padding: 16px 22px;
+    padding-right: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    transition: 0.5s;
+    & .subtitle {
+      color: white;
+      font-size: 11px;
+      line-height: 11px;
+      font-weight: 300;
+      margin: 0;
+    }
+    & .title {
+      color: white;
+      font-size: 15px;
+      line-height: 18px;
+      font-weight: 600;
+      margin: 0;
+    }
+  }
+  & .item
+  {
+    margin-bottom: 20px;
+    & .descr
+    {
+      padding-top: 13px;
+      padding-left: 5px;
+      & p
+      {
+        color:white;
+        font-size: 13px;
+        line-height: 20px;
+
+      }
+
+    }
+  }
+  & .item:hover .title-block
+  {
+    background: @blue;
+  }
+  & .btns
+  {
+    text-align: center;
+    margin-top: 16px;
+  }
+}
+
+.myth
+{
+  &-subtitle
+  {
+    margin-bottom: 14px !important;
+  }
+  &-h2
+  {
+    margin-top: 0 !important;
+  }
+}
