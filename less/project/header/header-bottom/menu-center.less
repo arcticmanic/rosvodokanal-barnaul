@@ -3,18 +3,25 @@
     display: flex;
     align-items: center;
   }
+  &__center-item {
+    &.active {
+      .header-bottom__center-link {
+        color: @colorPrimary3;
+      }
+    }
+    @media (min-width: @hoverW) {
+      &:hover:not(.active) {
+        .header-bottom__center-link {
+          color: @colorPrimary3;
+          background-size: 4px 50px;
+        }
+      }
+    }
+  }
   &__center-link {
     color: @colorBlue;
     font-size: 13px;
     text-transform: uppercase;
     font-weight: 400;
-    &.active {
-      color: @colorPrimary3;
-    }
-    @media (min-width: @hoverW) {
-      &:hover:not(.active) {
-        color: @colorPrimary3;
-      }
-    }
   }
 }

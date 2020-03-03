@@ -7,12 +7,31 @@
     border: 2px solid @colorPrimary3;
     padding: 6px 15px;
     transition: @transMid;
+    background: #fff;
 
     &__text {
       font-size: 13px;
       color: @colorPrimary3;
       margin-left: 10px;
       transition: @transMid;
+    }
+
+    &__spez {
+      display: block;
+    }
+
+    &__std {
+      display: none;
+    }
+
+    &-active {
+      .eye-version__spez {
+        display: none;
+      }
+
+      .eye-version__std {
+        display: block;
+      }
     }
 
     @media (min-width: @hoverW) {

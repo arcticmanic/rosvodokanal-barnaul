@@ -24,6 +24,9 @@
 
 @import 'project/layout.less';
 
+// Universal Elements
+@import 'project/universalEl/social-icons.less';
+
 // Header
 @import 'project/header/header.less';
 
@@ -39,8 +42,10 @@
 @import 'project/header/header-bottom/header-bottom.less';
 @import 'project/header/header-bottom/menu-left.less';
 @import 'project/header/header-bottom/menu-center.less';
-@import 'project/header/header-bottom/social-icons.less';
 @import 'project/header/header-bottom/all-sites.less';
+
+// Eye version
+@import 'project/eye-version-panel/eye-version-panel.less';
 
 @import 'project/jumbotron.less';
 @import 'project/news.less';
@@ -61,3 +66,18 @@
 @import 'project/footer.less';
 @import 'project/media.less';
 @import 'project/spec.less';
+
+.overlay {
+  pointer-events: none;
+  height: 100vh;
+  width: 100%;
+  max-width: calc(@maxWidth + 35px);
+  position: fixed;
+  background: url(../../img/overlay.png) top center repeat-y;
+  background-size: 100%;
+  opacity: 0.1;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  filter: brightness(0.6);
+}

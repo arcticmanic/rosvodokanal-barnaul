@@ -1,0 +1,51 @@
+.social-icons {
+  display: flex;
+  align-items: center;
+  margin-bottom: -6px;
+}
+
+.social-icon {
+  * {
+    transition: @transFast;
+  }
+  &__link {
+    display: block;
+    margin-left: 2px;
+    margin-right: 2px;
+
+    @media (min-width: @hoverW) {
+      &:hover {
+        .social-icon {
+          * {
+            fill: @colorPrimary3;
+          }
+          &-vk {
+            * {
+              fill: #4c75a3;
+            }
+          }
+          &-fb {
+            * {
+              fill: #3b5999;
+            }
+          }
+          &-twitter {
+            * {
+              fill: #55acee;
+            }
+          }
+          &-instagram {
+            * {
+              fill: #e4405f;
+            }
+          }
+          &-youtube {
+            * {
+              fill: #cd201f;
+            }
+          }
+        }
+      }
+    }
+  }
+}

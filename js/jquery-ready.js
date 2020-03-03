@@ -56,6 +56,7 @@ $(document).ready(function() {
     $('.city-list', this).fadeToggle()
   })
 
+  // Header Functionality
   $(document)
     .on('click', '.all-sites .all-sites__text', function() {
       $(this)
@@ -70,6 +71,18 @@ $(document).ready(function() {
       $('.city-list').fadeOut(500, function() {
         $('body').removeClass('somethingIsOpen')
       })
+    })
+    .on('mouseover', '.header-bottom__item', function() {
+      $(this).addClass('submenu-is-opened')
+      $(this)
+        .find('.submenu')
+        .fadeIn(500)
+    })
+    .on('mouseleave', '.header-bottom__item', function() {
+      $(this).removeClass('submenu-is-opened')
+      $(this)
+        .find('.submenu')
+        .fadeOut(500)
     })
 
   if (_w > 768) {
@@ -625,76 +638,82 @@ $(document).ready(function() {
     }
   })
 
-  var Spez = (function() {
+  const eyeVersion = (function() {
     var $container = $('body')
 
     return {
       init: function() {
         $('.eye-version').on('click', function() {
-          var set = !$container.hasClass('spez')
+          $('.eye-version-panel').slideToggle()
+          $('.eye-version').toggleClass('eye-version-active')
+          var set = !$container.hasClass('eye-version')
           if (set) {
             $container
-              .addClass('spez')
-              .addClass('scale-' + $('.spez__scale.m--current').data('scale'))
-              .addClass('color-' + $('.spez__color.m--current').data('color'))
-            $('.header__spez_panel').slideDown(300)
+              .addClass('eye-version')
+              .addClass(
+                'scale-' + $('.eye-version__scale.m--current').data('scale')
+              )
+              .addClass(
+                'color-' + $('.eye-version__color.m--current').data('color')
+              )
+            $('.header__eye-version_panel').slideDown(300)
             $('.mob_m').slideUp()
             $('.btn_mob').removeClass('open')
           } else {
             $container
-              .removeClass('spez')
+              .removeClass('eye-version')
               .removeClass('scale-1 scale-2 scale-3')
               .removeClass('color-white color-black')
-            $('.header__spez_panel').slideUp(300)
+            $('.header__eye-version_panel').slideUp(300)
           }
-          Spez.save('set', set)
+          eyeVersion.save('set', set)
         })
 
-        $('.spez__scale').on('click', function(e) {
+        $('.eye-version__scale').on('click', function(e) {
           e.preventDefault()
-          if ($container.hasClass('spez')) {
+          if ($container.hasClass('eye-version')) {
             var $this = $(this)
-            $('.spez__scale').removeClass('m--current')
+            $('.eye-version__scale').removeClass('m--current')
             $this.addClass('m--current')
             $container
               .removeClass('scale-1 scale-2 scale-3')
               .addClass('scale-' + $this.data('scale'))
-            Spez.save('scale', $this.data('scale'))
+            eyeVersion.save('scale', $this.data('scale'))
           }
         })
 
-        $('.spez__color').on('click', function(e) {
+        $('.eye-version__color').on('click', function(e) {
           e.preventDefault()
-          if ($container.hasClass('spez')) {
+          if ($container.hasClass('eye-version')) {
             var $this = $(this)
-            $('.spez__color').removeClass('m--current')
+            $('.eye-version__color').removeClass('m--current')
             $this.addClass('m--current')
             $container
               .removeClass('color-white color-black')
               .addClass('color-' + $this.data('color'))
-            Spez.save('color', $this.data('color'))
+            eyeVersion.save('color', $this.data('color'))
           }
         })
 
-        $('.spez__back').on('click', function(e) {
+        $('.eye-version-item_back').on('click', function(e) {
+          $('.eye-version-active').removeClass('eye-version-active')
+          $('.eye-version').addClass('eye-version-std')
+          $('.eye-version-panel').slideToggle()
           e.preventDefault()
           $container
-            .removeClass('spez')
+            .removeClass('eye-version')
             .removeClass('scale-1 scale-2 scale-3')
             .removeClass('color-white color-black')
-          $('.header__spez_panel').slideUp(300)
+          $('.header__eye-version_panel').slideUp(300)
           $('.mob_m').slideUp()
           $('.btn_mob').removeClass('open')
-          Spez.save('set', false)
+          eyeVersion.save('set', false)
         })
       },
       save: function(type, value) {
         console.log(type, value)
-        // $.post('/misc/spez', {type: type, value: value}, function(response) {
-        //   console.log(response);
-        // });
       }
     }
   })()
-  Spez.init()
+  eyeVersion.init()
 })

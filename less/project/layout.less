@@ -2,8 +2,8 @@
  * element that contains the map. */
 
 /* Optional: Makes the sample page fill the window. */
-html, body {
-  height: 100%;
+html,
+body {
   margin: 0;
   padding: 0;
   min-width: 320px;
@@ -19,11 +19,11 @@ html, body {
 
 body {
   background: #fff;
-  background-image: url("../img/bg-lines.png");
-  background-position: center top;
-  &:after {
-    position: absolute;
-  }
+  // background-image: url("../img/overlay.png");
+  // background-position: center top;
+  // &:after {
+  //   position: absolute;
+  // }
 }
 
 .sml-col {
@@ -44,7 +44,6 @@ body {
       padding-bottom: 17px;
       border-bottom: 1px solid #ececec;
     }
-
   }
 }
 
@@ -148,7 +147,7 @@ ul li {
   //top: 0;
   padding-right: 52px;
   &:after {
-    content: url("../img/arrow-blue.png");
+    content: url('../img/arrow-blue.png');
     position: absolute;
     right: 0;
     top: 0px;
@@ -167,7 +166,6 @@ ul li {
   & h2 {
     margin-bottom: 40px;
   }
-
 }
 
 .page-bg {
@@ -232,7 +230,8 @@ ul li {
   & .sep {
     padding: 0 4px;
   }
-  & a, & .sep {
+  & a,
+  & .sep {
     font-size: 13px;
     color: #2a2a2a;
     text-decoration: none;
@@ -322,7 +321,7 @@ ul li {
   height: 55px;
   border-radius: 50%;
   display: block;
-  background-image: url("../img/arr-short.png");
+  background-image: url('../img/arr-short.png');
   background-position: center;
   background-repeat: no-repeat;
   background-color: red;
@@ -404,7 +403,8 @@ ul li {
   background: url(../img/play.png) no-repeat center;
 }
 
-.videoPoster:hover:before, .videoPoster:focus:before {
+.videoPoster:hover:before,
+.videoPoster:focus:before {
   border-color: red;
 }
 
@@ -483,8 +483,7 @@ ul li {
     padding: 0;
     padding-bottom: 17px;
     position: relative;
-    &.border-bottom
-    {
+    &.border-bottom {
       padding-bottom: 30px;
       border-bottom: 2px solid @blue;
     }
@@ -533,7 +532,8 @@ ul li {
     text-align: center;
   }
 
-  & label, & p {
+  & label,
+  & p {
     font-size: 13px;
     line-height: 20px;
     color: @navy;
@@ -543,7 +543,6 @@ ul li {
     margin-bottom: 5px;
     & span {
       padding-left: 5px;
-
     }
   }
   .form.white-bg .btns {
@@ -595,7 +594,6 @@ ul li {
       height: 30px;
     }
   }
-
 }
 
 .pagination {
@@ -671,14 +669,10 @@ ul li {
         }
       }
       &.active {
-
         & a {
           color: @cyan;
         }
       }
     }
-
   }
 }
-
-

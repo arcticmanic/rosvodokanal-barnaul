@@ -17,34 +17,45 @@
 
   <div class="overlay"></div>
 
-  <div class="header__spez_panel" style="display: none;">
+  <div class="eye-version-panel">
     <div class="wrapper">
-      <div class="row">
-        <div class="col-sm-12">
-          <div class="spez__left">
-            <div class="spez__wrap">
-              <div class="spez__color_text">
-                Цветовая схема:
-              </div>
-              <div class="spez__colors">
-                <a href="#" class="spez__color m--current" data-color="white">A</a>
-                <a href="#" class="spez__color" data-color="black">A</a>
-              </div>
-            </div>
-            <div class="spez__wrap">
-              <div class="spez__scale_text">
-                Размер шрифта:
-              </div>
-              <div class="spez__scales">
-                <a href="#" class="spez__scale m--current" data-scale="1">A</a>
-                <a href="#" class="spez__scale" data-scale="2">A</a>
-                <a href="#" class="spez__scale" data-scale="3">A</a>
-              </div>
-            </div>
-          </div>
-          <a href="#" class="spez__back">Обычная версия сайта <img src="../../img/arr-b.png"></a>
+
+      <div class="eye-version-item eye-version-item_color-theme">
+        <div class="eye-version__color_text">
+          Цветовая схема:
+        </div>
+        <div class="eye-version__colors">
+          <a href="#" class="eye-version__color m--current" data-color="white">A</a>
+          <a href="#" class="eye-version__color" data-color="black">A</a>
         </div>
       </div>
+
+      <div class="eye-version-item eye-version-item_font">
+        <div class="eye-version__scale_text">
+          Размер шрифта:
+        </div>
+        <div class="eye-version__scales">
+          <a href="#" class="eye-version__scale m--current" data-scale="1">A</a>
+          <a href="#" class="eye-version__scale" data-scale="2">A</a>
+          <a href="#" class="eye-version__scale" data-scale="3">A</a>
+        </div>
+      </div>
+
+      <a href="#" class="eye-version-item eye-version-item_back">
+        <span class="eye-version-item_back__text">Обычная версия сайта</span>
+        <svg class="icon-back-svg" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 495.9 345.7"
+          style="enable-background:new 0 0 495.9 345.7;" xml:space="preserve">
+          <g>
+            <g>
+              <path d="M489.3,54.2c-111.6-88.4-278.9-66.2-379.2,49L52,56c-13.7-11.1-33.9-9-45,4.6c-5,6.2-7.5,14-6.9,22.1
+                c0,0,11.9,183.4,17.7,238c0.7,6.7,4.5,13.1,10.6,18.1c6.1,5,13.2,7.3,19.9,6.7C102.9,340,284.8,314,284.8,314
+                c8-1.1,15.2-5.2,20.2-11.3c11.1-13.7,9-33.9-4.7-45l-57.9-47C340.9,92.9,443,44.1,478.2,72.6c4.6,3.7,11.3,3,15-1.5
+                c0.1-0.1,0.2-0.3,0.3-0.3c3.7-4.6,3-11.3-1.6-15C491.1,55.1,490.2,54.6,489.3,54.2z" />
+            </g>
+          </g>
+        </svg>
+      </a>
     </div>
   </div>
 
@@ -210,7 +221,7 @@
         </a>
       </div>
 
-      <a class="eye-version" href="#">
+      <a class="eye-version eye-version-std" href="#">
         <svg class="icon-eye-svg" version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg"
           xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 98.5 56.8"
           style="enable-background:new 0 0 98.5 56.8;" xml:space="preserve">
@@ -228,8 +239,8 @@
                         		C83.2,34,67.7,48.1,49.2,48.1" />
           </g>
         </svg>
-
-        <span class="eye-version__text">Версия для слабовидящих</span>
+        <span class="eye-version__text eye-version__spez">Версия для слабовидящих</span>
+        <span class="eye-version__text eye-version__std">Обычный версия</span>
       </a>
       <a href="#" class="lk-user-link" target="blank">
         <div class="icon-user__bc">
@@ -259,23 +270,46 @@
 
     <nav class="header-bottom">
 
-      <div class="header-bottom__left-menu">
-        <a href="programms.html" class="header-bottom__link header-bottom__left-link active">Абонентам</a>
-        <a href="programms.html" class="header-bottom__link header-bottom__left-link">Услуги</a>
-      </div>
+      <ul class="header-bottom__left-menu">
+        <li class="header-bottom__item header-bottom__left-item active">
+          <a href="programms.html" class="header-bottom__link header-bottom__left-link ">Абонентам</a>
+        </li class="header-bottom__item header-bottom__left-item">
+        <li class="header-bottom__item header-bottom__left-item">
+          <a href="programms.html" class="header-bottom__link header-bottom__left-link">Услуги</a>
+          <ul class="submenu">
+            <li class="submenu__item active">
+              <a href="#" class="submenu__link">Частные лица</a>
+            </li>
+            <li class="submenu__item">
+              <a href="#" class="submenu__link">Юридические лица</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
 
       <div class="divider divider_primary3">|</div>
 
-      <div class="header-bottom__center-menu">
-        <a href="programms.html" class="header-bottom__link header-bottom__center-link active">О водоканале</a>
-        <a href="about_qa.html" class="header-bottom__link header-bottom__center-link">Закупки</a>
+      <ul class="header-bottom__center-menu">
+        <li class="header-bottom__item header-bottom__center-item active">
+          <a href="programms.html" class="header-bottom__link header-bottom__center-link">О водоканале</a>
+        </li class="header-bottom__item header-bottom__center-item">
 
-        <a href="about_qa.html" class="header-bottom__link header-bottom__center-link">Карьера</a>
+        <li class="header-bottom__item header-bottom__center-item">
+          <a href="about_qa.html" class="header-bottom__link header-bottom__center-link">Закупки</a>
+        </li>
 
-        <a href="about_qa.html" class="header-bottom__link header-bottom__center-link">Пресс-центр</a>
+        <li class="header-bottom__item header-bottom__center-item">
+          <a href="about_qa.html" class="header-bottom__link header-bottom__center-link">Карьера</a>
+        </li>
 
-        <a href="about_qa.html" class="header-bottom__link header-bottom__center-link">Контакты</a>
-      </div>
+        <li class="header-bottom__item header-bottom__center-item">
+          <a href="about_qa.html" class="header-bottom__link header-bottom__center-link">Пресс-центр</a>
+        </li>
+
+        <li class="header-bottom__item header-bottom__center-item">
+          <a href="about_qa.html" class="header-bottom__link header-bottom__center-link">Контакты</a>
+        </li>
+      </ul>
 
       <div class="divider divider_primary">|</div>
 
@@ -366,7 +400,7 @@
         </a>
 
         <a href="#" class="social-icon__link">
-          <svg class="social-icon social-icon-fb" version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg"
+          <svg class="social-icon social-icon-instagram" version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
             style="enable-background:new 0 0 24 24;" xml:space="preserve">
             <g>
@@ -397,7 +431,7 @@
         </a>
 
         <a href="#" class="social-icon__link">
-          <svg class="social-icon social-icon-fb" version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg"
+          <svg class="social-icon social-icon-youtube" version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
             style="enable-background:new 0 0 24 24;" xml:space="preserve">
             <g>
@@ -465,13 +499,13 @@
         </div>
       </div>
 
-      <div class="mobile-toggle">
+      <!-- <div class="mobile-toggle">
         <div class="btn_mob">
           <span></span>
           <span></span>
           <span></span>
         </div>
-      </div>
+      </div> -->
 
     </nav>
   </header>
@@ -824,179 +858,7 @@
       </div>
     </div>
   </div>
-  <div class="main-map map">
-    <div class="wrapper">
-      <p class="subtitle">Регионы присутсвия</p>
-      <h2 class="h3-main">Росводоканал на карте</h2>
-      <div class="row">
-        <div class="col-md-7 map-col">
-          <div class="map-container">
-            <img src="../../img/map.png">
-            <div class="regions-map">
-              <div class="region" data-tab="archangelsk" id="archangelsk">
-                <img src="../../img/archangelsk.png">
-              </div>
-              <div class="region" data-tab="barnaul" id="barnaul">
-                <img src="../../img/barnaul.png">
-              </div>
-              <div class="region" data-tab="krasnodar" id="krasnodar">
-                <img src="../../img/krasnodar.png">
-              </div>
-              <div class="region" data-tab="tumen" id="tumen">
-                <img src="../../img/tumen.png">
-              </div>
-              <div class="region" data-tab="voronezh" id="voronezh">
-                <img src="../../img/voronezh.png">
-              </div>
-              <div class="region" data-tab="omsk" id="omsk">
-                <img src="../../img/omsk.png">
-              </div>
-              <div class="region" data-tab="orenburg" id="orenburg">
-                <img src="../../img/orenburg.png">
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 col-md-offset-1 region-col">
-          <ul class="regions-list">
-            <li class="region-list__tab" data-tab="archangelsk">
-              <a class="city">Росводоканал Архангельск</a>
-              <div class="hide-block">
-                <ul>
-                  <li>
-                    г. Воронеж, ул. Пеше-Стрелецкая, 90
-                  </li>
-                  <li>
-                    <a href="tel:+7 (473) 206-77-06">+7 (473) 206-77-06</a>
-                  </li>
-                  <li>
-                    <a href="http://voronezh.rosvodokanal.ru">voronezh.rosvodokanal.ru</a>
-                  </li>
-                  <li>
-                    <a href="mailto:mail_vrn@rosvodokanal.ru">mail_vrn@rosvodokanal.ru</a>
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li class="region-list__tab" data-tab="barnaul">
-              <a class="city">Росводоканал Барнаул</a>
-              <div class="hide-block">
-                <ul>
-                  <li>
-                    г. Воронеж, ул. Пеше-Стрелецкая, 90
-                  </li>
-                  <li>
-                    <a href="tel:+7 (473) 206-77-06">+7 (473) 206-77-06</a>
-                  </li>
-                  <li>
-                    <a href="http://voronezh.rosvodokanal.ru">voronezh.rosvodokanal.ru</a>
-                  </li>
-                  <li>
-                    <a href="mailto:mail_vrn@rosvodokanal.ru">mail_vrn@rosvodokanal.ru</a>
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li class="region-list__tab" data-tab="voronezh">
-              <a class="city">Росводоканал Воронеж</a>
-              <div class="hide-block">
-                <ul>
-                  <li>
-                    г. Воронеж, ул. Пеше-Стрелецкая, 90
-                  </li>
-                  <li>
-                    <a href="tel:+7 (473) 206-77-06">+7 (473) 206-77-06</a>
-                  </li>
-                  <li>
-                    <a href="http://voronezh.rosvodokanal.ru">voronezh.rosvodokanal.ru</a>
-                  </li>
-                  <li>
-                    <a href="mailto:mail_vrn@rosvodokanal.ru">mail_vrn@rosvodokanal.ru</a>
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li class="region-list__tab" data-tab="krasnodar">
-              <a class="city">Росводоканал Краснодар</a>
-              <div class="hide-block">
-                <ul>
-                  <li>
-                    г. Воронеж, ул. Пеше-Стрелецкая, 90
-                  </li>
-                  <li>
-                    <a href="tel:+7 (473) 206-77-06">+7 (473) 206-77-06</a>
-                  </li>
-                  <li>
-                    <a href="http://voronezh.rosvodokanal.ru">voronezh.rosvodokanal.ru</a>
-                  </li>
-                  <li>
-                    <a href="mailto:mail_vrn@rosvodokanal.ru">mail_vrn@rosvodokanal.ru</a>
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li class="region-list__tab" data-tab="omsk">
-              <a class="city">Росводоканал Омск</a>
-              <div class="hide-block">
-                <ul>
-                  <li>
-                    г. Воронеж, ул. Пеше-Стрелецкая, 90
-                  </li>
-                  <li>
-                    <a href="tel:+7 (473) 206-77-06">+7 (473) 206-77-06</a>
-                  </li>
-                  <li>
-                    <a href="http://voronezh.rosvodokanal.ru">voronezh.rosvodokanal.ru</a>
-                  </li>
-                  <li>
-                    <a href="mailto:mail_vrn@rosvodokanal.ru">mail_vrn@rosvodokanal.ru</a>
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li class="region-list__tab" data-tab="orenburg">
-              <a class="city">Росводоканал Оренбург</a>
-              <div class="hide-block">
-                <ul>
-                  <li>
-                    г. Воронеж, ул. Пеше-Стрелецкая, 90
-                  </li>
-                  <li>
-                    <a href="tel:+7 (473) 206-77-06">+7 (473) 206-77-06</a>
-                  </li>
-                  <li>
-                    <a href="http://voronezh.rosvodokanal.ru">voronezh.rosvodokanal.ru</a>
-                  </li>
-                  <li>
-                    <a href="mailto:mail_vrn@rosvodokanal.ru">mail_vrn@rosvodokanal.ru</a>
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li class="region-list__tab" data-tab="tumen">
-              <a class="city">Росводоканал Тюмень</a>
-              <div class="hide-block">
-                <ul>
-                  <li>
-                    г. Воронеж, ул. Пеше-Стрелецкая, 90
-                  </li>
-                  <li>
-                    <a href="tel:+7 (473) 206-77-06">+7 (473) 206-77-06</a>
-                  </li>
-                  <li>
-                    <a href="http://voronezh.rosvodokanal.ru">voronezh.rosvodokanal.ru</a>
-                  </li>
-                  <li>
-                    <a href="mailto:mail_vrn@rosvodokanal.ru">mail_vrn@rosvodokanal.ru</a>
-                  </li>
-                </ul>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
+
   <div class="main-clients">
     <div class="wrapper">
       <p class="subtitle">Сотрудничество</p>
