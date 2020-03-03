@@ -1,0 +1,113 @@
+.all-sites {
+  display: inline-block;
+  position: relative;
+  z-index: 4;
+  &__text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    z-index: 3;
+    &-inner {
+      color: @colorPrimary;
+      font-size: 13px;
+      display: block;
+      position: relative;
+      z-index: 3;
+      margin-right: 7px;
+    }
+  }
+  .circle {
+    border: 2px solid @colorPrimary;
+    box-shadow: inset 1px 1px 3px #fff;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    position: relative;
+    margin: 4px;
+    display: inline-block;
+    vertical-align: middle;
+    background: transparent;
+    z-index: 3;
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+    &.plus:before,
+    &.plus:after {
+      background: @colorPrimary;
+      box-shadow: 1px 1px 1px #ffffff9e;
+    }
+    &.plus:before {
+      width: 2px;
+      margin: 3px auto;
+      transition: @transMid;
+      opacity: 1;
+    }
+    &.plus:after {
+      margin: auto 3px;
+      height: 2px;
+      box-shadow: none;
+    }
+  }
+
+  &.active {
+    .circle {
+      &.plus:before {
+        opacity: 0;
+      }
+    }
+  }
+
+  .city-list {
+    display: none;
+    min-width: 210px;
+    border-radius: 5px;
+    box-shadow: 0 0 9px 3px rgba(0, 0, 0, 0.16);
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-top: 50px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 10px;
+    text-align: left;
+    background: #fff;
+    z-index: 2;
+
+    &__link {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+      .city-list__city {
+        font-size: 13px;
+        line-height: 15px;
+        color: @navy;
+        transition: @transFast;
+      }
+      .city-list__gerb {
+        margin-right: 4px;
+        transition: @transMid;
+      }
+      @media (min-width: @hoverW) {
+        &:hover {
+          .city-list__city {
+            color: @cyan;
+          }
+          .city-list__gerb {
+            transform: translateY(-2px);
+          }
+        }
+      }
+    }
+  }
+}

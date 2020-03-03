@@ -1,0 +1,33 @@
+.header-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 24px;
+  margin-bottom: 21px;
+
+  &__link {
+    user-select: none;
+    margin-right: 6px;
+    margin-left: 6px;
+    padding-left: 4px;
+    padding-right: 4px;
+    background: linear-gradient(to bottom, #e5e7e9 0%, #e5e7e9 100%);
+    border-radius: 2px;
+    background-position: 0 0;
+    background-repeat: repeat-x;
+    background-size: 1px 0;
+    text-decoration: none;
+    transition: all 0.4s ease-in-out;
+
+    &.active {
+      cursor: default;
+      pointer-events: none;
+    }
+
+    @media (min-width: @hoverW) {
+      &:hover:not(.active) {
+        background-size: 4px 50px;
+      }
+    }
+  }
+}

@@ -1,0 +1,82 @@
+.header {
+  .search-menu {
+    position: relative;
+    .search__input {
+      width: 260px;
+      background: #f1f3f4;
+      border-radius: 50px;
+      font-size: 16px;
+      line-height: 20px;
+      padding: 10px 12px;
+      border: 1px solid #dce4e8;
+      padding-right: 40px;
+
+      &:focus {
+        & ~ .search-icon .icon-search-svg {
+          * {
+            stroke: @colorPrimary3;
+          }
+        }
+      }
+    }
+    .search-icon {
+      position: absolute;
+      right: 10px;
+      top: 5px;
+
+      .icon-search-svg {
+        * {
+          stroke: #cad1d5;
+        }
+      }
+    }
+  }
+
+  input[type='search'] {
+    -webkit-appearance: none;
+  }
+
+  @media screen and (min-width: 768px) {
+    input[type='search']::-moz-placeholder {
+      color: #768186; /* Цвет подсказывающего текста */
+    }
+
+    input[type='search']::-webkit-input-placeholder {
+      color: #768186;
+    }
+
+    input[type='search']:-ms-input-placeholder {
+      color: #768186;
+    }
+
+    input[type='search']::-ms-input-placeholder {
+      color: #768186;
+    }
+
+    input[type='search']::placeholder {
+      color: #768186;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    input[type='search']::-moz-placeholder {
+      color: #fff; /* Цвет подсказывающего текста */
+    }
+
+    input[type='search']::-webkit-input-placeholder {
+      color: #fff;
+    }
+
+    input[type='search']:-ms-input-placeholder {
+      color: #fff;
+    }
+
+    input[type='search']::-ms-input-placeholder {
+      color: #fff;
+    }
+
+    input[type='search']::placeholder {
+      color: #fff;
+    }
+  }
+}

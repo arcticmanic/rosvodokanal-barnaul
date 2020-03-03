@@ -1,0 +1,20 @@
+.header-bottom {
+  &__center-menu {
+    display: flex;
+    align-items: center;
+  }
+  &__center-link {
+    color: @colorBlue;
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: 400;
+    &.active {
+      color: @colorPrimary3;
+    }
+    @media (min-width: @hoverW) {
+      &:hover:not(.active) {
+        color: @colorPrimary3;
+      }
+    }
+  }
+}
