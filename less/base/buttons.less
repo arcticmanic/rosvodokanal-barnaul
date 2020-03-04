@@ -9,7 +9,7 @@
   background-repeat: no-repeat;
   padding: 8px 12px;
   line-height: 1.2em;
-  border: 1px solid @navy;
+  border: 1px solid rgba(@colorPrimary3, 0.3);
   border-radius: 50px;
   font-family: @title-font;
   vertical-align: middle;
@@ -64,7 +64,8 @@
   &.dark {
     background: @blue;
   }
-  &.like-btn, &.dislike-btn {
+  &.like-btn,
+  &.dislike-btn {
     font-weight: 600;
     padding: 8px 22px;
     font-size: 13px;
@@ -92,7 +93,7 @@
   color: white;
   &:after {
     position: absolute;
-    content: url("../img/arr-w.png");
+    content: url('../img/arr-w.png');
     right: 13px;
     top: 7px;
   }
@@ -153,11 +154,11 @@
   border-radius: 5px;
   border: none;
   &.ios-btn {
-    background-image: url("../img/ios-icon.png");
+    background-image: url('../img/ios-icon.png');
     background-position: 13%;
   }
   &.and-btn {
-    background-image: url("../img/android-icon.png");
+    background-image: url('../img/android-icon.png');
     background-position: 13%;
   }
 }
@@ -171,7 +172,7 @@
   font-weight: 500;
   &:after {
     position: absolute;
-    content: url("../img/arr-w.png");
+    content: url('../img/arr-w.png');
     right: 20px;
     top: 10px;
   }

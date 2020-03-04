@@ -1,0 +1,37 @@
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  background: #fff;
+  @media (min-width: @maxWidth) {
+    padding-right: 30px;
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    color: @colorPrimary3;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 30px;
+    &-icon {
+      margin-right: 3px;
+    }
+  }
+  .copyright-mark {
+    color: @colorPrimary;
+    font-size: 24px;
+    font-weight: 700;
+  }
+  @media (min-width: @hoverW) {
+    a.footer-bottom__item:hover {
+      color: @colorPrimary;
+    }
+    .footer-bottom__item:hover {
+      a {
+        color: @colorPrimary;
+      }
+    }
+  }
+}

@@ -1,6 +1,135 @@
 $(document).ready(function() {
   var _w = $(window).width()
 
+  // Eye version functionality
+  const eyeVersion = (function() {
+    var $container = $('body')
+
+    return {
+      init: function() {
+        $('.eye-version').on('click', function() {
+          $('.eye-version-panel').slideToggle()
+          $('.eye-version').toggleClass('eye-version-active')
+          var set = !$container.hasClass('eye-version')
+          if (set) {
+            $container
+              .addClass('eye-version')
+              .addClass(
+                'scale-' + $('.eye-version__scale.m--current').data('scale')
+              )
+              .addClass(
+                'color-' + $('.eye-version__color.m--current').data('color')
+              )
+            $('.header__eye-version_panel').slideDown(300)
+            $('.mob_m').slideUp()
+            $('.btn_mob').removeClass('open')
+          } else {
+            $container
+              .removeClass('eye-version')
+              .removeClass('scale-1 scale-2 scale-3')
+              .removeClass('color-white color-black')
+            $('.header__eye-version_panel').slideUp(300)
+          }
+          eyeVersion.save('set', set)
+        })
+
+        $('.eye-version__scale').on('click', function(e) {
+          e.preventDefault()
+          if ($container.hasClass('eye-version')) {
+            var $this = $(this)
+            $('.eye-version__scale').removeClass('m--current')
+            $this.addClass('m--current')
+            $container
+              .removeClass('scale-1 scale-2 scale-3')
+              .addClass('scale-' + $this.data('scale'))
+            eyeVersion.save('scale', $this.data('scale'))
+          }
+        })
+
+        $('.eye-version__color').on('click', function(e) {
+          e.preventDefault()
+          if ($container.hasClass('eye-version')) {
+            var $this = $(this)
+            $('.eye-version__color').removeClass('m--current')
+            $this.addClass('m--current')
+            $container
+              .removeClass('color-white color-black')
+              .addClass('color-' + $this.data('color'))
+            eyeVersion.save('color', $this.data('color'))
+          }
+        })
+
+        $('.eye-version-item_back').on('click', function(e) {
+          $('.eye-version-active').removeClass('eye-version-active')
+          $('.eye-version').addClass('eye-version-std')
+          $('.eye-version-panel').slideToggle()
+          e.preventDefault()
+          $container
+            .removeClass('eye-version')
+            .removeClass('scale-1 scale-2 scale-3')
+            .removeClass('color-white color-black')
+          $('.header__eye-version_panel').slideUp(300)
+          $('.mob_m').slideUp()
+          $('.btn_mob').removeClass('open')
+          eyeVersion.save('set', false)
+        })
+      },
+      save: function(type, value) {
+        console.log(type, value)
+      }
+    }
+  })()
+  eyeVersion.init()
+
+  // Show random partner bages on every load
+  if ($('.partners__cont')) {
+    const amountOfPartnerItems = $('.partners__cont .partner__item').length
+    const set = new Set()
+    while (set.size < 6) {
+      const prevSetSize = set.size,
+        generatedRandomNum = Math.floor(
+          Math.random() * (amountOfPartnerItems - 1 + 1) + 1
+        )
+      set.add(generatedRandomNum)
+      if (set.size !== prevSetSize) {
+        $(
+          '.partners__cont .partner__item:nth-child(' + generatedRandomNum + ')'
+        )[0].style.display = 'flex'
+      }
+    }
+  }
+
+  const infoSlider = $('.info-slider')
+
+  infoSlider.on('init reinit afterChange', function(
+    event,
+    slick,
+    currentSlide,
+    nextSlide
+  ) {
+    if (infoSlider.find('.slick-current').hasClass('hard-visibility')) {
+      infoSlider.find('.slick-dots').addClass('slick-dots_visibility')
+    } else {
+      infoSlider.find('.slick-dots').removeClass('slick-dots_visibility')
+    }
+  })
+
+  // Section Info
+  infoSlider.slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    fade: true,
+    arrows: false,
+    autoplay: false,
+    dots: true,
+    adaptiveHeight: false
+  })
+
+  const myP = document.querySelector('.info-slider__text')
+  if (myP) {
+    $clamp(myP, { clamp: 3 })
+  }
+
   // $('.progress .progress-bar').progressbar()
 
   // $(function() {
@@ -526,16 +655,6 @@ $(document).ready(function() {
     ''
   )
 
-  $('.main-about__slider').slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    fade: true,
-    arrows: false,
-    autoplay: false,
-    dots: true,
-    adaptiveHeight: false
-  })
-
   $('.jumbotron__slider').on('init reInit', function(
     event,
     slick,
@@ -637,83 +756,4 @@ $(document).ready(function() {
       equal_height($('.special__slider-2 .slide'), $('.special__slider-2'))
     }
   })
-
-  const eyeVersion = (function() {
-    var $container = $('body')
-
-    return {
-      init: function() {
-        $('.eye-version').on('click', function() {
-          $('.eye-version-panel').slideToggle()
-          $('.eye-version').toggleClass('eye-version-active')
-          var set = !$container.hasClass('eye-version')
-          if (set) {
-            $container
-              .addClass('eye-version')
-              .addClass(
-                'scale-' + $('.eye-version__scale.m--current').data('scale')
-              )
-              .addClass(
-                'color-' + $('.eye-version__color.m--current').data('color')
-              )
-            $('.header__eye-version_panel').slideDown(300)
-            $('.mob_m').slideUp()
-            $('.btn_mob').removeClass('open')
-          } else {
-            $container
-              .removeClass('eye-version')
-              .removeClass('scale-1 scale-2 scale-3')
-              .removeClass('color-white color-black')
-            $('.header__eye-version_panel').slideUp(300)
-          }
-          eyeVersion.save('set', set)
-        })
-
-        $('.eye-version__scale').on('click', function(e) {
-          e.preventDefault()
-          if ($container.hasClass('eye-version')) {
-            var $this = $(this)
-            $('.eye-version__scale').removeClass('m--current')
-            $this.addClass('m--current')
-            $container
-              .removeClass('scale-1 scale-2 scale-3')
-              .addClass('scale-' + $this.data('scale'))
-            eyeVersion.save('scale', $this.data('scale'))
-          }
-        })
-
-        $('.eye-version__color').on('click', function(e) {
-          e.preventDefault()
-          if ($container.hasClass('eye-version')) {
-            var $this = $(this)
-            $('.eye-version__color').removeClass('m--current')
-            $this.addClass('m--current')
-            $container
-              .removeClass('color-white color-black')
-              .addClass('color-' + $this.data('color'))
-            eyeVersion.save('color', $this.data('color'))
-          }
-        })
-
-        $('.eye-version-item_back').on('click', function(e) {
-          $('.eye-version-active').removeClass('eye-version-active')
-          $('.eye-version').addClass('eye-version-std')
-          $('.eye-version-panel').slideToggle()
-          e.preventDefault()
-          $container
-            .removeClass('eye-version')
-            .removeClass('scale-1 scale-2 scale-3')
-            .removeClass('color-white color-black')
-          $('.header__eye-version_panel').slideUp(300)
-          $('.mob_m').slideUp()
-          $('.btn_mob').removeClass('open')
-          eyeVersion.save('set', false)
-        })
-      },
-      save: function(type, value) {
-        console.log(type, value)
-      }
-    }
-  })()
-  eyeVersion.init()
 })
