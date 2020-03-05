@@ -1,0 +1,51 @@
+.info {
+  &-hot {
+    &-subtitle {
+      color: #fff;
+      font-size: 15px;
+      font-weight: 600;
+      margin: 0;
+      margin-bottom: 24px;
+    }
+    &-text {
+      color: #fff;
+      font-size: 13px;
+      line-height: 20px;
+    }
+    &-phone {
+      color: #fff;
+      font-size: 31px;
+      font-weight: 600;
+      margin-bottom: 9px;
+      display: block;
+    }
+    &-email {
+      color: #fff;
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 26px;
+      display: block;
+    }
+    &-text {
+      color: #fff;
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 20px;
+    }
+    .btn {
+      margin-top: auto;
+    }
+    &-phone,
+    &-email {
+      transition: @transFast;
+    }
+    @media (min-width: @hoverW) {
+      &-phone,
+      &-email {
+        &:hover {
+          color: @colorPrimary3;
+        }
+      }
+    }
+  }
+}

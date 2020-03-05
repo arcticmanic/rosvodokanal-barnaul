@@ -3,36 +3,36 @@
 =====================*/
 
 @font-face {
-  font-family: "BeauSans";
-  src: url("../fonts/BeauSans/PFBeauSansPro-Black.ttf") format("truetype");
+  font-family: 'BeauSans';
+  src: url('../fonts/BeauSans/PFBeauSansPro-Black.ttf') format('truetype');
   font-style: normal;
   font-weight: 800;
 }
 @font-face {
-  font-family: "BeauSans";
-  src: url("../fonts/BeauSans/PFBeauSansPro-Bold.ttf") format("truetype");
+  font-family: 'BeauSans';
+  src: url('../fonts/BeauSans/PFBeauSansPro-Bold.ttf') format('truetype');
   font-style: normal;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 @font-face {
-  font-family: "BeauSans";
-  src: url("../fonts/BeauSans/PFBeauSansPro-SemiBold.ttf") format("truetype");
+  font-family: 'BeauSans';
+  src: url('../fonts/BeauSans/PFBeauSansPro-SemiBold.ttf') format('truetype');
   font-style: normal;
   font-weight: 500;
 }
 
 @font-face {
-  font-family: "BeauSans";
-  src: url("../fonts/BeauSans/PFBeauSansPro-Regular.ttf") format("truetype");
+  font-family: 'BeauSans';
+  src: url('../fonts/BeauSans/PFBeauSansPro-Regular.ttf') format('truetype');
   font-style: normal;
-  font-weight: 300;
+  font-weight: 400;
 }
 @font-face {
-  font-family: "BeauSans";
-  src: url("../fonts/BeauSans/PFBeauSansPro-Italic.ttf") format("truetype");
+  font-family: 'BeauSans';
+  src: url('../fonts/BeauSans/PFBeauSansPro-Italic.ttf') format('truetype');
   font-style: italic;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 @base-font: 'BeauSans', sans-serif;
@@ -75,7 +75,7 @@ a {
     top: -2px;
     position: absolute;
     content: '';
-    background: url("../img/arr-r-r.png");
+    background: url('../img/arr-r-r.png');
   }
 }
 
@@ -116,8 +116,7 @@ h2 {
     position: relative;
     margin-bottom: 42px;
   }
-  &.h2-add-info
-  {
+  &.h2-add-info {
     margin-top: 62px;
     margin-bottom: 41px;
     color: @cyan;
@@ -125,7 +124,6 @@ h2 {
 }
 
 .section-title {
-
   font-family: @base-font;
   font-size: 12px;
   line-height: 12px;
@@ -152,8 +150,7 @@ h3 {
       color: black;
     }
   }
-  &.lined
-  {
+  &.lined {
     display: block;
     border-bottom: 1px dashed #bdc3c6;
     padding-bottom: 19px;
@@ -161,14 +158,12 @@ h3 {
     font-size: 25px;
     line-height: 35px;
     margin-bottom: 26px;
-    &.mt-50
-    {
+    &.mt-50 {
       margin-top: 50px;
     }
   }
 }
-.lined
-{
+.lined {
   display: block;
   color: @blue;
   font-size: 30px;
@@ -205,7 +200,7 @@ h6 {
 ol {
   counter-reset: item;
   padding-left: 0;
-  &>li {
+  & > li {
     position: relative;
     list-style-type: none;
     font-family: @title-font;
@@ -274,7 +269,6 @@ hr {
 
     &:hover {
       text-decoration: none;
-
     }
   }
 
@@ -283,7 +277,7 @@ hr {
     margin: 20px 0;
     &.styled {
       & li:before {
-        content: "";
+        content: '';
         position: absolute;
         height: 5px;
         width: 5px;
@@ -298,7 +292,6 @@ hr {
       padding-left: 32px;
       position: relative;
       margin: 7px 0;
-
     }
   }
 
@@ -324,7 +317,7 @@ hr {
     font-size: 14px;
     font-family: @title-font;
     &:before {
-      content: url("../img/check.png");
+      content: url('../img/check.png');
       left: 2px;
       top: 5px;
       position: absolute;
@@ -394,10 +387,8 @@ hr {
   ol {
     counter-reset: item;
     padding-left: 0;
-    &.fs-17
-    {
-      &>li
-      {
+    &.fs-17 {
+      & > li {
         font-size: 17px;
         padding-left: 28px;
         margin-bottom: 17px;
@@ -458,7 +449,6 @@ hr {
       }
     }
   }
-
 }
 
 @media screen and (max-width: 991px) {
@@ -504,7 +494,8 @@ hr {
     left: -40px;
   }
 
-  h2, h2.h2-main {
+  h2,
+  h2.h2-main {
     font-size: 20px;
     line-height: 24px;
     //margin-bottom: 35px;

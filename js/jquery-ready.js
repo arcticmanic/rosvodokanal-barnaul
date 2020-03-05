@@ -99,6 +99,7 @@ $(document).ready(function() {
     }
   }
 
+  // Section Info
   const infoSlider = $('.info-slider')
 
   infoSlider.on('init reinit afterChange', function(
@@ -114,7 +115,6 @@ $(document).ready(function() {
     }
   })
 
-  // Section Info
   infoSlider.slick({
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -125,9 +125,11 @@ $(document).ready(function() {
     adaptiveHeight: false
   })
 
-  const myP = document.querySelector('.info-slider__text')
-  if (myP) {
-    $clamp(myP, { clamp: 3 })
+  const infoSliderParagraphs = document.querySelectorAll('.info-slider__text')
+  if (infoSliderParagraphs) {
+    infoSliderParagraphs.forEach(paragraph => {
+      $clamp(paragraph, { clamp: 3 })
+    })
   }
 
   // $('.progress .progress-bar').progressbar()
