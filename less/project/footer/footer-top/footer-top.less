@@ -26,13 +26,23 @@
       margin-top: auto;
       margin-bottom: 38px;
       .social-icon {
+        transition: @transFast;
         * {
           fill: #fff;
         }
         @media (min-width: @hoverW) {
-          &:hover {
-            * {
-              fill: @colorPrimary3;
+          &__link {
+            &:hover {
+              &:nth-child(odd) {
+                .social-icon {
+                  transform: translateY(-4px);
+                }
+              }
+              &:nth-child(even) {
+                .social-icon {
+                  transform: translateY(-2px);
+                }
+              }
             }
           }
         }

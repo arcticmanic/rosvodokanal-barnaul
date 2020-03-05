@@ -1,85 +1,58 @@
 $(document).ready(function() {
   var _w = $(window).width()
 
-  // Eye version functionality
-  const eyeVersion = (function() {
-    var $container = $('body')
+  $('.jumbotron__slider').on('init reInit', function(
+    event,
+    slick,
+    currentSlide,
+    nextSlide
+  ) {
+    var i = (nextSlide ? nextSlide : 0) + 1
 
-    return {
-      init: function() {
-        $('.eye-version').on('click', function() {
-          $('.eye-version-panel').slideToggle()
-          $('.eye-version').toggleClass('eye-version-active')
-          var set = !$container.hasClass('eye-version')
-          if (set) {
-            $container
-              .addClass('eye-version')
-              .addClass(
-                'scale-' + $('.eye-version__scale.m--current').data('scale')
-              )
-              .addClass(
-                'color-' + $('.eye-version__color.m--current').data('color')
-              )
-            $('.header__eye-version_panel').slideDown(300)
-            $('.mob_m').slideUp()
-            $('.btn_mob').removeClass('open')
-          } else {
-            $container
-              .removeClass('eye-version')
-              .removeClass('scale-1 scale-2 scale-3')
-              .removeClass('color-white color-black')
-            $('.header__eye-version_panel').slideUp(300)
-          }
-          eyeVersion.save('set', set)
-        })
+    $('.jumbotron .slick-dots li button').each(function(index) {
+      $(this).text('0' + $(this).html())
+    })
+  })
 
-        $('.eye-version__scale').on('click', function(e) {
-          e.preventDefault()
-          if ($container.hasClass('eye-version')) {
-            var $this = $(this)
-            $('.eye-version__scale').removeClass('m--current')
-            $this.addClass('m--current')
-            $container
-              .removeClass('scale-1 scale-2 scale-3')
-              .addClass('scale-' + $this.data('scale'))
-            eyeVersion.save('scale', $this.data('scale'))
-          }
-        })
+  $('.jumbotron_main__slider').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    fade: true,
+    arrows: false,
+    autoplay: false,
+    dots: true,
+    adaptiveHeight: false
+  })
 
-        $('.eye-version__color').on('click', function(e) {
-          e.preventDefault()
-          if ($container.hasClass('eye-version')) {
-            var $this = $(this)
-            $('.eye-version__color').removeClass('m--current')
-            $this.addClass('m--current')
-            $container
-              .removeClass('color-white color-black')
-              .addClass('color-' + $this.data('color'))
-            eyeVersion.save('color', $this.data('color'))
-          }
-        })
+  $('.jumbotron__slider-left', '.jumbotron__nav').click(function(e) {
+    e.preventDefault()
+    $('.jumbotron_main__slider').slick('slickPrev')
+  })
 
-        $('.eye-version-item_back').on('click', function(e) {
-          $('.eye-version-active').removeClass('eye-version-active')
-          $('.eye-version').addClass('eye-version-std')
-          $('.eye-version-panel').slideToggle()
-          e.preventDefault()
-          $container
-            .removeClass('eye-version')
-            .removeClass('scale-1 scale-2 scale-3')
-            .removeClass('color-white color-black')
-          $('.header__eye-version_panel').slideUp(300)
-          $('.mob_m').slideUp()
-          $('.btn_mob').removeClass('open')
-          eyeVersion.save('set', false)
+  $('.jumbotron__slider-right', '.jumbotron__nav').click(function(e) {
+    e.preventDefault()
+    $('.jumbotron_main__slider').slick('slickNext')
+  })
+
+  // Set Clamps
+  function setClamps(object) {
+    for (const elQuerySel in object) {
+      const els = document.querySelectorAll(elQuerySel)
+      if (els) {
+        els.forEach(el => {
+          $clamp(el, { clamp: object[elQuerySel] })
         })
-      },
-      save: function(type, value) {
-        console.log(type, value)
       }
     }
-  })()
-  eyeVersion.init()
+  }
+
+  const elWithClammpSizes = {
+    '.section-info .info-slider__text': 3,
+    '.section-news .news__title': 2,
+    '.section-quick-menu .quick-menu__p': 4
+  }
+
+  setClamps(elWithClammpSizes)
 
   // Show random partner bages on every load
   if ($('.partners__cont')) {
@@ -124,13 +97,6 @@ $(document).ready(function() {
     dots: true,
     adaptiveHeight: false
   })
-
-  const infoSliderParagraphs = document.querySelectorAll('.info-slider__text')
-  if (infoSliderParagraphs) {
-    infoSliderParagraphs.forEach(paragraph => {
-      $clamp(paragraph, { clamp: 3 })
-    })
-  }
 
   // $('.progress .progress-bar').progressbar()
 
@@ -357,124 +323,124 @@ $(document).ready(function() {
     $('.file_upload input').triggerHandler('change')
   })
 
-  Map = (function() {
-    var _activeClass = 'active-region'
-    var _hoverClass = 'hover-region'
-    return {
-      init: function(tabs, control, callback) {
-        var $tabs = tabs instanceof jQuery ? tabs : $(tabs),
-          $control = control instanceof jQuery ? control : $(control)
+  // Map = (function() {
+  //   var _activeClass = 'active-region'
+  //   var _hoverClass = 'hover-region'
+  //   return {
+  //     init: function(tabs, control, callback) {
+  //       var $tabs = tabs instanceof jQuery ? tabs : $(tabs),
+  //         $control = control instanceof jQuery ? control : $(control)
 
-        if (!$tabs.is('[data-tab]') || !$control.is('[data-tab]')) return false
+  //       if (!$tabs.is('[data-tab]') || !$control.is('[data-tab]')) return false
 
-        // $tabs.hide().filter(':first').show();
-        // $control.filter(':first').addClass(_activeClass);
+  //       // $tabs.hide().filter(':first').show();
+  //       // $control.filter(':first').addClass(_activeClass);
 
-        $control.on({
-          click: function() {
-            var $this = $(this)
-            if (!$this.hasClass(_activeClass)) {
-              $control.removeClass(_activeClass)
-              $this.addClass(_activeClass)
-              $tabs.removeClass(_activeClass)
-              var $current = $tabs
-                .filter('[data-tab=' + $this.data('tab') + ']')
-                .addClass(_activeClass)
-              $('.hide-block').slideUp()
-              $('.hide-block', $current).slideDown()
-              // $tabs.hide().filter('[data-tab=' + $this.data('tab') + ']').show();
-              if (callback instanceof Function) callback($this)
-            } else {
-              $control.removeClass(_activeClass)
-              $tabs.removeClass(_activeClass)
-              $('.hide-block').slideUp()
-            }
-          },
-          mouseenter: function() {
-            var $this = $(this)
-            $tabs
-              .filter('[data-tab=' + $this.data('tab') + ']')
-              .addClass(_hoverClass)
-          },
-          mouseleave: function() {
-            var $this = $(this)
-            $tabs
-              .filter('[data-tab=' + $this.data('tab') + ']')
-              .removeClass(_hoverClass)
-          }
-        })
-        $tabs.on({
-          click: function() {
-            var $this = $(this)
-            if (!$this.hasClass(_activeClass)) {
-              $tabs.removeClass(_activeClass)
-              $this.addClass(_activeClass)
-              $('.hide-block').slideUp()
-              $('.hide-block', $this).slideDown()
-              $control
-                .removeClass(_activeClass)
-                .filter('[data-tab=' + $this.data('tab') + ']')
-                .addClass(_activeClass)
-              // $tabs.hide().filter('[data-tab=' + $this.data('tab') + ']').show();
-              if (callback instanceof Function) callback($this)
-            } else {
-              $control.removeClass(_activeClass)
-              $tabs.removeClass(_activeClass)
-              $('.hide-block').slideUp()
-            }
-          },
-          mouseenter: function() {
-            var $this = $(this)
-            $control
-              .filter('[data-tab=' + $this.data('tab') + ']')
-              .addClass(_hoverClass)
-          },
-          mouseleave: function() {
-            var $this = $(this)
-            $control
-              .filter('[data-tab=' + $this.data('tab') + ']')
-              .removeClass(_hoverClass)
-          }
-        })
-      }
-    }
-  })()
-  Map.init('.region-list__tab', '.regions-map .region')
+  //       $control.on({
+  //         click: function() {
+  //           var $this = $(this)
+  //           if (!$this.hasClass(_activeClass)) {
+  //             $control.removeClass(_activeClass)
+  //             $this.addClass(_activeClass)
+  //             $tabs.removeClass(_activeClass)
+  //             var $current = $tabs
+  //               .filter('[data-tab=' + $this.data('tab') + ']')
+  //               .addClass(_activeClass)
+  //             $('.hide-block').slideUp()
+  //             $('.hide-block', $current).slideDown()
+  //             // $tabs.hide().filter('[data-tab=' + $this.data('tab') + ']').show();
+  //             if (callback instanceof Function) callback($this)
+  //           } else {
+  //             $control.removeClass(_activeClass)
+  //             $tabs.removeClass(_activeClass)
+  //             $('.hide-block').slideUp()
+  //           }
+  //         },
+  //         mouseenter: function() {
+  //           var $this = $(this)
+  //           $tabs
+  //             .filter('[data-tab=' + $this.data('tab') + ']')
+  //             .addClass(_hoverClass)
+  //         },
+  //         mouseleave: function() {
+  //           var $this = $(this)
+  //           $tabs
+  //             .filter('[data-tab=' + $this.data('tab') + ']')
+  //             .removeClass(_hoverClass)
+  //         }
+  //       })
+  //       $tabs.on({
+  //         click: function() {
+  //           var $this = $(this)
+  //           if (!$this.hasClass(_activeClass)) {
+  //             $tabs.removeClass(_activeClass)
+  //             $this.addClass(_activeClass)
+  //             $('.hide-block').slideUp()
+  //             $('.hide-block', $this).slideDown()
+  //             $control
+  //               .removeClass(_activeClass)
+  //               .filter('[data-tab=' + $this.data('tab') + ']')
+  //               .addClass(_activeClass)
+  //             // $tabs.hide().filter('[data-tab=' + $this.data('tab') + ']').show();
+  //             if (callback instanceof Function) callback($this)
+  //           } else {
+  //             $control.removeClass(_activeClass)
+  //             $tabs.removeClass(_activeClass)
+  //             $('.hide-block').slideUp()
+  //           }
+  //         },
+  //         mouseenter: function() {
+  //           var $this = $(this)
+  //           $control
+  //             .filter('[data-tab=' + $this.data('tab') + ']')
+  //             .addClass(_hoverClass)
+  //         },
+  //         mouseleave: function() {
+  //           var $this = $(this)
+  //           $control
+  //             .filter('[data-tab=' + $this.data('tab') + ']')
+  //             .removeClass(_hoverClass)
+  //         }
+  //       })
+  //     }
+  //   }
+  // })()
+  // Map.init('.region-list__tab', '.regions-map .region')
 
-  Tab = (function() {
-    var _activeClass = 'active'
-    return {
-      init: function(tabs, control, callback) {
-        var $tabs = tabs instanceof jQuery ? tabs : $(tabs),
-          $control = control instanceof jQuery ? control : $(control)
+  // Tab = (function() {
+  //   var _activeClass = 'active'
+  //   return {
+  //     init: function(tabs, control, callback) {
+  //       var $tabs = tabs instanceof jQuery ? tabs : $(tabs),
+  //         $control = control instanceof jQuery ? control : $(control)
 
-        if (!$tabs.is('[data-tab]') || !$control.is('[data-tab]')) return false
+  //       if (!$tabs.is('[data-tab]') || !$control.is('[data-tab]')) return false
 
-        $tabs
-          .hide()
-          .filter(':first')
-          .show()
-        $control.filter(':first').addClass(_activeClass)
+  //       $tabs
+  //         .hide()
+  //         .filter(':first')
+  //         .show()
+  //       $control.filter(':first').addClass(_activeClass)
 
-        $control.on('click', function() {
-          var $this = $(this)
-          if (!$this.hasClass(_activeClass)) {
-            $control.removeClass(_activeClass)
-            $this.addClass(_activeClass)
-            $tabs
-              .hide()
-              .filter('[data-tab=' + $this.data('tab') + ']')
-              .show()
-            if (callback instanceof Function) callback($this)
-          }
-        })
-      }
-    }
-  })()
-  Tab.init('.team__tab-content', '.team__tab')
-  Tab.init('.info-list__tab-content', '.info-list__tab')
+  //       $control.on('click', function() {
+  //         var $this = $(this)
+  //         if (!$this.hasClass(_activeClass)) {
+  //           $control.removeClass(_activeClass)
+  //           $this.addClass(_activeClass)
+  //           $tabs
+  //             .hide()
+  //             .filter('[data-tab=' + $this.data('tab') + ']')
+  //             .show()
+  //           if (callback instanceof Function) callback($this)
+  //         }
+  //       })
+  //     }
+  //   }
+  // })()
+  // Tab.init('.team__tab-content', '.team__tab')
+  // Tab.init('.info-list__tab-content', '.info-list__tab')
 
-  Tab.init('.modal-tab-content', '.modal-tab')
+  // Tab.init('.modal-tab-content', '.modal-tab')
 
   function equal_height($elem, $parent) {
     var highestBox = 0
@@ -488,31 +454,31 @@ $(document).ready(function() {
 
   $('.phone').mask('99999999999')
 
-  $('.incr-input__div').append(
-    '<div class="inc input-button"><img src="./img/arr-r-br.png"></div><div class="dec input-button"><img src="./img/arr-l-br.png"></div>'
-  )
-  $('.input-button').on('click', function() {
-    var $button = $(this)
-    var oldValue = $button
-      .parent()
-      .find('input')
-      .val()
+  // $('.incr-input__div').append(
+  //   '<div class="inc input-button"><img src="./img/arr-r-br.png"></div><div class="dec input-button"><img src="./img/arr-l-br.png"></div>'
+  // )
+  // $('.input-button').on('click', function() {
+  //   var $button = $(this)
+  //   var oldValue = $button
+  //     .parent()
+  //     .find('input')
+  //     .val()
 
-    if ($button.hasClass('inc')) {
-      var newVal = parseFloat(oldValue) + 1
-    } else {
-      // Don't allow decrementing below zero
-      if (oldValue > 0) {
-        var newVal = parseFloat(oldValue) - 1
-      } else {
-        newVal = 0
-      }
-    }
-    $button
-      .parent()
-      .find('input')
-      .val(newVal)
-  })
+  //   if ($button.hasClass('inc')) {
+  //     var newVal = parseFloat(oldValue) + 1
+  //   } else {
+  //     // Don't allow decrementing below zero
+  //     if (oldValue > 0) {
+  //       var newVal = parseFloat(oldValue) - 1
+  //     } else {
+  //       newVal = 0
+  //     }
+  //   }
+  //   $button
+  //     .parent()
+  //     .find('input')
+  //     .val(newVal)
+  // })
 
   // $('input.timepicker').timepicker({
   //   timeFormat: 'HH:mm',
@@ -534,31 +500,31 @@ $(document).ready(function() {
   //   //     $(this).val(chosen_date.format('YYYY-MM-DD'));
   // })
 
-  $('.questions__form-list .question').click(function(e) {
-    e.preventDefault()
-    $parent = $(this).parent()
-    if ($(this).hasClass('open')) {
-      $(this).removeClass('open')
-      $('.hidden-block', $parent).slideUp()
-    } else {
-      $('.hidden-block', $parent).slideDown()
-      $(this).addClass('open')
-    }
-  })
+  // $('.questions__form-list .question').click(function(e) {
+  //   e.preventDefault()
+  //   $parent = $(this).parent()
+  //   if ($(this).hasClass('open')) {
+  //     $(this).removeClass('open')
+  //     $('.hidden-block', $parent).slideUp()
+  //   } else {
+  //     $('.hidden-block', $parent).slideDown()
+  //     $(this).addClass('open')
+  //   }
+  // })
 
-  $('.open-answer').click(function(e) {
-    e.preventDefault()
-    $parent = $(this).parent()
-    if ($(this).hasClass('open')) {
-      $(this).text('Посмотреть ответ')
-      $(this).removeClass('open')
-      $('.answer', $parent).slideUp()
-    } else {
-      $('.answer', $parent).slideDown()
-      $(this).text('Скрыть ответ')
-      $(this).addClass('open')
-    }
-  })
+  // $('.open-answer').click(function(e) {
+  //   e.preventDefault()
+  //   $parent = $(this).parent()
+  //   if ($(this).hasClass('open')) {
+  //     $(this).text('Посмотреть ответ')
+  //     $(this).removeClass('open')
+  //     $('.answer', $parent).slideUp()
+  //   } else {
+  //     $('.answer', $parent).slideDown()
+  //     $(this).text('Скрыть ответ')
+  //     $(this).addClass('open')
+  //   }
+  // })
 
   function slider_custom(
     $slickElement,
@@ -657,60 +623,24 @@ $(document).ready(function() {
     ''
   )
 
-  $('.jumbotron__slider').on('init reInit', function(
-    event,
-    slick,
-    currentSlide,
-    nextSlide
-  ) {
-    //currentSlide is undefined on init -- set it to 0 in this case (currentSlide is 0 based)
-    var i = (nextSlide ? nextSlide : 0) + 1
-
-    $('.jumbotron .slick-dots li button').each(function(index) {
-      $(this).text('0' + $(this).html())
-    })
-
-    // var htmlString = $( this ).html();
-    // $(".jumbotron .slick-dots li button").html()+="0";
-    // $slide__count.text(slick.slideCount);
-  })
-  $('.jumbotron__slider').slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    fade: true,
-    arrows: false,
-    autoplay: false,
-    dots: true,
-    adaptiveHeight: false
-  })
-  $('.jumbotron__slider-left', '.jumbotron__nav').click(function(e) {
-    e.preventDefault()
-    $('.jumbotron__slider').slick('slickPrev')
-  })
-
-  $('.jumbotron__slider-right', '.jumbotron__nav').click(function(e) {
-    e.preventDefault()
-    $('.jumbotron__slider').slick('slickNext')
-  })
-
-  $('.easywater-slider').slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    fade: true,
-    arrows: false,
-    autoplay: false,
-    dots: true,
-    adaptiveHeight: false,
-    responsive: [
-      {
-        breakpoint: 991,
-        rtl: false,
-        settings: {
-          adaptiveHeight: true
-        }
-      }
-    ]
-  })
+  // $('.easywater-slider').slick({
+  //   slidesToShow: 1,
+  //   slidesToScroll: 1,
+  //   fade: true,
+  //   arrows: false,
+  //   autoplay: false,
+  //   dots: true,
+  //   adaptiveHeight: false,
+  //   responsive: [
+  //     {
+  //       breakpoint: 991,
+  //       rtl: false,
+  //       settings: {
+  //         adaptiveHeight: true
+  //       }
+  //     }
+  //   ]
+  // })
 
   // $(window).on("scroll load resize", function () {
   $(window).on(' load ', function() {
@@ -758,4 +688,83 @@ $(document).ready(function() {
       equal_height($('.special__slider-2 .slide'), $('.special__slider-2'))
     }
   })
+  // Eye version functionality
+  const eyeVersion = (function() {
+    var $container = $('body')
+
+    return {
+      init: function() {
+        $('.eye-version').on('click', function() {
+          $('.eye-version-panel').slideToggle()
+          $('.eye-version').toggleClass('eye-version-active')
+          var set = !$container.hasClass('eye-version')
+          if (set) {
+            $container
+              .addClass('eye-version')
+              .addClass(
+                'scale-' + $('.eye-version__scale.m--current').data('scale')
+              )
+              .addClass(
+                'color-' + $('.eye-version__color.m--current').data('color')
+              )
+            $('.header__eye-version_panel').slideDown(300)
+            $('.mob_m').slideUp()
+            $('.btn_mob').removeClass('open')
+          } else {
+            $container
+              .removeClass('eye-version')
+              .removeClass('scale-1 scale-2 scale-3')
+              .removeClass('color-white color-black')
+            $('.header__eye-version_panel').slideUp(300)
+          }
+          eyeVersion.save('set', set)
+        })
+
+        $('.eye-version__scale').on('click', function(e) {
+          e.preventDefault()
+          if ($container.hasClass('eye-version')) {
+            var $this = $(this)
+            $('.eye-version__scale').removeClass('m--current')
+            $this.addClass('m--current')
+            $container
+              .removeClass('scale-1 scale-2 scale-3')
+              .addClass('scale-' + $this.data('scale'))
+            eyeVersion.save('scale', $this.data('scale'))
+          }
+        })
+
+        $('.eye-version__color').on('click', function(e) {
+          e.preventDefault()
+          if ($container.hasClass('eye-version')) {
+            var $this = $(this)
+            $('.eye-version__color').removeClass('m--current')
+            $this.addClass('m--current')
+            $container
+              .removeClass('color-white color-black')
+              .addClass('color-' + $this.data('color'))
+            eyeVersion.save('color', $this.data('color'))
+          }
+        })
+
+        $('.eye-version-item_back').on('click', function(e) {
+          $('.eye-version-active').removeClass('eye-version-active')
+          $('.eye-version').addClass('eye-version-std')
+          $('.eye-version-panel').slideToggle()
+          e.preventDefault()
+          $container
+            .removeClass('eye-version')
+            .removeClass('scale-1 scale-2 scale-3')
+            .removeClass('color-white color-black')
+          $('.header__eye-version_panel').slideUp(300)
+          $('.mob_m').slideUp()
+          $('.btn_mob').removeClass('open')
+          eyeVersion.save('set', false)
+        })
+      },
+      save: function(type, value) {
+        console.log(type, value)
+      }
+    }
+  })()
+  eyeVersion.init()
 })

@@ -15,5 +15,16 @@
       display: block;
       text-align: right;
     }
+    &__top-text,
+    &__bottom-text {
+      transition: @transFast;
+    }
+    @media (min-width: @hoverW) {
+      &:hover {
+        .phone__top-text {
+          color: @colorPrimary3;
+        }
+      }
+    }
   }
 }
