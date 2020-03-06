@@ -17,49 +17,15 @@
       margin-right: 7px;
     }
   }
-  .circle {
-    border: 2px solid @colorPrimary;
-    box-shadow: inset 1px 1px 3px #fff;
-    width: 20px;
-    height: 20px;
-    border-radius: 100%;
+  .icon-plus-in-circle-svg {
     position: relative;
-    margin: 4px;
-    display: inline-block;
-    vertical-align: middle;
-    background: transparent;
     z-index: 3;
-    &:before,
-    &:after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-    }
-    &.plus:before,
-    &.plus:after {
-      background: @colorPrimary;
-      box-shadow: 1px 1px 1px #ffffff9e;
-    }
-    &.plus:before {
-      width: 2px;
-      margin: 3px auto;
-      transition: @transMid;
-      opacity: 1;
-    }
-    &.plus:after {
-      margin: auto 3px;
-      height: 2px;
-      box-shadow: none;
-    }
   }
 
   &.active {
-    .circle {
-      &.plus:before {
-        opacity: 0;
+    .icon-plus-in-circle-svg {
+      &__vertical-line {
+        display: none;
       }
     }
   }

@@ -56,29 +56,6 @@ a {
   max-width: 100%;
 }
 
-.subtitle {
-  font-weight: 600;
-  font-size: 15px;
-  color: @blue;
-  margin: 0;
-}
-
-.arr-link {
-  text-transform: uppercase;
-  font-size: 12px;
-  line-height: normal;
-  position: relative;
-  &:after {
-    width: 41px;
-    height: 16px;
-    right: -61px;
-    top: -2px;
-    position: absolute;
-    content: '';
-    background: url('../img/arr-r-r.png');
-  }
-}
-
 h1 {
   font-family: @title-font;
   font-size: 50px;
@@ -163,6 +140,7 @@ h3 {
     }
   }
 }
+
 .lined {
   display: block;
   color: @blue;
@@ -172,6 +150,7 @@ h3 {
   padding-bottom: 19px;
   margin-top: 7px;
 }
+
 h4 {
   font-family: @title-font;
   font-weight: 600;
@@ -240,11 +219,11 @@ li:first-child,
 hr:first-child{
   margin-top: 0;
 } */
-p:last-child,
-li:last-child,
-hr:last-child {
-  margin-bottom: 0;
-}
+// p:last-child,
+// li:last-child,
+// hr:last-child {
+//   margin-bottom: 0;
+// }
 
 hr {
   margin: 25px 0;
@@ -273,22 +252,8 @@ hr {
   }
 
   ul {
-    padding-left: 0;
-    margin: 20px 0;
-    &.styled {
-      & li:before {
-        content: '';
-        position: absolute;
-        height: 5px;
-        width: 5px;
-        top: 7px;
-        left: 5px;
-        border-radius: 10px;
-        background: #000;
-      }
-    }
+    list-style: none;
     li {
-      list-style: none;
       padding-left: 32px;
       position: relative;
       margin: 7px 0;
@@ -316,18 +281,16 @@ hr {
     line-height: 25px;
     font-size: 14px;
     font-family: @title-font;
-    &:before {
-      content: url('../img/check.png');
-      left: 2px;
-      top: 5px;
-      position: absolute;
-    }
+    // &:before {
+    //   content: url('../img/check.png');
+    //   left: 2px;
+    //   top: 5px;
+    //   position: absolute;
+    // }
   }
 }
 
 .text {
-  //padding: 30px 100px;
-
   & .bold {
     font-weight: 600;
   }
@@ -451,109 +414,93 @@ hr {
   }
 }
 
-@media screen and (max-width: 991px) {
-  // .text{
-  h1 {
-    font-size: 30px;
-    line-height: 40px;
-  }
+// @media screen and (max-width: 991px) {
+//   // .text{
+//   h1 {
+//     font-size: 30px;
+//     line-height: 40px;
+//   }
 
-  h2 {
-    font-size: 28px;
-    line-height: 30px;
-    //margin-left: 30px;
-    margin-bottom: 35px;
-  }
+//   h2 {
+//     font-size: 28px;
+//     line-height: 30px;
+//     //margin-left: 30px;
+//     margin-bottom: 35px;
+//   }
 
-  h3 {
-    font-size: 26px;
-    line-height: 25px;
-    margin: 15px 0;
-  }
+//   h3 {
+//     font-size: 26px;
+//     line-height: 25px;
+//     margin: 15px 0;
+//   }
+// }
 
-  p,
-  li {
-    font-size: 14px;
-    line-height: 23px;
-    margin: 20px 0;
-  }
+// @media screen and (max-width: 768px) {
+//   // .text{
+//   h1 {
+//     font-size: 30px;
+//     line-height: 40px;
+//     margin: 0;
+//     margin-bottom: 10px;
+//   }
 
-  // }
-}
+//   h1:before {
+//     left: -40px;
+//   }
 
-@media screen and (max-width: 768px) {
-  // .text{
-  h1 {
-    font-size: 30px;
-    line-height: 40px;
-    margin: 0;
-    margin-bottom: 10px;
-  }
+//   h2,
+//   h2.h2-main {
+//     font-size: 20px;
+//     line-height: 24px;
+//     //margin-bottom: 35px;
+//     margin: 0 0 30px;
+//   }
 
-  h1:before {
-    left: -40px;
-  }
+//   h3 {
+//     font-size: 26px;
+//     line-height: 25px;
+//   }
 
-  h2,
-  h2.h2-main {
-    font-size: 20px;
-    line-height: 24px;
-    //margin-bottom: 35px;
-    margin: 0 0 30px;
-  }
+//   h5 {
+//     font-size: 15px;
+//     line-height: 17px;
+//     margin: 15px 0;
+//   }
+//   .text {
+//     h2 {
+//       font-size: 22px;
+//       line-height: 30px;
+//       margin: 0 0 30px;
+//     }
+//     & ol.styled {
+//       & > li {
+//         margin-bottom: 30px;
+//         padding-left: 0;
+//         padding-bottom: 15px;
+//         & > h2 {
+//           padding-left: 40px;
+//         }
+//         &:before {
+//           height: 30px;
+//           width: 30px;
+//           line-height: 30px;
+//           font-size: 16px;
+//           left: 0;
+//           top: 0;
+//         }
+//       }
+//     }
+//   }
+// }
 
-  h3 {
-    font-size: 26px;
-    line-height: 25px;
-  }
+// @media screen and (max-width: 425px) {
+//   h1 {
+//     font-size: 24px;
+//     line-height: 30px;
+//   }
 
-  p,
-  li {
-    font-size: 15px;
-    line-height: 28px;
-    margin: 16px 0;
-    // }
-  }
-  h5 {
-    font-size: 15px;
-    line-height: 17px;
-    margin: 15px 0;
-  }
-  .text {
-    h2 {
-      font-size: 22px;
-      line-height: 30px;
-      margin: 0 0 30px;
-    }
-    & ol.styled {
-      & > li {
-        margin-bottom: 30px;
-        padding-left: 0;
-        padding-bottom: 15px;
-        & > h2 {
-          padding-left: 40px;
-        }
-        &:before {
-          height: 30px;
-          width: 30px;
-          line-height: 30px;
-          font-size: 16px;
-          left: 0;
-          top: 0;
-        }
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 425px) {
-  h1 {
-    font-size: 24px;
-    line-height: 30px;
-  }
-
-  h3 {
-    font-size: 22px;
-    line-height: 25px;
-  }
-}
+//   h3 {
+//     font-size: 22px;
+//     line-height: 25px;
+//   }
+// }

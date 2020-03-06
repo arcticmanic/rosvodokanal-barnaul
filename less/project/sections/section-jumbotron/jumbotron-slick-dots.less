@@ -1,0 +1,111 @@
+.jumbotron__slider {
+  .slick-dots {
+    position: static;
+    display: block;
+    width: 30px;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    pointer-events: all;
+    &.slick-dots_dark {
+      li {
+        button {
+          color: @colorPrimary3;
+          &:before {
+            background: @colorPrimary3;
+          }
+        }
+        @media (min-width: @hoverW) {
+          &:hover {
+            button {
+              color: #fff;
+              &:before {
+                width: 16px;
+                background: #fff;
+              }
+            }
+          }
+        }
+      }
+    }
+    &__cont {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      pointer-events: none;
+      .wrapper {
+        height: 100%;
+        display: flex;
+      }
+    }
+    li {
+      position: relative;
+      display: block;
+      /* margin-bottom: 39px; */
+      width: 20px;
+      height: 20px;
+      margin: 30px 5px;
+      padding: 0;
+      user-select: none;
+      &:not(.slick-active) {
+        cursor: pointer;
+      }
+      button {
+        font-size: 12px;
+        line-height: 0;
+        display: block;
+        width: 20px;
+        font-weight: 600;
+        height: 20px;
+        padding: 5px;
+        cursor: pointer;
+        color: #ffffff;
+        border: 0;
+        outline: none;
+        background: transparent;
+        transition: @transFast;
+        &:before {
+          top: 9px;
+          right: 27px;
+          left: auto;
+          width: 10px;
+          height: 2px;
+          content: '';
+          text-align: center;
+          opacity: 1;
+          background: white;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+          transition: @transFast;
+        }
+      }
+      &.slick-active {
+        pointer-events: none;
+        cursor: default;
+        button:before {
+          width: 24px;
+        }
+      }
+    }
+    &:not(.slick-dots_dark) {
+      li {
+        @media (min-width: @hoverW) {
+          &:hover {
+            button {
+              color: @colorPrimary3;
+              &:before {
+                width: 16px;
+                background: @colorPrimary3;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

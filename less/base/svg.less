@@ -65,8 +65,10 @@ svg.icon-user {
 .icon-user__bc {
   background: @colorPrimary3;
   border-radius: 50%;
-  height: 40px;
-  width: 40px;
+  min-height: 40px;
+  max-height: 40px;
+  min-width: 40px;
+  max-width: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -206,10 +208,12 @@ svg.icon-arrow-svg {
   width: 27px;
   .st0 {
     fill: none;
-    stroke: #231f20;
     stroke-width: 2;
     stroke-linecap: round;
     stroke-miterlimit: 10;
+  }
+  * {
+    stroke: #fff;
   }
 }
 
@@ -221,4 +225,43 @@ svg.icon-telegram-chat-svg {
 svg.icon-viber-chat-svg {
   width: 120px;
   height: 40px;
+}
+
+svg.icon-stopwatch-svg {
+  width: 50px;
+  height: 55px;
+  .st0 {
+    fill: none;
+    stroke: #fff;
+    stroke-width: 2;
+    stroke-miterlimit: 10;
+  }
+
+  .st1 {
+    fill: none;
+    stroke: #fff;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-miterlimit: 10;
+  }
+}
+
+svg.icon-tools-svg {
+  width: 51px;
+  height: 52px;
+  .st0 {
+    fill: none;
+    stroke: #fff;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+  }
+}
+
+svg.icon-plus-in-circle-svg {
+  height: 20px;
+  * {
+    fill: @colorPrimary;
+  }
 }

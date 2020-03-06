@@ -1,0 +1,26 @@
+.section-jumbotron {
+  min-height: 520px;
+  max-height: 520px;
+  position: relative;
+  .chat-bots {
+    position: absolute;
+    top: 32px;
+    z-index: 1;
+    width: 100%;
+    .wrapper {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+}
+.jumbotron {
+  margin-bottom: 0 !important;
+  & .wrapper {
+    height: 100%;
+  }
+
+  &__slider {
+    min-height: 520px;
+    max-height: 520px;
+  }
+}

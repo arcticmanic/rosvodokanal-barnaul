@@ -1,7 +1,13 @@
 .chat-bots {
+  z-index: 1;
   .chat-bot__link {
     &:not(:first-child) {
       margin-left: 12px;
+    }
+  }
+  &.chat-bots_dark {
+    * {
+      stroke: #000 !important;
     }
   }
 }
