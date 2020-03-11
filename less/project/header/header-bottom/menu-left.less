@@ -1,3 +1,19 @@
+html.color-white {
+  .header-bottom {
+    &__left-link {
+      color: @blackEye !important;
+    }
+  }
+}
+
+html.color-black {
+  .header-bottom {
+    &__left-link {
+      color: @whiteEye !important;
+    }
+  }
+}
+
 .header-bottom {
   &__left-menu {
     display: flex;
@@ -19,28 +35,8 @@
   }
   &__left-link {
     color: @colorPrimary3;
-    font-size: 13px;
+    font-size: inherit;
     text-transform: uppercase;
     font-weight: 700;
   }
 }
-// &-left-menu {
-//   display: flex;
-//   align-items: center;
-//   justify-content: space-between;
-//   line-height: 17px;
-
-//   li {
-//     font-size: 13px;
-//     line-height: 14px;
-//     text-transform: uppercase;
-//     font-weight: 600;
-//     margin-right: 22px;
-//     position: relative;
-//     color: @navy;
-
-//     &.active {
-//       color: #5c7974;
-//     }
-//   }
-// }

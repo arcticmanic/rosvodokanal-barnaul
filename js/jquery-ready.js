@@ -8,7 +8,7 @@ const laptopW = 1400,
 
 $(document).ready(function() {
   var _w = $(window).width()
-  
+
   // Jumbotron Slider On Main Page
   const jumbotronSlider = $('.jumbotron__slider')
 
@@ -39,15 +39,19 @@ $(document).ready(function() {
     nextSlide
   ) {
     const jumobtronSlide = jumbotronSlider.find('.slick-current')
-    if (
-      jumobtronSlide.hasClass('jumbotron-slide_dark')
-    ) {
+    if (jumobtronSlide.hasClass('jumbotron-slide_dark')) {
       jumbotronSlider.find('.slick-dots').addClass('slick-dots_dark')
       $('.section-jumbotron .chat-bots').addClass('chat-bots_dark')
     } else {
       jumbotronSlider.find('.slick-dots').removeClass('slick-dots_dark')
       $('.section-jumbotron .chat-bots').removeClass('chat-bots_dark')
-
+    }
+    if (jumobtronSlide.hasClass('jumbotron-slide_milk-bc')) {
+      jumbotronSlider.find('.slick-dots').addClass('slick-dots_dark')
+      $('.section-jumbotron .chat-bots').addClass('chat-bots_dark')
+    } else {
+      jumbotronSlider.find('.slick-dots').removeClass('slick-dots_dark')
+      $('.section-jumbotron .chat-bots').removeClass('chat-bots_dark')
     }
   })
 
@@ -96,9 +100,9 @@ $(document).ready(function() {
     const amountOfPartnerItems = $('.partners__cont .partner__item').length
     const set = new Set()
     let ampountOfVisiblePartners = 6
-    if (_w < 1300 && _w > 1072) {
-      ampountOfVisiblePartners = 10
-    }
+    // if (_w < 1300 && _w > 1072) {
+    //   ampountOfVisiblePartners = 10
+    // }
 
     while (set.size < ampountOfVisiblePartners) {
       const prevSetSize = set.size,
@@ -196,6 +200,12 @@ $(document).ready(function() {
     $cities.fadeOut()
     $('.city-list', this).fadeToggle()
   })
+
+  function adjustElSize() {
+    $('.city-list').width($('.all-sites').width())
+  }
+
+  adjustElSize()
 
   // Header Functionality
   $(document)
@@ -732,7 +742,7 @@ $(document).ready(function() {
   // })
   // Eye version functionality
   const eyeVersion = (function() {
-    var $container = $('body')
+    var $container = $('html')
 
     return {
       init: function() {
@@ -802,6 +812,13 @@ $(document).ready(function() {
           $('.btn_mob').removeClass('open')
           eyeVersion.save('set', false)
         })
+
+        $('.eye-version, .eye-version__scale, .eye-version-item_back').on(
+          'click',
+          function() {
+            adjustElSize()
+          }
+        )
       },
       save: function(type, value) {
         console.log(type, value)

@@ -1,13 +1,124 @@
 .chat-bots {
   z-index: 1;
+  pointer-events: none;
   .chat-bot__link {
+    pointer-events: all;
     &:not(:first-child) {
       margin-left: 12px;
     }
+    &_viber {
+      @keyframes viber-animation {
+        10% {
+          transform: translateX(1px) translateY(1px);
+        }
+        20% {
+          transform: translateX(-1px) translateY(-1px);
+        }
+        30% {
+          transform: translateX(1px) translateY(1px);
+        }
+        40% {
+          transform: translateX(-1px) translateY(-1px);
+        }
+        50% {
+          transform: translateX(2px) translateY(2px);
+        }
+        60% {
+          transform: translateX(-2px) translateY(-2px);
+        }
+        70% {
+          transform: translateX(2px) translateY(2px);
+        }
+        80% {
+          transform: translateX(-2px) translateY(-2px);
+        }
+        90% {
+          transform: translateX(1px) translateY(1px);
+        }
+        100% {
+          transform: translateX(-1px) translateY(-1px);
+        }
+      }
+      @media (min-width: @hoverW) {
+        &:hover {
+          .viber-icon {
+            animation-name: viber-animation;
+            animation-duration: 0.75s;
+            animation-timing-function: linear;
+            animation-iteration-count: 1;
+          }
+        }
+      }
+    }
+    &_telegram {
+      @keyframes telegram-animation {
+        10% {
+          transform: translateX(2px) translateY(-2px) rotate(-4deg);
+        }
+        30% {
+          transform: translateX(6px) translateY(-6px) rotate(-18deg);
+        }
+        50% {
+          opacity: 0;
+          transform: rotate(-310deg);
+        }
+        60% {
+          transform: translateX(-8px) translateY(8px) rotate(-320deg);
+        }
+        70% {
+          transform: translateX(-6px) translateY(6px) rotate(-330deg);
+        }
+        80% {
+          transform: translateX(-4px) translateY(4px) rotate(-350deg);
+        }
+        90% {
+          transform: translateX(-2px) translateY(2px) rotate(-355deg);
+        }
+        100% {
+          transform: translateX(0px) translateY(0px) rotate(-360deg);
+        }
+      }
+      @media (min-width: @hoverW) {
+        &:hover {
+          .telegram-icon {
+            animation-name: telegram-animation;
+            animation-duration: 0.75s;
+            animation-timing-function: ease;
+            animation-iteration-count: 1;
+          }
+        }
+      }
+    }
   }
   &.chat-bots_dark {
-    * {
-      stroke: #000 !important;
+    svg.icon-telegram-chat-svg {
+      width: 120px;
+      height: 40px;
+      .st0 {
+        fill: @colorPrimary;
+      }
+      .st5 {
+        stroke: @colorPrimary;
+      }
+      .st6 {
+        fill: #fff;
+      }
+    }
+
+    svg.icon-viber-chat-svg {
+      width: 120px;
+      height: 40px;
+      .st0 {
+        fill: @colorPrimary;
+      }
+
+      .st5 {
+        stroke: @colorPrimary;
+      }
+
+      .st6 {
+        fill: #fff;
+      }
     }
   }
 }

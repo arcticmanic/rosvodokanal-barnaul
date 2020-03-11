@@ -1,5 +1,44 @@
+html.color-white {
+  .all-sites {
+    &__text {
+      &-inner {
+        color: @blackEye;
+      }
+    }
+
+    .city-list {
+      border: 1px solid #000;
+      &__link {
+        .city-list__city {
+          color: @blackEye;
+        }
+      }
+    }
+  }
+}
+
+html.color-black {
+  .all-sites {
+    &__text {
+      background: #000;
+      &-inner {
+        color: @whiteEye;
+      }
+    }
+
+    .city-list {
+      background: #000;
+      border: 1px solid #fff;
+      &__link {
+        .city-list__city {
+          color: @whiteEye;
+        }
+      }
+    }
+  }
+}
+
 .all-sites {
-  display: inline-block;
   position: relative;
   z-index: 4;
   &__text {
@@ -10,7 +49,7 @@
     z-index: 3;
     &-inner {
       color: @colorPrimary;
-      font-size: 13px;
+      font-size: @font-13;
       display: block;
       position: relative;
       z-index: 3;
@@ -18,7 +57,7 @@
     }
   }
   .icon-plus-in-circle-svg {
-    position: relative;
+    transform: translateY(-1px);
     z-index: 3;
   }
 
@@ -32,7 +71,7 @@
 
   .city-list {
     display: none;
-    min-width: 210px;
+    min-width: fit-content;
     border-radius: 5px;
     box-shadow: 0 0 9px 3px rgba(0, 0, 0, 0.16);
     position: absolute;
@@ -55,13 +94,12 @@
         margin-bottom: 15px;
       }
       .city-list__city {
-        font-size: 13px;
-        line-height: 15px;
+        font-size: @font-13;
+        line-height: @font-15;
         color: @navy;
         transition: @transFast;
       }
       .city-list__gerb {
-        margin-right: 4px;
         transition: @transMid;
       }
       @media (min-width: @hoverW) {

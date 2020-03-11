@@ -1,3 +1,25 @@
+html.color-white {
+  .header-bottom {
+    .submenu {
+      &__link {
+        color: @blackEye;
+      }
+    }
+  }
+}
+
+html.color-black {
+  .header-bottom {
+    .submenu {
+      background: #000;
+      border: 1px solid #fff;
+      &__link {
+        color: @whiteEye !important;
+      }
+    }
+  }
+}
+
 .header-bottom {
   display: flex;
   align-items: center;
@@ -10,6 +32,7 @@
     position: relative;
     margin-right: 6px;
     margin-left: 6px;
+    font-size: @font-13;
 
     &.active {
       .header-bottom__link {
