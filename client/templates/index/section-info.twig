@@ -1,0 +1,39 @@
+<section class="section-std section-info wrapper">
+  <div class="info__row">
+    <div class="info__item info__item_left info-slider">
+      {% for idx, infoItem in infoItems %}
+        <article class="info-slider__slide {{ infoItem.isContentVertical == true ? 'poor-visibility' : ''}}">
+          <div class="info-slider__content {{ infoItem.isContentVertical == true ? 'info-slider__content_vertical' : ''}}">
+            <img src="../img/info-{{idx + 1}}.png" class="info-slider__img">
+
+            <div class="info-slider__inner-cont">
+              <p class="info-slider__subtitle">
+                {{ infoItem.subtitle }}
+              </p>
+              <h3 class="info-slider__title">
+                {{ infoItem.title }}
+              </h3>
+              <p class="info-slider__text">
+                {{ infoItem.text }}
+              </p>
+              <a href="#" class="btn">
+                {{ infoItem.btnText }}
+              </a>
+            </div>
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+
+    <article class="info__item info__item_right info-hot">
+      <p class="info-hot-subtitle">Горячая линия безопасности</p>
+      <a href="tel:88002501747" class="info-hot-phone">8-800-250-17-47</a>
+      <a href="mailto:etika@rosvodokanal.ru" class="info-hot-email">etika@rosvodokanal.ru</a>
+      <p class="info-hot-text">
+        На условиях анонимности, сообщите о фактах хищений, злоупотреблений, мошенничества,
+        а также о других нарушениях и негативных событиях.
+      </p>
+      <a href="#" class="btn btn_trans">Подробнее</a>
+    </article>
+  </div>
+</section>

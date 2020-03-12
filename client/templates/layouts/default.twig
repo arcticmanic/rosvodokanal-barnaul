@@ -3,11 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  {% include "../includes/head.twig" %}
+  <title>{{ title }}</title>
   {% include "../includes/styles.twig" %}
 </head>
 <body>
     <!-- HEADER -->
+    {% include "../includes/overlay.twig" %}
+
+    {% include "../includes/eye-version-panel.twig" %}
+    
     {% include "../includes/header.twig" %}
     
 		{% block content %}

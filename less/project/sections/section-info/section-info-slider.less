@@ -131,6 +131,18 @@ html.scale {
       object-fit: contain;
     }
     .slick-dots {
+      &_dark {
+        li {
+          button {
+            &:before {
+              background: #000;
+            }
+          }
+          &.slick-active button:before {
+            border-color: #000;
+          }
+        }
+      }
       li {
         &.slick-active button:before {
           background: transparent;

@@ -12,33 +12,51 @@ const gulp = require('gulp'),
   twig = require('gulp-twig'),
   fs = require('fs')
 
-const styleFiles = ['./less/style.less'],
-  paths = {
-    build: './build/',
-    data: './client/data/'
-  }
+const paths = {
+  build: './build/',
+  data: './client/data/',
+  srcCSS: './less/style.less',
+  srcJS: './js/common.js',
+  pluginsJS: './js/plugins/'
+}
 
 function styles() {
   return gulp
-    .src(styleFiles)
+    .src(paths.srcCSS)
     .pipe(sourcemaps.init())
     .pipe(less())
     .pipe(concat('style.css'))
-    .pipe(autoprefixer('> 30%'))
+    .pipe(autoprefixer('> 1%'))
     .pipe(
       cleanCSS({
         level: 2
       })
     )
     .pipe(sourcemaps.write('./'))
-    .pipe(gulp.dest('./css'))
+    .pipe(gulp.dest(`${paths.build}assets/css`))
     .pipe(browserSync.stream())
+}
+const JSPluginsOrder = [
+  `${paths.pluginsJS}jquery-3.4.1.min.js`,
+  `${paths.pluginsJS}jquery-ui.min.js`,
+  `${paths.pluginsJS}*.js`
+]
+
+function concatPlugins() {
+  return gulp
+    .src(JSPluginsOrder)
+    .pipe(concat('plugins.js'))
+    .pipe(gulp.dest(`${paths.build}assets/js`))
+}
+
+function moveMainJS() {
+  return gulp.src(paths.srcJS).pipe(gulp.dest(`${paths.build}assets/js`))
 }
 
 function twigF() {
   return (
     gulp
-      .src(['./client/templates/*.twig'])
+      .src(['./client/templates/pages/*.twig'])
       // Stay live and reload on error
       .pipe(
         plumber({
@@ -66,8 +84,14 @@ function twigF() {
   )
 }
 
+const cleanFiles = [
+  `${paths.build}assets/js/*.js`,
+  `${paths.build}assets/css/*.css`,
+  `${paths.build}/*.html`
+]
+
 function clean() {
-  return del(['./css/styles.css', './css/styles.css.map'])
+  return del(cleanFiles)
 }
 
 function watch() {
@@ -78,10 +102,13 @@ function watch() {
     }
   })
 
-  gulp.watch('./img').on('change', browserSync.reload)
-  gulp.watch('./js/*.js').on('change', browserSync.reload)
+  gulp
+    .watch('./js/*.js')
+    .on('change', gulp.series(moveMainJS, browserSync.reload))
+  gulp
+    .watch('./jsplugins/*.js')
+    .on('change', gulp.series(concatPlugins, browserSync.reload))
   gulp.watch('./less/**/*.less', styles)
-  gulp.watch('./*.html').on('change', browserSync.reload)
   gulp
     .watch(['client/templates/**/*.twig', 'client/data/*.twig.json'])
     .on('change', gulp.series(twigF, browserSync.reload))
@@ -89,6 +116,9 @@ function watch() {
 
 gulp.task('watch', watch)
 
-gulp.task('build', gulp.series(clean, gulp.parallel(styles, twigF)))
+gulp.task(
+  'build',
+  gulp.series(clean, gulp.parallel(styles, twigF, concatPlugins, moveMainJS))
+)
 
 gulp.task('dev', gulp.series('build', 'watch'))
