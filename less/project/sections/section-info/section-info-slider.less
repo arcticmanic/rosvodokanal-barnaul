@@ -1,6 +1,87 @@
+html.color-white {
+  .info {
+    &-slider {
+      &__subtitle {
+        color: @blackEye;
+      }
+      &__title {
+        color: @blackEye;
+      }
+      &__text {
+        color: @blackEye;
+      }
+      .slick-dots {
+        li {
+          &:not(.slick-active) {
+            button:before {
+              background: @blackEye;
+            }
+          }
+          &.slick-active {
+            button:before {
+              border-color: @blackEye;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+html.color-black {
+  .info {
+    &-slider {
+      &__subtitle {
+        color: @whiteEye;
+      }
+      &__title {
+        color: @whiteEye;
+      }
+      &__text {
+        color: @whiteEye;
+      }
+      .slick-dots {
+        li {
+          &:not(.slick-active) {
+            button:before {
+              background: @whiteEye;
+            }
+          }
+          &.slick-active {
+            button:before {
+              border-color: @whiteEye;
+              background: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+html.scale {
+  .info {
+    &-slider {
+      &__inner-cont {
+        padding-top: 40px;
+        padding-bottom: 60px;
+      }
+      &__content {
+        &_vertical {
+          .info-slider__inner-cont {
+            padding-top: 15px;
+            padding-bottom: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+
 .info {
   &-slider {
     position: relative;
+    height: 350px;
     &__slide {
       height: 350px;
     }
@@ -31,20 +112,30 @@
     }
     &__subtitle {
       color: @cyan;
-      font-size: 15px;
+      font-size: @font-15;
       font-weight: 600;
     }
     &__title {
       color: @colorPrimary3;
-      font-size: 30px;
+      font-size: @font-30;
       font-weight: 400;
       line-height: 30px;
     }
     &__text {
       color: @colorPrimary3;
-      font-size: 15px;
+      font-size: @font-15;
       font-weight: 400;
       line-height: 25px;
+    }
+    &__img {
+      object-fit: contain;
+    }
+    .slick-dots {
+      li {
+        &.slick-active button:before {
+          background: transparent;
+        }
+      }
     }
   }
 }

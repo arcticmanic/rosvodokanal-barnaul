@@ -1,0 +1,678 @@
+// /* Always set the map height explicitly to define the size of the div
+//  * element that contains the map. */
+
+// /* Optional: Makes the sample page fill the window. */
+// html,
+// body {
+//   margin: 0;
+//   padding: 0;
+//   min-width: 320px;
+// }
+
+// .content {
+//   padding-bottom: 70px;
+//   padding-top: 40px;
+//   &.main-content {
+//     padding-bottom: 0;
+//   }
+// }
+
+// body {
+//   background: #fff;
+//   // background-image: url("../img/overlay.png");
+//   // background-position: center top;
+//   // &:after {
+//   //   position: absolute;
+//   // }
+// }
+
+// .sml-col {
+//   width: 25%;
+// }
+
+// .big-col {
+//   width: 50%;
+// }
+
+// .pages {
+//   & h1 {
+//     margin-top: 21px;
+//   }
+//   & .navbar {
+//     background: #f8f8f8;
+//     & .header-btm {
+//       padding-bottom: 17px;
+//       border-bottom: 1px solid #ececec;
+//     }
+//   }
+// }
+
+// body.overlayed {
+//   transition: 0.5s;
+//   overflow: hidden;
+//   &:before {
+//     position: fixed;
+//     z-index: 20;
+//     top: 0;
+//     left: 0;
+//     display: block;
+//     width: 100%;
+//     height: 100%;
+//     content: '';
+//     background: rgba(0, 0, 0, 0.7);
+//   }
+// }
+
+// a.fancybox-item.fancybox-close {
+//   background: url(../img/moda-cross.png);
+//   background-size: contain;
+// }
+
+// .vcenter {
+//   display: inline-block;
+//   vertical-align: middle;
+//   float: none;
+// }
+
+// * {
+//   outline: none;
+// }
+
+// .parent {
+//   display: table;
+// }
+
+// .child {
+//   display: table-cell;
+//   vertical-align: middle;
+// }
+
+// .list {
+//   display: -webkit-flex;
+//   display: -ms-flexbox;
+//   display: flex;
+
+//   -webkit-flex-wrap: wrap;
+//   -ms-flex-wrap: wrap;
+//   flex-wrap: wrap;
+// }
+
+// .list.container:before,
+// .list.container:after,
+// .list.row:before,
+// .list.row:after {
+//   content: normal; // IE doesn't support `initial`
+// }
+
+// .list__item {
+//   display: -webkit-flex;
+//   display: -ms-flexbox;
+//   display: flex;
+// }
+
+// .pl0 {
+//   padding-left: 0;
+// }
+
+// ul {
+//   padding-left: 0;
+// }
+
+// ul li {
+//   list-style-type: none;
+// }
+
+// .rotatable {
+//   -webkit-transform: rotate(-90deg);
+//   -moz-transform: rotate(-90deg);
+//   -o-transform: rotate(-90deg);
+//   -ms-transform: rotate(-90deg);
+//   transform: rotate(-90deg);
+// }
+
+// //p {
+// //  color: @text-color;
+// //  font-size: 15px;
+// //  line-height: 25px;
+// //}
+
+// .more-link {
+//   font-size: 15px;
+//   //position: absolute;
+//   font-weight: 300;
+//   font-family: @title-font;
+//   display: inline-block;
+//   position: relative;
+//   //right: 0;
+//   //top: 0;
+//   padding-right: 52px;
+//   &:after {
+//     content: url('../img/arrow-blue.png');
+//     position: absolute;
+//     right: 0;
+//     top: 0px;
+//   }
+//   &:hover::after {
+//     transform: translateX(5px);
+//   }
+// }
+
+// .page {
+//   font-size: 17px;
+//   padding: 22px 0 0;
+//   & h1 {
+//     //margin: 20px 0 13px;
+//   }
+//   & h2 {
+//     margin-bottom: 40px;
+//   }
+// }
+
+// .page-bg {
+//   background: #f7f6f6;
+// }
+
+// .similar-products {
+//   margin-top: 70px;
+//   & h2 {
+//     margin: 5px 0 27px;
+//   }
+// }
+
+// .pages-header {
+//   & .navbar {
+//     padding: 9px 0 10px;
+//     background: #fff;
+//     box-shadow: 0px 5px 18px 4px #e5e5e5;
+//     &.fixed {
+//       width: 100%;
+//       z-index: 1000;
+//       position: fixed;
+//     }
+//   }
+// }
+
+// .block-wrapper {
+//   margin-right: auto;
+//   margin-left: auto;
+//   padding-left: 12px;
+//   padding-right: 12px;
+//   padding-top: 65px;
+//   padding-bottom: 70px;
+//   width: 991px;
+// }
+
+// .bottom-text {
+//   .text-col {
+//     border-top: 1px solid black;
+//     padding: 64px 0;
+//     & p {
+//       margin-bottom: 23px;
+//     }
+//     &__img {
+//       margin-bottom: 38px;
+//     }
+//   }
+// }
+
+// .breadcrumbs {
+//   position: relative;
+//   top: -24px;
+//   margin-bottom: 0;
+//   &:after {
+//     position: absolute;
+//     width: 30px;
+//     height: 1px;
+//     background: #2a2a2a;
+//     content: '';
+//     bottom: -6px;
+//   }
+//   & .sep {
+//     padding: 0 4px;
+//   }
+//   & a,
+//   & .sep {
+//     font-size: 13px;
+//     color: #2a2a2a;
+//     text-decoration: none;
+//     line-height: 16px;
+//   }
+//   & ul {
+//     margin-bottom: 3px;
+//     margin-top: 3px;
+//     line-height: 16px;
+//   }
+//   & li {
+//     line-height: 16px;
+//     color: @light-blue;
+//     margin: 0;
+//     font-size: 13px;
+//     font-weight: 300;
+//     display: inline-block;
+//   }
+// }
+
+// .tags {
+//   margin-top: 54px;
+//   margin-bottom: 23px;
+// }
+
+// .main-link {
+//   color: red;
+//   text-decoration: none;
+//   font-weight: bold;
+//   font-size: 15px;
+// }
+
+// .main-pages-jumb {
+//   height: 120px;
+//   min-height: 120px;
+//   position: relative;
+//   background: dark-gradient;
+//   overflow: hidden;
+// }
+
+// .intro {
+//   margin-bottom: 30px;
+
+//   &-text {
+//     padding-left: 35px;
+//     & p {
+//       margin-bottom: 25px;
+//       margin-top: 10px;
+//     }
+//   }
+// }
+
+// .page {
+//   padding: 45px 0 0;
+// }
+
+// .main-advantages.page-advantages {
+//   padding: 82px 0 74px;
+// }
+
+// .nav-btns {
+//   border-top: 1px solid lightgray;
+//   padding-top: 37px;
+//   margin-top: 120px;
+//   text-align: center;
+//   .more-page-btn {
+//     font-size: 13px;
+//   }
+//   .next-page {
+//     float: right;
+//     position: relative;
+//     top: 6px;
+//   }
+//   .prev-page {
+//     float: left;
+//     position: relative;
+//     top: 6px;
+//   }
+// }
+
+// #back-top {
+//   position: fixed;
+//   bottom: 60px;
+//   right: 3%;
+//   z-index: 100;
+//   width: 55px;
+//   height: 55px;
+//   border-radius: 50%;
+//   display: block;
+//   background-image: url('../img/arr-short.png');
+//   background-position: center;
+//   background-repeat: no-repeat;
+//   background-color: red;
+// }
+
+// .video_wrapper {
+//   width: 100%;
+//   margin: 0 auto;
+//   position: relative;
+//   background-color: #000;
+// }
+
+// //.video_wrapper_full {
+// //  padding-top: 315px;
+// //}
+
+// .videoIframe {
+//   top: 0;
+//   bottom: 0;
+//   margin: auto;
+//   right: 0;
+//   left: 0;
+//   display: block;
+//   width: 100%;
+//   height: 658px;
+//   background-color: transparent;
+// }
+
+// .videoPoster {
+//   position: absolute;
+//   top: 0px;
+//   left: 0px;
+//   width: 100%;
+//   height: 100%;
+//   background-image: url(http://c.fastcompany.net/multisite_files/cocreate/imagecache/inline-large/inline/2013/01/1682283-inline-inline-2-music-veteran-amani-duncan-on-marketing-cf-martin-the-worlds-oldest-guitar-maker.jpg);
+//   background-size: 100%;
+//   border: none;
+//   text-indent: -999em;
+//   overflow: hidden;
+//   opacity: 1;
+//   -webkit-transition: opacity 800ms, height 0s;
+//   -moz-transition: opacity 800ms, height 0s;
+//   transition: opacity 800ms, height 0s;
+//   -webkit-transition-delay: 0s, 0s;
+//   -moz-transition-delay: 0s, 0s;
+//   transition-delay: 0s, 0s;
+// }
+
+// .videoPoster:hover {
+//   cursor: pointer;
+// }
+
+// .videoPoster:before {
+//   content: '';
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   right: 0;
+//   bottom: 0;
+//   margin: auto;
+//   width: 120px;
+//   height: 120px;
+//   border: 5px solid #fff;
+//   border-radius: 100%;
+//   background: rgba(255, 255, 255, 0.38);
+//   -webkit-transition: border-color 300ms;
+//   -moz-transition: border-color 300ms;
+//   transition: border-color 300ms;
+// }
+
+// .videoPoster:after {
+//   content: '';
+//   position: absolute;
+//   top: 50%;
+//   left: 49%;
+//   width: 40px;
+//   height: 44px;
+//   margin: -20px 0 0 -10px;
+//   background: url(../img/play.png) no-repeat center;
+// }
+
+// .videoPoster:hover:before,
+// .videoPoster:focus:before {
+//   border-color: red;
+// }
+
+// .videoWrapperActive .videoPoster {
+//   opacity: 0;
+//   height: 0;
+//   -webkit-transition-delay: 0s, 800ms;
+//   -moz-transition-delay: 0s, 800ms;
+//   transition-delay: 0s, 800ms;
+// }
+
+// .thumb-wrap {
+//   position: relative;
+//   padding-bottom: 56.25%; /* задаёт высоту контейнера для 16:9 (если 4:3 — поставьте 75%) */
+//   padding-top: 30px;
+//   height: 0;
+//   overflow: hidden;
+// }
+
+// .thumb-wrap iframe {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100%;
+// }
+
+// .modal {
+//   background: rgba(16, 116, 185, 0.7);
+// }
+
+// .clear {
+//   clear: both;
+// }
+
+// .modal-content {
+//   border-radius: 5px;
+//   padding: 37px 30px 40px;
+//   background: #fff;
+//   margin-top: 20px;
+//   & .subtitle {
+//     color: @blue;
+//     font-size: 15px;
+//     font-weight: 300;
+//   }
+//   & .modal-title {
+//     color: @blue;
+//     line-height: 22px;
+//     font-family: @base-font;
+//     font-size: 25px;
+//     font-weight: 300;
+//   }
+
+//   & .mt32 {
+//     margin-top: 32px;
+//   }
+//   & .btn-modal {
+//     position: relative;
+//     top: -7px;
+//     //padding: 12px 19px;
+//   }
+//   & .modal-header .close {
+//     float: right;
+//     background: none;
+//     border: none;
+//     position: absolute;
+//     top: -20px;
+//     right: -20px;
+//   }
+//   & .modal-body {
+//     padding: 0;
+//     padding-top: 30px;
+//   }
+//   & .modal-header {
+//     border-bottom: none;
+//     padding: 0;
+//     padding-bottom: 17px;
+//     position: relative;
+//     &.border-bottom {
+//       padding-bottom: 30px;
+//       border-bottom: 2px solid @blue;
+//     }
+//     & .modal-direction {
+//       font-weight: 300;
+//     }
+//   }
+//   .auth-content__tabs {
+//     .checkbox {
+//       margin-top: 39px;
+//       margin-bottom: 51px;
+//     }
+//   }
+//   .modal__tabs {
+//     border-bottom: 2px solid #e7f1f8;
+//     padding-bottom: 15px;
+//     margin: 0;
+//     & li {
+//       opacity: 0.3;
+//       font-size: 25px;
+//       display: inline-block;
+//       color: @blue;
+//       cursor: pointer;
+//       position: relative;
+//       margin: 0;
+//       &:first-child {
+//         padding-right: 22px;
+//         margin-right: 27px;
+//       }
+//       &.active {
+//         opacity: 1;
+//         &:after {
+//           width: 100%;
+//           background: @blue;
+//           height: 2px;
+//           content: '';
+//           position: absolute;
+//           bottom: -19px;
+//           left: 0;
+//         }
+//       }
+//     }
+//   }
+
+//   & .btns {
+//     text-align: center;
+//   }
+
+//   & label,
+//   & p {
+//     font-size: 13px;
+//     line-height: 20px;
+//     color: @navy;
+//     font-weight: 500;
+//     display: block;
+//     margin: 0;
+//     margin-bottom: 5px;
+//     & span {
+//       padding-left: 5px;
+//     }
+//   }
+//   .form.white-bg .btns {
+//     text-align: center;
+//     margin-top: 24px;
+//     & .form__btn {
+//       float: initial;
+//     }
+//   }
+//   & input {
+//     margin-top: 4px;
+//     margin-bottom: 16px;
+//     display: block;
+//     width: 100%;
+//     &.modal-input:first-child {
+//       margin-bottom: 20px;
+//     }
+//   }
+//   .file_upload > div {
+//     width: 86%;
+//   }
+//   & .file_upload > button {
+//     width: 16%;
+//   }
+//   & textarea {
+//     margin-top: 4px;
+//     margin-bottom: 14px;
+//     display: block;
+//     width: 100%;
+//     height: 82px;
+//   }
+//   & .checkbox {
+//     margin-top: 25px;
+//     margin-bottom: 51px;
+//   }
+//   & .checkbox__text {
+//     padding: 0 0 0 45px;
+//     cursor: pointer;
+//     font-weight: 300;
+//     font-size: 13px;
+//     & a {
+//       text-decoration: underline;
+//     }
+//     &:before {
+//       top: 0;
+//       bottom: 0;
+//       margin: auto;
+//       width: 30px;
+//       height: 30px;
+//     }
+//   }
+// }
+
+// .pagination {
+//   text-align: left;
+//   padding: 29px 0 0;
+//   margin-top: 30px;
+//   border-top: 2px solid #30afcf;
+//   &-back {
+//     text-align: center;
+//     padding: 33px 0 0;
+//     margin-top: 30px;
+//     border-top: 2px solid #30afcf;
+//     & .btns {
+//       & .prev {
+//         float: left;
+//         position: relative;
+//         top: -3px;
+//       }
+//       & .next {
+//         float: right;
+//         position: relative;
+//         top: -3px;
+//       }
+//       & .back-btn {
+//         color: @navy;
+//         font-size: 15px;
+//         font-weight: 600;
+//       }
+//     }
+//   }
+//   & .wrapper {
+//     position: relative;
+//   }
+//   & .more-page-btn {
+//     float: right;
+//     font-size: 13px;
+//   }
+//   & .btns {
+//     float: right;
+//     position: relative;
+//     top: 5px;
+//     & a {
+//       display: inline-block;
+//     }
+//   }
+//   & .pages {
+//     display: inline-block;
+//     margin: 0;
+
+//     & li {
+//       margin: 0;
+
+//       padding: 0 7px;
+//       font-family: @base-font;
+//       line-height: 16px;
+//       font-size: 14px;
+//       font-weight: 500;
+//       color: #bdc3c6;
+//       position: relative;
+//       display: inline-block;
+//       &:first-child {
+//         padding-left: 0;
+//       }
+//       & a {
+//         padding: 10px 0;
+//         display: inline-block;
+//         width: 14px;
+//         transition: 0.4s;
+//       }
+//       &:hover {
+//         & a {
+//           color: @cyan;
+//         }
+//       }
+//       &.active {
+//         & a {
+//           color: @cyan;
+//         }
+//       }
+//     }
+//   }
+// }

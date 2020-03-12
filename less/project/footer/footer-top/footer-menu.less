@@ -1,0 +1,28 @@
+html.color-white {
+  .footer-menu {
+    &__item {
+      color: @blackEye;
+    }
+  }
+}
+
+html.color-black {
+  .footer-menu {
+    &__item {
+      color: @whiteEye;
+    }
+  }
+}
+
+.footer-menu {
+  &__item {
+    display: block;
+    color: #fff;
+    font-size: @font-13;
+    font-weight: 300;
+    line-height: 20px;
+    &:not(:last-child) {
+      margin-bottom: 11px;
+    }
+  }
+}

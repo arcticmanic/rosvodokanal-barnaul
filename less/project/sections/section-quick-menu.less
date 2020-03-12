@@ -1,3 +1,74 @@
+html.color-white {
+  .section-quick-menu {
+    .quick-menu {
+      &__item {
+        .border-card-like_black(2px);
+        background: rgba(#fff, 1);
+      }
+      &__bg {
+        opacity: 0.3;
+      }
+      &__title {
+        color: #000;
+      }
+      &__p {
+        color: #000;
+      }
+    }
+  }
+}
+
+html.color-black {
+  .section-quick-menu {
+    .quick-menu {
+      &__item {
+        .border-card-like_white(2px);
+        background: rgba(#000, 1);
+      }
+      &__bg {
+        opacity: 0.3;
+      }
+      &__title {
+        color: #fff;
+      }
+      &__p {
+        color: #fff;
+      }
+    }
+  }
+}
+
+html.scale {
+  .section-quick-menu {
+    .quick-menu {
+      &__item {
+        &:not(.quick-menu__item_contentfull) {
+          padding: 25px 10px 25px 15px;
+          .quick-menu__icon {
+            margin-bottom: 10px;
+          }
+        }
+        &_contentfull {
+          padding: 10px 5px;
+        }
+        &_with-two-btns {
+          .btn {
+            &:not(:last-child) {
+              margin-bottom: 3px;
+            }
+            &:last-child {
+              margin-top: 3px;
+            }
+          }
+        }
+      }
+      &__title {
+        margin-bottom: 5px;
+      }
+    }
+  }
+}
+
 .section-quick-menu {
   &__row {
     display: flex;
@@ -19,7 +90,7 @@
       align-items: flex-start;
       z-index: 2;
       &:not(.quick-menu__item_contentfull) {
-        padding: 30px 10px 30px 20px;
+        padding: 20px 10px 30px 10px;
       }
       &_contentfull {
         padding: 30px 10px 12px 20px;
@@ -70,13 +141,13 @@
     }
     &__title {
       color: #ffffff;
-      font-size: 16px;
+      font-size: @font-16;
       font-weight: 700;
       line-height: 20px;
     }
     &__p {
       color: #ffffff;
-      font-size: 14px;
+      font-size: @font-14;
       font-weight: 400;
       line-height: 20px;
       margin-bottom: auto;

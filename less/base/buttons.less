@@ -1,10 +1,245 @@
+html.color-white {
+  .btn {
+    border-color: @blackEye;
+    color: @whiteEye;
+    background: @blackEye;
+
+    .btn__text {
+      color: @whiteEye;
+    }
+
+    &__icon {
+      * {
+        stroke: @whiteEye;
+      }
+    }
+
+    &_glass-like {
+      border-color: @blackEye;
+      background: @blackEye;
+      .btn__text {
+        color: @whiteEye;
+      }
+      &.btn_dark {
+        border-color: @blackEye;
+        background: @blackEye;
+        .btn__text {
+          color: @whiteEye;
+        }
+      }
+    }
+
+    &_trans {
+      background: @blackEye;
+      border-color: @blackEye;
+    }
+
+    &_frost {
+      border-color: @blackEye;
+      background: @whiteEye;
+      color: @blackEye;
+      &.btn_dark {
+        background: rgba(@blackEye, 0.7);
+        color: @whiteEye;
+        .btn__text {
+          color: @whiteEye;
+        }
+        .btn__icon {
+          * {
+            stroke: @whiteEye;
+          }
+        }
+      }
+      .btn__text {
+        color: @blackEye;
+      }
+      .btn__icon {
+        * {
+          stroke: @blackEye;
+        }
+      }
+    }
+
+    &_primary-color {
+      border-color: transparent;
+      background: @blackEye;
+      color: @whiteEye;
+      svg.btn__icon.icon-arrow-svg {
+        * {
+          stroke: @whiteEye;
+        }
+      }
+    }
+
+    &_dark {
+      background: @blackEye;
+      color: @whiteEye;
+      .btn__text {
+        color: @whiteEye;
+      }
+    }
+
+    @media (min-width: @hoverW) {
+      &_trans {
+        &:hover {
+          text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+          box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+        }
+      }
+      &_frost {
+        &:hover {
+          box-shadow: 0px 5px 40px -10px rgba(255, 255, 255, 0.57);
+          &.btn_dark {
+            box-shadow: 0px 5px 40px -10px rgba(000, 000, 000, 0.57);
+          }
+        }
+      }
+      &_with-arrow {
+        &:hover {
+          .btn__text {
+            text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+          }
+        }
+      }
+    }
+  }
+}
+
+html.color-black {
+  .btn {
+    border-color: @whiteEye;
+    color: @blackEye;
+    background: @whiteEye;
+
+    .btn__text {
+      color: @blackEye;
+    }
+
+    &__icon {
+      * {
+        stroke: @blackEye;
+      }
+    }
+
+    &_glass-like {
+      border-color: @whiteEye;
+      background: @whiteEye;
+      .btn__text {
+        color: @blackEye;
+      }
+      &.btn_dark {
+        border-color: @whiteEye;
+        background: @whiteEye;
+        .btn__text {
+          color: @blackEye;
+        }
+      }
+    }
+
+    &_trans {
+      background: @whiteEye;
+      border-color: @whiteEye;
+    }
+
+    &_frost {
+      border-color: @whiteEye;
+      background: @blackEye;
+      color: @whiteEye;
+      &.btn_dark {
+        background: rgba(@whiteEye, 0.7);
+        color: @blackEye;
+        .btn__text {
+          color: @blackEye;
+        }
+        .btn__icon {
+          * {
+            stroke: @blackEye;
+          }
+        }
+      }
+      .btn__text {
+        color: @whiteEye;
+      }
+      .btn__icon {
+        * {
+          stroke: @whiteEye;
+        }
+      }
+    }
+
+    &_primary-color {
+      border-color: transparent;
+      background: @whiteEye;
+      color: @blackEye;
+      svg.btn__icon.icon-arrow-svg {
+        * {
+          stroke: @blackEye;
+        }
+      }
+    }
+
+    &_dark {
+      background: @whiteEye;
+      color: @blackEye;
+      .btn__text {
+        color: @blackEye;
+      }
+    }
+
+    @media (min-width: @hoverW) {
+      &_trans {
+        &:hover {
+          text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+          box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+        }
+      }
+      &_frost {
+        &:hover {
+          box-shadow: 0px 5px 40px -10px rgba(255, 255, 255, 0.57);
+          &.btn_dark {
+            box-shadow: 0px 5px 40px -10px rgba(000, 000, 000, 0.57);
+          }
+        }
+      }
+      &_with-arrow {
+        &:hover {
+          .btn__text {
+            text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+          }
+        }
+      }
+    }
+  }
+}
+
+html.scale-2 {
+  .btn {
+    padding-right: 10px;
+    padding-left: 10px;
+    &_big {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+  }
+}
+
+html.scale-3 {
+  .btn {
+    padding-right: 9px;
+    padding-left: 9px;
+    &_big {
+      padding-top: 9px;
+      padding-bottom: 9px;
+    }
+  }
+}
+
 .btn {
   text-align: center;
   text-decoration: none;
   cursor: pointer;
-  font-size: 12px;
-  font-weight: 300;
-  background-repeat: no-repeat;
+  font-size: @font-12;
+  font-weight: 400;
   padding: 7px 11px;
   line-height: 1.2em;
   border: 1px solid rgba(@colorPrimary3, 0.3);
@@ -49,7 +284,6 @@
     background: transparent;
     border: 1px solid rgba(255, 255, 255, 0.53);
     color: white;
-    font-size: 12px;
     font-weight: 300;
   }
 
@@ -113,145 +347,4 @@
       }
     }
   }
-}
-
-.site-btn {
-  background: rgba(255, 255, 255, 0.39);
-  border: none;
-  color: white;
-  padding: 7px 15px;
-}
-
-.subscribe-button {
-  background: @cyan;
-  border: none;
-  color: white;
-}
-
-.blue-btn {
-  background: @cyan;
-  border: none;
-  color: white;
-  &.dark {
-    background: @blue;
-  }
-  &.like-btn,
-  &.dislike-btn {
-    font-weight: 600;
-    padding: 8px 22px;
-    font-size: 13px;
-    margin-bottom: 5px;
-    &.dark {
-      background: @navy;
-    }
-  }
-}
-
-.myth-btn {
-  font-size: 13px;
-  font-weight: 600;
-  padding: 7px 21px;
-  background: @navy;
-  color: white;
-}
-
-& .more-btn {
-  background: @blue;
-  position: relative;
-  padding: 7px 12px;
-  padding-right: 47px;
-  border: none;
-  color: white;
-  &:after {
-    position: absolute;
-    content: url('../img/arr-w.png');
-    right: 13px;
-    top: 7px;
-  }
-  &:hover {
-    background: @red;
-  }
-}
-
-&.job-btn {
-  padding: 7px 10px;
-  padding-right: 42px;
-  border: none;
-  background: @light-blue;
-  font-weight: 600;
-  color: white;
-  font-size: 13px;
-  position: relative;
-  top: -6px;
-  background-image: url(../img/mai-wl.png);
-  background-repeat: no-repeat;
-  background-position: 90%;
-}
-
-.form__btn {
-  font-size: 12px;
-  color: white;
-  background: @blue;
-  border: none;
-  position: relative;
-  top: -7px;
-  padding: 7px 14px;
-  float: right;
-}
-
-&.disabled {
-  background: #f1f3f4;
-  color: #a0a7b9;
-  border: 1px solid #dce4e8;
-}
-
-.app-btn {
-  font-size: 14px;
-  color: white;
-  background: @blue;
-  position: relative;
-  padding: 12px 17px;
-  padding-left: 45px;
-  background-repeat: no-repeat;
-  border-radius: 5px;
-  border: none;
-  &.ios-btn {
-    background-image: url('../img/ios-icon.png');
-    background-position: 13%;
-  }
-  &.and-btn {
-    background-image: url('../img/android-icon.png');
-    background-position: 13%;
-  }
-}
-
-.arr-btn {
-  font-size: 16px;
-  color: white;
-  padding: 12px 20px;
-  padding-right: 65px;
-  position: relative;
-  font-weight: 500;
-  &:after {
-    position: absolute;
-    content: url('../img/arr-w.png');
-    right: 20px;
-    top: 10px;
-  }
-}
-
-.btn-modal {
-  font-size: 12px;
-  color: white;
-  background: @blue;
-  position: relative;
-  font-weight: 300;
-  border: none;
-}
-
-.buy-btn {
-  background: #00bfa5;
-  color: #fff !important;
-  font-size: 13px !important;
-  padding-right: 58px;
 }

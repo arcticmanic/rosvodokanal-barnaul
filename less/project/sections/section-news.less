@@ -1,3 +1,80 @@
+html.color-white,
+html.color-black {
+  .news {
+    &__item {
+      border-radius: 6px;
+      padding-bottom: 1rem;
+
+      @media (min-width: @hoverW) {
+        &:hover {
+          .news__img {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    &__img-container {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+      border-bottom: 2px solid #000;
+    }
+    &__img {
+      opacity: 1;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  }
+}
+
+html.color-white {
+  .news {
+    &__item {
+      .border-card-like_black();
+    }
+
+    &__date {
+      color: @blackEye;
+    }
+    &__icon {
+      .st0 {
+        stroke: @blackEye;
+      }
+    }
+    &__title {
+      color: @blackEye;
+    }
+    &__img-container {
+      background: @blackEye;
+      border-bottom-color: @blackEye;
+    }
+  }
+}
+
+html.color-black {
+  .news {
+    &__item {
+      .border-card-like_white();
+    }
+
+    &__date {
+      color: @whiteEye;
+    }
+    &__icon {
+      .st0 {
+        stroke: @whiteEye;
+      }
+    }
+    &__title {
+      color: @whiteEye;
+    }
+    &__img-container {
+      background: @whiteEye;
+      border-bottom-color: @whiteEye;
+    }
+  }
+}
+
 .section-news {
   position: relative;
   z-index: 2;
@@ -35,7 +112,7 @@
   }
   &__date {
     color: @colorPrimary;
-    font-size: 13px;
+    font-size: @font-13;
     font-weight: 700;
   }
   &__item &__icon {
@@ -47,7 +124,7 @@
   }
   &__title {
     color: @colorPrimary3;
-    font-size: 15px;
+    font-size: @font-15;
     font-weight: 400;
     line-height: 20px;
     padding-left: 5px;
@@ -57,6 +134,7 @@
     border-radius: 5px;
     width: 370px;
     height: 210px;
+    max-width: 100%;
   }
   &__img {
     transition: @transFast;

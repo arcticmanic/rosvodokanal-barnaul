@@ -1,3 +1,54 @@
+html.color-white {
+  .partner {
+    &__item {
+      background: @whiteEye;
+      border-color: @blackEye;
+      @media (min-width: @hoverW) {
+        &:hover {
+          border-color: @blackEye;
+        }
+      }
+    }
+
+    &__title {
+      color: @blackEye;
+    }
+  }
+}
+
+html.color-black {
+  .partner {
+    &__item {
+      background: @blackEye;
+      border-color: @whiteEye;
+      @media (min-width: @hoverW) {
+        &:hover {
+          border-color: @whiteEye;
+          box-shadow: 0 0 15px 4px rgba(255, 255, 255, 0.33);
+        }
+      }
+    }
+
+    &__img {
+      &_too-black {
+        background: #fff;
+      }
+    }
+
+    &__title {
+      color: @whiteEye;
+    }
+  }
+}
+
+html.scale {
+  .partner {
+    &__item {
+      padding: 10px 10px;
+    }
+  }
+}
+
 .partners {
   &__cont {
     display: flex;
@@ -33,11 +84,9 @@
     transition: @transFast;
     @media (min-width: @hoverW) {
       &:hover {
+        transform: scale(1.02);
+        box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.33);
         border-color: @colorBeautifulBlue;
-        .partner__img,
-        .partner__img_fallback {
-          transform: translateY(-2px) scale(1.05);
-        }
       }
     }
   }
@@ -56,13 +105,13 @@
   }
   &__title {
     color: #000;
-    font-size: 15px;
+    font-size: @font-15;
     font-weight: 700;
     line-height: 18px;
     text-align: center;
     margin-top: 14px;
     &_small {
-      font-size: 12px;
+      font-size: @font-12;
       font-weight: 400;
     }
   }

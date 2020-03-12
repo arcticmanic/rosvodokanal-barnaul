@@ -42,6 +42,16 @@
     }
   }
 }
+html.color-white {
+  .anim-underline-link {
+    @media (min-width: @hoverW) {
+      &:hover:after {
+        background: @blackEye;
+      }
+    }
+  }
+}
+
 .anim-underline-link {
   position: relative;
   max-width: fit-content;
