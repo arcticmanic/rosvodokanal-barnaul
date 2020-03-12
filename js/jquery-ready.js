@@ -665,8 +665,6 @@ $(document).ready(function() {
     })
   }
 
-  $('.fancybox').fancybox()
-
   slider_custom(
     $('.clients-slider'),
     $('.clients-slider__navigate'),
