@@ -1,3 +1,91 @@
+.section-info {
+  position: relative;
+  z-index: 2;
+}
+
+.info {
+  &__row {
+    .row-flex();
+  }
+  &__item {
+    .col();
+    padding-left: 0;
+    padding-right: 0;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    &_left {
+      .size(8);
+      background: #f4f4f4;
+    }
+    &_right {
+      height: 350px;
+      .size(4);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      background: @cyan;
+      padding-top: 50px;
+      padding-left: 46px;
+      padding-right: 38px;
+      padding-bottom: 25px;
+    }
+    .slick-dots {
+      bottom: 30px;
+      padding-right: 130px;
+      li {
+        margin-left: 0;
+        margin-right: 0;
+        button:before {
+          font-size: @font-6;
+          background: @colorPrimary2;
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: @wrapperMaxWidth) {
+  .info {
+    &__item {
+      &_right {
+        padding: 10px !important;
+      }
+
+      .slick-dots {
+        bottom: 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: @tabletW) {
+  .info {
+    &__row {
+      flex-wrap: wrap;
+    }
+    &__item {
+      margin-top: 15px;
+      margin-bottom: 15px;
+      &_left {
+        .size(12);
+      }
+
+      &_right {
+        .size(12);
+        padding: 30px !important;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .slick-dots {
+        padding-right: 0;
+      }
+    }
+  }
+}
+
 html.scale {
   .info {
     &__item {
@@ -70,53 +158,6 @@ html.color-black {
               border-color: @whiteEye;
             }
           }
-        }
-      }
-    }
-  }
-}
-
-.section-info {
-  position: relative;
-  z-index: 2;
-  height: 350px;
-}
-
-.info {
-  &__row {
-    .row-flex();
-  }
-  &__item {
-    .col();
-    padding-left: 0;
-    padding-right: 0;
-    border-radius: 5px;
-    &_left {
-      .size(8);
-      background: #f4f4f4;
-    }
-    &_right {
-      height: 350px;
-      .size(4);
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      background: @cyan;
-      padding-top: 50px;
-      padding-left: 46px;
-      padding-right: 38px;
-      padding-bottom: 25px;
-    }
-    .slick-dots {
-      bottom: 30px;
-      padding-right: 130px;
-      li {
-        margin-left: 0;
-        margin-right: 0;
-        button:before {
-          font-size: @font-6;
-          background: @colorPrimary2;
-          opacity: 1;
         }
       }
     }

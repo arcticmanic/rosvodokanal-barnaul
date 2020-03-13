@@ -1,5 +1,13 @@
 "use strict";
 
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
+
+function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
+
 var laptopW = 1400,
     tabletW = 1024,
     hoverW = 1024,
@@ -373,7 +381,9 @@ $(document).ready(function () {
 $(document).ready(function () {
   function setClamps(object) {
     var _loop = function _loop(elQuerySel) {
-      var els = document.querySelectorAll(elQuerySel);
+      var elsNodeList = document.querySelectorAll(elQuerySel);
+
+      var els = _toConsumableArray(elsNodeList);
 
       if (els.length !== 0) {
         els.forEach(function (el) {

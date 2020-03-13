@@ -1,3 +1,150 @@
+.info {
+  &-slider {
+    position: relative;
+    height: 350px;
+    &__slide {
+      height: 350px;
+    }
+    &__content {
+      display: flex;
+      align-items: stretch;
+      justify-content: flex-start;
+      height: 100%;
+      &_vertical {
+        flex-direction: column-reverse;
+        .info-slider__inner-cont {
+          max-width: 100%;
+          width: 100%;
+          height: 100%;
+          padding: 10px;
+        }
+      }
+    }
+    &__inner-cont {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-left: auto;
+      margin-right: auto;
+      padding-top: 50px;
+      padding-right: 10px;
+      padding-bottom: 75px;
+      width: 65%;
+    }
+    &__subtitle {
+      color: @cyan;
+      font-size: @font-15;
+      font-weight: 600;
+      max-width: 100%;
+    }
+    &__title {
+      color: @colorPrimary3;
+      font-size: @font-30;
+      font-weight: 400;
+      line-height: 30px;
+      max-width: 100%;
+    }
+    &__text {
+      color: @colorPrimary3;
+      font-size: @font-15;
+      font-weight: 400;
+      line-height: 25px;
+      max-width: 100%;
+    }
+    &__img {
+      height: auto;
+      width: auto;
+      object-fit: contain;
+    }
+    .slick-dots {
+      &_dark {
+        li {
+          button {
+            &:before {
+              background: #000;
+            }
+          }
+          &.slick-active button:before {
+            border-color: #000;
+          }
+        }
+      }
+      li {
+        &.slick-active button:before {
+          background: transparent;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: @wrapperMaxWidth) {
+  .info {
+    &-slider {
+      &__inner-cont {
+        padding-top: 20px;
+        padding-bottom: 50px;
+        width: 60%;
+      }
+    }
+  }
+}
+
+@media (max-width: @tabletW) {
+  .info {
+    &-slider {
+      &__content {
+        &_vertical {
+          .info-slider__img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+          }
+        }
+      }
+      &__inner-cont {
+        padding-top: 25px;
+        padding-bottom: 50px;
+        width: 70%;
+      }
+    }
+  }
+}
+
+@media (max-width: @mobileLandscapeW) {
+  .info {
+    &-slider {
+      &__content:not(&__content_vertical) {
+        position: relative;
+        .info-slider__inner-cont {
+          z-index: 2;
+          text-align: right;
+          margin-right: 0;
+          padding-right: 20px;
+          .info-slider__subtitle,
+          .info-slider__title,
+          .info-slider__text {
+            margin-left: auto;
+            text-align: right;
+          }
+          .btn {
+            margin-left: auto;
+            margin-right: 0;
+          }
+        }
+        .info-slider__img {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          left: 0;
+          filter: brightness(1.2);
+        }
+      }
+    }
+  }
+}
+
 html.color-white {
   .info {
     &-slider {
@@ -72,80 +219,6 @@ html.scale {
             padding-top: 15px;
             padding-bottom: 15px;
           }
-        }
-      }
-    }
-  }
-}
-
-.info {
-  &-slider {
-    position: relative;
-    height: 350px;
-    &__slide {
-      height: 350px;
-    }
-    &__content {
-      display: flex;
-      align-items: stretch;
-      justify-content: space-between;
-      height: 100%;
-      &_vertical {
-        flex-direction: column-reverse;
-        .info-slider__inner-cont {
-          max-width: 100%;
-          width: 100%;
-          height: 100%;
-          padding: 10px;
-        }
-      }
-    }
-    &__inner-cont {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: flex-start;
-      padding-top: 50px;
-      padding-right: 20px;
-      padding-bottom: 75px;
-      max-width: 500px;
-    }
-    &__subtitle {
-      color: @cyan;
-      font-size: @font-15;
-      font-weight: 600;
-    }
-    &__title {
-      color: @colorPrimary3;
-      font-size: @font-30;
-      font-weight: 400;
-      line-height: 30px;
-    }
-    &__text {
-      color: @colorPrimary3;
-      font-size: @font-15;
-      font-weight: 400;
-      line-height: 25px;
-    }
-    &__img {
-      object-fit: contain;
-    }
-    .slick-dots {
-      &_dark {
-        li {
-          button {
-            &:before {
-              background: #000;
-            }
-          }
-          &.slick-active button:before {
-            border-color: #000;
-          }
-        }
-      }
-      li {
-        &.slick-active button:before {
-          background: transparent;
         }
       }
     }

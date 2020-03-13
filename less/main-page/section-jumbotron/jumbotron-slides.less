@@ -1,9 +1,11 @@
+@_jumbotronBcImgMaxWidth: 2560px;
+
 .jumbotron {
   &-slide {
     max-height: 520px;
     min-height: 520px;
     &_opacity {
-      @media (max-width: 2160px) {
+      @media (max-width: @_jumbotronBcImgMaxWidth) {
         background: linear-gradient(
           to bottom,
           rgba(#000, 0.8) 0%,
@@ -58,7 +60,7 @@
       width: 100%;
       min-height: 520px;
       object-fit: cover;
-      max-width: 2160px;
+      max-width: @_jumbotronBcImgMaxWidth;
       margin-left: auto;
       margin-right: auto;
     }
@@ -104,9 +106,12 @@
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      right: -200px;
+      right: -170px;
       height: 100%;
       z-index: -1;
+      &_S {
+        height: 433px;
+      }
     }
     &__subtitle {
       color: #fff;

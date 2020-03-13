@@ -1,3 +1,61 @@
+.info {
+  &-hot {
+    &-subtitle {
+      color: #fff;
+      font-size: @font-15;
+      font-weight: 600;
+      margin: 0;
+      margin-bottom: 10px;
+      max-width: 100%;
+    }
+    &-text {
+      color: #fff;
+      font-size: @font-13;
+      line-height: 20px;
+      max-width: 100%;
+    }
+    &-phone {
+      color: #fff;
+      font-size: @font-31;
+      line-height: 31px;
+      font-weight: 600;
+      margin-bottom: 9px;
+      display: block;
+      max-width: 100%;
+    }
+    &-email {
+      color: #fff;
+      font-size: @font-18;
+      font-weight: 600;
+      margin-bottom: 26px;
+      display: block;
+      max-width: 100%;
+    }
+    &-text {
+      color: #fff;
+      font-size: @font-13;
+      font-weight: 400;
+      line-height: 20px;
+      max-width: 100%;
+    }
+    .btn {
+      margin-top: auto;
+    }
+    &-phone,
+    &-email {
+      transition: @transFast;
+    }
+    @media (min-width: @hoverW) {
+      &-phone,
+      &-email {
+        &:hover {
+          color: @colorPrimary3;
+        }
+      }
+    }
+  }
+}
+
 html.scale {
   .info {
     &-hot {
@@ -65,59 +123,6 @@ html.color-black {
           &:hover {
             color: @whiteEye;
           }
-        }
-      }
-    }
-  }
-}
-
-.info {
-  &-hot {
-    &-subtitle {
-      color: #fff;
-      font-size: @font-15;
-      font-weight: 600;
-      margin: 0;
-      margin-bottom: 10px;
-    }
-    &-text {
-      color: #fff;
-      font-size: @font-13;
-      line-height: 20px;
-    }
-    &-phone {
-      color: #fff;
-      font-size: @font-31;
-      line-height: 31px;
-      font-weight: 600;
-      margin-bottom: 9px;
-      display: block;
-    }
-    &-email {
-      color: #fff;
-      font-size: @font-18;
-      font-weight: 600;
-      margin-bottom: 26px;
-      display: block;
-    }
-    &-text {
-      color: #fff;
-      font-size: @font-13;
-      font-weight: 400;
-      line-height: 20px;
-    }
-    .btn {
-      margin-top: auto;
-    }
-    &-phone,
-    &-email {
-      transition: @transFast;
-    }
-    @media (min-width: @hoverW) {
-      &-phone,
-      &-email {
-        &:hover {
-          color: @colorPrimary3;
         }
       }
     }

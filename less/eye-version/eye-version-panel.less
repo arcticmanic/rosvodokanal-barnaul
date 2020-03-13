@@ -10,8 +10,8 @@ html.color-black {
     .border-section-like_white();
     background: @blackEye;
   }
-  .eye-version__color_text,
-  .eye-version__scale_text {
+  .eye-version-item__text,
+  .eye-version-item__text {
     color: @whiteEye;
   }
   .eye-version__scale {
@@ -43,9 +43,7 @@ html.color-black {
 
   &_back {
     cursor: pointer;
-    &__text {
-      margin-right: 10px;
-    }
+
     .icon-back-svg {
       transition: @transFast;
     }
@@ -57,12 +55,16 @@ html.color-black {
       }
     }
   }
+  &__text {
+    margin-right: 10px;
+  }
 }
 
-.eye-version__color_text,
-.eye-version__scale_text {
+.eye-version-item__text {
   font-size: @font-15;
   font-weight: 700;
+  color: #000;
+  line-height: 33px;
   &:not(:last-child) {
     margin-right: 10px;
   }
@@ -177,12 +179,4 @@ html.color-black {
       background: #000;
     }
   }
-}
-
-.eye-version__back {
-  font-size: 15px;
-  font-weight: bold;
-  color: #000;
-  float: right;
-  line-height: 33px;
 }

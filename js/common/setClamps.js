@@ -1,7 +1,8 @@
 $(document).ready(function() {
   function setClamps(object) {
     for (const elQuerySel in object) {
-      const els = document.querySelectorAll(elQuerySel)
+      const elsNodeList = document.querySelectorAll(elQuerySel)
+      const els = [...elsNodeList]
       if (els.length !== 0) {
         els.forEach(el => {
           $clamp(el, { clamp: object[elQuerySel] })

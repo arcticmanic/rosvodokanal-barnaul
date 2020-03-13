@@ -1,11 +1,11 @@
 .wrapper {
-  max-width: @maxWidth;
+  max-width: @wrapperMaxWidth;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
 
-  &_responsive {
-    @media (max-width: @maxWidth) {
+  &:not(.wrapper_unresponsive) {
+    @media (max-width: @wrapperMaxWidthAdjusted) {
       padding-left: 10px;
       padding-right: 10px;
     }
