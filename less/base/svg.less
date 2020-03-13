@@ -1,5 +1,6 @@
 svg.logo-main-svg {
   height: 65px;
+  // width: 228px;
   transition: @transMid;
   * {
     transition: inherit;
@@ -15,10 +16,14 @@ svg.logo-main-svg {
   .st2 {
     fill: #0069b4;
   }
+  &_textless {
+    width: 49px;
+  }
 }
 
 svg.icon-search-svg {
   height: 31px;
+  width: 31px;
   transition: @transMid;
   * {
     transition: inherit;
@@ -38,6 +43,7 @@ svg.icon-search-svg {
 
 svg.icon-eye-svg {
   height: 14px;
+  width: 24px;
   transition: @transMid;
   * {
     transition: inherit;
@@ -49,6 +55,7 @@ svg.icon-eye-svg {
 
 svg.icon-user {
   height: 25px;
+  width: 25px;
   transition: @transMid;
   g {
     fill: #fff;
@@ -76,12 +83,14 @@ svg.icon-user {
 
 svg.social-icon {
   height: 24px;
+  width: 24px;
   * {
     fill: @colorPrimary;
   }
 }
 svg.icon-plus-svg {
   height: 20px;
+  width: 20px;
   .st0 {
     fill: none;
     stroke: #000000;
@@ -92,10 +101,12 @@ svg.icon-plus-svg {
 
 svg.icon-back-svg {
   height: 15px;
+  width: 22px;
 }
 
 svg.siluet-icon-svg {
   height: 27px;
+  width: 27px;
   margin-top: -2px;
   * {
     fill: @colorPrimary;
@@ -106,6 +117,7 @@ svg.icon-mobile-svg {
   min-height: 85px;
   max-height: 85px;
   height: 85px;
+  width: 49px;
   .st0 {
     fill: none;
     stroke: #ffffff;
@@ -130,6 +142,7 @@ svg.icon-mobile-svg {
 
 svg.icon-user-svg {
   height: 81px;
+  width: 72px;
   .st0 {
     fill: none;
     stroke: #ffffff;
@@ -146,6 +159,7 @@ svg.icon-user-svg {
 
 svg.icon-waterdevice-svg {
   height: 78px;
+  width: 78px;
   * {
     fill: #ffffff;
   }
@@ -153,6 +167,7 @@ svg.icon-waterdevice-svg {
 
 svg.icon-wallet-svg {
   height: 75px;
+  width: 75px;
   .st0 {
     fill: none;
     stroke: #ffffff;
@@ -169,6 +184,7 @@ svg.icon-wallet-svg {
 
 svg.icon-askedo-svg {
   height: 84px;
+  width: 134.5px;
   .st0 {
     fill: #64a8df;
   }
@@ -190,6 +206,7 @@ svg.icon-askedo-svg {
 
 svg.icon-stophand-svg {
   height: 87px;
+  width: 87px;
   .st0 {
     fill: #d1d1d1;
   }
@@ -206,6 +223,7 @@ svg.icon-stophand-svg {
 
 svg.icon-arrow-svg {
   width: 27px;
+  height: 20px;
   .st0 {
     fill: none;
     stroke-width: 2;
@@ -219,6 +237,7 @@ svg.icon-arrow-svg {
 
 svg.icon-telegram-chat-svg {
   width: 8.57rem;
+  height: 2.85rem;
   .st0 {
     fill: #ffffff;
   }
@@ -241,10 +260,36 @@ svg.icon-telegram-chat-svg {
     font-family: @base-font;
     font-weight: 500;
   }
+
+  &_dark {
+    .st0 {
+      fill: #000;
+    }
+    .st2 {
+      font-size: 12px;
+    }
+    .st4 {
+      font-size: 9px;
+    }
+    .st5 {
+      stroke: #000;
+    }
+    .st6 {
+      fill: #000;
+    }
+    text {
+      font-family: @base-font;
+      font-weight: 500;
+    }
+    .telegram-icon {
+      fill: #fff;
+    }
+  }
 }
 
 svg.icon-viber-chat-svg {
   width: 8.57rem;
+  height: 2.85rem;
   * {
     transition: @transFast;
   }
@@ -273,6 +318,29 @@ svg.icon-viber-chat-svg {
   text {
     font-family: @base-font;
     font-weight: 500;
+  }
+
+  &_dark {
+    .st0 {
+      fill: #000;
+    }
+
+    .st5 {
+      stroke: #000;
+    }
+
+    .st6 {
+      fill: #000;
+    }
+    text {
+      font-family: @base-font;
+      font-weight: 500;
+    }
+    .viber-icon {
+      * {
+        fill: #fff;
+      }
+    }
   }
 }
 
@@ -313,6 +381,7 @@ svg.icon-tools-svg {
 
 svg.icon-plus-in-circle-svg {
   height: 20px;
+  width: 20px;
   * {
     fill: @colorPrimary;
   }

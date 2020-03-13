@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ title }}</title>
   {% include "../includes/styles.twig" %}
@@ -12,14 +13,14 @@
 
     {% include "../includes/eye-version-panel.twig" %}
     
-    {% include "../includes/header.twig" %}
+    {% include "../includes/header/header.twig" %}
     
 		{% block content %}
 
 		{% endblock %}
 
     <!-- FOOTER -->
-    {% include "../includes/footer.twig" %}
+    {% include "../includes/footer/footer.twig" %}
     
     <!-- SCRIPTS -->
     {% include "../includes/scripts.twig" %}

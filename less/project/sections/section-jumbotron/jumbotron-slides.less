@@ -153,12 +153,14 @@ html.color-black {
     max-height: 520px;
     min-height: 520px;
     &_opacity {
-      background: linear-gradient(
-        to bottom,
-        rgba(#000, 0.8) 0%,
-        rgba(#1caaf2, 0.5) 20%,
-        rgba(#1caaf2, 0.95) 100%
-      );
+      @media (max-width: 2160px) {
+        background: linear-gradient(
+          to bottom,
+          rgba(#000, 0.8) 0%,
+          rgba(#1caaf2, 0.5) 20%,
+          rgba(#1caaf2, 0.95) 100%
+        );
+      }
       .jumbotron-slide__img {
         opacity: 0.7;
       }
@@ -206,6 +208,9 @@ html.color-black {
       width: 100%;
       min-height: 520px;
       object-fit: cover;
+      max-width: 2160px;
+      margin-left: auto;
+      margin-right: auto;
     }
     &__content {
       position: absolute;

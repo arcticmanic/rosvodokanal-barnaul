@@ -1,11 +1,11 @@
 <section class="section-std section-partners wrapper">
-  <p class="subtitle">Сотрудничество</p>
-  <h2 class="h2-main">Наши партнеры</h2>
+  <h2 class="title">Мы сотрудничаем</h2>
+
   <div class="partners__cont">
     {% for idx, partner in partners %}
       <a href="#" class="partner__item">
         {% if idx < 13 %}
-          <img src="../img/partner-{{idx + 1}}.png" alt="{{partner.title}}" class="partner__img {{ partner.isTooBlack == true ? 'partner__img_too-black' : ''}}">
+          <img data-src="../img/partner-{{idx + 1}}.png" alt="{{partner.title}}" class="partner__img lazy {{ partner.isTooBlack == true ? 'partner__img_too-black' : ''}}">
         {% else %}  
           <div class="partner__img_fallback"></div>
         {% endif %}
@@ -15,4 +15,5 @@
       </a>
     {% endfor %}
   </div>
+  
 </section>

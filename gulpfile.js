@@ -10,13 +10,14 @@ const gulp = require('gulp'),
   path = require('path'),
   data = require('gulp-data'),
   twig = require('gulp-twig'),
-  fs = require('fs')
+  fs = require('fs'),
+  babel = require('gulp-babel')
 
 const paths = {
   build: './build/',
   data: './client/data/',
   srcCSS: './less/style.less',
-  srcJS: './js/common.js',
+  commonJS: './js/common/',
   pluginsJS: './js/plugins/'
 }
 
@@ -26,7 +27,7 @@ function styles() {
     .pipe(sourcemaps.init())
     .pipe(less())
     .pipe(concat('style.css'))
-    .pipe(autoprefixer('> 1%'))
+    .pipe(autoprefixer('> 0.01%'))
     .pipe(
       cleanCSS({
         level: 2
@@ -36,6 +37,7 @@ function styles() {
     .pipe(gulp.dest(`${paths.build}assets/css`))
     .pipe(browserSync.stream())
 }
+
 const JSPluginsOrder = [
   `${paths.pluginsJS}jquery-3.4.1.min.js`,
   `${paths.pluginsJS}jquery-ui.min.js`,
@@ -49,8 +51,24 @@ function concatPlugins() {
     .pipe(gulp.dest(`${paths.build}assets/js`))
 }
 
-function moveMainJS() {
-  return gulp.src(paths.srcJS).pipe(gulp.dest(`${paths.build}assets/js`))
+const JSCommonOrder = [
+  `${paths.commonJS}variables.js`,
+  `${paths.commonJS}functions.js`,
+  `${paths.commonJS}*.js`
+]
+
+function concatCommonJS() {
+  return gulp
+    .src(JSCommonOrder)
+    .pipe(sourcemaps.init())
+    .pipe(concat('common.js'))
+    .pipe(
+      babel({
+        presets: ['@babel/env']
+      })
+    )
+    .pipe(sourcemaps.write('./'))
+    .pipe(gulp.dest(`${paths.build}assets/js`))
 }
 
 function twigF() {
@@ -103,10 +121,10 @@ function watch() {
   })
 
   gulp
-    .watch('./js/*.js')
-    .on('change', gulp.series(moveMainJS, browserSync.reload))
+    .watch('./js/common/*.js')
+    .on('change', gulp.series(concatCommonJS, browserSync.reload))
   gulp
-    .watch('./jsplugins/*.js')
+    .watch('./js/plugins/*.js')
     .on('change', gulp.series(concatPlugins, browserSync.reload))
   gulp.watch('./less/**/*.less', styles)
   gulp
@@ -118,7 +136,10 @@ gulp.task('watch', watch)
 
 gulp.task(
   'build',
-  gulp.series(clean, gulp.parallel(styles, twigF, concatPlugins, moveMainJS))
+  gulp.series(
+    clean,
+    gulp.parallel(styles, twigF, concatPlugins, concatCommonJS)
+  )
 )
 
 gulp.task('dev', gulp.series('build', 'watch'))

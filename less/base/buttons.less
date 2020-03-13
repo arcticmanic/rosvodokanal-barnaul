@@ -1,3 +1,123 @@
+.btn {
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: @font-12;
+  font-weight: 400;
+  padding: 7px 11px;
+  line-height: 1.2em;
+  border: 1px solid rgba(@colorPrimary3, 0.3);
+  border-radius: 50px;
+  font-family: @title-font;
+  color: @navy;
+  transition: @transFast;
+  background: transparent;
+
+  &__icon {
+    margin-left: 14px;
+    transition: @transFast;
+    * {
+      stroke: #fff;
+    }
+  }
+
+  &__text {
+    transition: @transFast;
+  }
+
+  &_big {
+    padding: 13px 19px;
+  }
+
+  &_glass-like {
+    border: 1px solid rgba(#fff, 0.3);
+    background: rgba(#fff, 0.1);
+    .btn__text {
+      color: #fff;
+    }
+    &.btn_dark {
+      border: 1px solid rgba(#000, 0.3);
+      background: rgba(#000, 0.1);
+      .btn__text {
+        color: #fff;
+      }
+    }
+  }
+
+  &_trans {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.53);
+    color: white;
+    font-weight: 300;
+  }
+
+  &_frost {
+    border-color: transparent;
+    background: rgba(#fff, 0.3);
+    color: #fff;
+    &.btn_dark {
+      background: rgba(#000, 0.3);
+      color: #fff;
+    }
+  }
+
+  &_primary-color {
+    border-color: transparent;
+    background: @colorPrimary;
+    color: #fff;
+    svg.btn__icon.icon-arrow-svg {
+      * {
+        stroke: #fff;
+      }
+    }
+  }
+
+  &_with-arrow {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: fit-content;
+    width: intrinsic;
+    width: -moz-max-content;
+    &.btn_dark {
+    }
+  }
+
+  &_dark {
+    color: @colorPrimary3;
+  }
+
+  @media (min-width: @hoverW) {
+    &:hover {
+      box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+    }
+    &_trans {
+      &:hover {
+        text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+        box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+      }
+    }
+    &_frost {
+      &:hover {
+        background: rgba(#fff, 0.4);
+        &.btn_dark {
+          background: rgba(#000, 0.4);
+        }
+      }
+    }
+    &_with-arrow {
+      &:hover {
+        .btn__text {
+          text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+        }
+        .btn__icon {
+          transform: translateX(3px);
+        }
+      }
+    }
+  }
+}
+
 html.color-white {
   .btn {
     border-color: @blackEye;
@@ -230,121 +350,6 @@ html.scale-3 {
     &_big {
       padding-top: 9px;
       padding-bottom: 9px;
-    }
-  }
-}
-
-.btn {
-  text-align: center;
-  text-decoration: none;
-  cursor: pointer;
-  font-size: @font-12;
-  font-weight: 400;
-  padding: 7px 11px;
-  line-height: 1.2em;
-  border: 1px solid rgba(@colorPrimary3, 0.3);
-  border-radius: 50px;
-  font-family: @title-font;
-  color: @navy;
-  transition: @transFast;
-  background: transparent;
-
-  &__icon {
-    margin-left: 14px;
-    transition: @transFast;
-    * {
-      stroke: #fff;
-    }
-  }
-
-  &__text {
-    transition: @transFast;
-  }
-
-  &_big {
-    padding: 13px 19px;
-  }
-
-  &_glass-like {
-    border: 1px solid rgba(#fff, 0.3);
-    background: rgba(#fff, 0.1);
-    .btn__text {
-      color: #fff;
-    }
-    &.btn_dark {
-      border: 1px solid rgba(#000, 0.3);
-      background: rgba(#000, 0.1);
-      .btn__text {
-        color: #fff;
-      }
-    }
-  }
-
-  &_trans {
-    background: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.53);
-    color: white;
-    font-weight: 300;
-  }
-
-  &_frost {
-    border-color: transparent;
-    background: rgba(#fff, 0.3);
-    color: #fff;
-    &.btn_dark {
-      background: rgba(#000, 0.3);
-      color: #fff;
-    }
-  }
-
-  &_primary-color {
-    border-color: transparent;
-    background: @colorPrimary;
-    color: #fff;
-    svg.btn__icon.icon-arrow-svg {
-      * {
-        stroke: #fff;
-      }
-    }
-  }
-
-  &_with-arrow {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    max-width: fit-content;
-    &.btn_dark {
-    }
-  }
-
-  &_dark {
-    color: @colorPrimary3;
-  }
-
-  @media (min-width: @hoverW) {
-    &_trans {
-      &:hover {
-        text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
-        box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
-      }
-    }
-    &_frost {
-      &:hover {
-        background: rgba(#fff, 0.4);
-        &.btn_dark {
-          background: rgba(#000, 0.4);
-        }
-      }
-    }
-    &_with-arrow {
-      &:hover {
-        .btn__text {
-          text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
-        }
-        .btn__icon {
-          transform: translateX(3px);
-        }
-      }
     }
   }
 }
