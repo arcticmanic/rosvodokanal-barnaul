@@ -4,13 +4,24 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="./favlike/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favlike/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./favlike/favicon-16x16.png">
+  <link rel="manifest" href="./favlike/site.webmanifest">
+  <link rel="mask-icon" href="./favlike/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="./favlike/favicon.ico">
+  <meta name="msapplication-TileColor" content="#00aba9">
+  <meta name="msapplication-config" content="./favlike/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
   <title>{{ title }}</title>
   {% include "../includes/styles.twig" %}
+  {% block customStyles %}
+  
+  {% endblock %}
 </head>
 <body>
-    <!-- HEADER -->
     {% include "../includes/overlay.twig" %}
-
+      
     {% include "../includes/eye-version-panel.twig" %}
     
     {% include "../includes/header/header.twig" %}
@@ -19,10 +30,8 @@
 
 		{% endblock %}
 
-    <!-- FOOTER -->
     {% include "../includes/footer/footer.twig" %}
     
-    <!-- SCRIPTS -->
     {% include "../includes/scripts.twig" %}
 </body>
 </html>

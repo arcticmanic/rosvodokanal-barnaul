@@ -16,17 +16,20 @@ const gulp = require('gulp'),
 const paths = {
   build: './build/',
   data: './client/data/',
-  srcCSS: './less/style.less',
   commonJS: './js/common/',
   pluginsJS: './js/plugins/'
 }
 
-function styles() {
+function baseStyles() {
+  const info = {
+    path: './less/style.less',
+    name: 'style'
+  }
   return gulp
-    .src(paths.srcCSS)
+    .src(info.path)
     .pipe(sourcemaps.init())
     .pipe(less())
-    .pipe(concat('style.css'))
+    .pipe(concat(`${info.name}.css`))
     .pipe(autoprefixer('> 0.01%'))
     .pipe(
       cleanCSS({
@@ -38,26 +41,51 @@ function styles() {
     .pipe(browserSync.stream())
 }
 
-const JSPluginsOrder = [
-  `${paths.pluginsJS}jquery-3.4.1.min.js`,
-  `${paths.pluginsJS}jquery-ui.min.js`,
-  `${paths.pluginsJS}*.js`
-]
+function mainPageStyles() {
+  const info = {
+    path: './less/main-page/main-page.less',
+    name: 'main-page'
+  }
+  return gulp
+    .src(info.path)
+    .pipe(sourcemaps.init())
+    .pipe(less())
+    .pipe(concat(`${info.name}.css`))
+    .pipe(autoprefixer('> 0.01%'))
+    .pipe(
+      cleanCSS({
+        level: 2
+      })
+    )
+    .pipe(sourcemaps.write('./'))
+    .pipe(gulp.dest(`${paths.build}assets/css`))
+    .pipe(browserSync.stream())
+}
+
+function styles(cb) {
+  gulp.series(baseStyles, mainPageStyles)()
+  cb()
+}
 
 function concatPlugins() {
+  const JSPluginsOrder = [
+    `${paths.pluginsJS}jquery-3.4.1.min.js`,
+    `${paths.pluginsJS}*.js`
+  ]
+
   return gulp
     .src(JSPluginsOrder)
     .pipe(concat('plugins.js'))
     .pipe(gulp.dest(`${paths.build}assets/js`))
 }
 
-const JSCommonOrder = [
-  `${paths.commonJS}variables.js`,
-  `${paths.commonJS}functions.js`,
-  `${paths.commonJS}*.js`
-]
-
 function concatCommonJS() {
+  const JSCommonOrder = [
+    `${paths.commonJS}variables.js`,
+    `${paths.commonJS}functions.js`,
+    `${paths.commonJS}*.js`
+  ]
+
   return gulp
     .src(JSCommonOrder)
     .pipe(sourcemaps.init())
@@ -102,13 +130,13 @@ function twigF() {
   )
 }
 
-const cleanFiles = [
-  `${paths.build}assets/js/*.js`,
-  `${paths.build}assets/css/*.css`,
-  `${paths.build}/*.html`
-]
-
 function clean() {
+  const cleanFiles = [
+    `${paths.build}assets/js/*.js`,
+    `${paths.build}assets/css/*.css`,
+    `${paths.build}/*.html`
+  ]
+
   return del(cleanFiles)
 }
 
@@ -138,7 +166,7 @@ gulp.task(
   'build',
   gulp.series(
     clean,
-    gulp.parallel(styles, twigF, concatPlugins, concatCommonJS)
+    gulp.parallel(styles, concatPlugins, concatCommonJS, twigF)
   )
 )
 
