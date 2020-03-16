@@ -11,7 +11,11 @@ const gulp = require('gulp'),
   data = require('gulp-data'),
   twig = require('gulp-twig'),
   fs = require('fs'),
-  babel = require('gulp-babel')
+  babel = require('gulp-babel'),
+  sass = require('gulp-sass'),
+  merge = require('merge-stream')
+
+sass.compiler = require('node-sass')
 
 const paths = {
   build: './build/',
@@ -22,48 +26,58 @@ const paths = {
 
 function baseStyles() {
   const info = {
-    path: './less/style.less',
+    pathLess: './less/style.less',
+    pathSass: './scss/mmenu-light.scss',
     name: 'style'
   }
-  return gulp
-    .src(info.path)
+
+  const lessStream = gulp.src(info.pathLess).pipe(less())
+
+  const sassStream = gulp.src(info.pathSass).pipe(sass())
+
+  const mergedStream = merge(lessStream, sassStream)
     .pipe(sourcemaps.init())
-    .pipe(less())
     .pipe(concat(`${info.name}.css`))
-    .pipe(autoprefixer('> 0.01%'))
     .pipe(
       cleanCSS({
         level: 2
       })
     )
+    .pipe(autoprefixer('> 0.01%'))
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest(`${paths.build}assets/css`))
     .pipe(browserSync.stream())
+
+  return mergedStream
 }
 
-function mainPageStyles() {
-  const info = {
-    path: './less/main-page/main-page.less',
-    name: 'main-page'
-  }
+function resolvePageStyles(info) {
   return gulp
     .src(info.path)
     .pipe(sourcemaps.init())
     .pipe(less())
     .pipe(concat(`${info.name}.css`))
-    .pipe(autoprefixer('> 0.01%'))
     .pipe(
       cleanCSS({
         level: 2
       })
     )
+    .pipe(autoprefixer('> 0.01%'))
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest(`${paths.build}assets/css`))
     .pipe(browserSync.stream())
 }
 
 function styles(cb) {
-  gulp.series(baseStyles, mainPageStyles)()
+  gulp.series(
+    gulp.parallel(
+      baseStyles,
+      resolvePageStyles.bind(this, {
+        path: './less/main-page/main-page.less',
+        name: 'main-page'
+      })
+    )
+  )()
   cb()
 }
 
@@ -77,6 +91,7 @@ function concatPlugins() {
     .src(JSPluginsOrder)
     .pipe(concat('plugins.js'))
     .pipe(gulp.dest(`${paths.build}assets/js`))
+    .pipe(browserSync.stream())
 }
 
 function concatCommonJS() {
@@ -97,6 +112,7 @@ function concatCommonJS() {
     )
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest(`${paths.build}assets/js`))
+    .pipe(browserSync.stream())
 }
 
 function twigF() {
@@ -155,6 +171,7 @@ function watch() {
     .watch('./js/plugins/*.js')
     .on('change', gulp.series(concatPlugins, browserSync.reload))
   gulp.watch('./less/**/*.less', styles)
+  gulp.watch('./scss/**/*.scss', styles)
   gulp
     .watch(['client/templates/**/*.twig', 'client/data/*.twig.json'])
     .on('change', gulp.series(twigF, browserSync.reload))

@@ -102,6 +102,64 @@ svg.icon-back-svg {
   width: 22px;
 }
 
+svg.icon-hambuger-svg {
+  height: 30px;
+  width: 40px;
+  * {
+    fill: @colorPrimary;
+  }
+  .bar {
+    &_top {
+      transition: @transFast;
+    }
+    &_middle {
+      transition: @transFast;
+    }
+    &_bottom {
+      transition: @transMid;
+    }
+  }
+
+  .dot {
+    &_top {
+      transition: @transSlow;
+    }
+
+    &_middle {
+      transition: @transMid;
+    }
+
+    &_bottom {
+      transition: @transSlow;
+    }
+  }
+
+  &:hover {
+    .dot {
+      &_top {
+        transform: translateX(-10px);
+      }
+      &_middle {
+        transform: translateX(-30px);
+      }
+      &_bottom {
+        transform: translateX(-40px);
+      }
+    }
+    .bar {
+      &_top {
+        transform: translateX(-25px);
+      }
+      &_middle {
+        transform: translateX(-60px);
+      }
+      &_bottom {
+        transform: translateX(-45px);
+      }
+    }
+  }
+}
+
 svg.siluet-icon-svg {
   height: 27px;
   width: 27px;
@@ -382,6 +440,18 @@ svg.icon-plus-in-circle-svg {
   width: 20px;
   * {
     fill: @colorPrimary;
+  }
+}
+
+svg.icon-cross-svg {
+  height: 10px;
+  width: 10px;
+  .st0 {
+    fill: none;
+    stroke: @colorPrimary3;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-miterlimit: 10;
   }
 }
 

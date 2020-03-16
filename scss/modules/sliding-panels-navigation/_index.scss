@@ -1,0 +1,192 @@
+$prefix: '.mm-spn';
+
+/** Animation duration. */
+$mmspn_transition_duration: 0.3s;
+
+/** Arrow size. */
+$mmspn_arrow_size: 10px !default;
+
+/** Arrow weight. */
+$mmspn_arrow_weight: 2px !default;
+
+/** Border opacity. */
+$mmspn_border_opac: 0.15 !default;
+
+/** Navbar opacity. */
+$mmspn_navbar_opac: 0.4 !default;
+
+/** Arrow opacity. */
+$mmspn_arrow_opac: 0.4 !default;
+
+/** Item height. */
+$mmspn_item_height: 50px !default;
+
+/** Item indent. */
+$mmspn_item_indent: 20px !default;
+
+/** Line height. */
+$mmspn_line_height: 24px !default;
+
+/** Panel offset. */
+$mmspn_panel_offset: 30% !default;
+
+%mmspn-reset {
+  display: block;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /** Height for menu items. */
+  --mm-spn-item-height: #{$mmspn_item_height};
+
+  /** Indent for menu items. */
+  --mm-spn-item-indent: #{$mmspn_item_indent};
+
+  /** Line height for menu items. */
+  --mm-spn-line-height: #{$mmspn_line_height};
+}
+
+//  The menu
+#{$prefix} {
+  @extend %mmspn-reset;
+
+  width: 100%;
+  height: 100vh;
+  min-height: 100vh;
+
+  //  Prevent the entire menu from highlighting when clicking the navbar
+  -webkit-tap-highlight-color: transparent;
+
+  //  Enables smooth scrolling.
+  -webkit-overflow-scrolling: touch;
+
+  //  Prevent any content being visible outside the menu
+  overflow: hidden;
+  clip-path: inset(0 0 0 0);
+
+  //  This creates a new viewport from the menu so the panels can be fixed
+  transform: translateX(0px);
+}
+
+//  Listviews
+#{$prefix} {
+  //  All listviews.
+  ul {
+    @extend %mmspn-reset;
+
+    //  Enables smooth scrolling.
+    -webkit-overflow-scrolling: touch;
+
+    // position: fixed;
+    top: 0;
+    left: 100%;
+    bottom: 0;
+    z-index: 2; // Needs a z-index to be above its parent.
+
+    //  Fix for weird iOS Safari issue:
+    //  A fixed element is not visible outside of its parent if its parent is scrollable.
+    width: 100% + $mmspn_panel_offset;
+    padding-right: $mmspn_panel_offset;
+    //  /Fix
+
+    line-height: $mmspn_line_height; // IE11 fallback
+    line-height: var(--mm-spn-line-height);
+
+    overflow: visible;
+    overflow-y: auto;
+    background: inherit;
+    transition: left $mmspn_transition_duration ease 0s;
+
+    cursor: default;
+  }
+
+  //  First level listview.
+  > ul {
+    left: 0;
+  }
+
+  //  Listview opened.
+  ul#{$prefix}--open {
+    left: 0;
+  }
+
+  //  Child listview opened.
+  ul#{$prefix}--parent {
+    left: -$mmspn_panel_offset;
+    overflow-y: hidden;
+  }
+}
+
+//  Listitems
+#{$prefix} {
+  li {
+    @extend %mmspn-reset;
+    position: relative;
+    background: inherit;
+    cursor: pointer;
+  }
+}
+
+//  Anchors
+#{$prefix} {
+  .mobile-menu__item {
+    ul {
+      padding-left: 20px;
+    }
+  }
+
+  hr {
+    width: 90%;
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid rgba(#fff, 0.2);
+    margin: 1em 0;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  a.mobile-menu__link,
+  span {
+    @extend %mmspn-reset;
+
+    position: relative;
+    z-index: 1;
+    margin-top: (($mmspn_item_height - $mmspn_line_height) / 2);
+    margin-bottom: (($mmspn_item_height - $mmspn_line_height) / 2);
+    padding-right: $mmspn_item_indent; // IE11 fallback
+    padding-left: $mmspn_item_indent; // IE11 fallback
+    margin-top: calc(
+      (var(--mm-spn-item-height) - var(--mm-spn-line-height)) / 2
+    );
+    margin-bottom: calc(
+      (var(--mm-spn-item-height) - var(--mm-spn-line-height)) / 2
+    );
+    padding-left: var(--mm-spn-item-indent);
+    padding-right: var(--mm-spn-item-indent);
+
+    &.phone {
+      color: $colorPrimary3;
+      font-size: 16px;
+      font-weight: 700;
+    }
+  }
+
+  a.mobile-menu__link {
+    background: inherit;
+    color: inherit;
+    text-decoration: none;
+  }
+
+  //  Show arrow for opening the submenu.
+  span {
+    background: transparent;
+  }
+}
+
+// @import 'navbar';
+@import 'themes';
+@import 'vertical';

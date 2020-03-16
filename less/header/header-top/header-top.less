@@ -10,5 +10,65 @@
   .header-top {
     padding-left: 10px;
     padding-right: 10px;
+    .search-menu {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: @tabletW) {
+  .header-top {
+    .phone {
+      display: none;
+    }
+    .eye-version {
+      margin-left: auto;
+      margin-right: 15px;
+    }
+    .lk-user-link {
+      margin-right: 15px;
+    }
+  }
+}
+
+@media (max-width: @mobileLandscapeWBig) {
+  .header-top {
+  }
+}
+
+@media (max-width: @mobileLandscapeW) {
+  .header-top {
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+    .eye-version {
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 5px;
+      padding-right: 5px;
+      &__text {
+        display: none !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .header {
+    .header-top {
+      margin-top: 11px;
+      margin-bottom: 11px;
+      .eye-version {
+        display: none;
+      }
+      .lk-user-link {
+        display: none;
+      }
+      .logo {
+        svg.logo-main-svg {
+          height: 50px;
+        }
+      }
+    }
   }
 }

@@ -1,44 +1,19 @@
-html.color-white {
-  .header-bottom {
-    &__center-item {
-      .header-bottom__center-link {
-        color: @blackEye !important;
-      }
-    }
-    &__center-link {
-      color: @blackEye !important;
-    }
-  }
-}
-
-html.color-black {
-  .header-bottom {
-    &__center-item {
-      .header-bottom__center-link {
-        color: @whiteEye !important;
-      }
-    }
-    &__center-link {
-      color: @whiteEye !important;
-    }
-  }
-}
-
 .header-bottom {
   &__center-menu {
     display: flex;
     align-items: center;
   }
   &__center-item {
+    .header-bottom__center-link {
+      color: inherit;
+    }
     &.active {
-      .header-bottom__center-link {
-        color: @colorPrimary3;
-      }
+      color: @colorPrimary3;
     }
     @media (min-width: @hoverW) {
       &:hover:not(.active) {
+        color: @colorPrimary3;
         .header-bottom__center-link {
-          color: @colorPrimary3;
           background-size: 4px 50px;
         }
       }
@@ -49,5 +24,38 @@ html.color-black {
     font-size: inherit;
     text-transform: uppercase;
     font-weight: 400;
+  }
+}
+
+html.color-white {
+  .header-bottom {
+    &__center-item {
+      color: @blackEye;
+      &.active {
+        text-decoration: underline;
+      }
+      @media (min-width: @hoverW) {
+        &:hover:not(.active) {
+          color: @blackEye;
+        }
+      }
+    }
+  }
+}
+
+html.color-black {
+  .header-bottom {
+    &__center-item {
+      color: @whiteEye;
+      &.active {
+        text-decoration: underline;
+      }
+
+      @media (min-width: @hoverW) {
+        &:hover:not(.active) {
+          color: @blackEye;
+        }
+      }
+    }
   }
 }

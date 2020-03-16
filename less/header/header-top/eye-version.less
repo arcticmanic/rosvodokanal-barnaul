@@ -1,29 +1,79 @@
-html.color-white {
-  .header {
-    .eye-version {
-      background: @blackEye;
-      border-color: @blackEye;
+.eye-version {
+  display: flex;
+  align-items: center;
+  position: relative;
+  border-radius: 50px;
+  border: 2px solid @colorPrimary3;
+  padding: 6px 15px;
+  transition: @transMid;
+  background: #fff;
 
-      &__text {
-        color: @whiteEye;
+  &__text {
+    font-size: @font-13;
+    color: @colorPrimary3;
+    margin-left: 10px;
+    transition: @transMid;
+    line-height: 1.7em;
+  }
+
+  &__spez {
+    display: block;
+  }
+
+  &__std {
+    display: none;
+  }
+
+  &-active {
+    .eye-version__spez {
+      display: none;
+    }
+
+    .eye-version__std {
+      display: block;
+    }
+  }
+
+  @media (min-width: @hoverW) {
+    &:hover {
+      background: @colorPrimary3;
+      .eye-version__text {
+        color: #fff;
       }
-
       .icon-eye-svg {
+        transform: translateY(-1px);
         * {
-          fill: @whiteEye;
+          fill: #fff;
         }
       }
+    }
+  }
+}
 
-      @media (min-width: @hoverW) {
-        &:hover {
-          background: @whiteEye;
-          .eye-version__text {
-            color: @blackEye;
-          }
-          .icon-eye-svg {
-            * {
-              fill: @blackEye;
-            }
+html.color-white {
+  .eye-version {
+    background: @blackEye;
+    border-color: @blackEye;
+
+    &__text {
+      color: @whiteEye;
+    }
+
+    .icon-eye-svg {
+      .st0 {
+        fill: @whiteEye;
+      }
+    }
+
+    @media (min-width: @hoverW) {
+      &:hover {
+        background: @whiteEye;
+        .eye-version__text {
+          color: @blackEye;
+        }
+        .icon-eye-svg {
+          .st0 {
+            fill: @blackEye;
           }
         }
       }
@@ -32,84 +82,28 @@ html.color-white {
 }
 
 html.color-black {
-  .header {
-    .eye-version {
-      background: @whiteEye;
-      border-color: @blackEye;
-
-      &__text {
-        color: @blackEye;
-      }
-
-      .icon-eye-svg {
-        * {
-          fill: @blackEye;
-        }
-      }
-
-      @media (min-width: @hoverW) {
-        &:hover {
-          .eye-version__text {
-            color: @blackEye;
-          }
-          .icon-eye-svg {
-            * {
-              fill: @blackEye;
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-.header {
   .eye-version {
-    display: flex;
-    align-items: center;
-    position: relative;
-    border-radius: 50px;
-    border: 2px solid @colorPrimary3;
-    padding: 6px 15px;
-    transition: @transMid;
-    background: #fff;
+    background: @whiteEye;
+    border-color: @blackEye;
 
     &__text {
-      font-size: @font-13;
-      color: @colorPrimary3;
-      margin-left: 10px;
-      transition: @transMid;
-      line-height: 1.7em;
+      color: @blackEye;
     }
 
-    &__spez {
-      display: block;
-    }
-
-    &__std {
-      display: none;
-    }
-
-    &-active {
-      .eye-version__spez {
-        display: none;
-      }
-
-      .eye-version__std {
-        display: block;
+    .icon-eye-svg {
+      .st0 {
+        fill: @blackEye;
       }
     }
 
     @media (min-width: @hoverW) {
       &:hover {
-        background: @colorPrimary3;
         .eye-version__text {
-          color: #fff;
+          color: @blackEye;
         }
         .icon-eye-svg {
-          transform: translateY(-1px);
-          * {
-            fill: #fff;
+          .st0 {
+            fill: @blackEye;
           }
         }
       }

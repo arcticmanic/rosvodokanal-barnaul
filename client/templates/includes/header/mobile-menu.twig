@@ -1,0 +1,59 @@
+<nav id="my-menu"class="mobile-menu">
+  <div class="mobile-menu__header">
+    {% include '../stdEls/logo.twig' %}
+
+    {% include '../stdEls/eye-version.twig' %}
+
+    {% include '../stdEls/lk-user-link.twig' %}
+
+  </div>
+
+  <a class="phone mobile-menu__link" href="tel:83852282200">8 (3852) 282-200</a>
+
+  <ul class="mobile-menu__items">
+    <li class="mobile-menu__item">
+      <a class="mobile-menu__link" href="#">Абонетам</a>
+    </li>
+
+    <hr>
+
+    <li class="mobile-menu__item">
+        <a class="mobile-menu__link" href="#">Услуги</a>
+        <ul>
+            <li class="mobile-menu__item"><a class="mobile-menu__link" href="#">Частные лица</a></li>
+            <li class="mobile-menu__item"><a class="mobile-menu__link" href="#">Юридические лица</a></li>
+        </ul>
+    </li>
+
+    <hr>
+
+    <li class="mobile-menu__item">
+      <a class="mobile-menu__link" href="#">О водоканале</a>
+    </li>
+
+    <li class="mobile-menu__item">
+      <a class="mobile-menu__link" href="#">Закупки</a>
+    </li>
+
+    <li class="mobile-menu__item">
+      <a class="mobile-menu__link" href="#">Карьера</a>
+    </li>
+
+    <li class="mobile-menu__item">
+      <a class="mobile-menu__link" href="#">Пресс-цент</a>
+    </li>
+
+    <li class="mobile-menu__item">
+      <a class="mobile-menu__link" href="#">Контакты</a>
+    </li>
+  </ul>
+
+  <div class="mobile-menu__footer">
+    {% include '../stdEls/search-menu.twig' %}
+
+    {% include './all-sites.twig' %}
+
+    {% include '../stdEls/social-icons.twig' %}
+  </div>
+
+</nav>
