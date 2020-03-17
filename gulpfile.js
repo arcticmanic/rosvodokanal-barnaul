@@ -74,18 +74,16 @@ function resolvePageStyles(info) {
 }
 
 function styles(cb) {
-  gulp.series(
-    gulp.parallel(
-      baseStyles,
-      resolvePageStyles.bind(this, {
-        path: './less/main-page-tpl/main-page-tpl.less',
-        name: 'main-page-tpl'
-      }),
-      resolvePageStyles.bind(this, {
-        path: './less/services-tpl/services-tpl.less',
-        name: 'services-tpl'
-      })
-    )
+  gulp.parallel(
+    baseStyles,
+    resolvePageStyles.bind(this, {
+      path: './less/main-page-tpl/main-page-tpl.less',
+      name: 'main-page-tpl'
+    }),
+    resolvePageStyles.bind(this, {
+      path: './less/services-tpl/services-tpl.less',
+      name: 'services-tpl'
+    })
   )()
   cb()
 }
@@ -99,6 +97,21 @@ function concatPlugins() {
   return gulp
     .src(JSPluginsOrder)
     .pipe(concat('plugins.js'))
+    .pipe(gulp.dest(`${paths.build}assets/js`))
+    .pipe(browserSync.stream())
+}
+
+function resolvePageJS(info) {
+  return gulp
+    .src(info.src)
+    .pipe(sourcemaps.init())
+    .pipe(concat(`${info.name}.js`))
+    .pipe(
+      babel({
+        presets: ['@babel/env']
+      })
+    )
+    .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest(`${paths.build}assets/js`))
     .pipe(browserSync.stream())
 }
@@ -122,6 +135,17 @@ function concatCommonJS() {
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest(`${paths.build}assets/js`))
     .pipe(browserSync.stream())
+}
+
+function javascript(cb) {
+  gulp.parallel(
+    concatCommonJS,
+    resolvePageJS.bind(this, {
+      src: `${paths.commonJS}main-page-tpl/*.js`,
+      name: `main-page-tpl`
+    })
+  )()
+  cb()
 }
 
 function twigF() {
@@ -174,8 +198,8 @@ function watch() {
   })
 
   gulp
-    .watch('./js/common/*.js')
-    .on('change', gulp.series(concatCommonJS, browserSync.reload))
+    .watch('./js/common/**/*.js')
+    .on('change', gulp.series(javascript, browserSync.reload))
   gulp
     .watch('./js/plugins/*.js')
     .on('change', gulp.series(concatPlugins, browserSync.reload))
@@ -190,10 +214,7 @@ gulp.task('watch', watch)
 
 gulp.task(
   'build',
-  gulp.series(
-    clean,
-    gulp.parallel(styles, concatPlugins, concatCommonJS, twigF)
-  )
+  gulp.series(clean, gulp.parallel(styles, concatPlugins, javascript, twigF))
 )
 
 gulp.task('dev', gulp.series('build', 'watch'))
