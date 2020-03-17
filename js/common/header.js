@@ -1,18 +1,19 @@
 $(document).ready(function() {
   $(document)
-    .on('click', '.all-sites .all-sites__text', function() {
+    .on('click', '.header-bottom .all-sites .all-sites__text', function() {
       $(this)
         .closest('.all-sites')
         .toggleClass('active')
-      $('.city-list').fadeToggle(500, function() {
-        $('body').toggleClass('somethingIsOpen')
-      })
+      $(this)
+        .closest('.header-bottom')
+        .find('.city-list')
+        .fadeToggle(500)
     })
     .on('mouseleave', '.header-bottom .all-sites', function() {
-      $('.all-sites').removeClass('active')
-      $('.city-list').fadeOut(500, function() {
-        $('body').removeClass('somethingIsOpen')
-      })
+      $(this).removeClass('active')
+      $(this)
+        .find('.city-list')
+        .fadeOut(500)
     })
     .on('mouseover', '.header-bottom__item', function() {
       $(this).addClass('submenu-is-opened')
@@ -26,5 +27,4 @@ $(document).ready(function() {
         .find('.submenu')
         .fadeOut(500)
     })
-
 })

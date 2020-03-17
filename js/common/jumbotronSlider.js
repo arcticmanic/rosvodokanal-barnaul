@@ -7,8 +7,6 @@ $(document).ready(function() {
     currentSlide,
     nextSlide
   ) {
-    // var i = (nextSlide ? nextSlide : 0) + 1
-
     jumbotronSlider.find('.slick-dots li button').each(function(index) {
       if (index < 9) {
         $(this).text('0' + $(this).html())
@@ -63,11 +61,16 @@ $(document).ready(function() {
   jumbotronSlider.slick({
     slidesToShow: 1,
     slidesToScroll: 1,
-    fade: true,
+    infinite: false,
+    // fade: true,
     arrows: false,
     autoplay: false,
+    autoplaySpeed: 6000,
+    verticalSwiping: true,
+    pauseOnHover: true,
     dots: true,
     adaptiveHeight: false,
+    vertical: true,
     lazyLoad: 'ondemand'
   })
 

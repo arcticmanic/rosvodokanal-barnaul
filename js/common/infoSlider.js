@@ -19,8 +19,10 @@ $(document).ready(function() {
     slidesToScroll: 1,
     fade: true,
     arrows: false,
-    autoplay: false,
+    // autoplay: true,
+    // autoplaySpeed: 4000,
     dots: true,
-    adaptiveHeight: false
+    adaptiveHeight: false,
+    lazyLoad: 'ondemand'
   })
 })

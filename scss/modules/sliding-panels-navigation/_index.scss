@@ -126,6 +126,55 @@ $mmspn_panel_offset: 30% !default;
     position: relative;
     background: inherit;
     cursor: pointer;
+    color: #fff;
+
+    a {
+      transition: all 0.25s ease;
+    }
+
+    @media (min-width: $tabletW) {
+      &:hover {
+        color: $colorPrimary3;
+      }
+    }
+  }
+}
+
+html.color-white {
+  #{$prefix} {
+    li {
+      color: #000;
+
+      @media (min-width: $tabletW) {
+        &:hover {
+          color: #000;
+          text-decoration: underline;
+        }
+      }
+    }
+
+    hr {
+      border-color: #000;
+    }
+  }
+}
+
+html.color-black {
+  #{$prefix} {
+    li {
+      color: #fff;
+
+      @media (min-width: $tabletW) {
+        &:hover {
+          color: #fff;
+          text-decoration: underline;
+        }
+      }
+    }
+
+    hr {
+      border-color: #fff;
+    }
   }
 }
 

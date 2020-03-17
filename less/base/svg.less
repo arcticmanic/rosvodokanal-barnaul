@@ -317,28 +317,30 @@ svg.icon-telegram-chat-svg {
     font-weight: 500;
   }
 
-  &_dark {
-    .st0 {
-      fill: #000;
-    }
-    .st2 {
-      font-size: 12px;
-    }
-    .st4 {
-      font-size: 9px;
-    }
-    .st5 {
-      stroke: #000;
-    }
-    .st6 {
-      fill: #000;
-    }
-    text {
-      font-family: @base-font;
-      font-weight: 500;
-    }
-    .telegram-icon {
-      fill: #fff;
+  @media (min-width: @tabletW) {
+    &_dark {
+      .st0 {
+        fill: #000;
+      }
+      .st2 {
+        font-size: 12px;
+      }
+      .st4 {
+        font-size: 9px;
+      }
+      .st5 {
+        stroke: #000;
+      }
+      .st6 {
+        fill: #000;
+      }
+      text {
+        font-family: @base-font;
+        font-weight: 500;
+      }
+      .telegram-icon {
+        fill: #fff;
+      }
     }
   }
 }
@@ -627,6 +629,12 @@ html.color-white {
       fill: #000;
     }
   }
+
+  svg.icon-hambuger-svg {
+    * {
+      fill: #000;
+    }
+  }
 }
 
 html.color-black {
@@ -803,6 +811,12 @@ html.color-black {
   }
 
   svg.icon-plus-in-circle-svg {
+    * {
+      fill: #fff;
+    }
+  }
+
+  svg.icon-hambuger-svg {
     * {
       fill: #fff;
     }

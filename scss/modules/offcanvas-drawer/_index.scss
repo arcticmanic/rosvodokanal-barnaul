@@ -17,6 +17,16 @@ $red: #e30613;
 $blackEye: #000;
 $whiteEye: #fff;
 
+$wrapperMaxWidthAdjusted: calc($wrapperMaxWidth + 10px);
+$wrapperMaxWidth: 1160px;
+$laptopW: 1400px;
+$tabletW: 1024px;
+$hoverW: 1024px;
+$mobileLandscapeWBig: 850px;
+$mobileLandscapeW: 768px;
+$mobileW: 500px;
+$mobileSSW: 350px;
+
 //  CSS variables
 :root {
   /** Width for the drawer. */

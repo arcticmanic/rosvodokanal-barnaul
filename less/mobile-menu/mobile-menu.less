@@ -4,19 +4,6 @@
   }
 }
 
-.hamburger-btn {
-  display: inline-block;
-  cursor: pointer;
-
-  .bar {
-    width: 25px;
-    height: 3px;
-    background-color: #333;
-    margin: 4px 0;
-    transition: 0.4s;
-  }
-}
-
 .mm-spn {
   .phone.mobile-menu__link {
     display: none;
@@ -108,11 +95,14 @@
         display: none;
         &__text {
           background: transparent;
+          padding-right: 10px;
+          padding-left: 10px;
           &-inner {
             font-size: 13px;
             color: @colorPrimary3;
             padding: 0;
-            padding-right: 10px;
+            z-index: 3;
+            margin-right: 10px;
           }
           svg.icon-plus-in-circle-svg {
             height: 18px;
@@ -124,6 +114,16 @@
         }
         .city-list {
           position: relative;
+          margin-top: -30px;
+          padding-top: 45px;
+          padding-left: 10px;
+          padding-right: 10px;
+          &__link {
+            margin-bottom: 0;
+            .city-list__city {
+              padding-left: 1px;
+            }
+          }
         }
         @media (max-width: @wrapperMaxWidth) {
           display: block;
@@ -163,4 +163,119 @@
 }
 
 @media (min-width: @tabletW) {
+}
+
+html.color-white {
+  .mm-spn {
+    .phone.mobile-menu__link {
+      color: #000;
+    }
+    .mobile-menu {
+      &__header {
+        border-bottom: 1px solid #000;
+        .logo {
+          svg.logo-main-svg {
+            * {
+              fill: #000;
+            }
+          }
+        }
+      }
+
+      &__footer {
+        .search-menu {
+          .search__input {
+            border-color: #000;
+            color: #000;
+          }
+          .search-icon {
+            svg.icon-search-svg {
+              * {
+                stroke: #000 !important;
+              }
+            }
+          }
+        }
+
+        .all-sites {
+          &__text {
+            &-inner {
+              color: #000;
+            }
+            svg.icon-plus-in-circle-svg {
+              * {
+                fill: #000;
+              }
+            }
+          }
+        }
+
+        .social-icons {
+          svg.social-icon {
+            * {
+              fill: #000;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+html.color-black {
+  .mm-spn {
+    .phone.mobile-menu__link {
+      color: #fff;
+    }
+    .mobile-menu {
+      &__header {
+        background: #000;
+        border-bottom: 1px solid #fff;
+        .logo {
+          svg.logo-main-svg {
+            * {
+              fill: #fff;
+            }
+          }
+        }
+      }
+
+      &__footer {
+        .search-menu {
+          .search__input {
+            border-color: #fff;
+            color: #fff;
+          }
+          .search-icon {
+            svg.icon-search-svg {
+              * {
+                stroke: #fff !important;
+              }
+            }
+          }
+        }
+
+        .all-sites {
+          &__text {
+            &-inner {
+              color: #fff;
+            }
+            svg.icon-plus-in-circle-svg {
+              * {
+                fill: #fff;
+              }
+            }
+          }
+        }
+
+        .social-icons {
+          svg.social-icon {
+            * {
+              fill: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
 }

@@ -4,10 +4,22 @@
     color: #fff;
     background: $colorPrimary2;
   }
+}
 
-  //  Dark theme
-  &#{$prefix}--dark {
-    color: #ddd;
-    background: #333;
+html.color-white {
+  #{$prefix} {
+    //  Light theme
+    &#{$prefix}--light {
+      background: #fff;
+    }
+  }
+}
+
+html.color-black {
+  #{$prefix} {
+    //  Light theme
+    &#{$prefix}--light {
+      background: #000;
+    }
   }
 }
