@@ -31,12 +31,17 @@ function baseStyles() {
     name: 'style'
   }
 
-  const lessStream = gulp.src(info.pathLess).pipe(less())
+  const lessStream = gulp
+    .src(info.pathLess)
+    .pipe(less())
+    .pipe(sourcemaps.init())
 
-  const sassStream = gulp.src(info.pathSass).pipe(sass())
+  const sassStream = gulp
+    .src(info.pathSass)
+    .pipe(sass())
+    .pipe(sourcemaps.init())
 
   const mergedStream = merge(lessStream, sassStream)
-    .pipe(sourcemaps.init())
     .pipe(concat(`${info.name}.css`))
     .pipe(
       cleanCSS({
@@ -73,8 +78,12 @@ function styles(cb) {
     gulp.parallel(
       baseStyles,
       resolvePageStyles.bind(this, {
-        path: './less/main-page/main-page.less',
-        name: 'main-page'
+        path: './less/main-page-tpl/main-page-tpl.less',
+        name: 'main-page-tpl'
+      }),
+      resolvePageStyles.bind(this, {
+        path: './less/services-tpl/services-tpl.less',
+        name: 'services-tpl'
       })
     )
   )()
