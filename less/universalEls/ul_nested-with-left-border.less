@@ -1,0 +1,60 @@
+.ul_nested-with-left-border {
+  max-width: fit-content;
+  li {
+    ul {
+      border-left: 1px solid @colorPrimary;
+      transition: @transFast;
+
+      @media (min-width: @hoverW) {
+        &:hover {
+          border-width: 3px;
+        }
+      }
+    }
+    a {
+      color: @colorPrimary;
+      @media (min-width: @hoverW) {
+        &:hover {
+          color: @colorPrimary;
+          transform: translateX(4px);
+        }
+      }
+    }
+  }
+}
+
+html.color-white {
+  .ul_nested-with-left-border {
+    li {
+      ul {
+        border-color: @blackEye;
+      }
+    }
+    a {
+      color: @blackEye;
+      @media (min-width: @hoverW) {
+        &:hover {
+          color: @blackEye;
+        }
+      }
+    }
+  }
+}
+
+html.color-black {
+  .ul_nested-with-left-border {
+    li {
+      ul {
+        border-color: @whiteEye;
+      }
+    }
+    a {
+      color: @whiteEye;
+      @media (min-width: @hoverW) {
+        &:hover {
+          color: @whiteEye;
+        }
+      }
+    }
+  }
+}

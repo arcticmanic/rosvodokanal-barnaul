@@ -16,11 +16,11 @@
     },
     {
       "title": "Абонентам",
-      "link": "users_info.html",
+      "link": "text_page.html",
       "pages": [
         {
           "title": "Общая информация",
-          "link": "users_info.html",
+          "link": "text_page.html",
           "pages": [
             {
               "title": "Отключения",
@@ -41,7 +41,7 @@
             },
             {
               "title": "Справочная служба",
-              "link": "users_info.html"
+              "link": "text_page.html"
             },
             {
               "title": "Режим работы",
@@ -119,7 +119,7 @@
               "pages": [
                 {
                   "title": "Глоссарий",
-                  "link": "users_info.html"
+                  "link": "text_page.html"
                 },
                 {
                   "title": "Калькулятор",
@@ -287,7 +287,7 @@
             },
             {
               "title": "Прочие услуги",
-              "link": "users_info.html"
+              "link": "text_page.html"
             },
             {
               "title": "Образцы документов",
@@ -295,7 +295,7 @@
             },
             {
               "title": "Тарифы и нормативы",
-              "link": "users_info.html"
+              "link": "text_page.html"
             },
             {
               "title": "Нормативные акты",
@@ -303,7 +303,7 @@
             },
             {
               "title": "Изменения и уведомления",
-              "link": "users_info.html"
+              "link": "text_page.html"
             },
             {
               "title": "Задать вопрос",
@@ -321,33 +321,33 @@
             },
             {
               "title": "Передать показания приборов",
-              "link": "users_info.html"
+              "link": "text_page.html"
             },
             {
               "title": "Оплатить",
-              "link": "users_info.html"
+              "link": "text_page.html"
             },
             {
               "title": "Тарифы",
-              "link": "users_info.html"
+              "link": "text_page.html"
             },
             {
               "title": "Договор на оказание услуг",
-              "link": "users_info.html",
+              "link": "text_page.html",
               "pages": [
                 {
                   "title": "Порядок заключения",
-                  "link": "users_info.html"
+                  "link": "text_page.html"
                 }
               ]
             },
             {
               "title": "Электронный документооборот",
-              "link": "users_info.html"
+              "link": "text_page.html"
             },
             {
               "title": "Формы документов",
-              "link": "users_info.html"
+              "link": "text_page.html"
             },
             {
               "title": "Нормативные акты",
@@ -355,11 +355,11 @@
             },
             {
               "title": "Декларация",
-              "link": "users_info.html"
+              "link": "text_page.html"
             },
             {
               "title": "Расчет НДС",
-              "link": "users_info.html"
+              "link": "text_page.html"
             },
             {
               "title": "Приборы учета",
@@ -393,7 +393,7 @@
               "pages": [
                 {
                   "title": "Глоссарий",
-                  "link": "users_info.html"
+                  "link": "text_page.html"
                 },
                 {
                   "title": "Калькулятор",
@@ -565,13 +565,13 @@
             },
             {
               "title": "Прочие услуги",
-              "link": "users_info.html"
+              "link": "text_page.html"
             }
           ]
         },
         {
           "title": "Противодействие коррупции",
-          "link": "users_info.html"
+          "link": "text_page.html"
         }
       ]
     },
@@ -621,7 +621,7 @@
             },
             {
               "title": "Прочие услуги",
-              "link": "users_info.html"
+              "link": "text_page.html"
             }
           ]
         },
@@ -667,7 +667,7 @@
             },
             {
               "title": "Прочие услуги",
-              "link": "users_info.html"
+              "link": "text_page.html"
             }
           ]
         }
@@ -675,11 +675,11 @@
     },
     {
       "title": "О водоканале",
-      "link": "users_info.html",
+      "link": "text_page.html",
       "pages": [
         {
           "title": "История",
-          "link": "users_info.html"
+          "link": "text_page.html"
         },
         {
           "title": "Руководство",
@@ -699,7 +699,7 @@
             },
             {
               "title": "Молодые специалисты",
-              "link": "users_info.html",
+              "link": "text_page.html",
               "pages": [
                 {
                   "title": "Совет молодых специалистов",
@@ -707,27 +707,166 @@
                 },
                 {
                   "title": "Волонтерство",
-                  "link": "about_coworkers_volunteering.html"
-                }
-              ]
-            },
-            {
-              "title": "Устойчивое развитие",
-              "link": "about_development_ecology.html",
-              "pages": [
-                {
-                  "title": "Экология",
-                  "link": "about_development_ecology.html"
-                },
-                {
-                  "title": "Экология",
-                  "link": "about_development_ecology.html"
+                  "link": "about_coworkers_youth_volunteering.html"
                 }
               ]
             }
           ]
+        },
+        {
+          "title": "Устойчивое развитие",
+          "link": "about_development_ecology.html",
+          "pages": [
+            {
+              "title": "Экология",
+              "link": "about_development_ecology.html"
+            },
+            {
+              "title": "Энергоэффективность (снижение потерь)",
+              "link": "about_development_energy.html"
+            },
+            {
+              "title": "Охрана труда и промбезопасность",
+              "link": "about_development_laborProtection_OTEBP.html",
+              "pages": [
+                {
+                  "title": "Политика в области ОТЭПБ",
+                  "link": "about_development_laborProtection_OTEBP.html"
+                },
+                {
+                  "title": "Шаги безопасности",
+                  "link": "about_development_laborProtection_steps.html"
+                }
+              ]
+            },
+            {
+              "title": "Общественный совет",
+              "link": "about_development_publicCouncil_info.html",
+              "pages": [
+                {
+                  "title": "Общая информация",
+                  "link": "about_development_publicCouncil_info.html"
+                },
+                {
+                  "title": "Состав совета",
+                  "link": "text_page.html"
+                },
+                {
+                  "title": "Прошедшие советы",
+                  "link": "pressroom_news_list.html"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Раскрытие информации",
+          "link": "about_openInfo_finReports.html",
+          "pages": [
+            {
+              "title": "Финансовая отчетность",
+              "link": "about_openInfo_finReports.html"
+            },
+            {
+              "title": "Стандарты раскрытия",
+              "link": "about_openInfo_finReports.html"
+            }
+          ]
+        },
+        {
+          "title": "Контакты",
+          "link": "about_contacts.html"
         }
       ]
+    },
+    {
+      "title": "Закупки",
+      "link": "purchases_info.html",
+      "pages": [
+        {
+          "title": "Общая информация",
+          "link": "purchases_info.html"
+        },
+        {
+          "title": "Положение о закупках",
+          "link": "text_page.html"
+        },
+        {
+          "title": "ЭТП",
+          "link": "text_page.html"
+        }
+      ]
+    },
+    {
+      "title": "Карьера",
+      "link": "career_jobs_categories.html",
+      "pages": [
+        {
+          "title": "Вакансии",
+          "link": "career_jobs_categories.html",
+          "extra_sketches": ["career_jobs_list", "career_jobs_list_form "]
+        },
+        {
+          "title": "Корпоративное обучение",
+          "link": "career_study.html",
+          "pages": [
+            {
+              "title": "Молодым специалистам",
+              "link": "career_study_youth.html",
+              "pages": [
+                {
+                  "title": "«Золотая сотня»",
+                  "link": "career_study_youth_gold.html"
+                },
+                {
+                  "title": "КНПК",
+                  "link": "career_study_youth_knpk.html"
+                }
+              ]
+            },
+            {
+              "title": "Руководителям",
+              "link": "career_study_heads.html"
+            },
+            {
+              "title": "Экспертам",
+              "link": "career_study_experts.html"
+            }
+          ]
+        },
+        {
+          "title": "Оценка компетенций",
+          "link": "career_competence.html"
+        },
+        {
+          "title": "Контакты",
+          "link": "career_competence.html"
+        }
+      ]
+    },
+    {
+      "title": "Пресс-центр",
+      "link": "pressroom_news_list.html",
+      "pages": [
+        {
+          "title": "Новости",
+          "link": "pressroom_news_list.html",
+          "extra_sketches": ["pressroom_news_list_detail"]
+        },
+        {
+          "title": "СМИ о нас",
+          "link": "pressroom_media.html",
+          "extra_sketches": ["pressroom_news_list_detail"]
+        },
+        {
+          "title": "Контакты для СМИ",
+          "link": "pressroom_news_contacts.html"
+        }
+      ]
+    },
+    {
+      "title": "Контакты",
+      "link": "career_contacts.html"
     }
   ]
 }

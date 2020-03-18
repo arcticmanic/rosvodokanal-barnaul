@@ -1,7 +1,14 @@
 {% extends "../layouts/default.twig" %}
+{% import "../macros/displayPage.twig" as macros %}
 
 {% block content %}
-<div class="wrapper">
-  
-</div>
+<section class="section-std_S wrapper text section-sitemap">
+  <ul class="ul_nested-with-left-border">
+
+    {% for page in pages %}
+        {{ macros.displayPage(page) }}
+    {% endfor %}
+    
+  </ul>
+</section>
 {% endblock %}

@@ -177,6 +177,26 @@ h6.prependLine {
   font-weight: 300;
 }
 
+.text {
+  li {
+    a {
+      display: block;
+      margin-bottom: 10px;
+      color: @colorPrimary3;
+      transition: @transFast;
+
+      @media (min-width: @hoverW) {
+        &:hover {
+          color: @red;
+        }
+      }
+    }
+    ul {
+      padding-left: 15px;
+    }
+  }
+}
+
 @media (max-width: @laptopW) {
   h1 {
     font-size: @font-48;

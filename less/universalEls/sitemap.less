@@ -1,0 +1,24 @@
+.section-sitemap {
+  background: #ededed;
+  padding: 20px;
+  margin-top: 0;
+  li {
+    a {
+      font-size: @font-16;
+    }
+  }
+}
+
+html.color-white {
+  .section-sitemap {
+    .border-card-like_black();
+    background: @whiteEye;
+  }
+}
+
+html.color-black {
+  .section-sitemap {
+    .border-card-like_white();
+    background: @blackEye;
+  }
+}
