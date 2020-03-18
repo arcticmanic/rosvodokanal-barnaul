@@ -2,16 +2,181 @@
   "title": "Карта сайта",
   "pages": [
     {
-      "title": "Главная страница"
+      "title": "Главная страница",
+      "link": "index.html",
+      "extra_sketches": [
+        "main_3_info_1",
+        "main_3_info_2",
+        "main_3_info_3_c",
+        "main_3_info_4",
+        "main_3_info_5",
+        "320_menu",
+        "special"
+      ]
+    },
+    {
+      "title": "Абонентам",
+      "link": "users_info.html",
+      "pasges": [
+        {
+          "title": "Общая информация",
+          "link": "users_info.html",
+          "pages": [
+            {
+              "title": "Отключения",
+              "link": "users_switch-off.html"
+            },
+            {
+              "title": "Часто задаваемые вопросы",
+              "link": "users_faq.html"
+            },
+            {
+              "title": "Подать заявку",
+              "link": "users_application.html",
+              "extra_sketches": ["users_application_2"]
+            },
+            {
+              "title": "Задать вопрос",
+              "link": "users_question.html"
+            },
+            {
+              "title": "Справочная служба",
+              "link": "users_info.html"
+            },
+            {
+              "title": "Режим работы",
+              "link": "users_openHours.html"
+            },
+            {
+              "title": "Пункты оплаты",
+              "link": "users_paymentPoints.html"
+            },
+            {
+              "title": "Прием абонентов руководством",
+              "link": "users_question.html"
+            }
+          ]
+        },
+        {
+          "title": "Частные лица",
+          "link": "users_individuals_menu.html",
+          "pages": [
+            {
+              "title": "Личный кабинет",
+              "link": "ссылка_на_личный_кабинет_интегрированный_со_стороны_заказчика"
+            },
+            {
+              "title": "Передать показания приборов",
+              "link": "users_individuals_data.html"
+            },
+            {
+              "title": "Оплата",
+              "link": "users_individuals_payment.html",
+              "pages": [
+                {
+                  "title": "Способы оплаты",
+                  "link": "users_individuals_payment.html"
+                }
+              ]
+            },
+            {
+              "title": "Приборы учёта",
+              "link": "services_indiviual_meters.html",
+              "pages": [
+                {
+                  "title": "Установка",
+                  "link": "services_indiviual_meters_application.html"
+                },
+                {
+                  "title": "Повторная опломбировка",
+                  "link": "services_indiviual_meters_application.html"
+                },
+                {
+                  "title": "Проверка",
+                  "link": "services_indiviual_meters_application.html"
+                }
+              ]
+            },
+            {
+              "title": "Подключение к системам водоснабжения и водоотведения",
+              "link": "users_individuals_connection.html",
+              "pages": [
+                {
+                  "title": "Глоссарий",
+                  "link": "users_info.html"
+                },
+                {
+                  "title": "Калькулятор",
+                  "link": "sers_individuals_connection_calculator.html"
+                }
+              ]
+            },
+            {
+              "title": "Услуги на сетях ВиВ"
+            },
+            {
+              "title": "Сантехнические услуги",
+              "pages": [{}]
+            },
+            {
+              "title": "Лаборатория"
+            },
+            {
+              "title": "Вывоз стоков"
+            },
+            {
+              "title": "Специальная техника",
+              "pages": [{}]
+            },
+            {
+              "title": "Проектирование и строительство"
+            },
+            {
+              "title": "Локальные очистные сооружения"
+            },
+            {
+              "title": "Скачать мобильное приложение"
+            },
+            {
+              "title": "Прочие услуги"
+            },
+            {
+              "title": "Образцы документов"
+            },
+            {
+              "title": "Тарифы и нормативы"
+            },
+            {
+              "title": "Нормативные акты"
+            },
+            {
+              "title": "Изменения и уведомления",
+              "pages": [{}]
+            },
+            {
+              "title": "Задать вопрос"
+            }
+          ]
+        },
+        {
+          "title": "Юридические лица"
+        },
+        {
+          "title": "Противодействие коррупции"
+        }
+      ]
     },
     {
       "title": "Услуги",
+      "link": "services.html",
       "pasges": [
         {
           "title": "Частные лица",
+          "link": "services_individual.html",
           "pages": [
             {
-              "title": "Скачать мобильные приложение"
+              "title": "Скачать мобильные приложение",
+              "link": "services_special.html"
             },
             {
               "title": "Приборы учета воды"
@@ -43,60 +208,8 @@
           ]
         },
         {
-          "title": "Юридические лица"
-        }
-      ]
-    },
-    {
-      "title": "Абонентам",
-      "pasges": [
-        {
-          "title": "Общая информация",
-          "pages": [
-            {
-              "title": "Отключения"
-            },
-            {
-              "title": "Часто задаваемые вопросы"
-            },
-            {
-              "title": "Подать заявку"
-            },
-            {
-              "title": "Задать вопрос"
-            },
-            {
-              "title": "Справочная служба"
-            },
-            {
-              "title": "Режим работы"
-            },
-            {
-              "title": "Пункты оплаты"
-            },
-            {
-              "title": "Прием абонентов руководством"
-            }
-          ]
-        },
-        {
-          "title": "Частные лица",
-          "pages": [
-            {
-              "title": "Личный кабинет"
-            },
-            {
-              "title": "Передать показания приборов"
-            },
-            {
-              "title": "Оплата",
-              "pages": [
-                {
-                  
-                }
-              ]
-            }
-          ] 
+          "title": "Юридические лица",
+          "link": "ссылка_на_личный_кабинет_интегрированный_со_стороны_заказчика"
         }
       ]
     }
