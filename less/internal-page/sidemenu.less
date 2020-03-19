@@ -65,7 +65,17 @@
 
     &_active {
       .icon-accord {
-        transform: rotate(180deg);
+        transform: translateY(4px);
+      }
+    }
+
+    &:not(.sidemenu__item_active) {
+      .icon-accord {
+        @media (min-width: @hoverW) {
+          &:hover {
+            transform: translateY(4px);
+          }
+        }
       }
     }
   }
@@ -74,6 +84,7 @@
     cursor: pointer;
     padding: 5px;
     box-sizing: content-box;
+    transition: @transFast;
     &.icon-arrow-accord {
       @media (min-width: @hoverW) {
         &:hover {
@@ -115,6 +126,11 @@ html.scale {
 
     .icon-arrow-accord {
       padding: 10px;
+    }
+
+    svg.icon-arrow-accord {
+      width: 15px;
+      height: 11.25px;
     }
   }
 }

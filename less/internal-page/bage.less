@@ -37,6 +37,16 @@
 
   .title {
     font-size: @font-50;
+    line-height: @font-50;
+  }
+}
+
+@media (max-width: @wrapperMaxWidthAdjusted) {
+  .bage {
+    .wrapper {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
   }
 }
 
@@ -53,7 +63,7 @@ html.color-white {
   }
 }
 
-html.color-white {
+html.color-black {
   .bage {
     background: @blackEye;
     &:before {

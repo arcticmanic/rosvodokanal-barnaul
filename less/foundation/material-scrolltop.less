@@ -25,10 +25,14 @@
   background: @colorBeautifulBlue;
   transition: all 0.3s cubic-bezier(0.25, 0.25, 0, 1);
   z-index: @zBackTop;
-}
-.material-scrolltop:hover {
-  text-decoration: none;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5), 0 3px 15px rgba(0, 0, 0, 0.5);
+
+  @media (min-width: @hoverW) {
+    &:hover {
+      text-decoration: none;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5), 0 3px 15px rgba(0, 0, 0, 0.5);
+      background-position: center 40%;
+    }
+  }
 }
 .material-scrolltop::before {
   position: absolute;
@@ -57,7 +61,26 @@
 
 .material-scrolltop,
 .material-scrolltop::before {
+  transition: @transFast;
   background-image: url('../../img/top-arrow.svg');
   background-position: center 50%;
   background-repeat: no-repeat;
+}
+
+@media (max-width: @laptopW) {
+  .material-scrolltop {
+    bottom: 15px;
+    right: 15px;
+    &.reveal {
+      width: 45px;
+      height: 45px;
+    }
+  }
+}
+
+@media (max-width: @tabletW) {
+  .material-scrolltop {
+    bottom: 10px;
+    right: 10px;
+  }
 }
