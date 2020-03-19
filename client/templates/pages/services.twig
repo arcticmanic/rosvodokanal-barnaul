@@ -1,6 +1,27 @@
 {% extends "../layouts/services.twig" %}
 
 {% block main %}
+  {% include '../includes/stdEls/page-content__title_with-underline.twig' with {"title" : "Услуги Росводоканал Барнаул"} %}
 
- 
+  <section class="section-service-type services-type">
+    <artcile class="services-type__card">
+      <img class="card__bg lazy" data-src="./img/serivces-type_1.png" width="350" height="430">
+      <div class="card__content">
+        {% include "../includes/svg/icon-family-svg.twig" with {"classes" : "card__icon"} %}
+        <h4 class="card__title">Частным <br> лицам</h4>
+        <p class="card__text">Ознакомьтесь с перечнем услуг для частных лиц.</p>
+        <a href="#" class="btn btn_trans">Подробнее</a>
+      </div>
+    </artcile>
+
+    <artcile class="services-type__card">
+      <img class="card__bg lazy" data-src="./img/serivces-type_2.png" width="350" height="430">
+      <div class="card__content">
+        {% include "../includes/svg/icon-case-svg.twig" with {"classes" : "card__icon"} %}
+        <h4 class="card__title">Юридическим <br> лицам</h4>
+        <p class="card__text">Ознакомьтесь с перечнем услуг для юридческих лиц.</p>
+        <a href="#" class="btn btn_trans">Подробнее</a>
+      </div>
+    </artcile>
+  </section>
 {% endblock %}

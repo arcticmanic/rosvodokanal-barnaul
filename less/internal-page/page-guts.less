@@ -1,4 +1,30 @@
 .page-guts {
   margin-top: 50px;
   margin-bottom: 60px;
+
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+@media (max-width: @wrapperMaxWidth) {
+  .page-guts {
+    margin-top: 40px;
+    margin-bottom: 55px;
+  }
+}
+
+@media (max-width: @mobileLandscapeW) {
+  .page-guts {
+    margin-top: 30px;
+    margin-bottom: 45px;
+  }
+}
+
+@media (max-width: @mobileW) {
+  .page-guts {
+    margin-top: 30px;
+    margin-bottom: 25px;
+  }
 }

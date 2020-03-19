@@ -143,6 +143,10 @@ function javascript(cb) {
     resolvePageJS.bind(this, {
       src: `${paths.commonJS}main-page-tpl/*.js`,
       name: `main-page-tpl`
+    }),
+    resolvePageJS.bind(this, {
+      src: `${paths.commonJS}services-tpl/*.js`,
+      name: `services-tpl`
     })
   )()
   cb()

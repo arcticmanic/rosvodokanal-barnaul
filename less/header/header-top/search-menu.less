@@ -36,14 +36,14 @@
 html.color-white {
   .search-menu {
     .search__input {
-      background: #000;
-      color: #fff;
-      border-color: #fff;
+      background: @blackEye;
+      color: @whiteEye;
+      border-color: @whiteEye;
     }
     .search-icon {
       .icon-search-svg {
         * {
-          stroke: #fff !important;
+          stroke: @whiteEye !important;
         }
       }
     }
@@ -51,4 +51,18 @@ html.color-white {
 }
 
 html.color-black {
+  .search-menu {
+    .search__input {
+      background: @whiteEye;
+      color: @blackEye;
+      border-color: @blackEye;
+    }
+    .search-icon {
+      .icon-search-svg {
+        * {
+          stroke: @blackEye !important;
+        }
+      }
+    }
+  }
 }
