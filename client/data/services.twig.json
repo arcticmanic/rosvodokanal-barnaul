@@ -1,3 +1,108 @@
 {
-  "title": "Услуги"
+  "title": "Услуги",
+  "bage": {
+    "title": "Услуги",
+    "subtitle": "Росводоканал Барнаул"
+  },
+  "pages": [
+    {
+      "title": "Услуги",
+      "link": "services.html",
+      "withoutArrow": true,
+      "pages": [
+        {
+          "title": "Частные лица",
+          "link": "services_individual.html",
+          "pages": [
+            {
+              "title": "Скачать мобильные приложение",
+              "link": "services_special.html"
+            },
+            {
+              "title": "Приборы учета воды",
+              "link": "services_indiviual_meters_application.html"
+            },
+            {
+              "title": "Лаборатория",
+              "link": "services_indiviual_lab.html"
+            },
+            {
+              "title": "Услуги на сетях водоснабжения и водоотведения",
+              "link": "services_indiviual_networks.html"
+            },
+            {
+              "title": "Сантехнические услуги",
+              "link": "services_indiviual_plumbing.html"
+            },
+            {
+              "title": "Вывоз стоков",
+              "link": "services_indiviual_waste.html"
+            },
+            {
+              "title": "Проектирование и строительство",
+              "link": "services_indiviual_construction.html"
+            },
+            {
+              "title": "Специальная техника",
+              "link": "services_indiviual_specialEquipment.html"
+            },
+            {
+              "title": "Локальные очистные сооружения",
+              "link": "services_indiviual_treatmentFacilities.html"
+            },
+            {
+              "title": "Прочие услуги",
+              "link": "text_page.html"
+            }
+          ]
+        },
+        {
+          "title": "Юридические лица",
+          "link": "services_individual.html",
+          "pages": [
+            {
+              "title": "Скачать мобильные приложение",
+              "link": "services_special.html"
+            },
+            {
+              "title": "Приборы учета воды",
+              "link": "services_indiviual_meters_application.html"
+            },
+            {
+              "title": "Лаборатория",
+              "link": "services_indiviual_lab.html"
+            },
+            {
+              "title": "Услуги на сетях водоснабжения и водоотведения",
+              "link": "services_indiviual_networks.html"
+            },
+            {
+              "title": "Сантехнические услуги",
+              "link": "services_indiviual_plumbing.html"
+            },
+            {
+              "title": "Вывоз стоков",
+              "link": "services_indiviual_waste.html"
+            },
+            {
+              "title": "Проектирование и строительство",
+              "link": "services_indiviual_construction.html"
+            },
+            {
+              "title": "Специальная техника",
+              "link": "services_indiviual_specialEquipment.html"
+            },
+            {
+              "title": "Локальные очистные сооружения",
+              "link": "services_indiviual_treatmentFacilities.html"
+            },
+            {
+              "title": "Прочие услуги",
+              "link": "text_page.html"
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

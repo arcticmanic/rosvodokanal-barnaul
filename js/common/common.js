@@ -6,6 +6,23 @@ $(document).ready(function() {
     use_native: true
   })
 
+  $('body').materialScrollTop({
+    easing: 'swing'
+  })
+
+  $(document).on(
+    'click',
+    '.sidemenu__link-cont_with-arrow .icon-accord',
+    function() {
+      $(this)
+        .closest('.sidemenu__item')
+        .toggleClass('sidemenu__item_active')
+        .next('.sidemenu__list')
+        .toggleClass('sidemenu__list_opened')
+        .slideToggle()
+    }
+  )
+
   var $cities = $('.services-list .city-list')
   var $service_item = $('.services-list .item')
   $('.services-list .item ').click(function() {
@@ -14,7 +31,7 @@ $(document).ready(function() {
   })
 
   // Header Functionality
-  
+
   var $search = $('.search-menu')
   var elem = $('.navbar')
   $('.mobile-toggle').click(function(e) {

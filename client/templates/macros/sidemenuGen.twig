@@ -1,0 +1,36 @@
+{% macro sidemenuGen(page) %}
+  {% import _self as self %}
+    <li class="sidemenu__item">
+      {% if page.pages is not empty %}
+        {% if page.withoutArrow == true %}
+          <div class="sidemenu__link-cont sidemenu__link-cont_without-arrow">
+            <a href="{{ page.link }}" class="sidemenu__link">
+                {{ page.title }} 
+            </a>
+          </div>
+
+        {% elseif page.withoutArrow is not defined %}
+          <div class="sidemenu__link-cont sidemenu__link-cont_with-arrow">
+            <a href="{{ page.link }}" class="sidemenu__link">
+                {{ page.title }} 
+            </a>
+            {% include "../includes/svg/icon-arrow-accord.twig" with {"classes" : "icon-accord"}%}
+          </div>
+        {% endif %}
+
+      {% else %}
+        <a href="{{ page.link }}" class="sidemenu__link sidemenu__link_ultimate">
+            {{ page.title }} 
+        </a>
+      {% endif %}
+    </li>
+
+    {% if page.pages is defined %}
+      <ul class="sidemenu__list">
+        {% for page in page.pages %}
+          {{ self.sidemenuGen(page) }}
+        {% endfor %}
+      </ul>
+    {% endif %}
+
+{% endmacro %}

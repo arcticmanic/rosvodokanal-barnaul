@@ -1,0 +1,9 @@
+{% import "../macros/sidemenuGen.twig" as macros %}
+
+<aside class="sidemenu">
+  <ul class="sidemenu__list sidemenu__list_ancestor">
+    {% for page in pages %}
+        {{ macros.sidemenuGen(page) }}
+    {% endfor %}
+  </ul>
+</aside>

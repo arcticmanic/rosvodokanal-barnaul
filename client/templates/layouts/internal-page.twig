@@ -1,0 +1,16 @@
+{% extends "../layouts/default.twig" %}
+
+{% block content %}
+  {% include "../includes/bage.twig"%}
+
+  <div class="page-guts wrapper">
+    {% include "../includes/sidemenu.twig" %}
+
+    <main>
+      {% block main %}
+
+      {% endblock %}
+    </main>
+  </div>
+
+{% endblock %}
