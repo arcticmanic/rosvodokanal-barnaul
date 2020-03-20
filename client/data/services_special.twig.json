@@ -1,8 +1,8 @@
 {
-  "title": "Частыне лица",
+  "title": "Скачать мобильное приложение ",
   "bage": {
-    "title": "Частыне лица",
-    "subtitle": "Услуги"
+    "title": "Скачать мобильное приложение ",
+    "subtitle": "Частные лица"
   },
   "pages": [
     {
@@ -13,11 +13,12 @@
         {
           "title": "Частные лица",
           "link": "services_individual.html",
-          "classes": "current-page",
+          "classes": "sidemenu__item_active",
           "pages": [
             {
               "title": "Скачать мобильные приложение",
-              "link": "services_special.html"
+              "link": "services_special.html",
+              "classes": "current-page"
             },
             {
               "title": "Приборы учета воды",

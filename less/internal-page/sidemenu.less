@@ -64,6 +64,13 @@
     transition: @transFast;
     border-bottom: 1px solid #e0e0e0;
 
+    &.current-page {
+      border-left: 3px solid @colorPrimary3;
+      .sidemenu__link {
+        font-weight: 700;
+      }
+    }
+
     &_active {
       .icon-accord {
         transform: translateY(4px);

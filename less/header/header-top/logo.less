@@ -5,6 +5,32 @@
       display: none;
     }
   }
+
+  .logo-main-svg__logo {
+    .st1,
+    .st2 {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+      animation-duration: 2s;
+      animation-delay: 0.5s;
+      animation-timing-function: linear;
+    }
+  }
+
+  @media (min-width: @hoverW) {
+    &:hover {
+      .logo-main-svg__logo {
+        .st1 {
+          animation-name: st1-anim;
+        }
+      }
+    }
+  }
+}
+
+@keyframes st1-anim {
+  50% {
+    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+  }
 }
 
 @media (max-width: @tabletW) {

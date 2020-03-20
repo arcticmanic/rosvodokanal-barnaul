@@ -198,8 +198,7 @@ html.color-black {
     margin-right: auto;
   }
 
-  a.mobile-menu__link,
-  span {
+  a.mobile-menu__link {
     @extend %mmspn-reset;
 
     position: relative;

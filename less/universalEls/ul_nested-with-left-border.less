@@ -1,5 +1,7 @@
 .ul_nested-with-left-border {
   max-width: fit-content;
+  // Fallback for IE and Edge
+  display: table;
   li {
     ul {
       border-left: 1px solid @colorPrimary;

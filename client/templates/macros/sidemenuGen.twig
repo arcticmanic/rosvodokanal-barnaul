@@ -1,6 +1,6 @@
 {% macro sidemenuGen(page) %}
   {% import _self as self %}
-    <li class="sidemenu__item">
+    <li class="sidemenu__item {{page.classes is defined ? page.classes : }}">
       {% if page.pages is not empty %}
         {% if page.withoutArrow == true %}
           <div class="sidemenu__link-cont sidemenu__link-cont_without-arrow">

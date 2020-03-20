@@ -1,0 +1,49 @@
+.section-services-special {
+}
+
+.jumbotron-mobile {
+  margin-top: 40px;
+  margin-bottom: 30px;
+  &__bottom {
+    width: 95.9%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -175px;
+  }
+
+  &__item {
+    .btn {
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 35px;
+    }
+  }
+
+  &__img {
+    width: 100%;
+  }
+}
+
+@media (max-width: @mobileW) {
+  .jumbotron-mobile {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    &__bottom {
+      width: 95%;
+      margin-top: 10px;
+    }
+
+    &__QR {
+      height: 120px;
+      width: 120px;
+    }
+
+    &__item {
+      .btn {
+        margin-top: 15px;
+      }
+    }
+  }
+}

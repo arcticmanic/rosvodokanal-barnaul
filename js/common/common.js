@@ -6,9 +6,19 @@ $(document).ready(function() {
     use_native: true
   })
 
+  new LazyLoad({
+    elements_selector: `.text img`,
+    use_native: true
+  })
+
   $('body').materialScrollTop({
     easing: 'swing'
   })
+
+  $('.sidemenu__item_active')
+    .next('.sidemenu__list')
+    .toggleClass('sidemenu__list_opened')
+    .slideToggle()
 
   $(document).on(
     'click',

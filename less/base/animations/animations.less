@@ -55,10 +55,11 @@ html.color-white {
 .anim-underline-link {
   position: relative;
   max-width: fit-content;
-  width: intrinsic;
-  width: -moz-max-content;
-  // Fallback for IE and Edge
-  display: table;
+  -moz-width: fit-content;
+  &.footer-menu__item {
+    // Fallback for IE and Edge
+    display: table;
+  }
   @keyframes strike {
     0% {
       transform-origin: 0% 50%;
