@@ -71,7 +71,7 @@ h3 {
 
 h4 {
   font-size: @font-25;
-  line-height: @font-30;
+  line-height: @font-28;
 }
 
 h5 {
@@ -81,7 +81,7 @@ h5 {
 
 h6 {
   font-size: @font-20;
-  line-height: @font-30;
+  line-height: @font-25;
 }
 
 p {
@@ -97,6 +97,22 @@ p {
     font-size: @font-15;
     line-height: @font-25;
     margin-bottom: 20px;
+  }
+}
+
+html.color-white {
+  .text {
+    p {
+      color: @blackEye;
+    }
+  }
+}
+
+html.color-black {
+  .text {
+    p {
+      color: @whiteEye;
+    }
   }
 }
 

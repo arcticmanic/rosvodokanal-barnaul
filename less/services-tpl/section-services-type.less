@@ -1,3 +1,6 @@
+.section-services-type {
+}
+
 .services-type {
   display: flex;
   flex-wrap: wrap;
@@ -6,7 +9,7 @@
   margin-left: -10px;
   margin-right: -10px;
 
-  &__card {
+  .card {
     position: relative;
     width: 350px;
     height: 430px;
@@ -26,49 +29,48 @@
       background: @colorPrimary;
       z-index: 3;
       opacity: 0.4;
+      border-radius: 6px;
     }
 
-    .card {
-      &__bg {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        z-index: 2;
-        border-radius: 5px;
-      }
+    &__bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 2;
+      border-radius: 6px;
+    }
 
-      &__content {
-        position: relative;
-        height: 100%;
-        padding: 30px 20px 43px 40px;
-        z-index: 4;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        transition: @transFast;
-        .btn {
-          margin-top: auto;
-        }
+    &__content {
+      position: relative;
+      height: 100%;
+      padding: 30px 20px 43px 40px;
+      z-index: 4;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      transition: @transFast;
+      .btn {
+        margin-top: auto;
       }
+    }
 
-      &__icon {
-        margin-bottom: 22px;
-      }
+    &__icon {
+      margin-bottom: 22px;
+    }
 
-      &__title,
-      &__text {
-        color: #fff;
-        margin-left: 8px;
-        max-width: 100%;
-      }
+    &__title,
+    &__text {
+      color: #fff;
+      margin-left: 8px;
+      max-width: 100%;
+    }
 
-      &__title {
-        font-weight: 600;
-        margin-bottom: 15px;
-      }
+    &__title {
+      font-weight: 600;
+      margin-bottom: 15px;
     }
   }
 }
@@ -81,11 +83,9 @@
 
 @media (max-width: @mobileLandscapeW) {
   .services-type {
-    &__card {
+    .card {
       width: 300px;
       height: 390px;
-    }
-    .card {
       &__content {
         padding: 20px;
       }
@@ -95,7 +95,7 @@
 
 @media (max-width: @mobileW) {
   .services-type {
-    &__card {
+    .card {
       width: 100%;
 
       svg.icon-family-svg {
@@ -106,8 +106,6 @@
         width: 106px;
         height: 106px;
       }
-    }
-    .card {
       &__content {
         padding: 10px;
         padding-bottom: 20px;
@@ -118,13 +116,11 @@
 
 html.scale {
   .services-type {
-    &__card {
-      .card {
-        &__content {
-          padding-top: 20px;
-          padding-bottom: 30px;
-          padding-left: 20px;
-        }
+    .card {
+      &__content {
+        padding-top: 20px;
+        padding-bottom: 30px;
+        padding-left: 20px;
       }
     }
   }
@@ -133,7 +129,7 @@ html.scale {
 html.color-white,
 html.color-black {
   .services-type {
-    &__card {
+    .card {
       &:after {
         opacity: 0.9;
       }
@@ -143,22 +139,20 @@ html.color-black {
 
 html.color-white {
   .services-type {
-    &__card {
+    .card {
       .border-card-like_black();
       &:after {
         background: @whiteEye;
       }
-      .card {
-        &__icon {
-          * {
-            fill: @blackEye;
-          }
+      &__icon {
+        * {
+          fill: @blackEye;
         }
+      }
 
-        &__title,
-        &__text {
-          color: @blackEye;
-        }
+      &__title,
+      &__text {
+        color: @blackEye;
       }
     }
   }
@@ -166,22 +160,20 @@ html.color-white {
 
 html.color-black {
   .services-type {
-    &__card {
+    .card {
       .border-card-like_white();
       &:after {
         background: @blackEye;
       }
-      .card {
-        &__icon {
-          * {
-            fill: @whiteEye;
-          }
+      &__icon {
+        * {
+          fill: @whiteEye;
         }
+      }
 
-        &__title,
-        &__text {
-          color: @whiteEye;
-        }
+      &__title,
+      &__text {
+        color: @whiteEye;
       }
     }
   }
