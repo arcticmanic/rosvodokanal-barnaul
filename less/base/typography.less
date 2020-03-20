@@ -119,8 +119,8 @@ html.color-black {
 ol {
   counter-reset: my-awesome-counter;
   li {
-    counter-increment: my-awesome-counter;
     position: relative;
+    counter-increment: my-awesome-counter;
     &:not(:last-child) {
       margin-bottom: 30px;
     }
@@ -128,8 +128,9 @@ ol {
       content: counter(my-awesome-counter) '. ';
       position: absolute;
       left: 0;
-      color: inherit;
       font-weight: inherit;
+      font-weight: 700;
+      color: @colorPrimary3;
     }
   }
 }
@@ -139,11 +140,29 @@ ol {
 }
 
 .text {
-  li {
+  .colorPrimary2 {
+    color: @colorPrimary2;
+  }
+  .underline {
+    padding-bottom: 20px;
+    margin-bottom: 37px;
+    &_dashed {
+      border-bottom: 1px dashed #cdcdcd;
+    }
+  }
+  li,
+  p {
     a {
-      display: block;
+      color: @colorPrimary2;
+      text-decoration: underline;
+    }
+  }
+  li {
+    padding-left: 25px;
+    font-size: @font-17;
+    color: @colorPrimary3;
+    a {
       margin-bottom: 10px;
-      color: @colorPrimary3;
       transition: @transFast;
 
       @media (min-width: @hoverW) {

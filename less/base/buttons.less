@@ -14,6 +14,11 @@
   transition: @transFast;
   background: transparent;
 
+  &.btn_align-to-center {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   &__icon {
     margin-left: 14px;
     transition: @transFast;
@@ -82,6 +87,19 @@
 
   &_with-arrow {
     &.btn_dark {
+    }
+  }
+
+  &_wide {
+    padding: 9px 28px;
+  }
+
+  &_font-17 {
+    font-size: @font-17;
+    font-weight: 700;
+    .btn__text {
+      font-size: @font-17;
+      font-weight: 700;
     }
   }
 

@@ -7,6 +7,10 @@
       border-left: 1px solid @colorPrimary;
       transition: @transFast;
 
+      li {
+        padding-left: 20px;
+      }
+
       @media (min-width: @hoverW) {
         &:hover {
           border-width: 3px;
@@ -14,6 +18,7 @@
       }
     }
     a {
+      transition: @transFast;
       color: @colorPrimary;
       @media (min-width: @hoverW) {
         &:hover {

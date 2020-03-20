@@ -1,8 +1,8 @@
 {
-  "title": "Скачать мобильное приложение ",
+  "title": "Услуги",
   "bage": {
-    "title": "Скачать мобильное приложение ",
-    "subtitle": "Частные лица"
+    "title": "Услуги",
+    "subtitle": "Росводоканал Барнаул"
   },
   "pages": [
     {
@@ -13,12 +13,10 @@
         {
           "title": "Частные лица",
           "link": "services_type.html",
-          "classes": "sidemenu__item_active",
           "pages": [
             {
               "title": "Скачать мобильные приложение",
-              "link": "services_special.html",
-              "classes": "current-page"
+              "link": "services_special.html"
             },
             {
               "title": "Приборы учета воды",

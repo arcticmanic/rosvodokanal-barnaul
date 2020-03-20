@@ -1,0 +1,32 @@
+.banner-with-form {
+  display: flex;
+  width: 770px;
+  height: 1030px;
+
+  max-width: 770px;
+  .banner-left,
+  .banner-right {
+    width: 50%;
+  }
+  .banner-left {
+    position: relative;
+
+    &__content {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    &__title {
+      font-weight: 700;
+    }
+
+    &__footer {
+      margin-top: auto;
+    }
+  }
+  .banner-right {
+    background: #f1f3f4;
+  }
+}
