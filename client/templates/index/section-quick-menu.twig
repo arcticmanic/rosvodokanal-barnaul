@@ -1,67 +1,79 @@
 <section class="section-std section-quick-menu wrapper">
   <div class="section-quick-menu__row">
-    <article class="quick-menu__item quick-menu__item_contentfull quick-menu__item_with-two-btns">
-      <img class="quick-menu__bg lazy" data-src="./img/quick-menu-1.png" width="185" height="350">
+    <article class="quick-menu__item card card__bg_primary quick-menu__item_contentfull quick-menu__item_with-two-btns">
+      <img class="quick-menu__bg img-as-bg lazy" data-src="./img/quick-menu-1.png" width="185" height="350">
       
-      {% include '../includes/svg/icon-mobile-svg.twig' with {'classes': 'quick-menu__icon'} %}
+      <div class="quick-menu__content card card__content">
+        {% include '../includes/svg/icon-mobile-svg.twig' with {'classes': 'quick-menu__icon'} %}
 
-      <p class="quick-menu__title">Ваш мобильный водоканал</p>
-      <p class="quick-menu__p">Услуги на сетях ВиВ и удобное мобильное приложение, чтобы их заказать</p>
-      <a href="#" class="btn btn_frost">Приложение Android</a>
-      <a href="#" class="btn btn_frost">Приложение IOS</a>
+        <p class="quick-menu__title">Ваш мобильный водоканал</p>
+        <p class="quick-menu__p">Услуги на сетях ВиВ и удобное мобильное приложение, чтобы их заказать</p>
+        <a href="#" class="btn btn_frost">Приложение Android</a>
+        <a href="#" class="btn btn_frost">Приложение IOS</a>
+      </div>
     </article>
 
-    <article class="quick-menu__item">
-      <img class="quick-menu__bg lazy" data-src="./img/quick-menu-2.png" width="185" height="350">
+    <article class="quick-menu__item card card__bg_primary">
+      <img class="quick-menu__bg img-as-bg lazy" data-src="./img/quick-menu-2.png" width="185" height="350">
       
-      {% include '../includes/svg/icon-user-svg.twig' with {'classes': 'quick-menu__icon'} %}
+      <div class="quick-menu__content card card__content">
+        {% include '../includes/svg/icon-user-svg.twig' with {'classes': 'quick-menu__icon'} %}
 
-      <p class="quick-menu__title">Личный <br> кабинет</p>
-      <p class="quick-menu__p">Информация <br>
-        о начислениях, история платежей</p>
-      <a href="#" class="btn btn_trans">Перейти</a>
+        <p class="quick-menu__title">Личный <br> кабинет</p>
+        <p class="quick-menu__p">Информация <br>
+          о начислениях, история платежей</p>
+        <a href="#" class="btn btn_trans">Перейти</a>
+      </div>
     </article>
 
-    <article class="quick-menu__item">
-      <img class="quick-menu__bg lazy" data-src="./img/quick-menu-3.png" width="185" height="350">
+    <article class="quick-menu__item card card__bg_primary">
+      <img class="quick-menu__bg img-as-bg lazy" data-src="./img/quick-menu-3.png" width="185" height="350">
       
-      {% include '../includes/svg/icon-waterdevice-svg.twig' with {'classes': 'quick-menu__icon'} %}
+      <div class="quick-menu__content card card__content">
+        {% include '../includes/svg/icon-waterdevice-svg.twig' with {'classes': 'quick-menu__icon'} %}
 
-      <p class="quick-menu__title">Передать показания</p>
-      <p class="quick-menu__p">Своевременно передать сведения о потреблении услуг</p>
-      <a href="#" class="btn btn_trans">Подробнее</a>
+        <p class="quick-menu__title">Передать показания</p>
+        <p class="quick-menu__p">Своевременно передать сведения о потреблении услуг</p>
+        <a href="#" class="btn btn_trans">Подробнее</a>
+      </div>
     </article>
 
-    <article class="quick-menu__item quick-menu__item_with-wallet">
-      <img class="quick-menu__bg lazy" data-src="./img/quick-menu-4.png" width="185" height="350">
+    <article class="quick-menu__item card card__bg_primary quick-menu__item_with-wallet">
+      <img class="quick-menu__bg img-as-bg lazy" data-src="./img/quick-menu-4.png" width="185" height="350">
       
-      {% include '../includes/svg/icon-wallet-svg.twig' with {'classes': 'quick-menu__icon'} %}
+      <div class="quick-menu__content card card__content">
+        {% include '../includes/svg/icon-wallet-svg.twig' with {'classes': 'quick-menu__icon'} %}
 
-      <p class="quick-menu__title">Оплатить</p>
-      <p class="quick-menu__p">Способы оплаты услуг холодного водоснабжения
-        и водоотведения</p>
-      <a href="#" class="btn btn_trans">Подробнее</a>
+        <p class="quick-menu__title">Оплатить</p>
+        <p class="quick-menu__p">Способы оплаты услуг холодного водоснабжения
+          и водоотведения</p>
+        <a href="#" class="btn btn_trans">Подробнее</a>
+      </div>
     </article>
 
-    <article class="quick-menu__item quick-menu__item_with-askedo">
-      <img class="quick-menu__bg lazy" data-src="./img/quick-menu-5.png" width="185" height="350">
+    <article class="quick-menu__item card card__bg_primary quick-menu__item_with-askedo">
+      <img class="quick-menu__bg img-as-bg lazy" data-src="./img/quick-menu-5.png" width="185" height="350">
 
-      {% include '../includes/svg/icon-askedo-svg.twig' with {'classes': 'quick-menu__icon'} %}
+      <div class="quick-menu__content card card__content">
+        {% include '../includes/svg/icon-askedo-svg.twig' with {'classes': 'quick-menu__icon'} %}
 
-      <p class="quick-menu__title">Ваш надежный помощник в быту</p>
-      <p class="quick-menu__p">Услуги профессионалов
-        по разумным ценам</p>
-      <a href="#" class="btn btn_trans">Подать заявку</a>
+        <p class="quick-menu__title">Ваш надежный помощник в быту</p>
+        <p class="quick-menu__p">Услуги профессионалов
+          по разумным ценам</p>
+        <a href="#" class="btn btn_trans">Подать заявку</a>
+      </div>
     </article>
 
-    <article class="quick-menu__item">
-      <img class="quick-menu__bg lazy" data-src="./img/quick-menu-6.png" width="185" height="350">
+    <article class="quick-menu__item card card__bg_primary">
+      <img class="quick-menu__bg img-as-bg lazy" data-src="./img/quick-menu-6.png" width="185" height="350">
      
-      {% include '../includes/svg/icon-stophand-svg.twig' with {'classes': 'quick-menu__icon'} %}
+      <div class="quick-menu__content card card__content">
+        {% include '../includes/svg/icon-stophand-svg.twig' with {'classes': 'quick-menu__icon'} %}
 
-      <p class="quick-menu__title">Отключения</p>
-      <p class="quick-menu__p">Информация об отключениях на сетях холодного водоснабжения</p>
-      <a href="#" class="btn btn_trans">Подробнее</a>
+        <p class="quick-menu__title">Отключения</p>
+        <p class="quick-menu__p">Информация об отключениях на сетях холодного водоснабжения</p>
+        <a href="#" class="btn btn_trans">Подробнее</a>
+      </div>
     </article>
   </div>
 </section>

@@ -1,0 +1,40 @@
+.apply-overlay {
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: @colorPrimary;
+    z-index: 1;
+    opacity: 0.4;
+    border-radius: 6px;
+  }
+}
+
+html.color-white,
+html.color-black {
+  .apply-overlay {
+    &:after {
+      opacity: 0.8;
+    }
+  }
+}
+
+html.color-white {
+  .apply-overlay {
+    .border-card-like_black();
+    &:after {
+      background: @whiteEye;
+    }
+  }
+}
+
+html.color-black {
+  .apply-overlay {
+    &:after {
+      background: @blackEye;
+    }
+  }
+}

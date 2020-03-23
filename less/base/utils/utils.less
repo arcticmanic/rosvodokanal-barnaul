@@ -1,58 +1,31 @@
+@import './apply-overlay.less';
+@import './img-as-bg.less';
+@import './card.less';
+
 .toUpperCase {
   text-transform: uppercase !important;
 }
 
 .strong {
-  font-weight: 700 !important;
+  font-weight: 600 !important;
 }
 
-.img-as-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1;
-}
-
-.apply-overlay {
-  &:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background: @colorPrimary;
-    z-index: 1;
-    opacity: 0.4;
-    border-radius: 6px;
-  }
-}
-
-html.color-white,
-html.color-black {
-  .apply-overlay {
-    &:after {
-      opacity: 0.8;
+.ul_rvk-logos {
+  li {
+    position: relative;
+    padding-left: 50px;
+    &:before {
+      content: '';
+      position: absolute;
+      background: url('../../img/logo_white.svg');
+      left: 0;
+      top: 0;
+      width: 21px;
+      height: 29px;
+      line-height: 20px;
     }
-  }
-}
-
-html.color-white {
-  .apply-overlay {
-    .border-card-like_black();
-    &:after {
-      background: @whiteEye;
-    }
-  }
-}
-
-html.color-black {
-  .apply-overlay {
-    &:after {
-      background: @blackEye;
+    &:not(:last-child) {
+      margin-bottom: 30px;
     }
   }
 }

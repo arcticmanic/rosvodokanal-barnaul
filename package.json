@@ -22,12 +22,14 @@
     "gulp-less": "^4.0.1",
     "gulp-path": "^4.0.0",
     "gulp-plumber": "^1.2.1",
+    "gulp-pretty-html": "^2.0.10",
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.5",
     "node-sass": "^4.13.1"
   },
   "dependencies": {
     "gulp-fs": "0.0.2",
+    "gulp-remove-empty-lines": "^0.1.0",
     "gulp-twig": "^1.2.0",
     "merge-stream": "^2.0.0"
   },

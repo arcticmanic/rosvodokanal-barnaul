@@ -13,7 +13,9 @@ const gulp = require('gulp'),
   fs = require('fs'),
   babel = require('gulp-babel'),
   sass = require('gulp-sass'),
-  merge = require('merge-stream')
+  merge = require('merge-stream'),
+  removeEmptyLines = require('gulp-remove-empty-lines'),
+  prettyHtml = require('gulp-pretty-html')
 
 sass.compiler = require('node-sass')
 
@@ -179,6 +181,8 @@ function twigF() {
           this.emit('end')
         })
       )
+      .pipe(removeEmptyLines())
+      .pipe(prettyHtml({ indent_size: 2, preserve_newlines: true }))
       .pipe(gulp.dest(paths.build))
   )
 }

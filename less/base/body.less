@@ -2,7 +2,26 @@ body {
   display: flex;
   flex-direction: column;
 
-  footer {
+  .footer {
     margin-top: auto;
+  }
+}
+
+::selection {
+  background: @colorPrimary;
+  color: #fff;
+}
+
+html.color-white {
+  ::selection {
+    background: @blackEye;
+    color: @whiteEye;
+  }
+}
+
+html.color-black {
+  ::selection {
+    background: @whiteEye;
+    color: @blackEye;
   }
 }

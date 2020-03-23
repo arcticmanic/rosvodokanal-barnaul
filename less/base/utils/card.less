@@ -1,0 +1,31 @@
+.card {
+  transition: @transFast;
+  &__bg {
+    &_primary {
+      background: @colorPrimary;
+    }
+  }
+  &__content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    z-index: 1;
+    max-width: 100%;
+    height: 100%;
+    * {
+      max-width: 100%;
+    }
+  }
+}
+
+html.color-white,
+html.color-black {
+  .card {
+    &__bg {
+      &_primary {
+        background: none;
+      }
+    }
+  }
+}
