@@ -12,6 +12,8 @@
   color: @navy;
   transition: @transFast;
   background: transparent;
+  // Safari bug fix
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
 
   &.btn_align-to-center {
     margin-left: auto;

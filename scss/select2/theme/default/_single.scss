@@ -1,11 +1,13 @@
 .select2-selection--single {
   background-color: #fff;
-  border: 1px solid #aaa;
-  border-radius: 4px;
-
+  border-radius: 5px;
+  border: 1px solid #dce4e8;
+  &:focus {
+    outline: none;
+  }
   .select2-selection__rendered {
     color: #444;
-    line-height: 28px;
+    line-height: 40px;
   }
 
   .select2-selection__clear {
@@ -19,11 +21,12 @@
   }
 
   .select2-selection__arrow {
-    height: 26px;
+    height: 100%;
     position: absolute;
     top: 1px;
-    right: 1px;
+    right: 5px;
     width: 20px;
+    transition: $transMid;
 
     b {
       position: absolute;
@@ -67,9 +70,8 @@
 &.select2-container--open {
   .select2-selection--single {
     .select2-selection__arrow {
+      transform: rotate(-180deg);
       b {
-        border-color: transparent transparent #888 transparent;
-        border-width: 0 4px 5px 4px;
       }
     }
   }

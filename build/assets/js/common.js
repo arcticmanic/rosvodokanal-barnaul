@@ -38,11 +38,12 @@ function setClamps(object) {
 
 $(document).ready(function () {
   $('table').wrap("<div class='table-container'></div>");
-  $('select').select2({
+  $('.input_phone').mask('+7 (999) 999-99-99');
+  $('.datepicker-here').datepicker({
     language: 'ru',
-    minimumResultsForSearch: Infinity
+    minDate: new Date() // Now can select only dates, which goes after today
+
   });
-  $('.phone').mask('99999999999');
 });
 
 function adjustElSize() {
@@ -276,6 +277,19 @@ $(document).ready(function () {
   }();
 
   eyeVersion.init();
+});
+$(document).ready(function (e) {
+  var getSelect2Id = function getSelect2Id(selectId) {
+    return $(selectId).select2('data')[0].id;
+  }; // const addErrorOnInvalidInput = (invalidInputs) => {
+  //   for (const invalidInput of invalidInputs) {
+  //   }
+  // }
+
+
+  $('form.validate').on('submit', function (e) {
+    console.log(!!getSelect2Id('#work-type'), !!getSelect2Id('#city-district'));
+  });
 });
 $(document).ready(function () {
   $(document).on('click', '.header-bottom .all-sites .all-sites__text', function () {

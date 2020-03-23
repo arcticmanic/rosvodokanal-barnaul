@@ -3,6 +3,9 @@
   border: 1px solid #aaa;
   border-radius: 4px;
   cursor: text;
+  &:focus {
+    outline: none;
+  }
 
   .select2-selection__rendered {
     box-sizing: border-box;
@@ -59,9 +62,10 @@
   }
 }
 
-&[dir="rtl"] {
+&[dir='rtl'] {
   .select2-selection--multiple {
-    .select2-selection__choice, .select2-search--inline {
+    .select2-selection__choice,
+    .select2-search--inline {
       float: right;
     }
 

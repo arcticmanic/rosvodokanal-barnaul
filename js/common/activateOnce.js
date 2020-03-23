@@ -1,10 +1,10 @@
 $(document).ready(function() {
   $('table').wrap("<div class='table-container'></div>")
 
-  $('select').select2({
-    language: 'ru',
-    minimumResultsForSearch: Infinity
-  })
+  $('.input_phone').mask('+7 (999) 999-99-99')
 
-  $('.phone').mask('99999999999')
+  $('.datepicker-here').datepicker({
+    language: 'ru',
+    minDate: new Date() // Now can select only dates, which goes after today
+  })
 })

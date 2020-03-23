@@ -32,6 +32,10 @@
       margin-top: auto;
       color: #fff;
       font-weight: 600;
+      .phone {
+        color: inherit;
+        user-select: all;
+      }
     }
   }
   .banner-right {
@@ -41,9 +45,37 @@
     background: #f1f3f4;
 
     .banner-form {
-      padding: 30px;
+      padding: 35px 30px 42px 33px;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
       &__title {
         margin-bottom: 20px;
+      }
+      &__content {
+        margin-top: auto;
+      }
+      &__p {
+        font-size: @font-13;
+        color: @colorPrimary3;
+        font-weight: 400;
+        line-height: 20px;
+        a {
+          color: @colorPrimary;
+          text-decoration: underline;
+          transition: @transFast;
+          @media (min-width: @hoverW) {
+            &:hover {
+              color: @red;
+            }
+          }
+        }
+      }
+      &__footer {
+        margin-top: 20px;
+        .banner-form__agreement {
+          margin-bottom: 15px;
+        }
       }
     }
   }

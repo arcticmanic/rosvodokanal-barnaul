@@ -1,10 +1,48 @@
 .input-with-label {
   display: flex;
   flex-direction: column;
+  margin-bottom: 10px;
+  &__cont {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    &_2 {
+      .input-with-label {
+        width: calc((100% / 2) - 10px);
+      }
+    }
+    &_3 {
+      .input-with-label {
+        width: calc((100% / 3) - 10px);
+      }
+    }
+  }
 }
 
 label {
   font-size: @font-13;
   color: @colorPrimary3;
-  font-weight: 400;
+  font-weight: 600;
+}
+
+input:not([type='submit']),
+textarea {
+  font-size: 14px;
+  padding: 9px;
+  border-radius: 5px;
+  border: 1px solid #dce4e8;
+  background-color: #ffffff;
+  color: @colorPrimary3;
+}
+
+textarea {
+  resize: none;
+  height: 80px;
+  &:focus {
+    outline: none;
+  }
 }

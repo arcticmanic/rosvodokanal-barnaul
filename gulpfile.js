@@ -210,7 +210,9 @@ function watch() {
     server: {
       baseDir: './',
       index: 'index.html'
-    }
+    },
+    ghostMode: false,
+    open: false
   })
 
   gulp

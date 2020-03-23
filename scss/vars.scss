@@ -1,3 +1,16 @@
+// Widthes
+$fullWidthMaxWidth: 2560px;
+$wrapperMaxWidthAdjusted: calc($wrapperMaxWidth + 10px);
+$wrapperMaxWidth: 1160px;
+$laptopW: 1400px;
+$tabletW: 1024px;
+$hoverW: 1024px;
+$mobileLandscapeWBig: 850px;
+$mobileLandscapeW: 768px;
+$mobileW: 500px;
+$mobileSSW: 350px;
+
+// Colors
 $colorPrimary: #1074b9;
 $colorPrimary2: #00a2dd;
 $colorPrimary3: #243970;
@@ -8,12 +21,15 @@ $red: #e30613;
 $blackEye: #000;
 $whiteEye: #fff;
 
-$wrapperMaxWidthAdjusted: calc($wrapperMaxWidth + 10px);
-$wrapperMaxWidth: 1160px;
-$laptopW: 1400px;
-$tabletW: 1024px;
-$hoverW: 1024px;
-$mobileLandscapeWBig: 850px;
-$mobileLandscapeW: 768px;
-$mobileW: 500px;
-$mobileSSW: 350px;
+// Transitions
+$transFast: all 0.25s ease-in-out;
+$transMid: all 0.35s ease-in-out;
+$transSlow: all 0.45s ease-in-out;
+
+// Z-indexes
+$zHeader: 3;
+$zBackTop: 4;
+$zMenu: 5;
+$zMenuOnTop: 6;
+$zOverlay: 7;
+$zModal: 8;
