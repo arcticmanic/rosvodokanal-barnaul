@@ -15,7 +15,10 @@ const gulp = require('gulp'),
   sass = require('gulp-sass'),
   merge = require('merge-stream'),
   removeEmptyLines = require('gulp-remove-empty-lines'),
-  prettyHtml = require('gulp-pretty-html')
+  prettyHtml = require('gulp-pretty-html'),
+  postcss = require('gulp-postcss'),
+  postcssPresetEnv = require('postcss-preset-env'),
+  minify = require('gulp-minify')
 
 sass.compiler = require('node-sass')
 
@@ -29,7 +32,7 @@ const paths = {
 function baseStyles() {
   const info = {
     pathLess: './less/style.less',
-    pathSass: './scss/mmenu-light.scss',
+    pathSass: './scss/style.scss',
     name: 'style'
   }
 
@@ -47,10 +50,12 @@ function baseStyles() {
     .pipe(concat(`${info.name}.css`))
     .pipe(
       cleanCSS({
-        level: 2
+        level: 2,
+        compatibility: 'ie7'
       })
     )
-    .pipe(autoprefixer('> 0.01%'))
+    .pipe(postcss([postcssPresetEnv()]))
+    .pipe(autoprefixer())
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest(`${paths.build}assets/css`))
     .pipe(browserSync.stream())
@@ -66,10 +71,12 @@ function resolvePageStyles(info) {
     .pipe(concat(`${info.name}.css`))
     .pipe(
       cleanCSS({
-        level: 2
+        level: 2,
+        compatibility: 'ie7'
       })
     )
-    .pipe(autoprefixer('> 0.01%'))
+    .pipe(postcss([postcssPresetEnv()]))
+    .pipe(autoprefixer())
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest(`${paths.build}assets/css`))
     .pipe(browserSync.stream())
@@ -98,6 +105,7 @@ function concatPlugins() {
 
   return gulp
     .src(JSPluginsOrder)
+    .pipe(minify())
     .pipe(concat('plugins.js'))
     .pipe(gulp.dest(`${paths.build}assets/js`))
     .pipe(browserSync.stream())

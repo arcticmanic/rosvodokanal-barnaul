@@ -38,7 +38,10 @@ function setClamps(object) {
 
 $(document).ready(function () {
   $('table').wrap("<div class='table-container'></div>");
-  $('select').selectric();
+  $('select').select2({
+    language: 'ru',
+    minimumResultsForSearch: Infinity
+  });
   $('.phone').mask('99999999999');
 });
 

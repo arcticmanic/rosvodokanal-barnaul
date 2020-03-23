@@ -1,6 +1,20 @@
 body {
   display: flex;
   flex-direction: column;
+  scrollbar-width: thin;
+  scrollbar-color: @colorPrimary #fff;
+
+  &::-webkit-scrollbar {
+    width: 11px;
+  }
+  &::-webkit-scrollbar-track {
+    background: #fff;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: @colorPrimary;
+    border-radius: 6px;
+    border: 3px solid #fff;
+  }
 
   .footer {
     margin-top: auto;
@@ -24,4 +38,9 @@ html.color-black {
     background: @whiteEye;
     color: @blackEye;
   }
+}
+
+:root {
+  scrollbar-color: @colorPrimary rgba(@colorPrimary, 0.2) !important;
+  scrollbar-width: thin !important;
 }

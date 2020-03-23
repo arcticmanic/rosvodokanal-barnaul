@@ -7,26 +7,6 @@ $mmocd_max_width: 360px !default;
 
 $mmocd_transition_duration: 0.3s !default;
 
-$colorPrimary: #1074b9;
-$colorPrimary2: #00a2dd;
-$colorPrimary3: #243970;
-$colorBlue: #1878bb;
-$colorBeautifulBlue: #0070ba;
-$red: #e30613;
-
-$blackEye: #000;
-$whiteEye: #fff;
-
-$wrapperMaxWidthAdjusted: calc($wrapperMaxWidth + 10px);
-$wrapperMaxWidth: 1160px;
-$laptopW: 1400px;
-$tabletW: 1024px;
-$hoverW: 1024px;
-$mobileLandscapeWBig: 850px;
-$mobileLandscapeW: 768px;
-$mobileW: 500px;
-$mobileSSW: 350px;
-
 //  CSS variables
 :root {
   /** Width for the drawer. */
