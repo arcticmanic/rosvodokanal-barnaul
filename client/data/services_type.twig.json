@@ -20,8 +20,25 @@
               "link": "services_special.html"
             },
             {
-              "title": "Приборы учета воды",
-              "link": "services_type_meters_application.html"
+              "title": "Приборы учета",
+              "link": "services_type_meters.html",
+              "pages": [
+                {
+                  "title": "Установка",
+                  "link": "services_type_meters_application.html",
+                  "extra_sketches": ["services_type_meters_application_3b"]
+                },
+                {
+                  "title": "Повторная опломбировка",
+                  "link": "services_type_meters_application.html",
+                  "extra_sketches": ["services_type_meters_application_3b"]
+                },
+                {
+                  "title": "Поверка",
+                  "link": "services_type_meters_application.html",
+                  "extra_sketches": ["services_type_meters_application_3b"]
+                }
+              ]
             },
             {
               "title": "Лаборатория",
@@ -66,8 +83,25 @@
               "link": "services_special.html"
             },
             {
-              "title": "Приборы учета воды",
-              "link": "services_type_meters_application.html"
+              "title": "Приборы учета",
+              "link": "services_type_meters.html",
+              "pages": [
+                {
+                  "title": "Установка",
+                  "link": "services_type_meters_application.html",
+                  "extra_sketches": ["services_type_meters_application_3b"]
+                },
+                {
+                  "title": "Повторная опломбировка",
+                  "link": "services_type_meters_application.html",
+                  "extra_sketches": ["services_type_meters_application_3b"]
+                },
+                {
+                  "title": "Поверка",
+                  "link": "services_type_meters_application.html",
+                  "extra_sketches": ["services_type_meters_application_3b"]
+                }
+              ]
             },
             {
               "title": "Лаборатория",

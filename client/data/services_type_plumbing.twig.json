@@ -1,7 +1,7 @@
 {
-  "title": "Скачать мобильное приложение ",
+  "title": "Сантехнические услуги",
   "bage": {
-    "title": "Скачать мобильное приложение ",
+    "title": "Сантехнические услуги",
     "subtitle": "Частные лица"
   },
   "pages": [
@@ -17,8 +17,7 @@
           "pages": [
             {
               "title": "Скачать мобильные приложение",
-              "link": "services_special.html",
-              "classes": "current-page"
+              "link": "services_special.html"
             },
             {
               "title": "Приборы учета",
@@ -51,7 +50,8 @@
             },
             {
               "title": "Сантехнические услуги",
-              "link": "services_type_plumbing.html"
+              "link": "services_type_plumbing.html",
+              "classes": "current-page"
             },
             {
               "title": "Вывоз стоков",

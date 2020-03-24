@@ -1,12 +1,15 @@
 .bage {
   position: relative;
+  height: auto;
   min-height: 150px;
   background: @colorPrimary2;
   display: flex;
   align-items: center;
   .wrapper {
-    padding-left: 10px;
-    padding-right: 10px;
+    // padding-left: 10px;
+    // padding-right: 10px;
+    padding-top: 30px;
+    padding-bottom: 30px;
   }
   &:before {
     content: '';
@@ -16,7 +19,8 @@
       @colorPrimary,
       rgba(@colorPrimary, 0.1)
     );
-    transform: skewX(-26deg);
+    // transform: skewX(-26deg);
+    clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
     width: 55%;
     height: 100%;
     z-index: 1;

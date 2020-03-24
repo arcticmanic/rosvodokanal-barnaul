@@ -11,3 +11,35 @@
 .strong {
   font-weight: 600 !important;
 }
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+hr {
+  display: block;
+  height: 2px;
+  border: 0;
+  margin: 1em 0;
+  padding: 0;
+  &.dashed {
+    border-top: 1px dashed #cdcdcd;
+  }
+}
+
+html.color-white {
+  hr {
+    &.dashed {
+      border-color: @blackEye;
+    }
+  }
+}
+
+html.color-black {
+  hr {
+    &.dashed {
+      border-color: @whiteEye;
+    }
+  }
+}

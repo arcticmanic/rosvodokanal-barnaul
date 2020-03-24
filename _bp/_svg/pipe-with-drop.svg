@@ -1,0 +1,26 @@
+<svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 58 52" style="enable-background:new 0 0 58 52;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+</style>
+<rect x="3" y="1" class="st0" width="8" height="4"/>
+<path class="st0" d="M11,9H3C1.9,9,1,8.1,1,7v0c0-1.1,0.9-2,2-2h8c1.1,0,2,0.9,2,2v0C13,8.1,12.1,9,11,9z"/>
+<path class="st0" d="M55,47h-8c-1.1,0-2-0.9-2-2v0c0-1.1,0.9-2,2-2h8c1.1,0,2,0.9,2,2v0C57,46.1,56.1,47,55,47z"/>
+<path class="st0" d="M37,23v8c0,1.1-0.9,2-2,2h0c-1.1,0-2-0.9-2-2v-8c0-1.1,0.9-2,2-2h0C36.1,21,37,21.9,37,23z"/>
+<path class="st0" d="M25,23v8c0,1.1-0.9,2-2,2h0c-1.1,0-2-0.9-2-2v-8c0-1.1,0.9-2,2-2h0C24.1,21,25,21.9,25,23z"/>
+<rect x="47" y="47" transform="matrix(-1 -1.224647e-16 1.224647e-16 -1 102 98)" class="st0" width="8" height="4"/>
+<line class="st0" x1="26" y1="23" x2="32" y2="23"/>
+<line class="st0" x1="26" y1="31" x2="32" y2="31"/>
+<path class="st0" d="M3,10v11c0,5.5,4.5,10,10,10h7"/>
+<path class="st0" d="M11,10v9c0,2.2,1.8,4,4,4h5"/>
+<path class="st0" d="M55,42v-9c0-5.5-4.5-10-10-10h-7"/>
+<path class="st0" d="M47,42v-7c0-2.2-1.8-4-4-4h-5"/>
+<line class="st0" x1="29" y1="22" x2="29" y2="13"/>
+<line class="st0" x1="25" y1="13" x2="33" y2="13"/>
+<circle class="st0" cx="22" cy="13" r="3"/>
+<circle class="st0" cx="36" cy="13" r="3"/>
+<g>
+	<path class="st0" d="M34,46c0,2.8-2.2,5-5,5s-5-2.2-5-5c0-4.2,5-10,5-10S34,41.8,34,46z"/>
+	<path class="st0" d="M28.2,47.7c-0.8-0.8-1.7-2.5,0.8-6.7"/>
+</g>
+</svg>

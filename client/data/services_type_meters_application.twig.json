@@ -1,7 +1,7 @@
 {
-  "title": "Приборы учета воды",
+  "title": "Заказ услуги",
   "bage": {
-    "title": "Приборы учета воды",
+    "title": "Заказ услуги",
     "subtitle": "Услуги"
   },
   "pages": [
@@ -20,9 +20,27 @@
               "link": "services_special.html"
             },
             {
-              "title": "Приборы учета воды",
-              "link": "services_type_meters_application.html",
-              "classes": "current-page"
+              "title": "Приборы учета",
+              "link": "services_type_meters.html",
+              "classes": "sidemenu__item_active",
+              "pages": [
+                {
+                  "title": "Установка",
+                  "link": "services_type_meters_application.html",
+                  "classes": "current-page",
+                  "extra_sketches": ["services_type_meters_application_3b"]
+                },
+                {
+                  "title": "Повторная опломбировка",
+                  "link": "services_type_meters_application.html",
+                  "extra_sketches": ["services_type_meters_application_3b"]
+                },
+                {
+                  "title": "Поверка",
+                  "link": "services_type_meters_application.html",
+                  "extra_sketches": ["services_type_meters_application_3b"]
+                }
+              ]
             },
             {
               "title": "Лаборатория",
@@ -67,8 +85,25 @@
               "link": "services_special.html"
             },
             {
-              "title": "Приборы учета воды",
-              "link": "services_type_meters_application.html"
+              "title": "Приборы учета",
+              "link": "services_type_meters.html",
+              "pages": [
+                {
+                  "title": "Установка",
+                  "link": "services_type_meters_application.html",
+                  "extra_sketches": ["services_type_meters_application_3b"]
+                },
+                {
+                  "title": "Повторная опломбировка",
+                  "link": "services_type_meters_application.html",
+                  "extra_sketches": ["services_type_meters_application_3b"]
+                },
+                {
+                  "title": "Поверка",
+                  "link": "services_type_meters_application.html",
+                  "extra_sketches": ["services_type_meters_application_3b"]
+                }
+              ]
             },
             {
               "title": "Лаборатория",
