@@ -68,9 +68,23 @@
     }
   }
 
-  &_primary-color {
+  &_colorPrimary {
     border-color: transparent;
     background: @colorPrimary;
+    color: #fff;
+    .btn__text {
+      color: #fff;
+    }
+    svg.btn__icon.icon-arrow-svg {
+      * {
+        stroke: #fff;
+      }
+    }
+  }
+
+  &_colorPrimary2 {
+    border-color: transparent;
+    background: @colorPrimary2;
     color: #fff;
     .btn__text {
       color: #fff;
@@ -263,7 +277,7 @@ html.color-white {
       }
     }
 
-    &_primary-color {
+    &_colorPrimary {
       border-color: transparent;
       background: @blackEye;
       color: @whiteEye;
@@ -370,7 +384,7 @@ html.color-black {
       }
     }
 
-    &_primary-color {
+    &_colorPrimary {
       border-color: transparent;
       background: @whiteEye;
       color: @blackEye;

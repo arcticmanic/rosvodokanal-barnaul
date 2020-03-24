@@ -1,6 +1,8 @@
 @import './apply-overlay.less';
 @import './img-as-bg.less';
 @import './card.less';
+@import './ul_rvk-logos.less';
+@import './forms.less';
 
 .toUpperCase {
   text-transform: uppercase !important;
@@ -8,24 +10,4 @@
 
 .strong {
   font-weight: 600 !important;
-}
-
-.ul_rvk-logos {
-  li {
-    position: relative;
-    padding-left: 50px;
-    &:before {
-      content: '';
-      position: absolute;
-      background: url('../../img/svg/logo/logo_white.svg');
-      left: 0;
-      top: 0;
-      width: 21px;
-      height: 29px;
-      line-height: 20px;
-    }
-    &:not(:last-child) {
-      margin-bottom: 30px;
-    }
-  }
 }

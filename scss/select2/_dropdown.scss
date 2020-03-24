@@ -70,3 +70,24 @@
     display: none;
   }
 }
+
+html.color-white,
+html.color-black {
+  .select2-dropdown {
+    box-shadow: none;
+  }
+}
+
+html.color-white {
+  .select2-dropdown {
+    background: $whiteEye;
+    border-color: $blackEye;
+  }
+}
+
+html.color-black {
+  .select2-dropdown {
+    background: $blackEye;
+    border-color: $whiteEye;
+  }
+}

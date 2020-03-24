@@ -26,10 +26,29 @@ body {
   color: #fff;
 }
 
+:root {
+  scrollbar-color: @colorPrimary rgba(@colorPrimary, 0.2);
+  scrollbar-width: thin;
+}
+
 html.color-white {
   ::selection {
     background: @blackEye;
     color: @whiteEye;
+  }
+  &:root {
+    scrollbar-color: @blackEye @whiteEye;
+  }
+  body {
+    scrollbar-color: @blackEye @whiteEye;
+
+    &::-webkit-scrollbar-track {
+      background: @whiteEye;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: @blackEye;
+      border-color: @whiteEye;
+    }
   }
 }
 
@@ -38,9 +57,18 @@ html.color-black {
     background: @whiteEye;
     color: @blackEye;
   }
-}
+  &:root {
+    scrollbar-color: @whiteEye @blackEye;
+  }
+  body {
+    scrollbar-color: @whiteEye @blackEye;
 
-:root {
-  scrollbar-color: @colorPrimary rgba(@colorPrimary, 0.2) !important;
-  scrollbar-width: thin !important;
+    &::-webkit-scrollbar-track {
+      background: @blackEye;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: @whiteEye;
+      border-color: @blackEye;
+    }
+  }
 }

@@ -23,6 +23,20 @@
   }
 }
 
+.input-cont {
+  position: relative;
+  input {
+    width: 100%;
+  }
+
+  .input__icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+  }
+}
+
 label {
   font-size: @font-13;
   color: @colorPrimary3;
@@ -31,11 +45,11 @@ label {
 
 input:not([type='submit']),
 textarea {
-  font-size: 14px;
+  font-size: @font-14;
   padding: 9px;
   border-radius: 5px;
   border: 1px solid #dce4e8;
-  background-color: #ffffff;
+  background: #ffffff;
   color: @colorPrimary3;
 }
 
@@ -44,5 +58,66 @@ textarea {
   height: 80px;
   &:focus {
     outline: none;
+  }
+}
+
+@media (max-width: @mobileW) {
+  .input-with-label {
+    &__row {
+      &_2 {
+        flex-direction: column;
+        .input-with-label {
+          width: 100%;
+        }
+      }
+      &_3 {
+        flex-wrap: wrap;
+        .input-with-label {
+          width: calc((100% / 3) - 5px);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: @mobileSSW) {
+  .input-with-label {
+    &__row {
+      &_3 {
+        flex-wrap: wrap;
+        .input-with-label:nth-child(1),
+        .input-with-label:nth-child(2) {
+          width: calc((100% / 2) - 5px);
+        }
+        .input-with-label:nth-child(3) {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+html.color-white {
+  label {
+    color: @blackEye;
+  }
+
+  input:not([type='submit']),
+  textarea {
+    border-color: @blackEye;
+    color: @blackEye;
+  }
+}
+
+html.color-black {
+  label {
+    color: @whiteEye;
+  }
+
+  input:not([type='submit']),
+  textarea {
+    border-color: @whiteEye;
+    color: @whiteEye;
+    background: @blackEye;
   }
 }

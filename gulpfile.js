@@ -220,7 +220,7 @@ function watch() {
     .on('change', gulp.series(javascript, browserSync.reload))
   gulp
     .watch('./js/plugins/*.js')
-    .on('change', gulp.series(concatPlugins, browserSync.reload))
+    .on('add', gulp.series(concatPlugins, browserSync.reload))
   gulp.watch('./less/**/*.less', styles)
   gulp.watch('./scss/**/*.scss', styles)
   gulp

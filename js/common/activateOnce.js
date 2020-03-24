@@ -5,6 +5,13 @@ $(document).ready(function() {
 
   $('.datepicker-here').datepicker({
     language: 'ru',
-    minDate: new Date() // Now can select only dates, which goes after today
+    minDate: new Date()
+  })
+
+  $('a.open-modal').click(function(event) {
+    $(this).modal({
+      fadeDuration: 250
+    })
+    return false
   })
 })

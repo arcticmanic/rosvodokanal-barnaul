@@ -1,0 +1,145 @@
+.text {
+  .colorPrimary2 {
+    color: @colorPrimary2;
+  }
+  .underline {
+    padding-bottom: 20px;
+    margin-bottom: 37px;
+    &_dashed {
+      border-bottom: 1px dashed #cdcdcd;
+    }
+  }
+  p {
+    color: @colorPrimary3;
+    font-size: @font-15;
+    line-height: @font-25;
+    margin-bottom: 20px;
+  }
+  li,
+  p {
+    a {
+      color: @colorPrimary2;
+      text-decoration: underline;
+    }
+  }
+  li {
+    padding-left: 25px;
+    font-size: @font-17;
+    color: @colorPrimary3;
+    a {
+      margin-bottom: 10px;
+      transition: @transFast;
+
+      @media (min-width: @hoverW) {
+        &:hover {
+          color: @red;
+        }
+      }
+    }
+    ul {
+      padding-left: 15px;
+    }
+  }
+}
+
+@media (max-width: @mobileW) {
+  .text {
+    .underline {
+      padding-bottom: 15px;
+      margin-bottom: 15px;
+    }
+    p {
+      font-size: @font-14;
+      line-height: @font-20;
+      margin-bottom: 15px;
+    }
+    li {
+      font-size: @font-15;
+      line-height: @font-24;
+      padding-left: 20px;
+    }
+  }
+}
+
+html.color-white,
+html.color-black {
+  .text {
+    li {
+      a {
+        @media (min-width: @hoverW) {
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+html.color-white {
+  .text {
+    .colorPrimary2 {
+      color: @blackEye;
+    }
+    .underline {
+      &_dashed {
+        border-bottom-color: @blackEye;
+      }
+    }
+    p {
+      color: @blackEye;
+    }
+    li,
+    p {
+      a {
+        color: @blackEye;
+      }
+    }
+    li {
+      color: @blackEye;
+      a {
+        color: @blackEye;
+
+        @media (min-width: @hoverW) {
+          &:hover {
+            color: @blackEye;
+          }
+        }
+      }
+    }
+  }
+}
+
+html.color-black {
+  .text {
+    .colorPrimary2 {
+      color: @whiteEye;
+    }
+    .underline {
+      &_dashed {
+        border-bottom-color: @whiteEye;
+      }
+    }
+    p {
+      color: @whiteEye;
+    }
+    li,
+    p {
+      a {
+        color: @whiteEye;
+      }
+    }
+    li {
+      color: @whiteEye;
+      a {
+        color: @whiteEye;
+
+        @media (min-width: @hoverW) {
+          &:hover {
+            color: @whiteEye;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,7 +1,7 @@
 .banner-with-form {
   display: flex;
-  width: 770px;
-  height: 1030px;
+  width: 100%;
+  // height: 1030px;
   margin-bottom: 30px;
   border-radius: 5px;
   max-width: 770px;
@@ -16,6 +16,7 @@
 
     &__content {
       padding: 40px 25px 40px 40px;
+      transition: @transFast;
     }
 
     &__title {
@@ -50,7 +51,7 @@
       flex-direction: column;
       height: 100%;
       &__title {
-        margin-bottom: 20px;
+        margin-bottom: 30px;
       }
       &__content {
         margin-top: auto;
@@ -75,6 +76,195 @@
         margin-top: 20px;
         .banner-form__agreement {
           margin-bottom: 15px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: @wrapperMaxWidth) {
+  .banner-with-form {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: @mobileLandscapeWBig) {
+  .banner-with-form {
+    .banner-left {
+      &__content {
+        padding: 20px;
+      }
+    }
+    .banner-right {
+      .banner-form {
+        padding: 20px;
+        &__footer {
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: @mobileLandscapeW) {
+  .banner-with-form {
+    flex-direction: column;
+    position: relative;
+    .banner-left {
+      position: static;
+      width: 100%;
+      border-bottom-left-radius: 0px;
+      border-top-right-radius: 5px;
+      &__title,
+      &__footer {
+        br {
+          display: none;
+        }
+      }
+      &__title {
+        margin-bottom: 20px;
+      }
+      &__footer {
+        margin-top: 15px;
+      }
+    }
+    .banner-right {
+      width: 100%;
+      border-top-right-radius: 0px;
+      border-bottom-left-radius: 5px;
+      z-index: 1;
+
+      .banner-form {
+        &__footer {
+          margin-top: 20px;
+          .btn {
+            margin-left: auto;
+            margin-right: auto;
+          }
+        }
+      }
+    }
+  }
+}
+
+html.scale {
+  .banner-with-form {
+    .banner-left {
+      &__content {
+        padding: 20px;
+      }
+    }
+
+    .banner-right {
+      .banner-form {
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+    }
+  }
+}
+
+html.color-white,
+html.color-black {
+  .banner-with-form {
+    .banner-left {
+      border: 2px solid @blackEye;
+      &__img {
+        display: none;
+      }
+    }
+    .banner-right {
+      background: @whiteEye;
+      @media (min-width: @mobileLandscapeW) {
+        border-top: 2px solid @blackEye;
+      }
+      @media (max-width: @mobileLandscapeW) {
+        border-left: 2px solid @blackEye;
+      }
+      border-right: 2px solid @blackEye;
+      border-bottom: 2px solid @blackEye;
+      .banner-form {
+        &__p {
+          a {
+            text-decoration: underline;
+            @media (min-width: @hoverW) {
+              &:hover {
+                text-decoration: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+html.color-white {
+  .banner-with-form {
+    .banner-left {
+      border-color: @blackEye;
+
+      &__title {
+        color: @blackEye;
+      }
+
+      &__ul {
+        color: @blackEye;
+      }
+
+      &__footer {
+        color: @blackEye;
+      }
+    }
+    .banner-right {
+      background: @whiteEye;
+      border-color: @blackEye;
+
+      .banner-form {
+        &__p {
+          color: @blackEye;
+          a {
+            color: @blackEye;
+          }
+        }
+      }
+    }
+  }
+}
+
+html.color-black {
+  .banner-with-form {
+    .banner-left {
+      border-color: @whiteEye;
+
+      &__title {
+        color: @whiteEye;
+      }
+
+      &__ul {
+        color: @whiteEye;
+      }
+
+      &__footer {
+        color: @whiteEye;
+      }
+    }
+    .banner-right {
+      background: @blackEye;
+      border-color: @whiteEye;
+
+      .banner-form {
+        &__p {
+          color: @whiteEye;
+          a {
+            color: @whiteEye;
+            @media (min-width: @hoverW) {
+              &:hover {
+                color: @whiteEye;
+              }
+            }
+          }
         }
       }
     }
