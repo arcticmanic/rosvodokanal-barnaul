@@ -1,7 +1,7 @@
 {
-  "title": "Сантехнические услуги",
+  "title": "Проектирование и строительство",
   "bage": {
-    "title": "Сантехнические услуги",
+    "title": "Проектирование и строительство",
     "subtitle": "Частные лица"
   },
   "pages": [
@@ -85,7 +85,6 @@
             {
               "title": "Сантехнические услуги",
               "link": "services_type_plumbing.html",
-              "classes": "current-page sidemenu__item_active",
               "pages": [
                 {
                   "title": "Ограничение и возобновление приема сточных вод на внутридомовых сетях",
@@ -108,6 +107,7 @@
             {
               "title": "Проектирование и строительство",
               "link": "services_type_construction.html",
+              "classes": "current-page sidemenu__item_active",
               "pages": [
                 {
                   "title": "Проектирование водопровода и канализации",

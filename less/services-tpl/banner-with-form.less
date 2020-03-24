@@ -10,8 +10,15 @@
     width: 43.5%;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
-    &__img {
+    &__bg {
       opacity: 0.2;
+    }
+
+    &__img {
+      width: 244px;
+      height: 184px;
+      margin-top: 55px;
+      margin-bottom: 60px;
     }
 
     &__content {
@@ -126,7 +133,11 @@
         margin-bottom: 20px;
       }
       &__footer {
+        margin-top: 20px;
+      }
+      &__img {
         margin-top: 15px;
+        margin-bottom: 25px;
       }
     }
     .banner-right {
@@ -148,11 +159,26 @@
   }
 }
 
+@media (max-width: @mobileW) {
+  .banner-with-form {
+    .banner-left {
+      &__img {
+        margin-top: 15px;
+        margin-bottom: 25px;
+      }
+    }
+  }
+}
+
 html.scale {
   .banner-with-form {
     .banner-left {
       &__content {
         padding: 20px;
+      }
+      &__img {
+        margin-top: 25px;
+        margin-bottom: 35px;
       }
     }
 
@@ -170,7 +196,7 @@ html.color-black {
   .banner-with-form {
     .banner-left {
       border: 2px solid @blackEye;
-      &__img {
+      &__bg {
         display: none;
       }
     }

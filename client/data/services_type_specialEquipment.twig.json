@@ -1,7 +1,7 @@
 {
-  "title": "Сантехнические услуги",
+  "title": "Специальная техника",
   "bage": {
-    "title": "Сантехнические услуги",
+    "title": "Специальная техника",
     "subtitle": "Частные лица"
   },
   "pages": [
@@ -85,7 +85,6 @@
             {
               "title": "Сантехнические услуги",
               "link": "services_type_plumbing.html",
-              "classes": "current-page sidemenu__item_active",
               "pages": [
                 {
                   "title": "Ограничение и возобновление приема сточных вод на внутридомовых сетях",
@@ -129,6 +128,7 @@
             {
               "title": "Специальная техника",
               "link": "services_type_specialEquipment.html",
+              "classes": "current-page sidemenu__item_active",
               "pages": [
                 {
                   "title": "Доставка воды",
