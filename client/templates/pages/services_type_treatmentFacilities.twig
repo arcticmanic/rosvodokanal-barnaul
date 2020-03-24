@@ -1,0 +1,36 @@
+{% extends "../layouts/services.twig" %}
+
+{% block main %}
+  {% include '../includes/stdEls/page-content__title_with-underline.twig' with {"title" : "Локальные очистные сооружения "} %}
+
+  <section class="section-services-type-networks">
+    <div class="text">
+      <p>«Росводоканал Барнаул» готов помочь предприятиям города и региона в решении проблем промышленного водопользования, используя лучшие практики и современные технологии. Партнеры компании рассмотрят возможность сотрудничества в части разработки индивидуальных технологических решений по водоочистке промышленных сточных вод, поверхностно-ливневых и хозяйственно-бытовых стоков.</p>
+
+      <article class="jumbo-icons__article">
+        <hr class="dashed">
+        <div class="jumbo-icons">
+          <a href="services_type_treatmentFacilities_application.html" class="jumbo-icons__item">
+            {% include '../includes/svg/icon-design-tools-svg.twig' with {"classes": "jumbo-icons__icon"} %}
+            <p class="jumbo-icons__p">Проектирование</p>
+          </a>
+
+          <a href="services_type_treatmentFacilities_application.html" class="jumbo-icons__item">
+            {% include '../includes/svg/icon-another-build-tools.twig' with {"classes": "jumbo-icons__icon"} %}
+            <p class="jumbo-icons__p">Строительство</p>
+          </a>
+
+          <a href="services_type_treatmentFacilities_application.html" class="jumbo-icons__item">
+            {% include '../includes/svg/icon-maintenance-tools-svg.twig' with {"classes": "jumbo-icons__icon"} %}
+            <p class="jumbo-icons__p">Проектирование</p>
+          </a>
+        </div>
+        <hr class="dashed">
+        <a href="#" class="btn btn_colorPrimary mx-auto">Прочие услуги раздела</a>
+        <hr class="dashed">
+      </article>
+      
+      <p>Партнеры компании рассмотрят возможность сотрудничества в части разработки индивидуальных технологических решений по водоочистке промышленных сточных вод, поверхностно-ливневых и хозяйственно-бытовых стоков.</p>
+    </div>
+  </section>
+{% endblock %}

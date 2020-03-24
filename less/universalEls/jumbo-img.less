@@ -1,0 +1,154 @@
+.jumbo-img {
+  border-radius: 7px;
+  width: 100%;
+  height: auto;
+  &__cont {
+    position: relative;
+    margin-bottom: 48px;
+  }
+  &__marker {
+    position: absolute;
+    left: -6px;
+    bottom: 13.5%;
+    background: @colorPrimary2;
+    min-height: 105px;
+    display: flex;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    &-cont {
+      margin-top: auto;
+      margin-bottom: auto;
+      padding: 10px 52px 10px 31px;
+      transition: @transFast;
+    }
+  }
+  &__title,
+  &__subtitle {
+    color: #fff;
+  }
+  &__subtitle {
+    font-size: @font-15;
+    line-height: @font-20;
+  }
+}
+
+@media (max-width: @tabletW) {
+  .jumbo-img {
+    &__cont {
+      margin-bottom: 30px;
+    }
+    &__marker {
+      min-height: unset;
+      bottom: 10%;
+      &-cont {
+        padding-left: 20px;
+        padding-right: 25px;
+      }
+    }
+  }
+}
+
+@media (max-width: @mobileLandscapeWBig) {
+  .jumbo-img {
+    &__marker {
+      bottom: 5%;
+      &-cont {
+        padding-left: 10px;
+        padding-right: 15px;
+      }
+    }
+    &__subtitle {
+      font-size: @font-14;
+    }
+    &__title {
+      font-size: @font-24;
+    }
+  }
+}
+
+@media (max-width: @mobileLandscapeW) {
+  .jumbo-img {
+    &__marker {
+      bottom: 5%;
+      &-cont {
+        padding-right: 10px;
+      }
+    }
+    &__subtitle {
+      font-size: @font-13;
+      line-height: @font-21;
+    }
+    &__title {
+      font-size: @font-20;
+      line-height: @font-24;
+    }
+  }
+}
+
+@media (max-width: @mobileW) {
+  .jumbo-img {
+    &__marker {
+      position: static;
+      margin-top: -5px;
+      border-top-right-radius: 0px;
+      border-bottom-left-radius: 5px;
+    }
+    &__subtitle {
+      font-size: @font-14;
+      line-height: @font-23;
+    }
+    &__title {
+      font-size: @font-22;
+      line-height: @font-26;
+    }
+  }
+}
+
+html.scale {
+  .jumbo-img {
+    &__marker {
+      &-cont {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+    }
+  }
+}
+
+html.color-white,
+html.color-black {
+  .jumbo-img {
+    &__marker {
+      border-top-right-radius: 0px;
+      border-bottom-right-radius: 0px;
+    }
+  }
+}
+
+html.color-white {
+  .jumbo-img {
+    .border-card-like_black();
+    &__marker {
+      .border-card-like_black();
+      background: @whiteEye;
+    }
+    &__title,
+    &__subtitle {
+      color: @blackEye;
+    }
+  }
+}
+
+html.color-black {
+  .jumbo-img {
+    .border-card-like_white();
+    &__marker {
+      .border-card-like_white();
+      background: @blackEye;
+    }
+    &__title,
+    &__subtitle {
+      color: @whiteEye;
+    }
+  }
+}
