@@ -170,22 +170,22 @@
               "pages": [
                 {
                   "title": "Промывка систем водоснабжения и водоотведения",
-                  "link": "services_corporate_meters_application.html",
+                  "link": "services_type_meters_application.html",
                   "extra_sketches": ["services_type_meters_application_3b"]
                 },
                 {
                   "title": "Обследование сетей",
-                  "link": "services_corporate_meters_application.html",
+                  "link": "services_type_meters_application.html",
                   "extra_sketches": ["services_type_meters_application_3b"]
                 },
                 {
                   "title": "Обслуживание водопроводных и канализационных сетей",
-                  "link": "services_corporate_meters_application.html",
+                  "link": "services_type_meters_application.html",
                   "extra_sketches": ["services_type_meters_application_3b"]
                 },
                 {
                   "title": "Ремонт и чистка колодцев",
-                  "link": "services_corporate_meters_application.html",
+                  "link": "services_type_meters_application.html",
                   "extra_sketches": ["services_type_meters_application_3b"]
                 }
               ]
@@ -196,7 +196,7 @@
               "pages": [
                 {
                   "title": "Ограничение и возобновление приема сточных вод на внутридомовых сетях",
-                  "link": "services_corporate_meters_application.html",
+                  "link": "services_type_meters_application.html",
                   "extra_sketches": ["services_type_meters_application_3b"]
                 }
               ]
@@ -239,7 +239,7 @@
                 },
                 {
                   "title": "Аренда автотранспорта и спецтехники",
-                  "link": "services_corporate_specialEquipment_application.html"
+                  "link": "services_type_specialEquipment_application.html"
                 }
               ]
             },
@@ -254,11 +254,11 @@
                 },
                 {
                   "title": "Строительство сетей водоснабжения и водоотведения",
-                  "link": "services_corporate_specialEquipment_application.html"
+                  "link": "services_type_specialEquipment_application.html"
                 },
                 {
                   "title": "Проектирование узлов учета",
-                  "link": "services_corporate_specialEquipment_application.html"
+                  "link": "services_type_specialEquipment_application.html"
                 }
               ]
             },
@@ -273,11 +273,11 @@
                 },
                 {
                   "title": "Строительство",
-                  "link": "services_corporate_specialEquipment_application.html"
+                  "link": "services_type_specialEquipment_application.html"
                 },
                 {
                   "title": "Обслуживание",
-                  "link": "services_corporate_specialEquipment_application.html"
+                  "link": "services_type_specialEquipment_application.html"
                 }
               ]
             },
@@ -444,22 +444,22 @@
               "pages": [
                 {
                   "title": "Промывка систем водоснабжения и водоотведения",
-                  "link": "services_corporate_meters_application.html",
+                  "link": "services_type_meters_application.html",
                   "extra_sketches": ["services_type_meters_application_3b"]
                 },
                 {
                   "title": "Обследование сетей",
-                  "link": "services_corporate_meters_application.html",
+                  "link": "services_type_meters_application.html",
                   "extra_sketches": ["services_type_meters_application_3b"]
                 },
                 {
                   "title": "Обслуживание водопроводных и канализационных сетей",
-                  "link": "services_corporate_meters_application.html",
+                  "link": "services_type_meters_application.html",
                   "extra_sketches": ["services_type_meters_application_3b"]
                 },
                 {
                   "title": "Ремонт и чистка колодцев",
-                  "link": "services_corporate_meters_application.html",
+                  "link": "services_type_meters_application.html",
                   "extra_sketches": ["services_type_meters_application_3b"]
                 }
               ]
@@ -470,7 +470,7 @@
               "pages": [
                 {
                   "title": "Ограничение и возобновление приема сточных вод на внутридомовых сетях",
-                  "link": "services_corporate_meters_application.html",
+                  "link": "services_type_meters_application.html",
                   "extra_sketches": ["services_type_meters_application_3b"]
                 }
               ]
@@ -481,12 +481,12 @@
               "pages": [
                 {
                   "title": "Анализ воды",
-                  "link": "services_corporate_meters_application.html",
+                  "link": "services_type_meters_application.html",
                   "extra_sketches": ["services_type_meters_application_3b"]
                 },
                 {
                   "title": "Анализ стоков",
-                  "link": "services_corporate_meters_application.html",
+                  "link": "services_type_meters_application.html",
                   "extra_sketches": ["services_type_meters_application_3b"]
                 }
               ]
@@ -497,7 +497,7 @@
               "pages": [
                 {
                   "title": "Откачка и вывоз стоков",
-                  "link": "services_corporate_meters_application.html",
+                  "link": "services_type_meters_application.html",
                   "extra_sketches": ["services_type_meters_application_3b"]
                 }
               ]
@@ -508,12 +508,12 @@
               "pages": [
                 {
                   "title": "Доставка воды",
-                  "link": "services_corporate_meters_application.html",
+                  "link": "services_type_meters_application.html",
                   "extra_sketches": ["services_type_meters_application_3b"]
                 },
                 {
                   "title": "Аренда автотранспорта и спецтехники",
-                  "link": "services_corporate_specialEquipment_application.html"
+                  "link": "services_type_specialEquipment_application.html"
                 }
               ]
             },
@@ -523,17 +523,17 @@
               "pages": [
                 {
                   "title": "Проектирование водопровода и канализации",
-                  "link": "services_corporate_meters_application.html",
+                  "link": "services_type_meters_application.html",
                   "extra_sketches": ["services_type_meters_application_3b"]
                 },
                 {
                   "title": "Строительство сетей водоснабжения и водоотведения",
-                  "link": "services_corporate_meters_application.html",
+                  "link": "services_type_meters_application.html",
                   "extra_sketches": ["services_type_meters_application_3b"]
                 },
                 {
                   "title": "Проектирование узлов учета",
-                  "link": "services_corporate_meters_application.html",
+                  "link": "services_type_meters_application.html",
                   "extra_sketches": ["services_type_meters_application_3b"]
                 }
               ]
@@ -544,17 +544,17 @@
               "pages": [
                 {
                   "title": "Проектирование",
-                  "link": "services_corporate_meters_application.html",
+                  "link": "services_type_meters_application.html",
                   "extra_sketches": ["services_type_meters_application_3b"]
                 },
                 {
                   "title": "Строительство",
-                  "link": "services_corporate_meters_application.html",
+                  "link": "services_type_meters_application.html",
                   "extra_sketches": ["services_type_meters_application_3b"]
                 },
                 {
                   "title": "Обслуживание",
-                  "link": "services_corporate_meters_application.html",
+                  "link": "services_type_meters_application.html",
                   "extra_sketches": ["services_type_meters_application_3b"]
                 }
               ]
@@ -610,11 +610,45 @@
             },
             {
               "title": "Лаборатория",
-              "link": "services_type_lab.html"
+              "link": "services_type_lab.html",
+              "pages": [
+                {
+                  "title": "Анализ воды",
+                  "link": "services_type_meters_application.html",
+                  "extra_sketches": ["services_type_meters_application_3b"]
+                },
+                {
+                  "title": "Анализ стоков",
+                  "link": "services_type_meters_application.html",
+                  "extra_sketches": ["services_type_meters_application_3b"]
+                }
+              ]
             },
             {
               "title": "Услуги на сетях водоснабжения и водоотведения",
-              "link": "services_type_networks.html"
+              "link": "services_type_networks.html",
+              "pages": [
+                {
+                  "title": "Промывка систем водоснабжения и водоотведения",
+                  "link": "services_type_meters_application.html",
+                  "extra_sketches": ["services_type_meters_application_3b"]
+                },
+                {
+                  "title": "Обследование сетей",
+                  "link": "services_type_meters_application.html",
+                  "extra_sketches": ["services_type_meters_application_3b"]
+                },
+                {
+                  "title": "Обслуживание водопроводных и канализационных сетей",
+                  "link": "services_type_meters_application.html",
+                  "extra_sketches": ["services_type_meters_application_3b"]
+                },
+                {
+                  "title": "Ремонт и чистка колодцев",
+                  "link": "services_type_meters_application.html",
+                  "extra_sketches": ["services_type_meters_application_3b"]
+                }
+              ]
             },
             {
               "title": "Сантехнические услуги",
@@ -673,11 +707,45 @@
             },
             {
               "title": "Лаборатория",
-              "link": "services_type_lab.html"
+              "link": "services_type_lab.html",
+              "pages": [
+                {
+                  "title": "Анализ воды",
+                  "link": "services_type_meters_application.html",
+                  "extra_sketches": ["services_type_meters_application_3b"]
+                },
+                {
+                  "title": "Анализ стоков",
+                  "link": "services_type_meters_application.html",
+                  "extra_sketches": ["services_type_meters_application_3b"]
+                }
+              ]
             },
             {
               "title": "Услуги на сетях водоснабжения и водоотведения",
-              "link": "services_type_networks.html"
+              "link": "services_type_networks.html",
+              "pages": [
+                {
+                  "title": "Промывка систем водоснабжения и водоотведения",
+                  "link": "services_type_meters_application.html",
+                  "extra_sketches": ["services_type_meters_application_3b"]
+                },
+                {
+                  "title": "Обследование сетей",
+                  "link": "services_type_meters_application.html",
+                  "extra_sketches": ["services_type_meters_application_3b"]
+                },
+                {
+                  "title": "Обслуживание водопроводных и канализационных сетей",
+                  "link": "services_type_meters_application.html",
+                  "extra_sketches": ["services_type_meters_application_3b"]
+                },
+                {
+                  "title": "Ремонт и чистка колодцев",
+                  "link": "services_type_meters_application.html",
+                  "extra_sketches": ["services_type_meters_application_3b"]
+                }
+              ]
             },
             {
               "title": "Сантехнические услуги",

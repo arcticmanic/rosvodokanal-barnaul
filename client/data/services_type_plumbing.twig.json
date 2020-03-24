@@ -42,11 +42,45 @@
             },
             {
               "title": "Лаборатория",
-              "link": "services_type_lab.html"
+              "link": "services_type_lab.html",
+              "pages": [
+                {
+                  "title": "Анализ воды",
+                  "link": "services_type_meters_application.html",
+                  "extra_sketches": ["services_type_meters_application_3b"]
+                },
+                {
+                  "title": "Анализ стоков",
+                  "link": "services_type_meters_application.html",
+                  "extra_sketches": ["services_type_meters_application_3b"]
+                }
+              ]
             },
             {
               "title": "Услуги на сетях водоснабжения и водоотведения",
-              "link": "services_type_networks.html"
+              "link": "services_type_networks.html",
+              "pages": [
+                {
+                  "title": "Промывка систем водоснабжения и водоотведения",
+                  "link": "services_type_meters_application.html",
+                  "extra_sketches": ["services_type_meters_application_3b"]
+                },
+                {
+                  "title": "Обследование сетей",
+                  "link": "services_type_meters_application.html",
+                  "extra_sketches": ["services_type_meters_application_3b"]
+                },
+                {
+                  "title": "Обслуживание водопроводных и канализационных сетей",
+                  "link": "services_type_meters_application.html",
+                  "extra_sketches": ["services_type_meters_application_3b"]
+                },
+                {
+                  "title": "Ремонт и чистка колодцев",
+                  "link": "services_type_meters_application.html",
+                  "extra_sketches": ["services_type_meters_application_3b"]
+                }
+              ]
             },
             {
               "title": "Сантехнические услуги",
@@ -106,11 +140,45 @@
             },
             {
               "title": "Лаборатория",
-              "link": "services_type_lab.html"
+              "link": "services_type_lab.html",
+              "pages": [
+                {
+                  "title": "Анализ воды",
+                  "link": "services_type_meters_application.html",
+                  "extra_sketches": ["services_type_meters_application_3b"]
+                },
+                {
+                  "title": "Анализ стоков",
+                  "link": "services_type_meters_application.html",
+                  "extra_sketches": ["services_type_meters_application_3b"]
+                }
+              ]
             },
             {
               "title": "Услуги на сетях водоснабжения и водоотведения",
-              "link": "services_type_networks.html"
+              "link": "services_type_networks.html",
+              "pages": [
+                {
+                  "title": "Промывка систем водоснабжения и водоотведения",
+                  "link": "services_type_meters_application.html",
+                  "extra_sketches": ["services_type_meters_application_3b"]
+                },
+                {
+                  "title": "Обследование сетей",
+                  "link": "services_type_meters_application.html",
+                  "extra_sketches": ["services_type_meters_application_3b"]
+                },
+                {
+                  "title": "Обслуживание водопроводных и канализационных сетей",
+                  "link": "services_type_meters_application.html",
+                  "extra_sketches": ["services_type_meters_application_3b"]
+                },
+                {
+                  "title": "Ремонт и чистка колодцев",
+                  "link": "services_type_meters_application.html",
+                  "extra_sketches": ["services_type_meters_application_3b"]
+                }
+              ]
             },
             {
               "title": "Сантехнические услуги",

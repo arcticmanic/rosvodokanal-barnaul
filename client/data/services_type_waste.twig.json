@@ -1,7 +1,7 @@
 {
-  "title": "Услуги на сетях водоснабжения и водоотведения",
+  "title": "Вывоз стоков",
   "bage": {
-    "title": "Услуги на сетях водоснабжения и водоотведения",
+    "title": "Вывоз стоков",
     "subtitle": "Частные лица"
   },
   "pages": [
@@ -59,7 +59,6 @@
             {
               "title": "Услуги на сетях водоснабжения и водоотведения",
               "link": "services_type_networks.html",
-              "classes": "current-page sidemenu__item_active",
               "pages": [
                 {
                   "title": "Промывка систем водоснабжения и водоотведения",
@@ -89,7 +88,8 @@
             },
             {
               "title": "Вывоз стоков",
-              "link": "services_type_waste.html"
+              "link": "services_type_waste.html",
+              "classes": "current-page"
             },
             {
               "title": "Проектирование и строительство",
