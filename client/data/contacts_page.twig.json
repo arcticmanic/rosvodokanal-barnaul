@@ -1,0 +1,31 @@
+{
+  "title": "Новости",
+  "bage": {
+    "title": "Новости",
+    "subtitle": "Пресс-центр"
+  },
+  "pages": [
+    {
+      "title": "Пресс-центр",
+      "link": "pressroom_news_list.html",
+      "withoutArrow": true,
+      "pages": [
+        {
+          "title": "Новости",
+          "link": "pressroom_news_list.html",
+          "extra_sketches": ["pressroom_news_list_detail"]
+        },
+        {
+          "title": "СМИ о нас",
+          "link": "pressroom_media.html",
+          "extra_sketches": ["pressroom_news_list_detail"]
+        },
+        {
+          "title": "Контакты для СМИ",
+          "link": "pressroom_news_contacts.html",
+          "classes": "current-page"
+        }
+      ]
+    }
+  ]
+}

@@ -12,7 +12,8 @@
       "pages": [
         {
           "title": "Общая информация",
-          "link": "purchases_info.html"
+          "link": "purchases_info.html",
+          "classes": "current-page"
         },
         {
           "title": "Положение о закупках",

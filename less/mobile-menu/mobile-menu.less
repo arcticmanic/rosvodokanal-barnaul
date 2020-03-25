@@ -162,7 +162,21 @@
   }
 }
 
-@media (min-width: @tabletW) {
+@media (max-width: @mobileW) {
+  .mm-spn .mobile-menu__header {
+    .logo .logo-main-svg {
+      &:not(.logo-main-svg_textless) {
+        display: none;
+      }
+      &.logo-main-svg_textless {
+        display: block;
+      }
+    }
+    .eye-version {
+      margin-left: auto;
+      margin-right: 10px;
+    }
+  }
 }
 
 html.color-white {

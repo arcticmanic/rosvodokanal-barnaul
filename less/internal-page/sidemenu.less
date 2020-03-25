@@ -93,7 +93,6 @@
       border-left: 3px solid @colorPrimary3;
       .sidemenu__link {
         font-weight: 600;
-        // padding-left: 53px;
         cursor: default;
         pointer-events: none;
       }
@@ -126,18 +125,26 @@
 }
 
 @media (max-width: @wrapperMaxWidth) {
-  .sidemenu {
-    width: 450px;
+  .page-nav {
     margin-left: auto;
     margin-right: auto;
+  }
+  .sidemenu {
+    width: 450px;
+    margin-bottom: 20px;
+  }
+  .page-nav {
     margin-bottom: 30px;
   }
 }
 
 @media (max-width: @mobileLandscapeW) {
+  .page-nav {
+    width: 100%;
+  }
+
   .sidemenu {
     width: 100%;
-
     &__link-cont {
       &_without-arrow {
         .sidemenu__link {
@@ -165,6 +172,9 @@
         padding-bottom: 15px;
       }
     }
+  }
+  .page-nav {
+    // margin-bottom: 25px;
   }
 }
 

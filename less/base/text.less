@@ -19,11 +19,38 @@
     margin-bottom: 20px;
     font-weight: 400;
   }
+  ul {
+    margin-bottom: 25px;
+    li {
+      position: relative;
+      font-size: @font-15;
+      padding-left: 20px;
+      &:not(:last-child) {
+      margin-bottom: 10px;
+
+      }
+      &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background: @colorPrimary3;
+        top: 0.6em;
+      }
+    }
+  }
   li,
   p {
     a {
       color: @colorPrimary2;
       text-decoration: underline;
+      @media (min-width: @hoverW) {
+        &:hover {
+          text-decoration: none;
+        }
+      }
     }
   }
   li {
@@ -112,6 +139,13 @@ html.color-white {
         }
       }
     }
+    ul {
+      li {
+        &:before {
+          background: @blackEye;
+        }
+      }
+    }
   }
 }
 
@@ -144,6 +178,13 @@ html.color-black {
           &:hover {
             color: @whiteEye;
           }
+        }
+      }
+    }
+    ul {
+      li {
+        &:before {
+          background: @whiteEye;
         }
       }
     }

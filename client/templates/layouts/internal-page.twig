@@ -4,7 +4,13 @@
   {% include "../includes/bage.twig"%}
 
   <div class="page-guts wrapper">
-    {% include "../includes/sidemenu.twig" %}
+    <div class="page-nav">
+      {% include "../includes/sidemenu.twig" %}
+
+      {% block undersidemenu %}
+
+      {% endblock %}
+    </div>
 
     <main class="page-content">
       {% block main %}

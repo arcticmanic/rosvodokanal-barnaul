@@ -1,0 +1,41 @@
+.contacts-block {
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+  &__title {
+    color: @colorPrimary;
+    font-size: @font-15;
+    font-weight: 700;
+    line-height: @font-25;
+  }
+  &__link {
+    color: @colorPrimary;
+    font-size: @font-17;
+    font-weight: 400;
+    line-height: @font-25;
+  }
+}
+
+html.color-white {
+  .contacts-block {
+    &__title {
+      color: @blackEye;
+    }
+    &__link {
+      color: @blackEye;
+    }
+  }
+}
+
+html.color-black {
+  .contacts-block {
+    &__title {
+      color: @whiteEye;
+    }
+    &__link {
+      color: @whiteEye;
+    }
+  }
+}

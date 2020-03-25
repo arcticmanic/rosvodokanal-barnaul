@@ -3,15 +3,7 @@
 {% block main %}
 
   <section class="section-text-page">
-    <article class="jumbo-img__cont">
-      <img data-src="./img/text-page-img.png" alt="" class="lazy jumbo-img" width="770" height="370">
-      <div class="jumbo-img__marker">
-        <div class="jumbo-img__marker-cont">
-          <p class="jumbo-img__subtitle">Общая информация</p>
-          <h3 class="jumbo-img__title">«Росводоканал Барнаул»</h3>
-        </div>
-      </div>
-    </article>
+    {% include "../includes/jumbo-img.twig" with {"imgSrc": "./img/text-page-img.png", "title": "«Росводоканал Барнаул»", "subtitle": "Общая информация"} %}
 
     <article class="text">
       <p>Более 650 тысяч жителей столицы Алтайского края «Росводоканал Барнаул» обеспечивает питьевой водой и оказывает услуги водоотведения.</p>

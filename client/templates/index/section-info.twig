@@ -25,15 +25,6 @@
       {% endfor %}
     </div>
 
-    <article class="info__item info__item_right info-hot">
-      <p class="info-hot-subtitle">Горячая линия безопасности</p>
-      <a href="tel:88002501747" class="info-hot-phone">8-800-250-17-47</a>
-      <a href="mailto:etika@rosvodokanal.ru" class="info-hot-email">etika@rosvodokanal.ru</a>
-      <p class="info-hot-text">
-        На условиях анонимности, сообщите о фактах хищений, злоупотреблений, мошенничества,
-        а также о других нарушениях и негативных событиях.
-      </p>
-      <a href="#" class="btn btn_trans">Подробнее</a>
-    </article>
+    {% include '../includes/stdEls/info-hot.twig' with {"classes": "info__item info__item_right"} %}
   </div>
 </section>

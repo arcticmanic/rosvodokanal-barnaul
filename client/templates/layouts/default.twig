@@ -14,7 +14,9 @@
   <meta name="msapplication-config" content="./favlike/browserconfig.xml">
   <meta name="theme-color" content="#ffffff">
   <title>{{ title }}</title>
+
   {% include "../includes/styles.twig" %}
+
   {% block customStyles %}
   
   {% endblock %}
@@ -38,9 +40,12 @@
     
     {% include "../includes/scripts.twig" %}
 
-
     {% block customJS %}
   
+    {% endblock %}
+
+    {% block indvidualPageJS %}
+
     {% endblock %}
 </body>
 </html>
