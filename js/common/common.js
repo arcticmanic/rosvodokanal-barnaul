@@ -42,27 +42,30 @@ $(document).ready(function() {
       .slideToggle()
   })
 
-  ymaps.ready(init)
-  function init() {
-    var map2 = new ymaps.Map('contacts-map', {
-        center: [59.825651, 30.326163],
-        zoom: 7,
-        controls: ['zoomControl']
-      }),
-      contactsPlacemark = new ymaps.Placemark(
-        map2.getCenter(),
-        {
-          hintContent: 'Собственный значок метки',
-          balloonContent: 'Это красивая метка'
-        },
-        {
-          iconLayout: 'default#image',
-          // iconImageHref: 'img/geo.png',
-          iconImageSize: [45, 50],
-          iconImageOffset: [-22.5, -50]
-        }
-      )
-    map2.geoObjects.add(contactsPlacemark)
-    map2.behaviors.disable('scrollZoom')
+  if ($('#contacts-map').length > 0) {
+    ymaps.ready(init)
+    function init() {
+      var map2 = new ymaps.Map('contacts-map', {
+          center: [53.388919, 83.744140],
+          zoom: 17,
+          controls: ['zoomControl']
+        }),
+        contactsPlacemark = new ymaps.Placemark(
+          map2.getCenter(),
+          {
+            hintContent: 'Собственный значок метки',
+            balloonContent: 'Это красивая метка'
+          },
+          {
+            iconLayout: 'default#image',
+            // iconImageHref: 'img/geo.png',
+            iconImageSize: [45, 50],
+            iconImageOffset: [-22.5, -50]
+          }
+        )
+      map2.geoObjects.add(contactsPlacemark)
+      map2.behaviors.disable('scrollZoom')
+    }
+
   }
 })

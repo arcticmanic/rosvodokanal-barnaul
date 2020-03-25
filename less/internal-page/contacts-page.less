@@ -1,11 +1,27 @@
 .section-contacts {
+  .jumbo-img__cont {
+    margin-bottom: 38px;
+  }
   .contacts-block {
     margin-bottom: 40px;
   }
   .map_contacts {
-    width: 770px;
+    // width: 770px;
     height: 380px;
     margin-top: 40px;
-    margin-bottom: 20px;
+    margin-bottom: 55px;
+    width: 100%;
+  }
+}
+
+@media (max-width: @mobileLandscapeWBig) {
+  .section-contacts {
+    .contacts-block {
+      margin-bottom: 30px;
+    }
+    .map_contacts {
+      margin-top: 30px;
+      margin-bottom: 35px;
+    }
   }
 }

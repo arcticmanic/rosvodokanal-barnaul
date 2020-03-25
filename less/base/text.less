@@ -1,4 +1,13 @@
 .text {
+  h2, h3, h4, h5, h6 {
+    color: @colorPrimary3;
+  }
+  h2, h3, h4 {
+    margin-bottom: 20px;
+  }
+  h5, h6 {
+    margin-bottom: 15px;
+  }
   .colorPrimary2 {
     color: @colorPrimary2;
   }
@@ -69,6 +78,25 @@
     }
     ul {
       padding-left: 15px;
+    }
+  }
+}
+
+@media (max-width: @laptopW) {
+  .text {
+    h2, h3, h4 {
+      margin-bottom: 15px;
+    }
+    h5, h6 {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+@media (max-width: @mobileW) {
+  .text {
+    h2, h3, h4 {
+      margin-bottom: 10px;
     }
   }
 }

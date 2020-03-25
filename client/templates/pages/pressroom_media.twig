@@ -1,0 +1,27 @@
+{% extends "../layouts/pressroom.twig" %}
+
+{% block undersidemenu %}
+  {% include '../includes/subscribe-to-news.twig' %}
+{% endblock %}
+
+{% block main %}
+  <section class="section-pressroom-media">
+    <article class="news-grid">
+      <div class="news-item">
+        <img data-src="./img/pressroom-media-img-1.png" alt="" class="lazy news-item__img">
+        <div class="news-item__bage">
+          <p class="news-item__title">В Барнауле прошло первое заседание Общественного совета</p>
+          <div class="news-item__info">
+            <p class="news-item__src">«Катунь24»</p>
+            <p class="news-item__meta">13.12.19</p>
+            <span class="divider"></span>
+            
+          </div>
+        </div>
+      </div>
+    </article>
+  </section>
+{% endblock %}
+
+{% block indvidualPageJS %}
+{% endblock %}

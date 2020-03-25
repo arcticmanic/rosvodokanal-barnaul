@@ -18,12 +18,12 @@
         {
           "title": "СМИ о нас",
           "link": "pressroom_media.html",
-          "extra_sketches": ["pressroom_news_list_detail"]
+          "extra_sketches": ["pressroom_news_list_detail"],
+          "classes": "current-page"
         },
         {
           "title": "Контакты для СМИ",
-          "link": "contacts_page.html",
-          "classes": "current-page"
+          "link": "contacts_page.html"
         }
       ]
     }

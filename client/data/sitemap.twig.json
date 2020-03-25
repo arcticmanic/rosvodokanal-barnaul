@@ -1007,7 +1007,7 @@
         },
         {
           "title": "Контакты",
-          "link": "pressroom_news_contacts.html"
+          "link": "contacts_page.html"
         }
       ]
     },
@@ -1074,7 +1074,7 @@
         },
         {
           "title": "Контакты для СМИ",
-          "link": "pressroom_news_contacts.html"
+          "link": "contacts_page.html"
         }
       ]
     },
