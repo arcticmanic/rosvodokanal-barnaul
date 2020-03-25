@@ -268,16 +268,15 @@
               "pages": [
                 {
                   "title": "Проектирование",
-                  "link": "services_type_meters_application.html",
-                  "extra_sketches": ["services_type_meters_application_3b"]
+                  "link": "services_type_treatmentFacilities_application.html"
                 },
                 {
                   "title": "Строительство",
-                  "link": "services_type_specialEquipment_application.html"
+                  "link": "services_type_treatmentFacilities_application.html"
                 },
                 {
                   "title": "Обслуживание",
-                  "link": "services_type_specialEquipment_application.html"
+                  "link": "services_type_treatmentFacilities_application.html"
                 }
               ]
             },
@@ -544,18 +543,15 @@
               "pages": [
                 {
                   "title": "Проектирование",
-                  "link": "services_type_meters_application.html",
-                  "extra_sketches": ["services_type_meters_application_3b"]
+                  "link": "services_type_treatmentFacilities_application.html"
                 },
                 {
                   "title": "Строительство",
-                  "link": "services_type_meters_application.html",
-                  "extra_sketches": ["services_type_meters_application_3b"]
+                  "link": "services_type_treatmentFacilities_application.html"
                 },
                 {
                   "title": "Обслуживание",
-                  "link": "services_type_meters_application.html",
-                  "extra_sketches": ["services_type_meters_application_3b"]
+                  "link": "services_type_treatmentFacilities_application.html"
                 }
               ]
             },
@@ -714,18 +710,15 @@
               "pages": [
                 {
                   "title": "Проектирование",
-                  "link": "services_type_meters_application.html",
-                  "extra_sketches": ["services_type_meters_application_3b"]
+                  "link": "services_type_treatmentFacilities_application.html"
                 },
                 {
                   "title": "Строительство",
-                  "link": "services_type_meters_application.html",
-                  "extra_sketches": ["services_type_meters_application_3b"]
+                  "link": "services_type_treatmentFacilities_application.html"
                 },
                 {
                   "title": "Обслуживание",
-                  "link": "services_type_meters_application.html",
-                  "extra_sketches": ["services_type_meters_application_3b"]
+                  "link": "services_type_treatmentFacilities_application.html"
                 }
               ]
             },
@@ -870,18 +863,15 @@
               "pages": [
                 {
                   "title": "Проектирование",
-                  "link": "services_type_meters_application.html",
-                  "extra_sketches": ["services_type_meters_application_3b"]
+                  "link": "services_type_treatmentFacilities_application.html"
                 },
                 {
                   "title": "Строительство",
-                  "link": "services_type_meters_application.html",
-                  "extra_sketches": ["services_type_meters_application_3b"]
+                  "link": "services_type_treatmentFacilities_application.html"
                 },
                 {
                   "title": "Обслуживание",
-                  "link": "services_type_meters_application.html",
-                  "extra_sketches": ["services_type_meters_application_3b"]
+                  "link": "services_type_treatmentFacilities_application.html"
                 }
               ]
             },
@@ -1014,6 +1004,10 @@
         {
           "title": "ЭТП",
           "link": "text_page.html"
+        },
+        {
+          "title": "Контакты",
+          "link": "pressroom_news_contacts.html"
         }
       ]
     },

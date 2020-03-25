@@ -297,21 +297,19 @@
             {
               "title": "Локальные очистные сооружения",
               "link": "services_type_treatmentFacilities.html",
+              "classes": "sidemenu__item_active current-page",
               "pages": [
                 {
                   "title": "Проектирование",
-                  "link": "services_type_meters_application.html",
-                  "extra_sketches": ["services_type_meters_application_3b"]
+                  "link": "services_type_treatmentFacilities_application.html"
                 },
                 {
                   "title": "Строительство",
-                  "link": "services_type_meters_application.html",
-                  "extra_sketches": ["services_type_meters_application_3b"]
+                  "link": "services_type_treatmentFacilities_application.html"
                 },
                 {
                   "title": "Обслуживание",
-                  "link": "services_type_meters_application.html",
-                  "extra_sketches": ["services_type_meters_application_3b"]
+                  "link": "services_type_treatmentFacilities_application.html"
                 }
               ]
             },

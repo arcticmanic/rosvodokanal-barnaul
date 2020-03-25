@@ -1,0 +1,32 @@
+{
+  "title": "Общая информация",
+  "bage": {
+    "title": "Общая информация",
+    "subtitle": "Закупки"
+  },
+  "pages": [
+    {
+      "title": "Закупки",
+      "link": "purchases_info.html",
+      "withoutArrow": true,
+      "pages": [
+        {
+          "title": "Общая информация",
+          "link": "purchases_info.html"
+        },
+        {
+          "title": "Положение о закупках",
+          "link": "text_page.html"
+        },
+        {
+          "title": "ЭТП",
+          "link": "text_page.html"
+        },
+        {
+          "title": "Контакты",
+          "link": "pressroom_news_contacts.html"
+        }
+      ]
+    }
+  ]
+}
