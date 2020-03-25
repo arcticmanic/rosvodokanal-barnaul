@@ -6,20 +6,41 @@
 
 {% block main %}
   <section class="section-pressroom-media">
-    <article class="news-grid">
-      <div class="news-item">
-        <img data-src="./img/pressroom-media-img-1.png" alt="" class="lazy news-item__img">
-        <div class="news-item__bage">
-          <p class="news-item__title">В Барнауле прошло первое заседание Общественного совета</p>
-          <div class="news-item__info">
-            <p class="news-item__src">«Катунь24»</p>
-            <p class="news-item__meta">13.12.19</p>
-            <span class="divider"></span>
-            
-          </div>
-        </div>
+    <div class="news-grid__cont">
+      <div class="news-grid">
+        {% for idx, newsItem in newsItems %}
+          {% if newsItem.fullSize is defined %}
+            <a href="#" class="news-item news-item_full-size">
+          {% else %}
+            <a href="#" class="news-item">
+          {% endif %}
+            <div class="news-item__img-cont">
+              <img data-src="./img/pressroom-media-img-{{idx + 1}}.png" alt="" class="lazy news-item__img">
+            </div>
+
+            <div class="news-item__bage">
+              <p class="news-item__title">{{newsItem.title}}</p>
+              <div class="news-item__info">
+                {% if newsItem.fullSize is defined %}
+                  <p class="news-item__src">{{newsItem.src}}</p>
+                  <div class="news-item__row">
+                    <p class="news-item__meta">{{newsItem.meta}}</p>
+                    {% include '../includes/svg/icon-arrow-svg.twig' with {'classes': 'news-item__arrow'} %}
+                  </div>
+                {% else %}
+                  <div class="news-item__row">
+                    <p class="news-item__meta">{{newsItem.meta}}</p>
+                    <span class="divider">|</span>
+                    <p class="news-item__src">{{newsItem.src}}</p>
+                    {% include '../includes/svg/icon-arrow-svg.twig' with {'classes': 'news-item__arrow'} %}
+                  </div>
+                {% endif %}
+              </div>
+            </div>
+          </a>
+        {% endfor %}
       </div>
-    </article>
+    </div>
   </section>
 {% endblock %}
 
