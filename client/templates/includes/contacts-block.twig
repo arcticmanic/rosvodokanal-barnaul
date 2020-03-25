@@ -1,18 +1,35 @@
 <article class="contacts-block {{ classes }}">
-  <div class="contacts-block__item">
-    <p class="contacts-block__title">Адрес:</p>
-    {# Если ссылка не нужна, то заменить <a> на <p> оставив класс #}
-    <a href="https://yandex.ru/maps/?pt=83.744140,53.388919&z=17&l=map" class="contacts-block__link">656037, г. Барнаул, проспект Калинина, 116</a>
-  </div>
+  {% if address is not empty %}
+    <div class="contacts-block__item">
+      <p class="contacts-block__title">Адрес:</p>
+      {# Если ссылка не нужна, то заменить <a> на <p> оставив класс #}
+      {% if addressLink is not empty %}
+        <a href="{{ addressLink }}" class="contacts-block__link" rel="nofollow noopener" target="_blank">{{address}}</a>
+      {% else %}
+        <p class="contacts-block__link">{{address}}</p>
+      {% endif %}
+    </div>
+  {% endif %}
 
-  <div class="contacts-block__item">
-    <p class="contacts-block__title">Электронная почта:</p>
-    <a href="mailto:pressabrn@rosvodokanal.ru" class="contacts-block__link">pressabrn@rosvodokanal.ru</a>
-  </div>
+  {% if email is not empty %}
+    <div class="contacts-block__item">
+      <p class="contacts-block__title">Электронная почта:</p>
+      <a href="mailto:{{email}}" class="contacts-block__link">{{email}}</a>
+    </div>
+  {% endif %}
 
-  <div class="contacts-block__item">
-    <p class="contacts-block__title">Телефон:</p>
-    <a href="tel:+73852282984" class="contacts-block__link">+7 (3852) 28-29-84</a>
-  </div>
+  {% if phone is not empty %}
+    <div class="contacts-block__item">
+      <p class="contacts-block__title">Телефон:</p>
+      <a href="tel:{{phone}}" class="contacts-block__link">{{phone}}</a>
+    </div>
+  {% endif %}
+
+  {% if fax is not empty %}
+    <div class="contacts-block__item">
+      <p class="contacts-block__title">Факс:</p>
+      <p class="contacts-block__link">{{fax}}</p>
+    </div>
+  {% endif %}
   
 </article>
