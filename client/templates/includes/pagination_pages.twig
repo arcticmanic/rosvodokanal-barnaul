@@ -1,0 +1,20 @@
+<div class="pagination pagination_pages">
+  <div class="pagination_pages__cont">
+    <div class="pagination__numbers">
+      <span class="pagination__number">1</span>
+      <span class="pagination__number active">2</span>
+      <span class="pagination__number">3</span>
+      <span class="pagination__number">4</span>
+      <span class="pagination__number">5</span>
+    </div>
+
+    <div class="pagination__arrows">
+      <a href="#" class="pagination__arrow pagination__arrow_left">
+        {% include '../includes/svg/pagination-arrow_left.twig' with {"classes": "pagination__icon"} %}
+      </a>
+      <a href="#" class="pagination__arrow pagination__arrow_right">
+        {% include '../includes/svg/pagination-arrow_right.twig' with {"classes": "pagination__icon"} %}
+      </a>
+    </div>
+  </div>
+</div>

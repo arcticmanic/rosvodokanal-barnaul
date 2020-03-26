@@ -1,1 +1,1 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"pressroom-tpl.js","sourcesContent":[]}
+{"version":3,"sources":["setClamps.js"],"names":["$","document","ready","elWithClammpSizes","setClamps"],"mappings":";;AAAAA,CAAA,CAAAC,QAAA,CAAA,CAAAC,KAAA,CAAA,YAAA;AACA,MAAAC,iBAAA,GAAA;AACA,wCAAA;AADA,GAAA;AAIAC,EAAAA,SAAA,CAAAD,iBAAA,CAAA;AACA,CANA","file":"pressroom-tpl.js","sourcesContent":["$(document).ready(function() {\r\n  const elWithClammpSizes = {\r\n    '.std-grid__item .std-grid__title': 3\r\n  }\r\n\r\n  setClamps(elWithClammpSizes)\r\n})\r\n"]}

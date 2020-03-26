@@ -1,15 +1,28 @@
 .text {
-  h2, h3, h4, h5, h6 {
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     color: @colorPrimary3;
   }
-  h2, h3, h4 {
+  h2,
+  h3,
+  h4 {
     margin-bottom: 20px;
   }
-  h5, h6 {
+  h5,
+  h6 {
     margin-bottom: 15px;
+  }
+  .colorPrimary {
+    color: @colorPrimary;
   }
   .colorPrimary2 {
     color: @colorPrimary2;
+  }
+  .colorPrimary3 {
+    color: @colorPrimary3;
   }
   .colorCyan {
     color: @cyan;
@@ -28,6 +41,16 @@
     margin-bottom: 20px;
     font-weight: 400;
   }
+  .meta {
+    font-size: @font-13;
+    font-weight: 700;
+    margin-bottom: 0 !important;
+  }
+  .size-M {
+    font-size: @font-17;
+    line-height: @font-30;
+    margin-bottom: 30px;
+  }
   ul {
     margin-bottom: 25px;
     li {
@@ -35,11 +58,10 @@
       font-size: @font-15;
       padding-left: 20px;
       &:not(:last-child) {
-      margin-bottom: 10px;
-
+        margin-bottom: 10px;
       }
       &:before {
-        content: "";
+        content: '';
         position: absolute;
         left: 0;
         width: 4px;
@@ -80,14 +102,23 @@
       padding-left: 15px;
     }
   }
+
+  & > img {
+    border-radius: 7px;
+    margin-top: 25px;
+    margin-bottom: 40px;
+  }
 }
 
 @media (max-width: @laptopW) {
   .text {
-    h2, h3, h4 {
+    h2,
+    h3,
+    h4 {
       margin-bottom: 15px;
     }
-    h5, h6 {
+    h5,
+    h6 {
       margin-bottom: 10px;
     }
   }
@@ -95,7 +126,9 @@
 
 @media (max-width: @mobileW) {
   .text {
-    h2, h3, h4 {
+    h2,
+    h3,
+    h4 {
       margin-bottom: 10px;
     }
   }
@@ -137,7 +170,9 @@ html.color-black {
 
 html.color-white {
   .text {
+    .colorPrimary,
     .colorPrimary2,
+    .colorPrimary3,
     .colorCyan {
       color: @blackEye;
     }
@@ -174,12 +209,17 @@ html.color-white {
         }
       }
     }
+    & > img {
+      .border-card-like_black();
+    }
   }
 }
 
 html.color-black {
   .text {
+    .colorPrimary,
     .colorPrimary2,
+    .colorPrimary3,
     .colorCyan {
       color: @whiteEye;
     }
@@ -215,6 +255,9 @@ html.color-black {
           background: @whiteEye;
         }
       }
+    }
+    & > img {
+      .border-card-like_white();
     }
   }
 }

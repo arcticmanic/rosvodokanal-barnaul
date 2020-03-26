@@ -1004,6 +1004,27 @@ svg.icon-maintenance-tools-svg {
   }
 }
 
+svg.pagination-arrow {
+  width: 6px;
+  height: 9px;
+  .stroke {
+    stroke: @cyan;
+    transition: @transFast;
+  }
+  .st0 {
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+  }
+}
+svg.pagination-arrow_left {
+}
+
+svg.pagination-arrow_left {
+}
+
 html.color-white {
   svg.logo-main-svg {
     .st0 {
@@ -1410,6 +1431,12 @@ html.color-white {
     }
     .fill {
       fill: @blackEye;
+    }
+  }
+
+  svg.pagination-arrow {
+    .stroke {
+      stroke: @blackEye;
     }
   }
 }
@@ -1826,6 +1853,12 @@ html.color-black {
     }
     .fill {
       fill: @whiteEye;
+    }
+  }
+
+  svg.pagination-arrow {
+    .stroke {
+      stroke: @whiteEye;
     }
   }
 }
