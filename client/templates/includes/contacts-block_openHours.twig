@@ -1,0 +1,37 @@
+<article class="contacts-block contacts-block_openHours {{ classes }}">
+  {% if address is not empty %}
+    <div class="contacts-block__item">
+      <p class="contacts-block__title">Адрес:</p>
+      {# Если ссылка не нужна, то заменить <a> на <p> оставив класс #}
+      {% if addressLink is not empty %}
+        <a href="{{ addressLink }}" class="contacts-block__link" rel="nofollow noopener" target="_blank">{{address}}</a>
+      {% else %}
+        <p class="contacts-block__link">{{address}}</p>
+      {% endif %}
+    </div>
+  {% endif %}
+
+  {% if phone is not empty %}
+    <div class="contacts-block__item">
+      <p class="contacts-block__title">Телефон:</p>
+      <a href="tel:{{phone}}" class="contacts-block__link">{{phone}} — Единая справочная</a>
+      {% if phone2 is not empty %}
+          <a href="tel:{{phone2}}" class="contacts-block__link">{{phone2}} — Автоматический</a>
+      {% endif %}
+    </div>
+  {% endif %}
+
+  {% if email is not empty %}
+    <div class="contacts-block__item">
+      <p class="contacts-block__title">Электронная почта:</p>
+      <a href="mailto:{{email}}" class="contacts-block__link">{{email}}</a>
+    </div>
+  {% endif %}
+
+  <div class="contacts-block__item">
+    <p class="contacts-block__title">Режим работы: </p>
+    <p class="contacts-block__link">Понедельник — четверг:  8.00 - 17.00</p>
+    <p class="contacts-block__link">Пятница: 8.00 - 16.00</p>
+  </div>
+  
+</article>

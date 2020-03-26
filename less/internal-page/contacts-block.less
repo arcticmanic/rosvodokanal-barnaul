@@ -15,6 +15,14 @@
     font-size: @font-17;
     font-weight: 400;
     line-height: @font-25;
+    display: block;
+  }
+  a.contacts-block__link {
+    @media (min-width: @hoverW) {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 }
 
