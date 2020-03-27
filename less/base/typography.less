@@ -98,9 +98,30 @@
   font-style: italic;
 }
 
+@font-face {
+  font-family: 'PF BeauSans Pro';
+  font-display: swap;
+  src: url('../fonts/PFBeauSansPro-Black.eot');
+  src: local('PFBeauSansPro-Black'),
+    url('../fonts/PFBeauSansPro-Black.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/PFBeauSansPro-Black.woff') format('woff'),
+    url('../fonts/PFBeauSansPro-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
 
-
-
+@font-face {
+  font-family: 'PF BeauSans Pro';
+  font-display: swap;
+  src: url('../fonts/PFBeauSansPro-BlackItalic.eot');
+  src: local('PFBeauSansPro-BlackItalic'),
+    url('../fonts/PFBeauSansPro-BlackItalic.eot?#iefix')
+      format('embedded-opentype'),
+    url('../fonts/PFBeauSansPro-BlackItalic.woff') format('woff'),
+    url('../fonts/PFBeauSansPro-BlackItalic.ttf') format('truetype');
+  font-weight: 900;
+  font-style: italic;
+}
 
 @base-font: 'PF BeauSans Pro', sans-serif;
 
@@ -174,6 +195,18 @@ ol {
       color: @colorPrimary3;
     }
   }
+}
+
+.toUpperCase {
+  text-transform: uppercase !important;
+}
+
+.strong {
+  font-weight: 700 !important;
+}
+
+.italic {
+  font-style: italic;
 }
 
 html.color-white {

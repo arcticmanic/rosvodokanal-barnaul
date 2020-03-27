@@ -1,0 +1,82 @@
+.section-about-coworkers-values {
+  & &__splashes {
+    margin-top: 70px;
+  }
+
+  .text-and-splash {
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+@media (max-width: @mobileLandscapeWBig) {
+  .section-about-coworkers-values {
+    & &__splashes {
+      margin-top: 40px;
+    }
+
+    .text-and-splash {
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
+
+@media (max-width: @mobileLandscapeW) {
+  .section-about-coworkers-values {
+    .text-and-splash {
+      flex-direction: column-reverse;
+      align-items: flex-start;
+      border: 2px solid @colorPrimary;
+      padding: 10px 10px 20px 10px;
+      border-radius: 5px;
+      ul {
+        margin-bottom: 0;
+      }
+      &:not(:last-child) {
+        margin-bottom: 35px;
+      }
+    }
+  }
+}
+
+@media (max-width: @mobileW) {
+  .section-about-coworkers-values {
+    & &__splashes {
+      margin-top: 20px;
+    }
+  }
+}
+
+@media (max-width: @mobileSSW) {
+  .section-about-coworkers-values {
+    .text-and-splash {
+      &__img {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+}
+
+html.color-white {
+  @media (max-width: @mobileLandscapeW) {
+    .section-about-coworkers-values {
+      .text-and-splash {
+        border-color: @blackEye;
+      }
+    }
+  }
+}
+
+html.color-black {
+  @media (max-width: @mobileLandscapeW) {
+    .section-about-coworkers-values {
+      .text-and-splash {
+        border-color: @whiteEye;
+      }
+    }
+  }
+}

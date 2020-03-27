@@ -1,0 +1,101 @@
+.text {
+  .youth-council {
+    &__member {
+      max-width: 545px;
+      display: flex;
+      flex-wrap: wrap;
+
+      margin-top: 45px;
+    }
+    &__img {
+      &-cont {
+        position: relative;
+        min-width: 230px;
+        max-width: 230px;
+      }
+    }
+    &__gerb {
+      position: absolute;
+      top: -10px;
+      right: 6px;
+    }
+    &__text {
+      margin-left: 40px;
+      margin-top: 20px;
+      min-width: 275px;
+      max-width: 275px;
+    }
+    &__name {
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    &__council-pos {
+      font-size: @font-15;
+      line-height: @font-20;
+      margin-bottom: 40px;
+    }
+    &__position {
+      font-size: @font-13;
+      line-height: @font-20;
+      font-style: italic;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .text {
+    .youth-council {
+      &__member {
+        flex-direction: column;
+        margin-right: auto;
+        margin-left: auto;
+        max-width: fit-content;
+        padding: 20px;
+        border-radius: 5px;
+        border: 2px solid @cyan;
+      }
+      &__text {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: @mobileW) {
+  .text {
+    .youth-council {
+      &__member {
+        margin-top: 30px;
+        margin-bottom: 35px;
+      }
+      &__text {
+        margin-left: 0;
+        min-width: unset;
+      }
+    }
+  }
+}
+
+html.color-white {
+  @media (max-width: 600px) {
+    .text {
+      .youth-council {
+        &__member {
+          border-color: @blackEye;
+        }
+      }
+    }
+  }
+}
+
+html.color-black {
+  @media (max-width: 600px) {
+    .text {
+      .youth-council {
+        &__member {
+          border-color: @whiteEye;
+        }
+      }
+    }
+  }
+}

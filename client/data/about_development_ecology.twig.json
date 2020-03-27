@@ -1,0 +1,118 @@
+{
+  "title": "Экология",
+  "bage": {
+    "title": "Экология",
+    "subtitle": "О водоканале"
+  },
+  "pages": [
+    {
+      "title": "О водоканале",
+      "link": "text_page.html",
+      "withoutArrow": true,
+      "pages": [
+        {
+          "title": "История",
+          "link": "text_page.html"
+        },
+        {
+          "title": "Руководство",
+          "link": "about_team.html"
+        },
+        {
+          "title": "Сотрудникам",
+          "link": "about_coworkers_values.html",
+          "pages": [
+            {
+              "title": "Наши ценности",
+              "link": "about_coworkers_values.html"
+            },
+            {
+              "title": "Корпоративные программы",
+              "link": "about_coworkers_programms.html"
+            },
+            {
+              "title": "Молодые специалисты",
+              "link": "text_page.html",
+              "pages": [
+                {
+                  "title": "Совет молодых специалистов",
+                  "link": "about_coworkers_youth_council.html"
+                },
+                {
+                  "title": "Волонтерство",
+                  "link": "about_coworkers_youth_volunteering.html"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Устойчивое развитие",
+          "link": "about_development_ecology.html",
+          "classes": "sidemenu__item_active",
+          "pages": [
+            {
+              "title": "Экология",
+              "link": "about_development_ecology.html",
+              "classes": "current-page"
+            },
+            {
+              "title": "Энергоэффективность (снижение потерь)",
+              "link": "about_development_energy.html"
+            },
+            {
+              "title": "Охрана труда и промбезопасность",
+              "link": "about_development_laborProtection_OTEBP.html",
+              "pages": [
+                {
+                  "title": "Политика в области ОТЭПБ",
+                  "link": "about_development_laborProtection_OTEBP.html"
+                },
+                {
+                  "title": "Шаги безопасности",
+                  "link": "about_development_laborProtection_steps.html"
+                }
+              ]
+            },
+            {
+              "title": "Общественный совет",
+              "link": "about_development_publicCouncil_info.html",
+              "pages": [
+                {
+                  "title": "Общая информация",
+                  "link": "about_development_publicCouncil_info.html"
+                },
+                {
+                  "title": "Состав совета",
+                  "link": "text_page.html"
+                },
+                {
+                  "title": "Прошедшие советы",
+                  "link": "pressroom_news_list.html"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Раскрытие информации",
+          "link": "about_openInfo_finReports.html",
+          "pages": [
+            {
+              "title": "Финансовая отчетность",
+              "link": "about_openInfo_finReports.html"
+            },
+            {
+              "title": "Стандарты раскрытия",
+              "link": "about_openInfo_finReports.html"
+            }
+          ]
+        },
+        {
+          "title": "Контакты",
+          "link": "about_contacts.html"
+        }
+      ]
+    }
+  ]
+}
