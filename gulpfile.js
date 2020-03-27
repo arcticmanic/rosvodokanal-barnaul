@@ -100,6 +100,14 @@ function styles(cb) {
     resolvePageStyles.bind(this, {
       path: './less/pressroom-tpl/pressroom-tpl.less',
       name: 'pressroom-tpl'
+    }),
+    resolvePageStyles.bind(this, {
+      path: './less/about-tpl/about-tpl.less',
+      name: 'about-tpl'
+    }),
+    resolvePageStyles.bind(this, {
+      path: './less/career-tpl/career-tpl.less',
+      name: 'career-tpl'
     })
   )()
   cb()
@@ -173,6 +181,14 @@ function javascript(cb) {
     resolvePageJS.bind(this, {
       src: `${paths.commonJS}pressroom-tpl/*.js`,
       name: `pressroom-tpl`
+    }),
+    resolvePageJS.bind(this, {
+      src: `${paths.commonJS}about-tpl/*.js`,
+      name: `about-tpl`
+    }),
+    resolvePageJS.bind(this, {
+      src: `${paths.commonJS}career-tpl/*.js`,
+      name: `career-tpl`
     })
   )()
   cb()

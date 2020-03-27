@@ -82,12 +82,12 @@ $(document).ready(function () {
 
   if ($('#contacts-map').length > 0) {
     var init = function init() {
-      var map2 = new ymaps.Map('contacts-map', {
-        center: [53.388919, 83.744140],
+      var map = new ymaps.Map('contacts-map', {
+        center: [53.388919, 83.74414],
         zoom: 17,
         controls: ['zoomControl']
       }),
-          contactsPlacemark = new ymaps.Placemark(map2.getCenter(), {
+          contactsPlacemark = new ymaps.Placemark(map.getCenter(), {
         hintContent: 'Собственный значок метки',
         balloonContent: 'Это красивая метка'
       }, {
@@ -96,8 +96,8 @@ $(document).ready(function () {
         iconImageSize: [45, 50],
         iconImageOffset: [-22.5, -50]
       });
-      map2.geoObjects.add(contactsPlacemark);
-      map2.behaviors.disable('scrollZoom');
+      map.geoObjects.add(contactsPlacemark);
+      map.behaviors.disable('scrollZoom');
     };
 
     ymaps.ready(init);

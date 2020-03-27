@@ -1,8 +1,8 @@
 {
-  "title": "Общая информация",
+  "title": "Шаги безопасности",
   "bage": {
-    "title": "Общая информация",
-    "subtitle": "Общественный совет"
+    "title": "Шаги безопасности",
+    "subtitle": "Охрана труда и промбезопасность"
   },
   "pages": [
     {
@@ -62,6 +62,7 @@
             {
               "title": "Охрана труда и промбезопасность",
               "link": "about_development_laborProtection_OTEBP.html",
+              "classes": "sidemenu__item_active",
               "pages": [
                 {
                   "title": "Политика в области ОТЭПБ",
@@ -69,19 +70,18 @@
                 },
                 {
                   "title": "Шаги безопасности",
-                  "link": "about_development_laborProtection_steps.html"
+                  "link": "about_development_laborProtection_steps.html",
+                  "classes": "current-page"
                 }
               ]
             },
             {
               "title": "Общественный совет",
               "link": "about_development_publicCouncil_info.html",
-              "classes": "sidemenu__item_active",
               "pages": [
                 {
                   "title": "Общая информация",
-                  "link": "about_development_publicCouncil_info.html",
-                  "classes": "current-page"
+                  "link": "about_development_publicCouncil_info.html"
                 },
                 {
                   "title": "Состав совета",

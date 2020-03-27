@@ -49,7 +49,6 @@
         {
           "title": "Устойчивое развитие",
           "link": "about_development_ecology.html",
-          "classes": "sidemenu__item_active",
           "pages": [
             {
               "title": "Экология",
@@ -76,12 +75,10 @@
             {
               "title": "Общественный совет",
               "link": "about_development_publicCouncil_info.html",
-              "classes": "sidemenu__item_active",
               "pages": [
                 {
                   "title": "Общая информация",
-                  "link": "about_development_publicCouncil_info.html",
-                  "classes": "current-page"
+                  "link": "about_development_publicCouncil_info.html"
                 },
                 {
                   "title": "Состав совета",
@@ -111,7 +108,8 @@
         },
         {
           "title": "Контакты",
-          "link": "about_contacts.html"
+          "link": "about_contacts.html",
+          "classes": "current-page"
         }
       ]
     }
