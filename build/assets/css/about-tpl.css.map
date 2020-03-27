@@ -1,1 +1,1 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"about-tpl.css","sourcesContent":[]}
+{"version":3,"sources":["section-about.less"],"names":[],"mappings":"AAIA,oBACE,kBAAA,CAGF,0BACE,oBACE,eAAA,CAAA","file":"about-tpl.css","sourcesContent":["@import '../base/my-vars.less';\r\n@import '../base/utils/mixins.less';\r\n@import '../foundation/smart-grid.less';\r\n\r\n.section-about-team {\r\n  margin-bottom: 50px;\r\n}\r\n\r\n@media (max-width: @tabletW) {\r\n  .section-about-team {\r\n    margin-bottom: 0;\r\n  }\r\n}\r\n"]}
