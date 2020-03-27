@@ -23,15 +23,15 @@
             {
               "title": "Молодым специалистам",
               "link": "career_study_youth.html",
-          "classes": "sidemenu__item_active",
+              "classes": "sidemenu__item_active",
               "pages": [
                 {
-                  "title": "— <strong>«Золотая сотня»</strong>",
+                  "title": "<strong>«Золотая сотня»</strong>",
                   "link": "career_study_youth_gold.html",
                   "classes": "current-page"
                 },
                 {
-                  "title": "— КНПК",
+                  "title": "КНПК",
                   "link": "career_study_youth_knpk.html"
                 }
               ]

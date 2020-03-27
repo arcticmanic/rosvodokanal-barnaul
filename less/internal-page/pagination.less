@@ -95,6 +95,40 @@
   }
 }
 
+@media (max-width: @tabletW) {
+  .pagination {
+    &_pages,
+    &_page {
+      padding-top: 20px;
+    }
+  }
+}
+
+@media (max-width: @mobileLandscapeW) {
+  .pagination {
+    &_pages,
+    &_page {
+      margin-top: 25px;
+      padding-top: 10px;
+    }
+  }
+}
+
+@media (max-width: @mobileW) {
+  .pagination {
+    &_page {
+      &__link {
+        font-size: @font-14;
+      }
+    }
+    &__number {
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
 html.color-white,
 html.color-black {
   .pagination {

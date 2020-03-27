@@ -217,4 +217,10 @@ $(document).ready(function () {
     $('.city-list').fadeToggle(500);
   });
 });
+$(document).ready(function () {
+  var elWithClammpSizes = {
+    '.std-grid__item .std-grid__title': 3
+  };
+  setClamps(elWithClammpSizes);
+});
 //# sourceMappingURL=common.js.map
