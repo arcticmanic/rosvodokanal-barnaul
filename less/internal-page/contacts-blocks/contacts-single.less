@@ -1,0 +1,40 @@
+.contacts-single {
+  &__title {
+    color: @colorPrimary;
+    font-size: @font-20;
+    font-weight: 700;
+    line-height: @font-25;
+    margin-bottom: 2px;
+  }
+  &__subtitle {
+    color: @colorPrimary;
+    font-size: @font-17;
+    font-weight: 600;
+    line-height: @font-25;
+  }
+  .contacts-block {
+    margin-top: 20px;
+  }
+}
+
+html.color-white {
+  .contacts-single {
+    &__title {
+      color: @blackEye;
+    }
+    &__subtitle {
+      color: @blackEye;
+    }
+  }
+}
+
+html.color-black {
+  .contacts-single {
+    &__title {
+      color: @whiteEye;
+    }
+    &__subtitle {
+      color: @whiteEye;
+    }
+  }
+}

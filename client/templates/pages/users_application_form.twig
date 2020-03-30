@@ -1,0 +1,74 @@
+{% extends "../layouts/users.twig" %}
+
+{% block main %}
+  <section class="section-services-type-meters-application">
+    {% include '../includes/stdEls/page-content__title_with-underline.twig' with {"title" : "Подать заявку" } %}
+
+    <article class="banner-with-form">
+      <div class="banner-left card__bg_primary">
+        <img data-src="./img/banner.png" class="banner-left__bg lazy img-as-bg" alt="Счётчик" >
+
+        <div class="banner-left__content card__content">
+          <h4 class="banner-left__title">Наши <br> преимущества</h4>
+
+          <ul  class="banner-left__ul ul_rvk-logos"> 
+            <li>Профессиональные и сертифицированные специалисты выполнят поверку по ГОСТу с применением эталона</li>
+            <li>Государственная аккредитация </li>
+            <li>Возможность поверки счетчиков без демонтажа</li>
+            <li>Низкая стоимость поверки счетчика </li>
+            <li>Если прибор не прошел поверку, мы предложим замену. За непрошедший поверку счетчик при замене плата не взымается</li>
+            <li>Выдача на месте свидетельства о поверке, акта выполненных работа, кассового чека, копии аттестата аккредитации </li>
+          </ul>
+
+          <h6 class="banner-left__footer">Подайте заявку <br> или позвоните нам: <br> 
+            {# Если не нужна ссылка, то убрать <a/> и вставить телефон в h6 #}
+            <a href="tel:282200" class="phone anim-underline-link">28-22-00</a>
+          </h6>
+        </div>
+      </div>
+
+      <div class="banner-right">
+        
+        <form action="" class="banner-form validate">
+          <h4 class="banner-form__title"><strong>Проверка приборов учета</strong></h4>
+          <div class="banner-form__content">
+            <div class="input-with-label">
+              <label>Категории услуг *</label>
+              <select id="work-type" class="required">
+                <option></option> 
+                <option value="1">- Установка приборов учёта</option>
+                <option value="2">- Проверка приборов учета</option>
+                <option value="3">- Опломбировка </option>
+              </select>
+            </div>
+
+            <div class="input-with-label">
+              <label>Категории услуг *</label>
+              <select id="work-type" class="required">
+                <option></option> 
+                <option value="1">- Установка приборов учёта</option>
+                <option value="2">- Проверка приборов учета</option>
+                <option value="3">- Опломбировка </option>
+              </select>
+            </div>
+
+            <div class="banner-form__footer">
+              <p class="banner-form__p banner-form__agreement">Отправляя заявку, я соглашаюсь на обработку <a href="#">персональных данных</a>, в соответствии c политикой конфиденциальности, и правилами оказания сервиса <a href="#">Askedo</a>. </p>
+              <button type="submit" class="btn btn_colorPrimary">Разместить заявку</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </article>
+ 
+    <article class="text">
+      <h4 class="underline underline_dashed colorPrimary2">Важно знать:</h4>
+
+      <ol>
+        <li>Поверка прибора учёта – обязательная процедура, по результатам которой оценивается точность показаний счетчика и его пригодность к дальнейшей эксплуатации. Соблюдать сроки поверки или замены счетчика должен сам владелец квартиры или дома (<a href="#" >п. 34 (д) Правил № 354</a>). Если вовремя не провести поверку, то прибор будет считаться неисправным (<a href="#" >п. 81 (12) Правил № 354</a>), а переданные по истечение межповерочного интервала показания - недостоверными. В случае окончания срока поверки, три месяца расчёт платы производится, исходя из среднемесячного потребления ресурса, а по истечении этого времени - по нормативу, в зависимости от количества проживающих (<a href="#" >пп. 59-60 Правил № 354</a>).</li>
+        <li>Поверка приборов учета горячей и холодной воды проводится 1 раз в 4-6 лет. Продолжительность межповерочного интервала и сведения о дате поверки указаны в техническом паспорте прибора учёта, а также в акте ввода в эксплуатацию, который остаётся у абонента. Кроме того, срок поверки прибора учёта отражается в платёжной квитанции.</li>
+        <li>Производить поверку могут только организации и специалисты, аттестованные Государственной метрологической службы. Чтобы обезопасить себя от мошенников, спрашивайте у представителей компаний разрешительные документы на осуществление деятельности по поверке счетчиков воды.</li>
+      </ol>
+    </article>
+  </section>
+{% endblock %}
