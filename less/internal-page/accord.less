@@ -1,0 +1,38 @@
+.accord {
+  &-item {
+    &__head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 23px;
+      margin-bottom: 23px;
+      border-bottom: 1px dashed #e0e0e0;
+    }
+
+    &__text {
+      font-size: @font-22;
+      font-weight: 600;
+    }
+    & &__text {
+      margin-bottom: 0;
+    }
+
+    svg.accord-item__icon {
+      .fill {
+        fill: @cyan;
+      }
+    }
+
+    &__icon {
+      &-cont {
+        width: 30px;
+        height: 30px;
+        background: rgba(@cyan, 0.2);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+}

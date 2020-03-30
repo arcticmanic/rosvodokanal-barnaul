@@ -1,0 +1,25 @@
+.rows-with-icons {
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    &:first-child {
+      border-top: 1px solid #e0e0e0;
+    }
+    &:not(:last-child) {
+      border-bottom: 1px dashed #e0e0e0;
+      margin-bottom: 0;
+    }
+  }
+  &__icon-cont {
+    width: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .analyze-with-magnifier-svg {
+      margin-left: auto;
+    }
+  }
+}
