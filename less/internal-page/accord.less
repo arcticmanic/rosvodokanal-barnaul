@@ -1,5 +1,8 @@
 .accord {
+  margin-top: 30px;
+  margin-bottom: 30px;
   &-item {
+    cursor: pointer;
     &__head {
       display: flex;
       align-items: center;
@@ -7,6 +10,23 @@
       padding-bottom: 23px;
       margin-bottom: 23px;
       border-bottom: 1px dashed #e0e0e0;
+      user-select: none;
+      &.accord-item__head_active {
+        .accord-item {
+          &__icon {
+            .fill {
+              fill: #fff;
+            }
+            &-cont {
+              transform: rotate(-180deg);
+              background: @cyan;
+            }
+          }
+        }
+      }
+    }
+    &__body {
+      display: none;
     }
 
     &__text {
@@ -32,6 +52,120 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        transition: @transFast;
+      }
+    }
+
+    @media (min-width: @hoverW) {
+      &:hover {
+        .accord-item {
+          &__icon {
+            .fill {
+              fill: #fff;
+            }
+            &-cont {
+              background: @cyan;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+html.color-white {
+  .accord {
+    &-item {
+      &__head {
+        border-color: @blackEye;
+
+        &.accord-item__head_active {
+          .accord-item {
+            &__icon {
+              .fill {
+                fill: @whiteEye;
+              }
+              &-cont {
+                transform: rotate(-180deg);
+                background: @blackEye;
+              }
+            }
+          }
+        }
+      }
+
+      &__icon {
+        .fill {
+          fill: @blackEye;
+        }
+        &-cont {
+          border: 1px solid @blackEye;
+          background: @whiteEye;
+        }
+      }
+
+      @media (min-width: @hoverW) {
+        &:hover {
+          .accord-item {
+            &__icon {
+              .fill {
+                fill: @whiteEye;
+              }
+              &-cont {
+                background: @blackEye;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+html.color-black {
+  .accord {
+    &-item {
+      &__head {
+        border-color: @whiteEye;
+
+        &.accord-item__head_active {
+          .accord-item {
+            &__icon {
+              .fill {
+                fill: @blackEye;
+              }
+              &-cont {
+                transform: rotate(-180deg);
+                background: @whiteEye;
+              }
+            }
+          }
+        }
+      }
+
+      &__icon {
+        .fill {
+          fill: @whiteEye;
+        }
+        &-cont {
+          border: 1px solid @whiteEye;
+          background: @blackEye;
+        }
+      }
+
+      @media (min-width: @hoverW) {
+        &:hover {
+          .accord-item {
+            &__icon {
+              .fill {
+                fill: @blackEye;
+              }
+              &-cont {
+                background: @whiteEye;
+              }
+            }
+          }
+        }
       }
     }
   }

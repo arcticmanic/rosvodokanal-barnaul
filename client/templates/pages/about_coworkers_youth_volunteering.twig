@@ -1,11 +1,7 @@
-{% extends "../layouts/pressroom.twig" %}
-
-{% block undersidemenu %}
-  {% include '../includes/subscribe-to-news.twig' %}
-{% endblock %}
+{% extends "../layouts/about.twig" %}
 
 {% block main %}
-  <section class="section-pressroom-news-list">
+  <section class="section-about-coworkers-youth-volunteering">
     <div class="std-grid__content news-grid__cont">
       <div class="std-grid news-grid">
         {% for idx, newsItem in newsItems %}
@@ -15,7 +11,7 @@
             <a href="pressroom_news_list_detail.html" class="std-grid__item news-item">
           {% endif %}
             <div class="news-item__img-cont">
-              <img data-src="./img/news-list-img-{{idx + 1}}.png" alt="" class="lazy news-item__img">
+              <img data-src="./img/about-coworkers-youth-volunteering-img.png" alt="" class="lazy news-item__img">
             </div>
 
             <div class="news-item__bage">
@@ -42,7 +38,4 @@
 
     {% include '../includes/pagination_pages.twig' %}
   </section>
-{% endblock %}
-
-{% block indvidualPageJS %}
 {% endblock %}

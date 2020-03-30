@@ -20,7 +20,7 @@
 
               <div class="accord-item__body">
                 {% for doc in accordItem.docs %}
-                  <div class="doc-info">
+                  <a href="#скачать_документ" class="doc-info">
                     {% include "../includes/svg/icon-doc-svg.twig" with {"classes": "doc-info__icon"} %}
                     <div class="doc-info__body">
                       <p class="doc-info__title">{{doc.title}}</p>
@@ -30,7 +30,7 @@
                         <span class="doc-info__meta-item doc-info__size colorCyan">{{doc.size}}</span>
                       </div>
                     </div>
-                  </div>
+                  </a>
                 {% endfor %}
               </div>
             </div>

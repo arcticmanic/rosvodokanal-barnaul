@@ -3,9 +3,11 @@
   margin-bottom: 25px;
   padding-bottom: 25px;
   border-bottom: 1px dashed #e0e0e0;
+  user-select: none;
 
   &__icon {
     margin-right: 15px;
+    transition: @transFast;
   }
   & &__title {
     font-size: @font-17;
@@ -19,5 +21,65 @@
         margin-right: 10px;
       }
     }
+  }
+
+  @media (min-width: @hoverW) {
+    &:hover {
+      .doc-info {
+        &__title {
+          text-decoration: underline;
+        }
+        &__icon {
+          animation-name: hvr-doc-icon-float, hvr-doc-icon;
+          animation-duration: 0.3s, 1.5s;
+          animation-delay: 0s, 0.3s;
+          animation-timing-function: ease-out, ease-in-out;
+          animation-iteration-count: 1, infinite;
+          animation-fill-mode: forwards;
+          animation-direction: normal, alternate;
+        }
+      }
+    }
+  }
+}
+
+@keyframes hvr-doc-icon {
+  0% {
+    transform: translateY(-8px);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+  100% {
+    transform: translateY(-8px);
+  }
+}
+@keyframes hvr-doc-icon-float {
+  100% {
+    transform: translateY(-8px);
+  }
+}
+
+html.scale {
+  .doc-info {
+    &__icon {
+      min-width: 21px;
+      width: 21px;
+      height: 25.6px;
+      min-height: 25.6px;
+      margin-right: 10px;
+    }
+  }
+}
+
+html.color-white {
+  .doc-info {
+    border-color: @blackEye;
+  }
+}
+
+html.color-black {
+  .doc-info {
+    border-color: @whiteEye;
   }
 }
