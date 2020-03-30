@@ -10,6 +10,7 @@
   &__row {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     &_2 {
       .input-with-label {
         width: calc((100% / 2) - 10px);
@@ -19,6 +20,17 @@
       .input-with-label {
         width: calc((100% / 3) - 10px);
       }
+    }
+  }
+  &_3 {
+    width: calc(25% - 10px);
+  }
+  &_9 {
+    width: calc(75% - 10px);
+  }
+  &_extra-mb {
+    &:not(:last-child) {
+      margin-bottom: 20px;
     }
   }
 }
@@ -61,6 +73,103 @@ textarea {
   }
 }
 
+.checkboxContainer {
+  display: flex;
+  align-items: center;
+  user-select: none;
+
+  input[type='checkbox'] {
+    display: none;
+    pointer-events: none;
+
+    & + label {
+      cursor: pointer;
+      font-size: 1em;
+      display: grid;
+      grid-template-columns: auto 3fr;
+
+      svg {
+        width: 2em;
+        stroke: #dce4e8;
+        stroke-width: 5;
+        fill: transparent;
+
+        .box {
+          stroke-dasharray: 320;
+          stroke-dashoffset: 0;
+          fill: #f1f3f4;
+          transition: stroke-dashoffset 0.3s linear;
+        }
+        .check {
+          stroke-dasharray: 70;
+          stroke-dashoffset: 70;
+          fill: none;
+          transition: stroke-dashoffset 0.3s linear;
+        }
+      }
+
+      span {
+        padding-top: 0.3em;
+        margin-left: 0.3em;
+      }
+    }
+
+    &:checked + label {
+      svg {
+        * {
+          stroke: @colorPrimary;
+        }
+      }
+      .box {
+        stroke-dashoffset: 320;
+      }
+      .check {
+        stroke-dashoffset: 0;
+      }
+    }
+    &.error {
+      & + label {
+        svg {
+          * {
+            stroke: @red;
+          }
+        }
+      }
+    }
+  }
+
+  .checkboxText {
+    font-size: @font-13;
+    font-weight: 400;
+    line-height: @font-16;
+    margin-left: 10px;
+  }
+  .checkboxText {
+    a {
+      text-decoration: underline;
+      color: @colorPrimary3;
+      cursor: pointer;
+      transition: @transFast;
+      @media (min-width: @tabletW) {
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: @mobileLandscapeWBig) {
+  .input-with-label {
+    &_3 {
+      width: calc(33.3% - 10px);
+    }
+    &_9 {
+      width: calc(66.6% - 10px);
+    }
+  }
+}
+
 @media (max-width: @mobileW) {
   .input-with-label {
     &__row {
@@ -76,6 +185,12 @@ textarea {
           width: calc((100% / 3) - 5px);
         }
       }
+    }
+    &_3 {
+      width: calc(50% - 10px);
+    }
+    &_9 {
+      width: calc(50% - 10px);
     }
   }
 }
@@ -94,6 +209,20 @@ textarea {
         }
       }
     }
+    &_3 {
+      width: 100%;
+    }
+    &_9 {
+      width: 100%;
+    }
+  }
+
+  .checkboxContainer {
+    .checkboxText {
+      font-size: @font-12;
+      line-height: @font-15;
+      margin-left: 5px;
+    }
   }
 }
 
@@ -107,6 +236,35 @@ html.color-white {
     border-color: @blackEye;
     color: @blackEye;
   }
+
+  .checkboxContainer {
+    input[type='checkbox'] {
+      & + label {
+        svg {
+          stroke: @blackEye;
+
+          .box {
+            fill: @whiteEye;
+          }
+        }
+      }
+
+      &:checked + label {
+        svg {
+          * {
+            stroke: @blackEye;
+          }
+        }
+      }
+    }
+
+    .checkboxText {
+      color: @blackEye;
+      a {
+        color: @blackEye;
+      }
+    }
+  }
 }
 
 html.color-black {
@@ -119,5 +277,34 @@ html.color-black {
     border-color: @whiteEye;
     color: @whiteEye;
     background: @blackEye;
+  }
+
+  .checkboxContainer {
+    input[type='checkbox'] {
+      & + label {
+        svg {
+          stroke: @whiteEye;
+
+          .box {
+            fill: @blackEye;
+          }
+        }
+      }
+
+      &:checked + label {
+        svg {
+          * {
+            stroke: @whiteEye;
+          }
+        }
+      }
+    }
+
+    .checkboxText {
+      color: @whiteEye;
+      a {
+        color: @whiteEye;
+      }
+    }
   }
 }

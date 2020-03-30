@@ -8,6 +8,11 @@ $(document).ready(function() {
     minDate: new Date()
   })
 
+  $('.select-item_general').select2({
+    language: 'ru',
+    minimumResultsForSearch: Infinity
+  })
+
   $('a.open-modal').click(function(event) {
     $(this).modal({
       fadeDuration: 250

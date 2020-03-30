@@ -108,6 +108,10 @@ function styles(cb) {
     resolvePageStyles.bind(this, {
       path: './less/career-tpl/career-tpl.less',
       name: 'career-tpl'
+    }),
+    resolvePageStyles.bind(this, {
+      path: './less/users-tpl/users-tpl.less',
+      name: 'users-tpl'
     })
   )()
   cb()
@@ -189,6 +193,10 @@ function javascript(cb) {
     resolvePageJS.bind(this, {
       src: `${paths.commonJS}career-tpl/*.js`,
       name: `career-tpl`
+    }),
+    resolvePageJS.bind(this, {
+      src: `${paths.commonJS}users-tpl/*.js`,
+      name: `users-tpl`
     })
   )()
   cb()

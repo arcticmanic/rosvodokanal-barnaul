@@ -53,6 +53,10 @@ $(document).ready(function () {
     language: 'ru',
     minDate: new Date()
   });
+  $('.select-item_general').select2({
+    language: 'ru',
+    minimumResultsForSearch: Infinity
+  });
   $('a.open-modal').click(function (event) {
     $(this).modal({
       fadeDuration: 250
@@ -180,6 +184,15 @@ $(document).ready(function () {
   }();
 
   eyeVersion.init();
+});
+$(document).ready(function () {
+  if ($('.faq-list .faq-list__switch').length > 0) {
+    $('.faq-list .faq-list__switch').each(function () {
+      $(this).on('click', function () {
+        $(this).toggleClass('faq-list__switch_show').closest('.faq-list__item').find('.faq-list__answer-block').slideToggle();
+      });
+    });
+  }
 });
 $(document).ready(function (e) {
   var getSelect2Id = function getSelect2Id(selectId) {

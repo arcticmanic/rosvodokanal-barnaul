@@ -1,0 +1,42 @@
+.form-in-text {
+  margin-bottom: 80px;
+  input:not([type='submit']),
+  textarea {
+    border: 1px solid #dce4e8;
+    background: #f1f3f4;
+  }
+}
+
+@media (max-width: @tabletW) {
+  .form-in-text {
+    margin-bottom: 60px;
+  }
+}
+
+@media (max-width: @mobileLandscapeWBig) {
+  .form-in-text {
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: @mobileLandscapeW) {
+  .form-in-text {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: @mobileW) {
+  .form-in-text {
+    margin-bottom: 25px;
+  }
+}
+
+html.color-white {
+  .form-in-text {
+    input:not([type='submit']),
+    textarea {
+      border-color: @blackEye;
+      background: @whiteEye;
+    }
+  }
+}

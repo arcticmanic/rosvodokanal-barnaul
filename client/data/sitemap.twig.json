@@ -59,7 +59,7 @@
         },
         {
           "title": "Частные лица",
-          "link": "users_individuals_menu.html",
+          "link": "users_individuals_data.html",
           "pages": [
             {
               "title": "Личный кабинет",

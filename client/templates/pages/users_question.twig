@@ -1,0 +1,76 @@
+{% extends "../layouts/users.twig" %}
+
+{% block main %}
+  <section class="section-users-questions">
+    {% include '../includes/stdEls/page-content__title_with-underline.twig' with {"title" : "Частые вопросы"} %}
+    <article class="text">
+      <form action="" class="form-in-text">
+        <div class="input-with-label__row input-with-label__row_2">
+          <div class="input-with-label">
+            <label>Ваше имя *</label>
+            <input type="text"  class="required">
+          </div>
+          <div class="input-with-label">
+            <label>Телефон *</label>
+            <input type="text"  class="required">
+          </div>
+        </div>
+
+        <div class="input-with-label__row input-with-label__row_2">
+          <div class="input-with-label">
+            <label>Название организации или адрес *</label>
+            <input type="text"  class="required">
+          </div>
+
+          <div class="input-with-label">
+            <label>Email *</label>
+            <input type="text"  class="required">
+          </div>
+        </div>
+
+        <div class="input-with-label input-with-label_extra-mb">
+          <label class="strong">Тема *</label>
+          <select class="select-item_general select-item_in-text">
+            <option value="1">Услуги на сетях водоснабжения и водоотведения</option>
+            <option value="2">Услуги вне сетей</option>
+            <option value="3">Сетевые дела</option>
+          </select>
+        </div>
+
+        <div class="input-with-label">
+          <label>Ваш вопрос *</label>
+          <textarea  class="required"></textarea>
+        </div>
+
+        <div class="form-footer">
+          <div class="input-with-label">
+            <label>Предпочтительная форма ответа *</label>
+            <select class="select-item_general select-item_in-text">
+              <option value="1">Ответа не требует</option>
+              <option value="2">Услуги вне сетей</option>
+              <option value="3">Сетевые дела</option>
+            </select>
+          </div>
+
+          <div class="checkboxContainer">
+            <input type="checkbox" id="confidential" class="required">
+            <label for="confidential">
+              <svg viewBox="0 0 100 100">
+                <path class="box"
+                  d="M82,89H18c-3.87,0-7-3.13-7-7V18c0-3.87,3.13-7,7-7h64c3.87,0,7,3.13,7,7v64C89,85.87,85.87,89,82,89z" />
+                <polyline class="check" points="25.5,53.5 39.5,67.5 72.5,34.5 " />
+              </svg>
+            </label>
+            <span class="checkboxText">Я принимаю <a href="#">Политику конфиденциальности</a></span>
+          </div>
+
+          <button type="submit" class="btn btn_colorPrimary submit-element">Подписаться</button>
+        </div>
+      </form>
+
+      <hr class="dashed">
+
+      <p>Благодарим вас за обращение. Наши специалисты внимательно относятся к сообщениям пользователей сайта и обязательно ответят на ваше письмо.</p>
+    </article>
+  </section>
+{% endblock %}

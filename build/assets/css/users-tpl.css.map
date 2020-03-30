@@ -1,0 +1,1 @@
+{"version":3,"sources":["section-users-questions.less"],"names":[],"mappings":"AAAA,uCAEI,kBAAA,CAFJ,mCAKI,eAAA,CACA,kBAAA","file":"users-tpl.css","sourcesContent":[".section-users-questions {\r\n  .form-in-text {\r\n    margin-bottom: 20px;\r\n  }\r\n  hr.dashed {\r\n    margin-top: 30px;\r\n    margin-bottom: 30px;\r\n  }\r\n}\r\n"]}
