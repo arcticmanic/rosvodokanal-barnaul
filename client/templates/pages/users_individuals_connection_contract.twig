@@ -1,0 +1,36 @@
+{% extends "../layouts/users.twig" %}
+
+{% block main %}
+  {% include '../includes/stdEls/page-content__title_with-underline.twig' with {"title" : "Заключить договор на подключение"} %}
+
+  <section class="section-users-individuals-connection-contract">
+    <div class="text">
+      <p>Первым и важным этапом подготовки договора является проработка Условий подключения (технологического присоединения), которые впоследствии становятся ключевым приложением к договору и подписываются уполномоченным представителем водоканала и заявителем вместе с договором. Условия подключения (технологического присоединения) – документ установленного образца, в котором определены:</p>
+
+      <ul>
+        <li>технические требования к объектам капитального строительства</li>
+        <li>точки подключения</li>
+        <li>сроки действия условий подключения (технологического присоединения)</li>
+      </ul>
+
+      <p>Вы можете отправить сканы документов для предварительной проверки и <a href="#">записаться</a> на сдачу оригинального пакета через сайт. Статус исполнения заявления можно посмотреть <a href="#">здесь</a>.</p>
+
+      <article class="jumbo-icons__article">
+        <hr class="dashed">
+        <div class="jumbo-icons">
+          <a href="users_individuals_connection_contract_application.html" class="jumbo-icons__item">
+            {% include '../includes/svg/icon-paper-with-signature-svg.twig' with {"classes": "jumbo-icons__icon"} %}
+            <p class="jumbo-icons__p">Подать заявление </p>
+          </a>
+
+          <a href="users_individuals_connection_contract_application.html" class="jumbo-icons__item">
+            {% include '../includes/svg/icon-status-list-svg.twig' with {"classes": "jumbo-icons__icon"} %}
+            <p class="jumbo-icons__p">Статус исполнения заявления</p>
+          </a>
+        </div>
+        <hr class="dashed">
+      </article>
+
+    </div>
+  </section>
+{% endblock %}

@@ -4,9 +4,20 @@
 
   &__title {
     &-cont {
-      &_with-underline {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      .btn,
+      .page-content__title {
         margin-top: 5px;
-        padding-bottom: 20px;
+        margin-bottom: 5px;
+      }
+      .page-content__title {
+        margin-right: 5px;
+      }
+      &_with-underline {
+        padding-bottom: 10px;
         border-bottom: 2px solid @colorPrimary;
         margin-bottom: 25px;
       }
@@ -21,6 +32,35 @@
 @media (max-width: @wrapperMaxWidth) {
   .page-content {
     width: 100%;
+  }
+}
+
+@media (max-width: @mobileW) {
+  .page-content {
+    &__title {
+      &-cont {
+        &_with-underline {
+          padding-bottom: 10px;
+          margin-bottom: 10px;
+        }
+        &_without-spacing {
+          padding-bottom: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: @mobileSSW) {
+  .page-content {
+    &__title {
+      &-cont {
+        .btn {
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+    }
   }
 }
 

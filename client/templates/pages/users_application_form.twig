@@ -13,16 +13,16 @@
 
           <ul  class="banner-left__ul ul_rvk-logos"> 
             <li>Профессиональные и сертифицированные специалисты выполнят поверку по ГОСТу с применением эталона</li>
-            <li>Государственная аккредитация </li>
-            <li>Возможность поверки счетчиков без демонтажа</li>
-            <li>Низкая стоимость поверки счетчика </li>
-            <li>Если прибор не прошел поверку, мы предложим замену. За непрошедший поверку счетчик при замене плата не взымается</li>
-            <li>Выдача на месте свидетельства о поверке, акта выполненных работа, кассового чека, копии аттестата аккредитации </li>
+            <li>Возможность поверки счетчиков без демонтажа.</li>
+            <li>Экономия времени — не нужно передавать сведения о поверке в водоканал.</li>
+            <li>При необходимости опломбировки ее выполнят бесплатно сразу после поверки.</li>
+            <li>Конкурентная цена 500 рублей</li>
+            <li>Выдача на месте акта выполненных работ, свидетельства, аттестата аккредитации и квитанции.</li>
           </ul>
 
           <h6 class="banner-left__footer">Подайте заявку <br> или позвоните нам: <br> 
             {# Если не нужна ссылка, то убрать <a/> и вставить телефон в h6 #}
-            <a href="tel:282200" class="phone anim-underline-link">28-22-00</a>
+            <a href="tel:777777" class="phone anim-underline-link">77-77-77</a>
           </h6>
         </div>
       </div>
@@ -34,21 +34,44 @@
           <div class="banner-form__content">
             <div class="input-with-label">
               <label>Категории услуг *</label>
-              <select id="work-type" class="required">
+              <select id="service-category" class="required">
                 <option></option> 
-                <option value="1">- Установка приборов учёта</option>
-                <option value="2">- Проверка приборов учета</option>
-                <option value="3">- Опломбировка </option>
+                <option value="1">- Для частных лиц</option>
+                <option value="2">- Для юридических лиц</option>
               </select>
             </div>
 
             <div class="input-with-label">
-              <label>Категории услуг *</label>
-              <select id="work-type" class="required">
+              <label>Вид услуги *</label>
+              <select id="service-type" class="required">
                 <option></option> 
-                <option value="1">- Установка приборов учёта</option>
-                <option value="2">- Проверка приборов учета</option>
-                <option value="3">- Опломбировка </option>
+                <optgroup label="Приборы учета:">
+                  <option value="1">- Установка</option>
+                  <option value="2">- Опломбировка </option>
+                  <option value="3">- Проверка</option>
+                </optgroup>
+
+                <optgroup label="Услуги на сетях ВиВ">
+                  <option value="4">- Промывка систем водоснабжения и водоотведения</option>
+                  <option value="5">- Обследование сетей </option>
+                  <option value="6">- Обслуживание водопроводных и канализационных сетей</option>
+                  <option value="7">- Ремонт и чистка колодцев</option>
+                </optgroup>
+
+                <optgroup label="Сантехнические услуги">
+                  <option value="8">- Ограничение и возобновление приема сточных вод на внутридомовых сетях</option>
+                </optgroup>
+
+                <optgroup label="Лаборатория">
+                  <option value="9">- Анализ воды</option>
+                  <option value="10">- Анализ стоков</option>
+                </optgroup>
+
+                <optgroup label="Вывоз стоков">
+                  <option value="11">- Откачка септиков</option>
+                  <option value="12">- Откачка стоков</option>
+                </optgroup>
+                
               </select>
             </div>
 

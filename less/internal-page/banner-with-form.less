@@ -34,6 +34,7 @@
 
     &__ul {
       color: #fff;
+      margin-bottom: 20px;
     }
 
     &__footer {
@@ -61,8 +62,10 @@
         margin-bottom: 30px;
       }
       &__content {
-        // margin-top: auto;
+        display: flex;
+        flex-direction: column;
         margin-bottom: auto;
+        height: 100%;
       }
       &__p {
         font-size: @font-13;
@@ -81,7 +84,7 @@
         }
       }
       &__footer {
-        margin-top: 20px;
+        margin-top: auto;
         .banner-form__agreement {
           margin-bottom: 15px;
         }
@@ -166,6 +169,9 @@
       &__img {
         margin-top: 15px;
         margin-bottom: 25px;
+      }
+      &__ul {
+        margin-bottom: 10px;
       }
     }
   }

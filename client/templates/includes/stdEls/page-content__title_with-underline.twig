@@ -1,3 +1,6 @@
-<div class="page-content__title-cont_with-underline {{ classes }}">
+<div class="page-content__title-cont page-content__title-cont_with-underline {{ classes }}">
   <h3 class="page-content__title">{{ title }}</h3>
+  {% if btnText is defined %}
+    <a href={{btnLink is defined ? btnLink : "#"}} class="btn {{btnClasses is defined ? btnClasses : "btn_colorPrimary"}}">{{btnText}}</a>
+  {% endif %}
 </div>

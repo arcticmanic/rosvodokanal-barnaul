@@ -1,6 +1,18 @@
 "use strict";
 
 $(document).ready(function () {
+  $('#service-category').select2({
+    language: 'ru',
+    minimumResultsForSearch: Infinity,
+    placeholder: 'Выберите категорию услуг'
+  });
+  $('#service-type').select2({
+    language: 'ru',
+    minimumResultsForSearch: Infinity,
+    placeholder: 'Выберите вид услуги'
+  });
+});
+$(document).ready(function () {
   if ($('#connection-map').length > 0) {
     var init = function init() {
       var map = new ymaps.Map('connection-map', {

@@ -35,8 +35,10 @@
   }
 
   .select2-results > .select2-results__options {
-    max-height: 200px;
+    max-height: 400px;
     overflow-y: auto;
+
+    @include styled-scrollbar();
   }
 
   .select2-results__option {
@@ -157,6 +159,10 @@ html.color-white {
       background-color: $blackEye;
       color: $whiteEye;
     }
+
+    .select2-results > .select2-results__options {
+      @include styled-scrollbar_for-light-theme();
+    }
   }
 
   .select2-selection--single {
@@ -198,6 +204,10 @@ html.color-black {
     .select2-results__option--highlighted[aria-selected] {
       background-color: $whiteEye;
       color: $blackEye;
+    }
+
+    .select2-results > .select2-results__options {
+      @include styled-scrollbar_for-dark-theme();
     }
   }
 

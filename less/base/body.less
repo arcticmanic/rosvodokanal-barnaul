@@ -1,20 +1,8 @@
 body {
   display: flex;
   flex-direction: column;
-  scrollbar-width: thin;
-  scrollbar-color: @colorPrimary #fff;
 
-  &::-webkit-scrollbar {
-    width: 11px;
-  }
-  &::-webkit-scrollbar-track {
-    background: #fff;
-  }
-  &::-webkit-scrollbar-thumb {
-    background-color: @colorPrimary;
-    border-radius: 6px;
-    border: 3px solid #fff;
-  }
+  .styled-scrollbar();
 
   .footer {
     margin-top: auto;
@@ -40,15 +28,7 @@ html.color-white {
     scrollbar-color: @blackEye @whiteEye;
   }
   body {
-    scrollbar-color: @blackEye @whiteEye;
-
-    &::-webkit-scrollbar-track {
-      background: @whiteEye;
-    }
-    &::-webkit-scrollbar-thumb {
-      background-color: @blackEye;
-      border-color: @whiteEye;
-    }
+    .styled-scrollbar_for-light-theme();
   }
 }
 
@@ -61,14 +41,6 @@ html.color-black {
     scrollbar-color: @whiteEye @blackEye;
   }
   body {
-    scrollbar-color: @whiteEye @blackEye;
-
-    &::-webkit-scrollbar-track {
-      background: @blackEye;
-    }
-    &::-webkit-scrollbar-thumb {
-      background-color: @whiteEye;
-      border-color: @blackEye;
-    }
+    .styled-scrollbar_for-dark-theme();
   }
 }
