@@ -12,6 +12,7 @@
   color: @navy;
   transition: @transFast;
   background: transparent;
+  user-select: none;
   // Safari bug fix
   -webkit-mask-image: -webkit-radial-gradient(white, black);
 
@@ -30,12 +31,35 @@
 
   &__text {
     transition: @transFast;
+    user-select: none;
   }
 
   &_big {
     padding: 13px 19px;
     &-text {
       font-size: @font-15;
+    }
+  }
+
+  &_low {
+    padding-top: 3px;
+    padding-bottom: 3px;
+  }
+
+  &_white {
+    background: #fff;
+    color: #9fa6aa;
+    .btn__text {
+      color: #9fa6aa;
+    }
+  }
+
+  &_red {
+    background: @red;
+    border-color: @red;
+    color: #fff;
+    .btn__text {
+      color: #fff;
     }
   }
 

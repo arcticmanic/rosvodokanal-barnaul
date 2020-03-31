@@ -9,3 +9,10 @@ function setClamps(object) {
     }
   }
 }
+
+function clearInputTypeFile(nonEmptyInput) {
+  const actualInput = nonEmptyInput.find('input[type="file"]'),
+    fileNameField = nonEmptyInput.find('.input_file__filename')
+  fileNameField.text('')
+  actualInput.val('')
+}

@@ -1,0 +1,11 @@
+<div class="input_file">
+  <input type="file" class="required" data-file-is-too-big-message="Файл слишком большой">
+  <div class="input_file__on-top">
+    {% include '../svg/icon-clip-svg.twig' %}
+    <span class="input_file__filename"></span>
+    {% if btnText is defined %}
+      <a href="#" class="btn input_file__btn_add {{ btnClasses is defined ? btnClasses : "btn_low btn_white"}}">{{btnText}}</a>
+    {% endif %}
+    <a href="#" class="btn btn_low btn_red input_file__btn_delete">Удалить</a>
+  </div>
+</div>

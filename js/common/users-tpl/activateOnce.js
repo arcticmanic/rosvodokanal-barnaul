@@ -10,4 +10,10 @@ $(document).ready(function() {
     minimumResultsForSearch: Infinity,
     placeholder: 'Выберите вид услуги'
   })
+
+  $('#city-district').select2({
+    language: 'ru',
+    minimumResultsForSearch: Infinity,
+    placeholder: 'Выберите район вашего проживания'
+  })
 })

@@ -2,6 +2,15 @@
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
+  .checkboxContainer {
+    margin-top: 4px;
+    margin-left: -2px;
+  }
+  .input_file {
+    & ~ .input_file {
+      margin-top: 10px;
+    }
+  }
   &__cont {
     width: 100%;
     margin-left: auto;
@@ -12,12 +21,14 @@
     justify-content: space-between;
     flex-wrap: wrap;
     &_2 {
-      .input-with-label {
+      .input-with-label,
+      .input-with-label__row {
         width: calc((100% / 2) - 10px);
       }
     }
     &_3 {
-      .input-with-label {
+      .input-with-label,
+      .input-with-label__row {
         width: calc((100% / 3) - 10px);
       }
     }
@@ -31,6 +42,31 @@
   &_extra-mb {
     &:not(:last-child) {
       margin-bottom: 20px;
+    }
+  }
+}
+form {
+  .form-title {
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+
+  .form-info {
+    color: #9fa6aa;
+    font-size: @font-13;
+    font-weight: 400;
+    line-height: @font-15;
+    font-style: italic;
+  }
+
+  .form-titles-block {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    .form-title {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    .form-info {
     }
   }
 }
@@ -53,8 +89,10 @@ label {
   font-size: @font-13;
   color: @colorPrimary3;
   font-weight: 600;
+  margin-bottom: 3px;
 }
 
+.input_file__on-top,
 input:not([type='submit']),
 textarea {
   font-size: @font-14;
@@ -175,13 +213,15 @@ textarea {
     &__row {
       &_2 {
         flex-direction: column;
-        .input-with-label {
+        .input-with-label,
+        .input-with-label__row {
           width: 100%;
         }
       }
       &_3 {
         flex-wrap: wrap;
-        .input-with-label {
+        .input-with-label,
+        .input-with-label__row {
           width: calc((100% / 3) - 5px);
         }
       }
@@ -231,6 +271,7 @@ html.color-white {
     color: @blackEye;
   }
 
+  .input_file__on-top,
   input:not([type='submit']),
   textarea {
     border-color: @blackEye;
@@ -272,6 +313,7 @@ html.color-black {
     color: @whiteEye;
   }
 
+  .input_file__on-top,
   input:not([type='submit']),
   textarea {
     border-color: @whiteEye;

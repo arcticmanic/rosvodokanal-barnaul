@@ -52,17 +52,7 @@
             </select>
           </div>
 
-          <div class="checkboxContainer">
-            <input type="checkbox" id="confidential" class="required">
-            <label for="confidential">
-              <svg viewBox="0 0 100 100">
-                <path class="box"
-                  d="M82,89H18c-3.87,0-7-3.13-7-7V18c0-3.87,3.13-7,7-7h64c3.87,0,7,3.13,7,7v64C89,85.87,85.87,89,82,89z" />
-                <polyline class="check" points="25.5,53.5 39.5,67.5 72.5,34.5 " />
-              </svg>
-            </label>
-            <span class="checkboxText">Я принимаю <a href="#">Политику конфиденциальности</a></span>
-          </div>
+          {% include '../includes/stdEls/checkbox.twig' with {"id": "check1", "text": "Я принимаю <a href='#'>Политику конфиденциальности</a>", "isRequired": true} %}
 
           <button type="submit" class="btn btn_colorPrimary submit-element">Подписаться</button>
         </div>

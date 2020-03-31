@@ -11,6 +11,11 @@ $(document).ready(function () {
     minimumResultsForSearch: Infinity,
     placeholder: 'Выберите вид услуги'
   });
+  $('#city-district').select2({
+    language: 'ru',
+    minimumResultsForSearch: Infinity,
+    placeholder: 'Выберите район вашего проживания'
+  });
 });
 $(document).ready(function () {
   if ($('#connection-map').length > 0) {
@@ -36,4 +41,5 @@ $(document).ready(function () {
     ymaps.ready(init);
   }
 });
+$(document).ready(function () {});
 //# sourceMappingURL=users-tpl.js.map

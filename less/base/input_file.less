@@ -1,0 +1,59 @@
+.input_file {
+  position: relative;
+
+  input[type='file'] {
+    position: relative;
+    opacity: 0;
+    z-index: 2;
+    width: 100%;
+  }
+
+  &__filename {
+    display: block;
+    width: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  &__on-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: @transFast;
+  }
+
+  &-with-file {
+    .input_file {
+      &__btn {
+        &_add {
+          display: none;
+        }
+        &_delete {
+          display: block;
+          pointer-events: initial;
+        }
+      }
+      &__on-top {
+        z-index: 2;
+      }
+    }
+    input[type='file'] {
+      z-index: 1;
+    }
+  }
+
+  &__btn {
+    &_add {
+      display: block;
+    }
+    &_delete {
+      display: none;
+      pointer-events: none;
+    }
+  }
+}
