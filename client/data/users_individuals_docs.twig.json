@@ -1,8 +1,8 @@
 {
-  "title": "Частые вопросы",
+  "title": "Образцы документов",
   "bage": {
-    "title": "Частые вопросы",
-    "subtitle": "Общая информация"
+    "title": "Образцы документов",
+    "subtitle": "Частные лица"
   },
   "pages": [
     {
@@ -13,7 +13,6 @@
         {
           "title": "Общая информация",
           "link": "text_page.html",
-          "classes": "sidemenu__item_active",
           "pages": [
             {
               "title": "Отключения",
@@ -30,8 +29,7 @@
             },
             {
               "title": "Задать вопрос",
-              "link": "users_question.html",
-              "classes": "current-page"
+              "link": "users_question.html"
             },
             {
               "title": "Справочная служба",
@@ -54,6 +52,7 @@
         {
           "title": "Частные лица",
           "link": "users_individuals_data.html",
+          "classes": "sidemenu__item_active",
           "pages": [
             {
               "title": "Личный кабинет",
@@ -284,7 +283,8 @@
             },
             {
               "title": "Образцы документов",
-              "link": "users_individuals_docs.html"
+              "link": "users_individuals_docs.html",
+              "classes": "current-page"
             },
             {
               "title": "Тарифы и нормативы",
@@ -564,6 +564,23 @@
           "link": "text_page.html"
         }
       ]
+    }
+  ],
+  "docs": [
+    {
+      "title": "<strong>Договор…</strong> <br> Стандартный бланк договора",
+      "name": "416_fz.doc",
+      "size": "495 kB" 
+    },
+    {
+      "title": "<strong>Справка…</strong> <br> Стандартный бланк справки",
+      "name": "pravila_354.doc",
+      "size": "54,2 kB" 
+    },
+    {
+      "title": "<strong>Заявление…</strong> <br> Стандартный бланк заявления",
+      "name": "pravila_644.doc",
+      "size": "908 kB" 
     }
   ]
 }

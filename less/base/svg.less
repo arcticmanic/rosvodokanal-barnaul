@@ -1057,8 +1057,10 @@ svg.analyze-with-magnifier-svg {
 }
 
 svg.woman-svg {
-  width: 48px;
-  height: 58px;
+  // width: 48px;
+  // height: 58px;
+  width: 73px;
+  height: 87px;
   .stroke {
     stroke: @colorPrimary;
   }
@@ -1188,6 +1190,34 @@ svg.icon-clip-svg {
   height: 20px;
   .fill {
     fill: #9fa6aa;
+  }
+}
+
+svg.icon-site-svg {
+  width: 85px;
+  height: 63px;
+  .stroke {
+    stroke: @colorPrimary;
+  }
+  .st0 {
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+  }
+
+  .st1 {
+    fill: none;
+    stroke-width: 2;
+    stroke-miterlimit: 10;
+  }
+
+  .st2 {
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-miterlimit: 10;
   }
 }
 
@@ -1642,6 +1672,12 @@ html.color-white {
       fill: @blackEye;
     }
   }
+  svg.icon-site-svg {
+    .stroke {
+      stroke: @blackEye;
+    }
+  }
+  
 }
 
 html.color-black {
@@ -2100,6 +2136,12 @@ html.color-black {
   svg.icon-clip-svg {
     .fill {
       fill: @whiteEye;
+    }
+  }
+
+  svg.icon-site-svg {
+    .stroke {
+      stroke: @whiteEye;
     }
   }
 }

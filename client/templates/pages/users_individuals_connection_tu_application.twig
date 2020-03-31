@@ -1,0 +1,286 @@
+{% extends "../layouts/users.twig" %}
+
+{% block main %}
+  {% include '../includes/stdEls/page-content__title_with-underline.twig' with {"title" : "Подать заявление ", "btnText": "Проверить статус"} %}
+
+  <section class="section-users-individuals-connection-contract-application">
+    <div class="text">
+      <p>Заявитель оформляет документ установленного образца, при этом важно, чтобы заявление содержало всю необходимую справочную информацию:</p>
+
+      <ul>
+        <li>о видах подключаемых сетей (водоснабжение, водоотведение или оба вида).</li>
+        <li>кадастровый номер земельного участка.</li>
+        <li>о планируемой величине необходимой для подключения нагрузки (если у вас есть такая информация).</li>
+        <li>о составе и свойствах сточных вод, намеченных к отведению в централизованную систему, включая их состав с перечислением ингредиентов и концентрации.</li>
+        <li>о сроках строительства (реконструкции) объекта, его назначении, в том числе высоте, этажности. </li>
+      </ul>
+
+      <p>Уточнение по необходимому объему водопотребления на период строительства также указывается в заявлении. Для нежилых объектов данная информация может быть включена в Разрешение на строительство.</p>
+
+      <ul>
+        <li>в случае временного подключения, например, летнего водопровода, заявитель также указывает необходимый объем водопотребления на этот период. При возобновлении услуги абоненту достаточно написать заявление на присоединение к существующей врезке и заключить новый договор на оказание услуг в летний период.</li>
+      </ul>
+
+      <hr class="dashed">
+
+      <ol class="doc-info-list">
+        <li>
+          <a href="#скачать_документ" class="doc-info">
+            <div class="doc-info__body">
+              <p class="doc-info__title">Форма заявления</p>
+              <div class="doc-info__meta">
+                <span class="doc-info__meta-item doc-info__name colorCyan">416_fz.doc</span>
+                <span class="doc-info__meta-item divider colorCyan">|</span>
+                <span class="doc-info__meta-item doc-info__size colorCyan">495 kB</span>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#скачать_документ" class="doc-info">
+            <div class="doc-info__body">
+              <p class="doc-info__title">Образец заполнения</p>
+              <div class="doc-info__meta">
+                <span class="doc-info__meta-item doc-info__name colorCyan">416_fz.doc</span>
+                <span class="doc-info__meta-item divider colorCyan">|</span>
+                <span class="doc-info__meta-item doc-info__size colorCyan">495 kB</span>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#скачать_документ" class="doc-info">
+            <div class="doc-info__body">
+              <p class="doc-info__title">Пример расчета объема водопотребления (водоотведения)</p>
+              <div class="doc-info__meta">
+                <span class="doc-info__meta-item doc-info__name colorCyan">416_fz.doc</span>
+                <span class="doc-info__meta-item divider colorCyan">|</span>
+                <span class="doc-info__meta-item doc-info__size colorCyan">495 kB</span>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#скачать_документ" class="doc-info">
+            <div class="doc-info__body">
+              <p class="doc-info__title">Пример согласия собственников</p>
+              <div class="doc-info__meta">
+                <span class="doc-info__meta-item doc-info__name colorCyan">416_fz.doc</span>
+                <span class="doc-info__meta-item divider colorCyan">|</span>
+                <span class="doc-info__meta-item doc-info__size colorCyan">495 kB</span>
+              </div>
+            </div>
+          </a>
+        </li>
+      </ol>
+
+      <hr class="dashed">
+
+      <h5 class="colorCyan">Документы-приложения</h5>
+
+      <p>Приведенный ниже перечень документов является обязательным приложением к заявлению. Заявление не может быть принято, если один из документов отсутствует или оформлен неверно. Проверить соответствие подготовленных документов требованиям законодательства вы можете, отправив сканы для проверки через сайт.</p>
+
+      <ol>
+        <li>
+          <span class="li-head strong">Копия паспорта заявителя</span>
+          <span class="li-text">Копия паспорта заявителя, заверенная нотариусом. Оригинал предъявляется при сдаче пакета документов специалисту.</span>
+        </li>
+
+        <li>
+          <span class="li-head strong">Копия ИНН</span>
+          <span class="li-text">Оригинал предъявляется при сдаче пакета документов специалисту. Индивидуальные Предприниматели дополнительно предоставляют Свидетельство о внесении записи в ЕГРИП. </span>
+        </li>
+
+        <li>
+          <span class="li-head"><strong>Нотариально заверенная копия</strong> одного из нижеперечисленных <strong>правоустанавливающих документов на земельный участок</strong> установленного образца</span>
+          <ul class="li-text">
+            <li>Свидетельство о государственной регистрации права</li>
+            <li>Договор аренды/субаренды</li>
+            <li>Договор дарения или наследования</li>
+            <li>Распоряжение об установление сервитута</li>
+            <li>Выписка из ЕГРН (дополнительно при подаче пакета документов предъявляется оригинал, документ можно получить в МФЦ)</li>
+          </ul>
+        </li>
+
+        <li>
+          <span class="li-head strong">Письма – согласия (оригиналы) собственников</span>
+          <span class="li-text">Письма – согласия (оригиналы) собственников в случае, если земельный участок находится в долевой собственности.</span>
+        </li>
+
+        <li>
+          <span class="li-head strong">Ситуационный план расположения объекта</span>
+          <span class="li-text">Ситуационный план расположения объекта с привязкой к территории населенного пункта. Карта распечатывается из Интернет- ресурса Яндекс-карты, 2 ГИС.</span>
+        </li>
+
+        <li>
+          <span class="li-head strong">Топографическая карта участка в масштабе 1:500</span>
+          <span class="li-text">Топографическая карта участка в масштабе 1:500 с указанием всех наземных и подземных коммуникаций и сооружений, согласованная с эксплуатирующими организациями. Документ можно получить в любой геодезической организации, имеющий лицензию на осуществление данных работ или закажите <a href="#">услугу у нас</a>. </span>
+        </li>
+
+        <li>
+          <span class="li-head strong">Баланс водопотребления и водоотведения подключаемого объекта</span>
+          <span class="li-text">Баланс водопотребления и водоотведения подключаемого объекта в период использования максимальной величины мощности (нагрузки) с указанием целей использования холодной воды и распределением объемов подключаемой нагрузки по целям использования, в том числе на пожаротушение, периодические нужды, заполнение и опорожнение бассейнов, прием поверхностных сточных вод, а также с распределением общего объема сточных вод по канализационным выпускам (в процентах). Заявитель может самостоятельно рассчитать эти показатели, подготовить документ в проектной организации или заказать <a href="#" >услугу у нас</a>.</span>
+        </li>
+
+        <li>
+          <span class="li-head strong">Квитанции на оплату по договору</span>
+          <span class="li-text">
+            <a href="#" >Квитанции на оплату по договору</a>
+          </span>
+        </li>
+
+        <li>
+          <span class="li-head strong">Дополнительные документы</span>
+          <span class="li-text">
+            <p>Приведенный ниже перечень документов не является обязательным, но их предоставление ускорит проверку всего пакета</p>
+            
+            <ul>
+              <li>Доверенность, заверенная нотариусом, в случае, если заявитель представляет интересы собственника.</li>
+              <li>Банковские реквизиты заявителя.</li>
+              <li>Кадастровый паспорт земельного участка.</li>
+              <li>Письма-согласования владельцев частных сетей, в случае такого подключения, с приложением копии проекта или исполнительной съемки (запрашивается у владельцев частных сетей). Пример <a href="#" >письма – согласования</a>.</li>
+            </ul>
+          </span>
+        </li>
+      </ol>
+
+      <hr class="dashed">
+
+      <h5 class="colorCyan">Сформировать пакет документов</h5>
+
+      <form action="" class="form-in-text">
+        <h6 class="strong form-title">Личные данные</h6>
+
+        <div class="input-with-label">
+          <label>Фамилия, Имя, Отчество *</label>
+          <input type="text" class="required">
+        </div>
+
+        <div class="input-with-label__row input-with-label__row_2">
+          <div class="input-with-label">
+            <label>Ваш телефон *</label>
+            <input type="text"  class="required">
+          </div>
+          <div class="input-with-label">
+            <label>Ваш е-mail *</label>
+            <input type="text"  class="required">
+          </div>
+        </div>
+
+        <div class="input-with-label">
+          <label>Район Вашего проживания *</label>
+          <select id="city-district"  class="required">
+            <option></option> 
+            <option value="1">- Железнодорожный район</option>
+            <option value="2">- Индустриальный район</option>
+            <option value="3">- Ленинский район </option>
+            <option value="4">- Октябрьский район </option>
+            <option value="5">- Центральный район </option>
+          </select>
+        </div>
+
+        <h6 class="strong form-title">Адрес Вашей регистрации</h6>
+
+        <div class="input-with-label__row input-with-label__row_2">
+          <div class="input-with-label">
+            <label>Город *</label>
+            <input type="text"  class="required">
+          </div>
+          <div class="input-with-label">
+            <label>Населенный пункт *</label>
+            <input type="text"  class="required">
+          </div>
+        </div>
+
+        <div class="input-with-label__row input-with-label__row_2">
+          <div class="input-with-label">
+            <label>Улица *</label>
+            <input type="text"  class="required">
+          </div>
+
+          <div class="input-with-label__row input-with-label__row_3">
+            <div class="input-with-label">
+              <label>Дом *</label>
+              <input type="text"  class="required">
+            </div>
+            <div class="input-with-label">
+              <label>Корпус</label>
+              <input type="text">
+            </div>
+            <div class="input-with-label">
+              <label>Квартира *</label>
+              <input type="text"  class="required">
+            </div>
+          </div>
+        </div>
+
+        <div class="form-titles-block">
+          <h6 class="strong form-title">Документы</h6>
+          <span class="form-info italic">Допустимые расширения файлов .doc .pdf .jpg .jpeg .rar .zip, до 20 Мб</span>
+        </div>
+        
+        <div class="input-with-label">
+          <label>Заявление на получение ТУ *</label>
+          {% include '../includes/stdEls/input_file.twig' with {"btnText": "Обзор"} %}
+        </div>
+        
+        <div class="input-with-label">
+          <label>Копия паспорта *</label>
+          {% include '../includes/stdEls/input_file.twig' with {"btnText": "Обзор"} %}
+        </div>
+        
+        <div class="input-with-label">
+          <label>Копия ИНН *</label>
+          {% include '../includes/stdEls/input_file.twig' with {"btnText": "Удалить"} %}
+        </div>
+        
+        <div class="input-with-label">
+          <label>Нотариально заверенная копия правоустанавливающего документа *</label>
+          {% include '../includes/stdEls/input_file.twig' with {"btnText": "Обзор"} %}
+        </div>
+        
+        <div class="input-with-label">
+          <label>Ситуационный план расположения объекта *</label>
+          {% include '../includes/stdEls/input_file.twig' with {"btnText": "Обзор"} %}
+        </div>
+        
+        <div class="input-with-label">
+          <label class="strong">Топографическая карта участка в масштабе 1:500 *</label>
+          {% include '../includes/stdEls/input_file.twig' with {"btnText": "Обзор"} %}
+          {% include '../includes/stdEls/checkbox.twig' with {"id": "check3", "text": "У меня нет нужного документа, я хочу заказать топографическую карту у вас"} %}
+        </div>
+        
+        <div class="input-with-label">
+          <label class="strong">Баланс водопотребления и водоотведения подключаемого объекта *</label>
+          {% include '../includes/stdEls/input_file.twig' with {"btnText": "Обзор"} %}
+          {% include '../includes/stdEls/checkbox.twig' with {"id": "check2", "text": "У меня нет нужного документа, я хочу заказать Баланс водопотребления и водоотведения у вас"} %}
+        </div>
+        
+        <div class="input-with-label" data-add-input-file-on-end="true">
+          <label class="strong">
+            <span class="block">Дополнительные документы</span>
+            <span class="block form-info">Например, доверенность, заверенная нотариусом, в случае, если заявитель представляет интересы собственника</span>
+          </label>
+          {% include '../includes/stdEls/input_file.twig' with {"btnText": "Обзор"} %}
+        </div>
+
+        <hr class="dashed">
+
+        <p class="strong">Важно!</p>
+
+        <p class="italic">Отправляя заявление о получении Технических условий и приложенные документы, вы несете ответственность за достоверность и полноту сведений. Проверка направленной вами информации осуществляется в течение 3 рабочих дней, по итогам проверки вы получите письмо-уведомление на электронную почту, указанную в заявлении. Эта информация также будет отображена в Статусе исполнения заявок. <br>
+        В случае, если ваш пакет документов требует доработки, вы можете предоставить уточнения, дополнительные сведения или документы в течение 20 рабочих дней с момента получения уведомления в рамках этого же заявления. По истечении этого срока заявление аннулируется.  <br>
+        Если все документы успешно прошли проверку, то в течение 14 рабочих дней специалисты предприятия подготовят Технические условия на основании вашего заявления.</p>
+
+        <hr class="dashed">
+
+        <div class="form-footer">
+          {% include '../includes/stdEls/checkbox.twig' with {"id": "check1", "text": "Я принимаю <a href='#'>Политику конфиденциальности</a>", "isRequired": true} %}
+
+
+          <button type="submit" class="btn btn_colorPrimary submit-element">Отправить</button>
+        </div>
+      </form>
+    </div>
+  </section>
+{% endblock %}

@@ -265,6 +265,9 @@ function watch() {
   gulp.watch('./scss/**/*.scss', styles)
   gulp
     .watch(['client/templates/**/*.twig', 'client/data/*.twig.json'])
+    .on('add', gulp.series(twigF, browserSync.reload))
+  gulp
+    .watch(['client/templates/**/*.twig', 'client/data/*.twig.json'])
     .on('change', gulp.series(twigF, browserSync.reload))
 }
 
