@@ -119,7 +119,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
   }
   .inText-footer {
     margin-top: 50px;
@@ -141,6 +140,12 @@
   }
 }
 
+@media (max-width: @mobileLandscapeWBig) {
+  .inText-row {
+    flex-wrap: wrap;
+  }
+}
+
 @media (max-width: @mobileW) {
   .text {
     h2,
@@ -148,11 +153,6 @@
     h4 {
       margin-bottom: 10px;
     }
-  }
-}
-
-@media (max-width: @mobileW) {
-  .text {
     .underline {
       padding-bottom: 15px;
       margin-bottom: 15px;

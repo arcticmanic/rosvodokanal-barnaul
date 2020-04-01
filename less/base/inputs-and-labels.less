@@ -106,6 +106,8 @@ textarea {
 textarea {
   resize: none;
   height: 80px;
+  overflow: auto;
+  .styled-scrollbar();
   &:focus {
     outline: none;
   }
@@ -278,6 +280,10 @@ html.color-white {
     color: @blackEye;
   }
 
+  textarea {
+    .styled-scrollbar_for-light-theme();
+  }
+
   .checkboxContainer {
     input[type='checkbox'] {
       & + label {
@@ -320,6 +326,11 @@ html.color-black {
     color: @whiteEye;
     background: @blackEye;
   }
+
+  textarea {
+    .styled-scrollbar_for-dark-theme();
+  }
+
 
   .checkboxContainer {
     input[type='checkbox'] {
