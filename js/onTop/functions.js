@@ -16,3 +16,8 @@ function clearInputTypeFile(nonEmptyInput) {
   fileNameField.text('')
   actualInput.val('')
 }
+
+function triggerEvent(elem, event) {
+  const clickEvent = new Event(event)
+  elem.dispatchEvent(clickEvent)
+}

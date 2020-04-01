@@ -5,27 +5,27 @@
   background: @colorPrimary2;
   display: flex;
   align-items: center;
+  transition: @transMid;
   .wrapper {
     // padding-left: 10px;
     // padding-right: 10px;
     padding-top: 30px;
     padding-bottom: 30px;
   }
-  &:before {
-    content: '';
+  &__overlay {
     position: absolute;
     background: linear-gradient(
       to right,
       @colorPrimary,
       rgba(@colorPrimary, 0.1)
     );
-    // transform: skewX(-26deg);
-    clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
+    // clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
     width: 55%;
     height: 100%;
     z-index: 1;
     left: -40px;
     top: 0;
+    transition: @transMid;
   }
   .title,
   .subtitle {
@@ -109,7 +109,7 @@
 html.color-white {
   .bage {
     background: @whiteEye;
-    &:before {
+    &__overlay {
       background: linear-gradient(to right, @blackEye, rgba(@blackEye, 0.1));
     }
     .title,
@@ -122,7 +122,7 @@ html.color-white {
 html.color-black {
   .bage {
     background: @blackEye;
-    &:before {
+    &__overlay {
       background: linear-gradient(to right, @whiteEye, rgba(@whiteEye, 0.1));
     }
     .title,

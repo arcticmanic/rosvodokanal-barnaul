@@ -1,81 +1,119 @@
 $(document).ready(function() {
+  const eyeVersionScale = localStorage.getItem('eyeVersionScale'),
+    eyeVersionColor = localStorage.getItem('eyeVersionColor')
+
+  setTimeout(function() {
+    if (eyeVersionScale || eyeVersionColor) {
+      $('#eye-version-btn').trigger('click')
+      if (eyeVersionScale) {
+        $(`span[data-scale="${eyeVersionScale}"]`).trigger('click')
+      }
+      if (eyeVersionColor) {
+        $(`span[data-color="${eyeVersionColor}"]`).trigger('click')
+      }
+    }
+  }, 0)
+
   const eyeVersion = (function() {
-    var $container = $('html')
+    const rootElement = $('html'),
+      eyeVersionPanel = $('.eye-version-panel')
 
     return {
       init: function() {
-        $('.eye-version').on('click', function() {
-          $('.eye-version-panel').slideToggle()
+        $('#eye-version-btn').on('click', function() {
+          eyeVersionPanel.slideToggle()
+
           $('.eye-version').toggleClass('eye-version-active')
-          var set = !$container.hasClass('eye-version-active')
+
+          let set = !rootElement.hasClass('eye-version-active')
+
           if (set) {
-            $container
+            rootElement
               .removeClass('eye-version-std')
               .addClass('eye-version-active')
               .addClass(
                 'color-' + $('.eye-version__color.m--current').data('color')
               )
             $('.header__eye-version_panel').slideDown(300)
+
+            localStorage.setItem(
+              'eyeVersionColor',
+              $('.eye-version__color.m--current').data('color')
+            )
           } else {
-            $container
+            rootElement
               .removeClass('eye-version-active')
               .removeClass('scale scale-1 scale-2 scale-3')
               .removeClass('color-white color-black')
               .addClass('eye-version-std')
+
             $('.header__eye-version_panel').slideUp(300)
+
             $('.eye-version__scale.m--current').removeClass('m--current')
+
+            localStorage.removeItem('eyeVersionColor')
+
+            localStorage.removeItem('eyeVersionScale')
           }
-          eyeVersion.save('set', set)
         })
 
         $('.eye-version__scale').on('click', function(e) {
-          e.preventDefault()
           var $this = $(this)
           if (
-            $container.hasClass('eye-version-active') &&
+            rootElement.hasClass('eye-version-active') &&
             !$this.hasClass('m--current')
           ) {
             $('.eye-version__scale').removeClass('m--current')
             $this.addClass('m--current')
-            $container
+            rootElement
               .removeClass('scale-1 scale-2 scale-3')
               .addClass('scale-' + $this.data('scale'))
               .addClass('scale')
-            eyeVersion.save('scale', $this.data('scale'))
+
+            localStorage.setItem('eyeVersionScale', $this.data('scale'))
           } else if (
-            $container.hasClass('eye-version-active') &&
+            rootElement.hasClass('eye-version-active') &&
             $this.hasClass('m--current')
           ) {
             $this.removeClass('m--current')
-            $container.removeClass('scale scale-1 scale-2 scale-3')
+            rootElement.removeClass('scale scale-1 scale-2 scale-3')
+            localStorage.removeItem('eyeVersionScale')
           }
         })
 
         $('.eye-version__color').on('click', function(e) {
-          e.preventDefault()
-          if ($container.hasClass('eye-version-active')) {
+          if (rootElement.hasClass('eye-version-active')) {
             var $this = $(this)
+
             $('.eye-version__color').removeClass('m--current')
+
             $this.addClass('m--current')
-            $container
+
+            rootElement
               .removeClass('color-white color-black')
               .addClass('color-' + $this.data('color'))
-            eyeVersion.save('color', $this.data('color'))
+
+            localStorage.setItem('eyeVersionColor', $this.data('color'))
           }
         })
 
         $('.eye-version-item_back').on('click', function(e) {
           $('.eye-version-active').removeClass('eye-version-active')
-          $('.eye-version').addClass('eye-version-std')
+
           $('.eye-version__scale.m--current').removeClass('m--current')
-          $('.eye-version-panel').slideToggle()
-          e.preventDefault()
-          $container
+
+          eyeVersionPanel.slideToggle()
+
+          rootElement
             .removeClass('eye-version')
             .removeClass('scale scale-1 scale-2 scale-3')
             .removeClass('color-white color-black')
+
           $('.header__eye-version_panel').slideUp(300)
-          eyeVersion.save('set', false)
+
+          localStorage.removeItem('eyeVersionColor')
+
+          localStorage.removeItem('eyeVersionScale')
         })
 
         $('.eye-version, .eye-version__scale, .eye-version-item_back').on(

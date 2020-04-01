@@ -1,6 +1,4 @@
 $(document).ready(function() {
-  var _w = $(window).width()
-
   new LazyLoad({
     elements_selector: `.lazy`,
     use_native: true

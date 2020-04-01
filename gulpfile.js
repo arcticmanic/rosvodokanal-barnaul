@@ -173,7 +173,7 @@ function concatCommonJS() {
     .pipe(concat('common.js'))
     .pipe(
       babel({
-        presets: ['@babel/env']
+        presets: [['@babel/env', { useBuiltIns: "entry" }]]
       })
     )
     .pipe(minify({ ext: { src: '', min: '.js' }, noSource: true }))
