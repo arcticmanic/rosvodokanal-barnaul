@@ -81,6 +81,23 @@
   }
 }
 
+html.color-white,
+html.color-black {
+  .all-sites {
+    .city-list {
+      &__link {
+        @media (min-width: @hoverW) {
+          &:hover {
+            .city-list__city {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 html.color-white {
   .all-sites {
     &__text {
@@ -90,7 +107,7 @@ html.color-white {
     }
 
     .city-list {
-      border: 1px solid #000;
+      border: 1px solid @blackEye;
       &__link {
         .city-list__city {
           color: @blackEye;
@@ -103,14 +120,14 @@ html.color-white {
 html.color-black {
   .all-sites {
     &__text {
-      background: #000;
+      background: @blackEye;
       &-inner {
         color: @whiteEye;
       }
     }
 
     .city-list {
-      background: #000;
+      background: @blackEye;
       border: 1px solid #fff;
       &__link {
         .city-list__city {

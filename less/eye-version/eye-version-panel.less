@@ -73,6 +73,8 @@
     text-align: center;
     margin-left: 1px;
     margin-right: 1px;
+    cursor: pointer;
+
 
     &_1 {
       font-size: 19px;
@@ -125,6 +127,10 @@
 
     &:not(.m--current) {
       cursor: pointer;
+    }
+
+    &.m--current {
+      pointer-events: none;
     }
 
     &.m--current,
