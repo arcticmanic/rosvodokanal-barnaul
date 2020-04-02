@@ -15,18 +15,18 @@
   <meta name="theme-color" content="#ffffff">
   <title>{{ title }}</title>
 
-  {% include "../includes/styles.twig" %}
+  {% include "../includes/references/styles.twig" %}
 
   {% block customStyles %}
   
   {% endblock %}
 </head>
 <body>
-    {% include "../includes/back-top.twig" %}
+    {% include "../includes/stdBlocks/back-top.twig" %}
     
-    {% include "../includes/overlay.twig" %}
+    {% include "../includes/stdBlocks/overlay.twig" %}
       
-    {% include "../includes/eye-version-panel.twig" %}
+    {% include "../includes/stdBlocks/eye-version-panel.twig" %}
     
     {% include "../includes/header/header.twig" %}
     
@@ -36,9 +36,9 @@
 
     {% include "../includes/footer/footer.twig" %}
     
-    {% include "../includes/modal_subscribe-to-news.twig" %}
+    {% include "../includes/modals/modal_subscribe-to-news.twig" %}
     
-    {% include "../includes/scripts.twig" %}
+    {% include "../includes/references/scripts.twig" %}
 
     {% block customJS %}
   
