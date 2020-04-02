@@ -1,0 +1,86 @@
+{% extends "../../layouts/users.twig" %}
+
+{% block main %}
+  <section class="section-users-switch-off">
+    {% include "../../includes/jumbo-img.twig" with {"imgSrc": "./img/users-switch-off-img.png", "subtitle": "Отключения", "title": "Получать информацию"} %}
+
+    <form action="" class="form form-in-text">
+      <div class="input-with-label__row">
+        <div class="input-with-label input-with-label_9">
+          <label>Улица *</label>
+          <input type="text"  class="required">
+        </div>
+        <div class="input-with-label input-with-label_3">
+          <label>Номер дома *</label>
+          <input type="text"  class="required">
+        </div>
+      </div>
+
+      <div class="input-with-label">
+        <label>E-mail для рассылки *</label>
+        <input type="text" class="required">
+      </div>
+
+      <div class="form-footer">
+        {% include '../../includes/stdEls/checkbox.twig' with {"id": "check1", "text": "Я принимаю <a href='#'>Политику конфиденциальности</a>", "isRequired": true} %}
+
+        <button type="submit" class="btn btn_colorPrimary submit-element">Подписаться</button>
+      </div>
+    </form>
+
+    {% include '../../includes/stdEls/page-content__title_with-underline.twig' with {"title" : "Отключения", "classes": "page-content__title-cont_without-spacing"} %}
+
+    <table>
+      <tr>
+        <th>Адрес</th>
+        <th class="center-text-in-td">Начало работ</th>
+        <th class="center-text-in-td">Окончание работ</th>
+      </tr>
+
+      <tr>
+        <td>
+          <span class="inTd-block">Барнаул,</span> 
+          <span class="inTd-block">ул. Союза Республик, 36а</span>
+        </td>
+        <td class="center-text-in-td">
+          <span class="inTd-block">11.12.2019</span>
+          <span class="inTd-block">18:00</span>
+        </td>
+        <td class="center-text-in-td">
+          <span class="inTd-block">11.12.2019</span>
+          <span class="inTd-block">19:00</span>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <span class="inTd-block">Барнаул,</span> 
+          <span class="inTd-block">ул.Короленко, 65</span>
+        </td>
+        <td class="center-text-in-td">
+          <span class="inTd-block">12.12.2019</span>
+          <span class="inTd-block">18:00</span>
+        </td>
+        <td class="center-text-in-td">
+          <span class="inTd-block">15.12.2019</span>
+          <span class="inTd-block">19:00</span>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <span class="inTd-block">Барнаул,</span> 
+          <span class="inTd-block">ул. Молодежная, 1</span>
+        </td>
+        <td class="center-text-in-td">
+          <span class="inTd-block">12.12.2019</span>
+          <span class="inTd-block">18:00</span>
+        </td>
+        <td class="center-text-in-td">
+          <span class="inTd-block">15.12.2019</span>
+          <span class="inTd-block">19:00</span>
+        </td>
+      </tr>
+    </table>
+  </section>
+{% endblock %}

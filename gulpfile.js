@@ -173,7 +173,7 @@ function concatCommonJS() {
     .pipe(concat('common.js'))
     .pipe(
       babel({
-        presets: [['@babel/env', { useBuiltIns: "entry" }]]
+        presets: [['@babel/env', { useBuiltIns: 'entry' }]]
       })
     )
     .pipe(minify({ ext: { src: '', min: '.js' }, noSource: true }))
@@ -217,37 +217,44 @@ function javascript(cb) {
   cb()
 }
 
-function twigF() {
-  return (
-    gulp
-      .src(path.join(paths.srcTwig, '**', '*.twig'))
-      .pipe(
-        plumber({
-          handleError: function(err) {
-            console.log(err)
-            this.emit('end')
-          }
-        })
-      )
-      .pipe(
-        data(function(file) {
-          return JSON.parse(
-            fs.readFileSync(
-              path.join(paths.srcData, '/') + path.basename(file.path) + '.json'
-            )
-          )
-        })
-      )
-      .pipe(
-        twig().on('error', function(err) {
-          process.stderr.write(err.message + '\n')
+function twigiFy() {
+  return gulp
+    .src(path.join(paths.srcTwig, '**', '*.twig'))
+    .pipe(
+      plumber({
+        handleError: function(err) {
+          console.log(err)
           this.emit('end')
-        })
-      )
-      .pipe(removeEmptyLines())
-      .pipe(prettyHtml({ indent_size: 2, preserve_newlines: true }))
-      .pipe(gulp.dest(paths.build))
-  )
+        }
+      })
+    )
+    .pipe(
+      data(function(file) {
+        const firstIndexOfDivider = path.basename(file.path).indexOf('_')
+        let prefix = ''
+        if (firstIndexOfDivider !== -1) {
+          prefix = path.basename(file.path).slice(0, firstIndexOfDivider)
+        } else if (firstIndexOfDivider === -1) {
+          prefix = 'other-pages'
+        }
+
+        return JSON.parse(
+          fs.readFileSync(
+            path.join(paths.srcData, prefix, `${path.basename(file.path)}.json`)
+          )
+        )
+      })
+    )
+    .pipe(
+      twig().on('error', function(err) {
+        process.stderr.write(err.message + '\n')
+        this.emit('end')
+        console.log(path.basename(file.path))
+      })
+    )
+    .pipe(removeEmptyLines())
+    .pipe(prettyHtml({ indent_size: 2, preserve_newlines: true }))
+    .pipe(gulp.dest(paths.build))
 }
 
 function clean() {
@@ -287,7 +294,7 @@ function watchFiles() {
 
   watch(
     ['client/templates/**/*.twig', 'client/data/*.twig.json'],
-    gulp.series(twigF, browserSync.reload)
+    gulp.series(twigiFy, browserSync.reload)
   )
 }
 
@@ -295,7 +302,7 @@ const watchTask = watchFiles
 
 const build = gulp.series(
   clean,
-  gulp.parallel(styles, concatPlugins, javascript, twigF)
+  gulp.parallel(styles, concatPlugins, javascript, twigiFy)
 )
 
 const dev = gulp.series(build, watchTask)

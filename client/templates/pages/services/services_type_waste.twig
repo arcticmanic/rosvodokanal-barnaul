@@ -1,0 +1,36 @@
+{% extends "../../layouts/services.twig" %}
+
+{% block main %}
+  {% include '../../includes/stdEls/page-content__title_with-underline.twig' with {"title" : "Вывоз стоков"} %}
+
+  <section class="section-services-type-networks">
+    <div class="text">
+      <p>Жидкие бытовые отходы, не попадающие в центральные системы водоотведения, подлежат обязательному вывозу и последующей утилизации. Жители Барнаула могут заказать услугу по вывозу стоков в «Росводоканал Барнаул». Ее оказывают операторы, осуществляющие ассенизаторскую откачку стоков из септиков и их доставку к очистным сооружениям предприятия. Барнаульский водоканал рекомендует только надежных партнеров. Весь цикл «откачка – вывоз – утилизация» проводится в соответствии с экологическими и санитарными нормами, под контролем специалистов предприятия.</p>
+
+      <article class="jumbo-icons__article">
+        <hr class="dashed">
+        <div class="jumbo-icons">
+          <a href="services_type_meters_application.html" class="jumbo-icons__item">
+            {% include '../../includes/svg/icon-septic-truck-svg.twig' with {"classes": "jumbo-icons__icon"} %}
+            <p class="jumbo-icons__p">Откачка септиков</p>
+          </a>
+
+          <a href="services_type_meters_application.html" class="jumbo-icons__item">
+            {% include '../../includes/svg/icon-cleaning-truck_individual-svg.twig' with {"classes": "jumbo-icons__icon"} %}
+            <p class="jumbo-icons__p">Откачка стоков (частные лица)</p>
+          </a>
+
+          <a href="services_type_meters_application.html" class="jumbo-icons__item">
+            {% include '../../includes/svg/icon-cleaning-truck_corporate-svg.twig' with {"classes": "jumbo-icons__icon"} %}
+            <p class="jumbo-icons__p">Откачка стоков (юр. лица)</p>
+          </a>
+        </div>
+        <hr class="dashed">
+        <a href="#" class="btn btn_colorPrimary mx-auto">Прочие услуги раздела</a>
+        <hr class="dashed">
+      </article>
+      
+      <p>Жидкие бытовые отходы, не попадающие в центральные системы водоотведения, подлежат обязательному вывозу и последующей утилизации. Жители Барнаула могут заказать услугу по вывозу стоков в «Росводоканал Барнаул». Ее оказывают операторы, осуществляющие ассенизаторскую откачку стоков из септиков и их доставку к очистным сооружениям предприятия. Барнаульский водоканал рекомендует только надежных партнеров. Весь цикл «откачка – вывоз – утилизация» проводится в соответствии с экологическими и санитарными нормами, под контролем специалистов предприятия.</p>
+    </div>
+  </section>
+{% endblock %}

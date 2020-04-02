@@ -1,0 +1,32 @@
+{% extends "../../layouts/users.twig" %}
+
+{% block main %}
+  {% include '../../includes/stdEls/page-content__title_with-underline.twig' with {"title" : "Нормативные документы"} %}
+
+  <section class="section-users-connection-docs">
+    <div class="text">
+      <p>В этом разделе вы найдете все необходимые нормативно-правовые акты, регламентирующие порядок подключения к системам водоснабжения и водоотведения, которые обслуживает «Росводоканал Барнаул».</p>
+
+      <h5 class="colorCyan">Список документов</h5>
+
+      <hr class="dashed">
+
+      <ol class="doc-info-not-list">
+        {% for doc in docs %}
+          <li>
+            <a href="#скачать_документ" class="doc-info">
+              <div class="doc-info__body">
+                <p class="doc-info__title">{{doc.title}}</p>
+                <div class="doc-info__meta">
+                  <span class="doc-info__meta-item doc-info__name colorCyan">{{doc.name}}</span>
+                  <span class="doc-info__meta-item divider colorCyan">|</span>
+                  <span class="doc-info__meta-item doc-info__size colorCyan">{{doc.size}}</span>
+                </div>
+              </div>
+            </a>
+          </li>
+        {% endfor %}
+      </ol>
+    </div>
+  </section>
+{% endblock %}

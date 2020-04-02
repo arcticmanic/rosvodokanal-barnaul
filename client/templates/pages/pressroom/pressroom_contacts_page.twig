@@ -1,0 +1,27 @@
+{% extends "../../layouts/pressroom.twig" %}
+
+{% block undersidemenu %}
+  {% include '../../includes/subscribe-to-news.twig' %}
+{% endblock %}
+
+{% block main %}
+  <section class="section-contacts">
+    {% include "../../includes/jumbo-img.twig" with {"imgSrc": "./img/pressroom-news-img.png", "subtitle": "Росводоканал Барнаул", "title": "Контакты пресс-службы"} %}
+
+
+    {% include "../../includes/contacts-block.twig" with {"address": "656037, г. Барнаул, проспект Калинина, 116", "addressLink": "https://yandex.ru/maps/?pt=83.744140,53.388919&z=17&l=map", "email": "pressabrn@rosvodokanal.ru", "phone": "+7 (3852) 28-29-84"} %}
+
+    <hr class="dashed">
+
+    <article id="contacts-map" class="map map_contacts"></article>
+
+    <article class="text">
+      <h6>О пребывании СМИ на объектах «Росводоканал Барнаул» О пребывании СМИ на объектах «Росводоканал Барнаул</h6>
+      <p>Большинство объектов региональных предприятий ГК «Росводоканал» являются режимными. Для осуществления представителями СМИ своей профессиональной деятельности на этих объектах, рекомендуем связаться с руководителями региональных пресс-служб и получить соответствующую аккредитацию.</p>
+    </article>
+  </section>
+{% endblock %}
+
+{% block indvidualPageJS %}
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=8e7ca4bf-0e6c-4f83-a757-531abebea7b5&lang=ru_RU" type="text/javascript"></script>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "../../layouts/users.twig" %}
+
+{% block main %}
+  <section class="section-contacts">
+    {% include "../../includes/jumbo-img.twig" with {"imgSrc": "./img/users-paymentPoints-img.png", "subtitle": "Общая информация", "title": "Пункты оплаты"} %}
+
+
+    {% include "../../includes/contacts-block_openHours.twig" with {"address": "656037, г. Барнаул, проспект Калинина, 116", "addressLink": "https://yandex.ru/maps/?pt=83.744140,53.388919&z=17&l=map", "email": "pressabrn@rosvodokanal.ru", "phone": "8 (3852) 282-200", "phone2": "8 (3852) 995-055"} %}
+
+    <hr class="dashed">
+
+    <article id="contacts-map" class="map map_contacts"></article>
+  </section>
+{% endblock %}
+
+{% block indvidualPageJS %}
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=8e7ca4bf-0e6c-4f83-a757-531abebea7b5&lang=ru_RU" type="text/javascript"></script>
+{% endblock %}

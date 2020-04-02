@@ -1,0 +1,14 @@
+{% extends "../../layouts/default.twig" %}
+{% import "../../macros/displayPage.twig" as macros %}
+
+{% block content %}
+<section class="section-std_S wrapper section-sitemap">
+  <ul class="ul_nested-with-left-border">
+
+    {% for page in pages %}
+        {{ macros.displayPage(page) }}
+    {% endfor %}
+    
+  </ul>
+</section>
+{% endblock %}

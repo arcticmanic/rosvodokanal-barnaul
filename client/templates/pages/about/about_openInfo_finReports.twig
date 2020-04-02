@@ -1,0 +1,43 @@
+{% extends "../../layouts/about.twig" %}
+
+{% block main %}
+  <section class="section-about-openInfo-finReports">
+    {% include "../../includes/jumbo-img.twig" with {"imgSrc": "./img/about-openInfo-finReports-img.png", "title": "Финансовая отчетность", "subtitle": "Росводоканал Барнаул"} %}
+    <article class="text">
+      <p>Финансовая (бухгалтерская) отчётность — информация о финансовом положении ООО «БАРНАУЛЬСКИЙ ВОДОКАНАЛ», финансовом результате его деятельности и движении денежных средств за отчётный период, систематизированная в соответствии с требованиями, установленными Федеральным законом «О бухгалтерском учёте» от 06.12.11 №402. </p> 
+
+      <div class="inText-footer">
+        <h3>Основные показатели финансово-хозяйственной деятельности </h3>
+        <div class="accord accord_inner">
+          {% for idx, accordItem in accordItems %}
+            <div class="accord-item">
+              <div class="accord-item__head">
+                <h6 class="accord-item__text colorCyan">{{2020 - idx}} год</h6>
+                <div class="accord-item__icon-cont">
+                  {% include "../../includes/svg/icon-arrow-accord.twig" with {"classes": "accord-item__icon"} %}
+                </div>
+              </div>
+
+              <div class="accord-item__body doc-info-not-list">
+                {% for doc in accordItem.docs %}
+                  <a href="#скачать_документ" class="doc-info">
+                    {% include "../../includes/svg/icon-doc-svg.twig" with {"classes": "doc-info__icon"} %}
+                    <div class="doc-info__body">
+                      <p class="doc-info__title">{{doc.title}}</p>
+                      <div class="doc-info__meta">
+                        <span class="doc-info__meta-item doc-info__name colorCyan">{{doc.name}}</span>
+                        <span class="doc-info__meta-item divider colorCyan">|</span>
+                        <span class="doc-info__meta-item doc-info__size colorCyan">{{doc.size}}</span>
+                      </div>
+                    </div>
+                  </a>
+                {% endfor %}
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </article>
+
+  </section>
+{% endblock %}

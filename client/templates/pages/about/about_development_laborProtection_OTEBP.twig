@@ -1,0 +1,31 @@
+{% extends "../../layouts/about.twig" %}
+
+{% block main %}
+  <section class="section-about-coworkers-programms">
+    {% include "../../includes/jumbo-img.twig" with {"imgSrc": "./img/about-development-laborProtection-OTEBP-img.png", "title": "Безопасность труда", "subtitle": "Ключевая ценность компании"} %}
+    <article class="text">
+      <h4 class="colorCyan">Охрана труда и промбезопасность</h4>
+
+      <p>Безопасность труда и производства – ключевая ценность барнаульского водоканала и всей группы компаний «Росводоканал». Сегодня система управления безопасностью «Росводоканала» соответствует лучшим практикам и позитивно отражается на повседневной деятельности предприятий группы во всех регионах присутствия.</p> 
+
+      <h4 class="colorCyan">Политика в области ОТЭПБ</h4>
+
+      <p>Политика группы компаний «Росводоканал» в области охраны труда, экологической и промышленной безопасности определяет принципы деятельность предприятий группы при эксплуатации и развитии систем водоподготовки, очистки сточных вод, водопроводных и канализационных сетей и сооружений, а также обязательства по обеспечению высокого уровня безопасности условий труда персонала и высокого уровня промышленной безопасности.</p>
+
+      <div class="doc-info-not-list">
+        <a href="#скачать_документ" class="doc-info">
+          {% include "../../includes/svg/icon-doc-svg.twig" with {"classes": "doc-info__icon"} %}
+          <div class="doc-info__body">
+            <p class="doc-info__title strong">Полный текст Политики в области ОТЭПБ</p>
+            <div class="doc-info__meta">
+              <span class="doc-info__meta-item doc-info__name colorCyan">416_fz.doc</span>
+              <span class="doc-info__meta-item divider colorCyan">|</span>
+              <span class="doc-info__meta-item doc-info__size colorCyan">495 kB</span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </article>
+
+  </section>
+{% endblock %}

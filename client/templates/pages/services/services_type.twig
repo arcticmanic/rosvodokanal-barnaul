@@ -1,0 +1,92 @@
+{% extends "../../layouts/services.twig" %}
+
+{% block main %}
+  {% include '../../includes/stdEls/page-content__title_with-underline.twig' with {"title" : "Список услуг"} %}
+
+  <section class="section-services-type">
+    <div class="services-type-grid">
+      <artcile class="card card__bg_primary">
+        <img class="card__bg img-as-bg lazy" data-src="./img/services-type_1.png" width="240" height="300">
+        {% include "../../includes/svg/icon-mobile-svg.twig" with {"classes": "card__icon card__icon_mobile"} %}
+        <div class="card__content card__content">
+          <h6 class="card__title">Скачать мобильное приложение</h6>
+          <a href="services_special.html" class="btn btn_trans">Подробнее</a>
+        </div>
+      </artcile>
+
+      <artcile class="card card__bg_primary">
+        <img class="card__bg img-as-bg lazy" data-src="./img/services-type_2.png" width="240" height="300">
+        {% include "../../includes/svg/icon-waterdevice_2-svg.twig" with {"classes": "card__icon card__icon_waterdevice"} %}
+        <div class="card__content card__content">
+          <h4 class="card__title">Приборы учета воды</h4>
+          <a href="services_type_meters_application.html" class="btn btn_trans">Подробнее</a>
+        </div>
+      </artcile>
+
+      <artcile class="card card__bg_primary">
+        <img class="card__bg img-as-bg lazy" data-src="./img/services-type_3.png" width="240" height="300">
+        {% include "../../includes/svg/icon-lab-svg.twig" with {"classes": "card__icon card__icon_lab"} %}
+        <div class="card__content card__content">
+          <h4 class="card__title">Лаборатория </h4>
+          <a href="services_type_lab.html" class="btn btn_trans">Подробнее</a>
+        </div>
+      </artcile>
+
+      <artcile class="card card__bg_primary">
+        <img class="card__bg img-as-bg lazy" data-src="./img/services-type_4.png" width="240" height="300">
+        {% include "../../includes/svg/icon-pipe-svg.twig" with {"classes": "card__icon card__icon_pipe"} %}
+        <div class="card__content card__content">
+          <h4 class="card__title">Услуги на сетях водоснабжения и водоотведения </h4>
+          <a href="services_type_networks.html" class="btn btn_trans">Подробнее</a>
+        </div>
+      </artcile>
+
+      <artcile class="card card__bg_primary">
+        <img class="card__bg img-as-bg lazy" data-src="./img/services-type_5.png" width="240" height="300">
+        {% include "../../includes/svg/icon-tap-svg.twig" with {"classes": "card__icon card__icon_tap"} %}
+        <div class="card__content card__content">
+          <h4 class="card__title">Сантехнические <br/>  услуги</h4>
+          <a href="services_type_plumbing.html" class="btn btn_trans">Подробнее</a>
+        </div>
+      </artcile>
+
+      <artcile class="card card__bg_primary">
+        <img class="card__bg img-as-bg lazy" data-src="./img/services-type_6.png" width="240" height="300">
+        {% include "../../includes/svg/icon-recycle-truck-svg.twig" with {"classes": "card__icon card__icon_truck"} %}
+        <div class="card__content card__content">
+          <h4 class="card__title">Вывоз стоков</h4>
+          <a href="services_type_waste.html" class="btn btn_trans">Подробнее</a>
+        </div>
+      </artcile>
+
+      <artcile class="card card__bg_primary">
+        <img class="card__bg img-as-bg lazy" data-src="./img/services-type_7.png" width="240" height="300">
+        {% include "../../includes/svg/icon-build-tools-svg.twig" with {"classes": "card__icon card__icon_build-tools"} %}
+        <div class="card__content card__content">
+          <h4 class="card__title">Проектирование и строительство </h4>
+          <a href="services_type_construction.html" class="btn btn_trans">Подробнее</a>
+        </div>
+      </artcile>
+
+      <artcile class="card card__bg_primary">
+        <img class="card__bg img-as-bg lazy" data-src="./img/services-type_8.png" width="240" height="300">
+        {% include "../../includes/svg/icon-dump-truck-svg.twig" with {"classes": "card__icon card__icon_dump-truck"} %}
+        <div class="card__content card__content">
+          <h4 class="card__title">Специальная техника</h4>
+          <a href="services_type_specialEquipment.html" class="btn btn_trans">Подробнее</a>
+        </div>
+      </artcile>
+
+      <artcile class="card card__bg_primary">
+        <img class="card__bg img-as-bg lazy" data-src="./img/services-type_9.png" width="240" height="300">
+        {% include "../../includes/svg/icon-clean-device-svg.twig" with {"classes": "card__icon card__icon_clean-device"} %}
+        <div class="card__content card__content">
+          <h4 class="card__title">Локальные <br> очистные <br> сооружения</h4>
+          <a href="services_type_treatmentFacilities.html" class="btn btn_trans">Подробнее</a>
+        </div>
+      </artcile>
+    </div>
+
+    <a href="text_page.html" class="btn btn_colorPrimary btn_wide btn_font-17 btn_align-to-center">Прочие услуги</a>
+  </section>
+{% endblock %}

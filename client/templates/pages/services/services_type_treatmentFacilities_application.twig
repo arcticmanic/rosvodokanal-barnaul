@@ -1,0 +1,129 @@
+{% extends "../../layouts/services.twig" %}
+
+{% block main %}
+  {% include '../../includes/stdEls/page-content__title_with-underline.twig' with {"title" : "Локальные очистные сооружения "} %}
+
+  <section class="section-services-type-treatmentFacilities-application">
+    <article class="banner-with-form">
+      <div class="banner-left card__bg_primary">
+
+        <div class="banner-left__content card__content">
+          <h4 class="banner-left__title">КАМАЗ <br> автоцистерна</h4>
+
+          <img data-src="./img/banner-left-img.png" alt="" class="lazy banner-left__img" width="244" height="184">
+
+          <ul  class="banner-left__ul ul_rvk-logos"> 
+            <li>Объем цистерны – 10 м3</li>
+            <li>Стоимость аренды 500 руб/час (минимальный заказ 2 часа)</li> 
+          </ul>
+
+          <h6 class="banner-left__footer">Подайте заявку <br> или позвоните нам: <br> 
+            {# Если не нужна ссылка, то убрать <a/> и вставить телефон в h6 #}
+            <a href="tel:282200" class="phone anim-underline-link">28-22-00</a>
+          </h6>
+        </div>
+      </div>
+
+      <div class="banner-right">
+        
+        <form action="" class="banner-form validate">
+          <h4 class="banner-form__title"><strong>Проверка приборов учета</strong></h4>
+          <div class="banner-form__content">
+            <div class="input-with-label">
+              <label>Вид работ *</label>
+              <select id="work-type" class="required">
+                <option></option> 
+                <option value="1">- Установка приборов учёта</option>
+                <option value="2">- Проверка приборов учета</option>
+                <option value="3">- Опломбировка </option>
+              </select>
+            </div>
+
+            <div class="input-with-label">
+              <label>Дата *</label>
+              <input type='text' class="datepicker-here" autocomplete="off"  class="required"/>
+            </div>
+
+            <div class="input-with-label">
+              <label>Фамилия Имя Отчество *</label>
+              <input type="text"  class="required">
+            </div>
+
+            <div class="input-with-label">
+              <label>Ваш телефон *</label>
+              <input type="text" class="input_phone"  class="required">
+            </div>
+
+            <div class="input-with-label">
+              <label>Ваш Email *</label>
+              <input type="text"  class="required">
+            </div>
+            
+            <div class="input-with-label">
+              <label>Район Вашего проживания *</label>
+              <select id="city-district"  class="required">
+                <option></option> 
+                <option value="1">- Железнодорожный район</option>
+                <option value="2">- Индустриальный район</option>
+                <option value="3">- Ленинский район </option>
+                <option value="4">- Октябрьский район </option>
+                <option value="5">- Центральный район </option>
+              </select>
+            </div>
+
+            <p class="banner-form__p"><strong>Ваш адрес</strong></p>
+            
+            <div class="input-with-label__row input-with-label__row_2">
+              <div class="input-with-label">
+                <label>Город *</label>
+                <input type="text"  class="required">
+              </div>
+              <div class="input-with-label">
+                <label>Населенный пункт *</label>
+                <input type="text"  class="required">
+              </div>
+            </div>
+
+            <div class="input-with-label">
+              <label>Улица *</label>
+              <input type="text"  class="required">
+            </div>
+
+            <div class="input-with-label__row input-with-label__row_3">
+              <div class="input-with-label">
+                <label>Дом *</label>
+                <input type="text"  class="required">
+              </div>
+              <div class="input-with-label">
+                <label>Корпус</label>
+                <input type="text">
+              </div>
+              <div class="input-with-label">
+                <label>Квартира *</label>
+                <input type="text"  class="required">
+              </div>
+            </div>
+
+            <div class="input-with-label">
+              <label>Комментарий *</label>
+              <textarea  class="required"></textarea>
+            </div>
+
+            <div class="banner-form__footer">
+              <p class="banner-form__p banner-form__agreement">Отправляя заявку, я соглашаюсь на обработку <a href="#">персональных данных</a>, в соответствии c политикой конфиденциальности, и правилами оказания сервиса <a href="#">Askedo</a>. </p>
+              <button type="submit" class="btn btn_colorPrimary">Разместить заявку</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </article>
+ 
+    <article class="text">
+      <h4 class="underline underline_dashed colorCyan">Обратите внимание</h4>
+
+      <p>Мы предлагаем в аренду строительную, сельскохозяйственную, коммунальную, дорожную автомобильную и тракторную технику. В автопарках наших партнёров большой выбор машин специального назначения, грузового транспорта и навесного оборудования.</p>
+
+      <p>Вы можете заказать аренду именной той техники, которая оптимально подходит для выполнения конкретного вида работ.</p>
+    </article>
+  </section>
+{% endblock %}
