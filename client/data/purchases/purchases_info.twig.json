@@ -17,15 +17,15 @@
         },
         {
           "title": "Положение о закупках",
-          "link": "text_page.html"
+          "link": "services_text_page.html"
         },
         {
           "title": "ЭТП",
-          "link": "text_page.html"
+          "link": "services_text_page.html"
         },
         {
           "title": "Контакты",
-          "link": "contacts_page.html"
+          "link": "pressroom_contacts_page.html"
         }
       ]
     }

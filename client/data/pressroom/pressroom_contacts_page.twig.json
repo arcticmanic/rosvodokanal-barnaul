@@ -22,7 +22,7 @@
         },
         {
           "title": "Контакты для СМИ",
-          "link": "contacts_page.html",
+          "link": "pressroom_contacts_page.html",
           "classes": "current-page"
         }
       ]

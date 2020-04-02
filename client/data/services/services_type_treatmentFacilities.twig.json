@@ -161,7 +161,7 @@
             },
             {
               "title": "Прочие услуги",
-              "link": "text_page.html"
+              "link": "services_text_page.html"
             }
           ]
         },
@@ -315,7 +315,7 @@
             },
             {
               "title": "Прочие услуги",
-              "link": "text_page.html"
+              "link": "services_text_page.html"
             }
           ]
         }

@@ -7,12 +7,12 @@
   "pages": [
     {
       "title": "Абонентам",
-      "link": "text_page.html",
+      "link": "services_text_page.html",
       "withoutArrow": true,
       "pages": [
         {
           "title": "Общая информация",
-          "link": "text_page.html",
+          "link": "services_text_page.html",
           "pages": [
             {
               "title": "Отключения",
@@ -33,7 +33,7 @@
             },
             {
               "title": "Справочная служба",
-              "link": "text_page.html"
+              "link": "services_text_page.html"
             },
             {
               "title": "Режим работы",
@@ -112,7 +112,7 @@
               "pages": [
                 {
                   "title": "Глоссарий",
-                  "link": "text_page.html"
+                  "link": "services_text_page.html"
                 },
                 {
                   "title": "Калькулятор",
@@ -279,7 +279,7 @@
             },
             {
               "title": "Прочие услуги",
-              "link": "text_page.html"
+              "link": "services_text_page.html"
             },
             {
               "title": "Образцы документов",
@@ -288,7 +288,7 @@
             },
             {
               "title": "Тарифы и нормативы",
-              "link": "text_page.html"
+              "link": "services_text_page.html"
             },
             {
               "title": "Нормативные акты",
@@ -296,7 +296,7 @@
             },
             {
               "title": "Изменения и уведомления",
-              "link": "text_page.html"
+              "link": "services_text_page.html"
             },
             {
               "title": "Задать вопрос",
@@ -314,33 +314,33 @@
             },
             {
               "title": "Передать показания приборов",
-              "link": "text_page.html"
+              "link": "services_text_page.html"
             },
             {
               "title": "Оплатить",
-              "link": "text_page.html"
+              "link": "services_text_page.html"
             },
             {
               "title": "Тарифы",
-              "link": "text_page.html"
+              "link": "services_text_page.html"
             },
             {
               "title": "Договор на оказание услуг",
-              "link": "text_page.html",
+              "link": "services_text_page.html",
               "pages": [
                 {
                   "title": "Порядок заключения",
-                  "link": "text_page.html"
+                  "link": "services_text_page.html"
                 }
               ]
             },
             {
               "title": "Электронный документооборот",
-              "link": "text_page.html"
+              "link": "services_text_page.html"
             },
             {
               "title": "Формы документов",
-              "link": "text_page.html"
+              "link": "services_text_page.html"
             },
             {
               "title": "Нормативные акты",
@@ -348,11 +348,11 @@
             },
             {
               "title": "Декларация",
-              "link": "text_page.html"
+              "link": "services_text_page.html"
             },
             {
               "title": "Расчет НДС",
-              "link": "text_page.html"
+              "link": "services_text_page.html"
             },
             {
               "title": "Приборы учета воды",
@@ -386,7 +386,7 @@
               "pages": [
                 {
                   "title": "Глоссарий",
-                  "link": "text_page.html"
+                  "link": "services_text_page.html"
                 },
                 {
                   "title": "Калькулятор",
@@ -555,13 +555,13 @@
             },
             {
               "title": "Прочие услуги",
-              "link": "text_page.html"
+              "link": "services_text_page.html"
             }
           ]
         },
         {
           "title": "Противодействие коррупции",
-          "link": "text_page.html"
+          "link": "services_text_page.html"
         }
       ]
     }
