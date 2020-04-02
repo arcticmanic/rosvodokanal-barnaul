@@ -1,0 +1,36 @@
+{% extends "../../layouts/services.twig" %}
+
+{% block main %}
+  {% include '../../includes/stdEls/page-content__title_with-underline.twig' with {"title" : "О приложении"} %}
+
+  <section class="section-services-special text">
+    <p>Мобильное приложение «РВК.Услуги» поможет клиентам «Росводоканал Барнаул» через смартфон или планшет выбирать профильные виды услуг и направлять заявки на их выполнение. Нужно лишь заполнить форму, выбрав нужную категорию работ.</p>
+
+    <section class="jumbotron-mobile">
+      <img class="jumbotron-mobile__img" data-src="../assets/img/services-special-img.png" alt="Скачать мобильное приложение" />
+
+      <div class="jumbotron-mobile__bottom">
+        <div class="jumbotron-mobile__item">
+          <img class="jumbotron-mobile__QR" data-src="../assets/img/QR-ios.png"  alt="IOS QR-код"/>
+
+          <a href="https://apps.apple.com/ru/app/%D1%80%D0%B2%D0%BA-%D1%83%D1%81%D0%BB%D1%83%D0%B3%D0%B8/id1419476207" class="btn btn_colorPrimary btn_boxy btn_prepend-icon" rel="nofollow noopener" target="_blank">
+            {% include "../../includes/svg/icon-ios-svg.twig" with {"classes": "btn__prepend-icon"} %}
+            <div class="btn__text">Скачать</div>
+          </a>
+        </div>
+
+        <div class="jumbotron-mobile__item">
+          <img class="jumbotron-mobile__QR" data-src="../assets/img/QR-android.png"  alt="Android QR-код"/>
+
+          <a href="#" class="btn btn_colorPrimary btn_boxy btn_prepend-icon" rel="nofollow noopener" target="_blank">
+            {% include "../../includes/svg/icon-android-svg.twig" with {"classes": "btn__prepend-icon"} %}
+            <div class="btn__text">Скачать</div>
+          </a>
+        </div>
+      </div>
+
+    </section>
+
+    <p>Специалисты свяжутся с вами для уточнения деталей и удобного для вас времени. Статус заявки можно отслеживать, а качество оказанных услуг — оценить.</p>
+  </section>
+{% endblock %}
