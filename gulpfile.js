@@ -31,13 +31,14 @@ sass.compiler = require('node-sass')
 const paths = {
   build: path.join(__dirname, 'build'),
   srcData: path.join(__dirname, 'client', 'data'),
-  srcOnTopJS: path.join(__dirname, 'js', 'onTop'),
-  srcCommonJS: path.join(__dirname, 'js', 'common'),
+  srcTwig: path.join(__dirname, 'client', 'templates', 'pages'),
   srcPluginsJS: path.join(__dirname, 'js', 'plugins'),
-  srcPolyfillsJS: path.join(__dirname, 'js', 'polyfills'),
+  srcPolyfillsJS: path.join(__dirname, 'js', 'plugins', 'polyfills'),
+  srcCommonJS: path.join(__dirname, 'js', 'common'),
+  srcCoreJS: path.join(__dirname, 'js', 'common', 'core'),
+  srcOnTopJS: path.join(__dirname, 'js', 'common', 'core', 'onTop'),
   srcLess: path.join(__dirname, 'less'),
   srcSass: path.join(__dirname, 'scss'),
-  srcTwig: path.join(__dirname, 'client', 'templates', 'pages'),
   distAssets: path.join(__dirname, 'build', 'assets'),
   distJS: path.join(__dirname, 'build', 'assets', 'js'),
   distCSS: path.join(__dirname, 'build', 'assets', 'css')
@@ -164,13 +165,13 @@ function concatCommonJS() {
   const JSCommonOrder = [
     path.join(paths.srcOnTopJS, 'variables.js'),
     path.join(paths.srcOnTopJS, 'functions.js'),
-    path.join(paths.srcCommonJS, 'core','*.js')
+    path.join(paths.srcCoreJS, '*.js')
   ]
 
   return gulp
     .src(JSCommonOrder)
     .pipe(sourcemaps.init())
-    .pipe(concat('common.js'))
+    .pipe(concat('core.js'))
     .pipe(
       babel({
         presets: [['@babel/env', { useBuiltIns: 'entry' }]]
