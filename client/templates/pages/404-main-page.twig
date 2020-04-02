@@ -1,10 +1,7 @@
 {% extends "../layouts/default.twig" %}
 
 {% block content %}
-<section class="section-std_S section-404_main-page">
-  <div class="wrapper">
-    <h1>Ошибка 404 - страница не найдена</h1>
-    {% include '../includes/svg/logo-main-svg_textless.twig' with {"classes": "404-logo"} %}
-  </div>
+<section class="wrapper section-404_main-page">
+  {% include '../includes/404-block.twig' %}
 </section>
 {% endblock %}

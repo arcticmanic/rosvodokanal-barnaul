@@ -220,7 +220,7 @@ function javascript(cb) {
 function twigF() {
   return (
     gulp
-      .src(path.join(paths.srcTwig, '*.twig'))
+      .src(path.join(paths.srcTwig, '**', '*.twig'))
       .pipe(
         plumber({
           handleError: function(err) {
