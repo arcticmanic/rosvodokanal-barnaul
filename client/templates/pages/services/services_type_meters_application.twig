@@ -29,7 +29,7 @@
 
       <div class="banner-right">
         
-        <form action="" class="banner-form validate">
+        <form action="" class="form form_flex-vertical banner-form validate">
           <h4 class="banner-form__title"><strong>Проверка приборов учета</strong></h4>
           <div class="banner-form__content">
             <div class="input-with-label">
@@ -114,7 +114,7 @@
 
             <div class="banner-form__footer">
               <p class="banner-form__p banner-form__agreement">Отправляя заявку, я соглашаюсь на обработку <a href="#">персональных данных</a>, в соответствии c политикой конфиденциальности, и правилами оказания сервиса <a href="#">Askedo</a>. </p>
-              <button type="submit" class="btn btn_colorPrimary">Разместить заявку</button>
+              <a href="#modal_autorization" rel="modal:open" class="btn btn_colorPrimary">Разместить заявку</a>
             </div>
           </div>
         </form>
@@ -131,4 +131,6 @@
       </ol>
     </article>
   </section>
+
+  {% include '../../includes/modals/modal_autorization.twig' %}
 {% endblock %}

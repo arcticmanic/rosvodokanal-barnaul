@@ -1,12 +1,16 @@
 <div id="modal_autorization" class="modal modal_autorization">
-  <form action="" class="form_autorization {{ classes }}">
+  <form action="" class="form form_autorization {{ classes }}">
     <div class="input-with-label">
-      <label>Подписка на новости</label>
-      <div class="input-cont">
-        <input type="text" placeholder="Вам e-mail" class="required">
-        {% include '../svg/icon-mail-svg.twig' with {"classes": "input__icon"} %}
-      </div>
+      <label>E-mail *</label>
+      <input class="required grey"></input>
     </div>
-    <button type="submit" class="btn btn_colorPrimary2">Подписаться</button>
+    <div class="input-with-label">
+      <label>Пароль *</label>
+      <input class="required grey"></input>
+    </div>
+    <div class="form-footer form-footer_vertical">
+      <a href="#" class="forget-password colorPrimary">Забыли пароль?</a>
+      <button type="submit" class="btn btn_wide btn_low-L btn_colorPrimary mx-auto">Войти</button>
+    </div>
   </form>
 </div>

@@ -1,6 +1,10 @@
 .form {
-  display: flex;
-  flex-direction: column;
+  &_flex {
+    &-vertical {
+      display: flex;
+      flex-direction: column;
+    }
+  }
   &_subscribe-to-news {
     label {
       font-size: @font-18;
@@ -11,16 +15,62 @@
       margin-top: 15px;
     }
   }
+  &_autorization {
+    .input-with-label {
+      margin-bottom: 15px;
+    }
+    .form-footer {
+      margin-top: 10px;
+    }
+  }
   &-footer {
     margin-top: 35px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+    &_vertical {
+      flex-direction: column;
+    }
     .checkboxContainer,
     .submit-element {
       margin-top: 5px;
       margin-bottom: 5px;
+    }
+  }
+
+  &-title {
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+
+  &-info {
+    color: #9fa6aa;
+    font-size: @font-13;
+    font-weight: 400;
+    line-height: @font-15;
+    font-style: italic;
+  }
+
+  &-titles-block {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    .form-title {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.forget-password {
+  margin-right: auto;
+  text-decoration: underline;
+  transition: @transFast;
+  margin-bottom: 15px;
+  @media (min-width: @hoverW) {
+    &:hover {
+      color: @red;
+      text-decoration: none;
     }
   }
 }

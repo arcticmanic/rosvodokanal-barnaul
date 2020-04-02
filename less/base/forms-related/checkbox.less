@@ -1,0 +1,159 @@
+.checkboxContainer {
+  display: flex;
+  align-items: center;
+  user-select: none;
+  max-height: 50px;
+
+  input[type='checkbox'] {
+    display: none;
+    pointer-events: none;
+
+    & + label {
+      cursor: pointer;
+      font-size: 1em;
+      display: grid;
+      grid-template-columns: auto 3fr;
+
+      svg {
+        width: 2em;
+        height: 2em;
+        stroke: #dce4e8;
+        stroke-width: 5;
+        fill: transparent;
+
+        .box {
+          stroke-dasharray: 320;
+          stroke-dashoffset: 0;
+          fill: #f1f3f4;
+          transition: stroke-dashoffset 0.3s linear;
+        }
+        .check {
+          stroke-dasharray: 70;
+          stroke-dashoffset: 70;
+          fill: none;
+          transition: stroke-dashoffset 0.3s linear;
+        }
+      }
+
+      span {
+        padding-top: 0.3em;
+        margin-left: 0.3em;
+      }
+    }
+
+    &:checked + label {
+      svg {
+        * {
+          stroke: @colorPrimary;
+        }
+      }
+      .box {
+        stroke-dashoffset: 320;
+      }
+      .check {
+        stroke-dashoffset: 0;
+      }
+    }
+    &.error {
+      & + label {
+        svg {
+          * {
+            stroke: @red;
+          }
+        }
+      }
+    }
+  }
+
+  .checkboxText {
+    font-size: @font-13;
+    font-weight: 400;
+    line-height: @font-16;
+    margin-left: 10px;
+  }
+  .checkboxText {
+    a {
+      text-decoration: underline;
+      color: @colorPrimary3;
+      cursor: pointer;
+      transition: @transFast;
+      @media (min-width: @tabletW) {
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: @mobileSSW) {
+  .checkboxContainer {
+    .checkboxText {
+      font-size: @font-12;
+      line-height: @font-15;
+      margin-left: 5px;
+    }
+  }
+}
+
+html.color-white {
+  .checkboxContainer {
+    input[type='checkbox'] {
+      & + label {
+        svg {
+          stroke: @blackEye;
+
+          .box {
+            fill: @whiteEye;
+          }
+        }
+      }
+
+      &:checked + label {
+        svg {
+          * {
+            stroke: @blackEye;
+          }
+        }
+      }
+    }
+
+    .checkboxText {
+      color: @blackEye;
+      a {
+        color: @blackEye;
+      }
+    }
+  }
+}
+
+html.color-black {
+  .checkboxContainer {
+    input[type='checkbox'] {
+      & + label {
+        svg {
+          stroke: @whiteEye;
+
+          .box {
+            fill: @blackEye;
+          }
+        }
+      }
+
+      &:checked + label {
+        svg {
+          * {
+            stroke: @whiteEye;
+          }
+        }
+      }
+    }
+
+    .checkboxText {
+      color: @whiteEye;
+      a {
+        color: @whiteEye;
+      }
+    }
+  }
+}
