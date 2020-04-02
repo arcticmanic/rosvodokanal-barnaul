@@ -1,0 +1,58 @@
+{
+  "title": "Вакансии",
+  "bage": {
+    "title": "Вакансии",
+    "subtitle": "Карьера"
+  },
+  "pages": [
+    {
+      "title": "Карьера",
+      "link": "career_jobs_categories.html",
+      "withoutArrow": true,
+      "pages": [
+        {
+          "title": "Вакансии",
+          "link": "career_jobs_categories.html",
+          "extra_sketches": ["career_jobs_list", "career_jobs_list_form"],
+          "classes": "current-page"
+        },
+        {
+          "title": "Корпоративное обучение",
+          "link": "career_study.html",
+          "pages": [
+            {
+              "title": "Молодым специалистам",
+              "link": "career_study_youth.html",
+              "pages": [
+                {
+                  "title": "<strong>«Золотая сотня»</strong>",
+                  "link": "career_study_youth_gold.html"
+                },
+                {
+                  "title": "КНПК",
+                  "link": "career_study_youth_knpk.html"
+                }
+              ]
+            },
+            {
+              "title": "Руководителям",
+              "link": "career_study_heads.html"
+            },
+            {
+              "title": "Экспертам",
+              "link": "career_study_experts.html"
+            }
+          ]
+        },
+        {
+          "title": "Оценка компетенций",
+          "link": "career_competence.html"
+        },
+        {
+          "title": "Контакты",
+          "link": "career_contacts.html"
+        }
+      ]
+    }
+  ]
+}

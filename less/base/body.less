@@ -1,12 +1,26 @@
 body {
   display: flex;
   flex-direction: column;
-
+  transition: @transFast;
   .styled-scrollbar();
+  cursor: url(../img/cursors/Arrow.cur), auto;
 
   .footer {
     margin-top: auto;
   }
+}
+
+a {
+  &:hover {
+    cursor: url(../img/cursors/Hand.cur), pointer;
+  }
+}
+
+input:hover,
+input:focus,
+textarea:hover,
+textarea:focus {
+  cursor: url(../img/cursors/IBeam.cur), pointer;
 }
 
 ::selection {
@@ -29,6 +43,7 @@ html.color-white {
   }
   body {
     .styled-scrollbar_for-light-theme();
+    cursor: url(../img/cursors/cursor-auto_dark-theme.png), auto;
   }
 }
 
@@ -42,5 +57,6 @@ html.color-black {
   }
   body {
     .styled-scrollbar_for-dark-theme();
+    cursor: url(../img/cursors/cursor-auto_light-theme.png), auto;
   }
 }
