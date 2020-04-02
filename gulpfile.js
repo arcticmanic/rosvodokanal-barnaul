@@ -221,7 +221,6 @@ function twigF() {
   return (
     gulp
       .src(path.join(paths.srcTwig, '*.twig'))
-      // Stay live and reload on error
       .pipe(
         plumber({
           handleError: function(err) {
@@ -230,7 +229,6 @@ function twigF() {
           }
         })
       )
-      // Load template pages json data
       .pipe(
         data(function(file) {
           return JSON.parse(
