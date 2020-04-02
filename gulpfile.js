@@ -164,7 +164,7 @@ function concatCommonJS() {
   const JSCommonOrder = [
     path.join(paths.srcOnTopJS, 'variables.js'),
     path.join(paths.srcOnTopJS, 'functions.js'),
-    path.join(paths.srcCommonJS, '*.js')
+    path.join(paths.srcCommonJS, 'core','*.js')
   ]
 
   return gulp
@@ -219,7 +219,7 @@ function javascript(cb) {
 
 function twigiFy() {
   return gulp
-    .src(path.join(paths.srcTwig, '**', '*.twig'))
+    .src(path.join(paths.srcTwig, '*', '*.twig'))
     .pipe(
       plumber({
         handleError: function(err) {

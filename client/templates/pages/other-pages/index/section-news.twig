@@ -15,7 +15,7 @@
               {{ newsItem.date }}
             </p>
 
-            {% include '../includes/svg/icon-arrow-svg.twig' with {'classes': 'news__icon'} %}
+            {% include '../../../includes/svg/icon-arrow-svg.twig' with {'classes': 'news__icon'} %}
             
           </div>
 
@@ -27,6 +27,6 @@
     {% endfor %}
   </div>
 
-  {% include '../includes/stdEls/btn_with-arrow.twig' with {'text' : 'Все новости', 'classes' : 'btn_colorPrimary'} %}
+  {% include '../../../includes/stdEls/btn_with-arrow.twig' with {'text' : 'Все новости', 'classes' : 'btn_colorPrimary'} %}
   
 </section>
