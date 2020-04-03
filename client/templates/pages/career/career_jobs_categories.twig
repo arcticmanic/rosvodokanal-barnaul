@@ -4,40 +4,26 @@
   <section class="section-career-jobs-categories">
     {% include '../../includes/stdEls/page-content__title_with-underline.twig' with {"title" : "11 открытых вакансий"} %}
 
-    <article class="text">
-      <p>Оценка компетенций персонала отражает стратегию и корпоративную культуру в требованиях, предъявляемых к сотрудникам.</p>
+    <article class="std-grid__content news-grid__cont jobs-grid__cont">
+      <div class="std-grid news-grid jobs-grid">
+        {% for idx, job in jobs %}
+          <a href="career_jobs_list.html" class="std-grid__item news-item jobs-item">
+            <div class="news-item__img-cont jobs-item__img-cont">
+              <img data-src="../assets/img/jobs-categories-img-{{idx + 1}}.png" alt="" class="lazy news-item__img jobs-item__img">
+            </div>
 
-
-      <h4 class="colorCyan">Система оценки персонала включает:</h4> 
-
-      <ul>
-        <li>нормативные документы, которые описывают задачи и процедуры оценки, обработку и использование её результатов,</li>
-        <li>квалифицированных специалистов, осуществляющих оценку, интерпретацию и применение результатов,</li>
-        <li>набор методов оценки персонала,</li>
-        <li>ряд оценочных мероприятий, результаты которых используются для отбора сотрудников, продвижения и вознаграждения.</li>
-      </ul>
-
-      <p>Основная задача оценки персонала - получение данных о характеристиках и эффективности сотрудников. Это дает возможность руководителям и специалистам дирекции по персоналу принимать решения о развитии и формировании кадрового резерва, перемещении работников или приеме новых. </p>
-
-      <h4 class="colorCyan">К задачам оценки персонала в водоканале также относятся:</h4> 
-
-      <ul>
-        <li>получение информации для принятия управленческих решений,</li>
-        <li>стимулирование сотрудников и их вознаграждение,</li>
-        <li>разработка программ обучения и развития,</li>
-        <li>разработка индивидуальных планов развития,</li>
-        <li>снижение или обоснование затрат.</li>
-      </ul>
-
-      <p>Исходя из задач, решаемых сотрудниками «Росводоканал Барнаул», применяются следующие критерии оценки персонала:</p>
-
-      <ul>
-        <li>направленность на достижение стратегии и целей компании,</li>
-        <li>соответствие корпоративной культуре,</li>
-        <li>прозрачность процедур и понятность результатов оценки для руководителей и сотрудников.</li>
-      </ul>
-
-      <p>Все мероприятия по оценке персонала - это возможность определить имеющийся потенциал сотрудников и наметить дальнейшие карьерные маршруты в рамках предприятия или в группе компаний «Росводоканал».</p>
+            <div class="news-item__bage jobs-item__bage">
+              <p class="std-grid__title news-item__title jobs-item__title">{{job.title}}</p>
+              <div class="news-item__info jobs-item__info">
+                <div class="news-item__row jobs-item__row">
+                  <p class="news-item__src jobs-item__amount">{{job.amount}}</p>
+                  {% include '../../includes/svg/icon-arrow-svg.twig' with {'classes': 'std-grid__arrow news-item__arrow jobs-item__arrow'} %}
+                </div>
+              </div>
+            </div>
+          </a>
+        {% endfor %}
+      </div>
     </article>
   </section>
 {% endblock %}
