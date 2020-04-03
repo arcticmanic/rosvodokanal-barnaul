@@ -5,6 +5,9 @@
       flex-direction: column;
     }
   }
+  &_bc-grey {
+    background: #f1f3f4;
+  }
   &_subscribe-to-news {
     label {
       font-size: @font-18;
@@ -110,6 +113,22 @@
         margin-left: auto;
         margin-right: auto;
       }
+    }
+  }
+}
+
+html.color-white {
+  .form {
+    &_bc-grey {
+      background: @whiteEye;
+    }
+  }
+}
+
+html.color-black {
+  .form {
+    &_bc-grey {
+      background: @blackEye;
     }
   }
 }

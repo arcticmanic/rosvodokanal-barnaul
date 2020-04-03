@@ -4,20 +4,20 @@
   <section class="section-career-jobs-categories">
     {% include '../../includes/stdEls/page-content__title_with-underline.twig' with {"title" : "11 открытых вакансий"} %}
 
-    <article class="std-grid__content news-grid__cont jobs-grid__cont">
-      <div class="std-grid news-grid jobs-grid">
+    <article class="std-grid__content jobs-grid__cont">
+      <div class="std-grid jobs-grid">
         {% for idx, job in jobs %}
-          <a href="career_jobs_list.html" class="std-grid__item news-item jobs-item">
-            <div class="news-item__img-cont jobs-item__img-cont">
-              <img data-src="../assets/img/jobs-categories-img-{{idx + 1}}.png" alt="" class="lazy news-item__img jobs-item__img">
+          <a href="career_jobs_list.html" class="std-grid__item jobs-item">
+            <div class="std-grid__img-cont jobs-item__img-cont">
+              <img data-src="../assets/img/jobs-categories-img-{{idx + 1}}.png" alt="" class="lazy std-grid__img jobs-item__img">
             </div>
 
-            <div class="news-item__bage jobs-item__bage">
-              <p class="std-grid__title news-item__title jobs-item__title">{{job.title}}</p>
-              <div class="news-item__info jobs-item__info">
-                <div class="news-item__row jobs-item__row">
-                  <p class="news-item__src jobs-item__amount">{{job.amount}}</p>
-                  {% include '../../includes/svg/icon-arrow-svg.twig' with {'classes': 'std-grid__arrow news-item__arrow jobs-item__arrow'} %}
+            <div class="std-grid__bage jobs-item__bage">
+              <p class="std-grid__title jobs-item__title">{{job.title}}</p>
+              <div class="jobs-item__info">
+                <div class="std-grid__row jobs-item__row">
+                  <p class="jobs-item__amount">{{job.amount}}</p>
+                  {% include '../../includes/svg/icon-arrow-svg.twig' with {'classes': 'std-grid__arrow jobs-item__arrow'} %}
                 </div>
               </div>
             </div>
@@ -25,5 +25,35 @@
         {% endfor %}
       </div>
     </article>
+
+    <hr class="dashed">
+
+    <div class="jobs-categories-form__cont">
+      {% include "../../includes/stdBlocks/jumbo-img.twig" with {"imgSrc": "../assets/img/jobs-categories-form-img.png", "title": "Оставьте резюме", "subtitle": "Работа у нас", "classes": "jumbo-img__cont_on-top"} %}
+      <form action="" class="form form_bc-grey form_jobs-categories">
+        <div class="input-with-label__row input-with-label__row_2">
+          <div class="input-with-label">
+            <label>Ваше имя *</label>
+            <input type="text"  class="required">
+          </div>
+          <div class="input-with-label">
+            <label>Контактные данные *</label>
+            <input type="text"  class="required">
+          </div>
+        </div>
+
+        <div class="input-with-label">
+          <label>Дополнительная информация</label>
+          <textarea></textarea>
+        </div>
+
+        <div class="input-with-label">
+          <label class="strong">Файл резюме</label>
+          {% include '../../includes/stdEls/input_file.twig' with {"btnText": "Обзор"} %}
+        </div>
+      </form>
+    </div>
+
+    
   </section>
 {% endblock %}

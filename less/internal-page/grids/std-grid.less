@@ -2,14 +2,11 @@
   .row-flex();
   flex-wrap: wrap;
   justify-content: space-between;
-  &__content {
-    // margin-left: -15px;
-    // margin-right: -15px;
-  }
 
   &__item {
     margin-left: 15px;
     margin-right: 15px;
+    transition: @transFast;
 
     &:not(.std-grid__item_full-size) {
       .size(6);
@@ -29,91 +26,154 @@
       }
     }
   }
-}
 
-@media (max-width: @wrapperMaxWidth) {
-  .std-grid {
-    display: grid;
-    grid-template-areas:
-      'full full full full st2 st2'
-      'full full full full st3 st3'
-      'st4 st4 st4 st5 st5 st5'
-      'st6 st6 st6 st7 st7 st7';
-    gap: 30px;
-    margin-left: 0;
-    margin-right: 0;
-    &__content {
-      margin-left: 0;
-      margin-right: 0;
+  &__row {
+    display: flex;
+    align-items: center;
+  }
+
+  & &__arrow {
+    transition: @transFast;
+    margin-left: 10px;
+    * {
+      stroke: @colorPrimary;
     }
+  }
 
-    &__item {
-      &_full-size {
+  &:not(.hasFullSizeItem) {
+    .std-grid {
+      &__bage {
+        margin-top: 10px;
+      }
+      &__img {
+        border-radius: 6px;
         width: 100%;
-        grid-area: full;
-        margin: 0;
-        height: 100%;
-      }
-      &:not(.std-grid__item_full-size) {
-        width: 100%;
-        height: 100%;
-        margin: 0;
-      }
-      &:nth-child(2) {
-        grid-area: st2;
-      }
-      &:nth-child(3) {
-        grid-area: st3;
-      }
-      &:nth-child(4) {
-        grid-area: st4;
-      }
-      &:nth-child(5) {
-        grid-area: st5;
-      }
-      &:nth-child(6) {
-        grid-area: st6;
-      }
-      &:nth-child(7) {
-        grid-area: st7;
+        &-cont {
+          width: 100%;
+        }
       }
     }
   }
 }
 
-@media (max-width: @mobileLandscapeWBig) {
-  .news {
-    &-grid {
+@media (max-width: @wrapperMaxWidth) {
+  .std-grid {
+    &.hasFullSizeItem {
+      display: grid;
       grid-template-areas:
-        'full full full full full full'
-        'full full full full full full'
-        'st2 st2 st2 st3 st3 st3'
+        'full full full full st2 st2'
+        'full full full full st3 st3'
         'st4 st4 st4 st5 st5 st5'
         'st6 st6 st6 st7 st7 st7';
+      gap: 30px;
+      margin-left: 0;
+      margin-right: 0;
+      .std-grid {
+        &__content {
+          margin-left: 0;
+          margin-right: 0;
+        }
+
+        &__item {
+          &_full-size {
+            width: 100%;
+            grid-area: full;
+            margin: 0;
+            height: 100%;
+          }
+          &:not(.std-grid__item_full-size) {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+          }
+          &:nth-child(2) {
+            grid-area: st2;
+          }
+          &:nth-child(3) {
+            grid-area: st3;
+          }
+          &:nth-child(4) {
+            grid-area: st4;
+          }
+          &:nth-child(5) {
+            grid-area: st5;
+          }
+          &:nth-child(6) {
+            grid-area: st6;
+          }
+          &:nth-child(7) {
+            grid-area: st7;
+          }
+        }
+      }
+    }
+    &:not(.hasFullSizeItem) {
+      .std-grid {
+        &__item {
+          &:not(.std-grid__item_full-size) {
+            .size(4);
+            margin-bottom: 32px;
+          }
+        }
+      }
     }
   }
 }
 
 @media (max-width: @mobileLandscapeW) {
   .std-grid {
-    display: flex;
-    flex-direction: column;
+    &.hasFullSizeItem {
+      display: flex;
+      flex-direction: column;
 
-    &__content {
-      margin-bottom: 20px;
-    }
-
-    &__item {
-      grid-template-areas: none !important;
-      &:not(.std-grid__item_full-size) {
-        &:not(:last-child) {
-          margin-bottom: 25px;
+      .std-grid {
+        &__content {
+          margin-bottom: 20px;
         }
-        height: 250px;
+
+        &__item {
+          grid-template-areas: none !important;
+          &:not(.std-grid__item_full-size) {
+            &:not(:last-child) {
+              margin-bottom: 25px;
+            }
+            height: 250px;
+          }
+          &_full-size {
+            height: 280px;
+            margin-bottom: 25px;
+          }
+        }
       }
-      &_full-size {
-        height: 280px;
-        margin-bottom: 25px;
+    }
+    &:not(.hasFullSizeItem) {
+      .std-grid {
+        &__item {
+          &:not(.std-grid__item_full-size) {
+            .size(6);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: @mobileW) {
+  .std-grid {
+    &:not(.hasFullSizeItem) {
+      margin-left: 0;
+      margin-right: 0;
+      .std-grid {
+        &__item {
+          &:not(.std-grid__item_full-size) {
+            width: 100%;
+            margin-left: 0;
+            margin-right: 0;
+          }
+        }
+        &__img {
+          width: 100%;
+        }
       }
     }
   }
@@ -121,13 +181,17 @@
 
 @media (max-width: @mobileSSW) {
   .std-grid {
-    &__item {
-      &:not(.std-grid__item_full-size) {
-        height: 95vw;
-        margin-bottom: 30px;
-      }
-      &_full-size {
-        height: 95vw;
+    &.hasFullSizeItem {
+      .std-grid {
+        &__item {
+          &:not(.std-grid__item_full-size) {
+            height: 95vw;
+            margin-bottom: 30px;
+          }
+          &_full-size {
+            height: 95vw;
+          }
+        }
       }
     }
   }
@@ -136,8 +200,6 @@
 html.scale {
   .std-grid {
     &__item {
-      &_full-size {
-      }
       &:not(.std-grid__item_full-size) {
         @media (min-width: @mobileSSW) {
           margin-bottom: 40px;
@@ -150,12 +212,28 @@ html.scale {
 html.color-white,
 html.color-black {
   .std-grid {
-    &___item {
+    &__item {
+      border-radius: 7px;
+
       &:not(.std-grid__item_full-size) {
         display: flex;
         flex-direction: column;
       }
-      &_full-size {
+    }
+
+    &:not(.hasFullSizeItem) {
+      .std-grid {
+        &__bage {
+          padding: 10px;
+          margin-top: 0;
+        }
+      }
+    }
+
+    &__img {
+      &-cont {
+        border-top-left-radius: 7px;
+        border-top-right-radius: 7px;
       }
     }
   }
@@ -166,6 +244,11 @@ html.color-white {
     &__item {
       .border-card-like_black();
     }
+    &__arrow {
+      * {
+        stroke: @blackEye;
+      }
+    }
   }
 }
 
@@ -173,6 +256,11 @@ html.color-black {
   .std-grid {
     &__item {
       .border-card-like_white();
+    }
+    &__arrow {
+      * {
+        stroke: @whiteEye;
+      }
     }
   }
 }

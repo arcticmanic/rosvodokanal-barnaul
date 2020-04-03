@@ -7,7 +7,7 @@
 {% block main %}
   <section class="section-pressroom-media">
       <div class="std-grid__content news-grid__cont">
-        <div class="std-grid news-grid">
+        <div class="std-grid news-grid hasFullSizeItem">
           {% for idx, newsItem in newsItems %}
             {% if newsItem.fullSize is defined %}
               <a href="pressroom_news_list_detail.html" class="std-grid__item std-grid__item_full-size news-item news-item_full-size">

@@ -28,28 +28,27 @@
   }
 
   &-with-file {
-    .input_file {
-      &__btn {
-        &_add {
-          display: none;
-        }
-        &_delete {
-          display: block;
-          pointer-events: initial;
-        }
+    .input_file-with-file__btn {
+      &_add {
+        display: none;
       }
-      &__on-top {
-        z-index: 2;
+      &_delete {
+        display: table;
+        pointer-events: initial;
       }
     }
+    &__on-top {
+      z-index: 2;
+    }
+
     input[type='file'] {
       z-index: 1;
     }
   }
 
-  &__btn {
+  & &__btn {
     &_add {
-      display: block;
+      display: table;
     }
     &_delete {
       display: none;

@@ -1,13 +1,12 @@
+.jobs-grid__cont {
+  margin-top: 40px;
+}
 .std-grid.jobs-grid {
   .jobs-item {
     &:not(.jobs-item_full-size) {
       .news-item__img-cont {
         height: 170px;
       }
-    }
-
-    &__img {
-      opacity: 1;
     }
 
     &__title {
@@ -23,6 +22,50 @@
       font-size: @font-15;
       font-weight: 600;
       line-height: @font-20;
+    }
+  }
+}
+
+@media (max-width: @tabletW) {
+  .std-grid.jobs-grid {
+    .jobs-item {
+      &__title {
+        font-size: @font-14;
+        line-height: @font-18;
+      }
+
+      &__amount {
+        font-size: @font-13;
+        line-height: @font-16;
+      }
+    }
+  }
+}
+
+html.color-white {
+  .std-grid.jobs-grid {
+    .jobs-item {
+      &__title {
+        color: @blackEye;
+      }
+
+      &__amount {
+        color: @blackEye;
+      }
+    }
+  }
+}
+
+html.color-black {
+  .std-grid.jobs-grid {
+    .jobs-item {
+      &__title {
+        color: @whiteEye;
+      }
+
+      &__amount {
+        color: @whiteEye;
+      }
     }
   }
 }
