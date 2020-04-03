@@ -1,11 +1,23 @@
 .std-grid.jobs-grid {
   .jobs-item {
+    &:not(.jobs-item_full-size) {
+      .news-item__img-cont {
+        height: 170px;
+      }
+    }
+
+    &__img {
+      opacity: 1;
+    }
+
     &__title {
       color: @colorPrimary;
       font-size: @font-17;
       font-weight: 700;
       line-height: @font-20;
+      margin-bottom: 5px;
     }
+
     &__amount {
       color: @colorPrimary3;
       font-size: @font-15;
