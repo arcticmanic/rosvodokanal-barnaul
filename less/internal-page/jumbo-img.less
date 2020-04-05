@@ -7,9 +7,14 @@
     margin-bottom: 48px;
 
     &_on-top {
-      margin-bottom: 0;
+      margin-bottom: 0 !important;
       .jumbo-img {
-        border-radius: 0;
+        border-bottom-left-radius: 0 !important;
+        border-bottom-right-radius: 0 !important;
+        &__marker {
+          border-bottom-left-radius: 0 !important;
+          border-bottom-right-radius: 0 !important;
+        }
       }
     }
   }

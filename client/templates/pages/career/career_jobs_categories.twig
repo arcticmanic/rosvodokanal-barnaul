@@ -34,22 +34,30 @@
         <div class="input-with-label__row input-with-label__row_2">
           <div class="input-with-label">
             <label>Ваше имя *</label>
-            <input type="text"  class="required">
+            <input type="text"  class="required input_dashed">
           </div>
           <div class="input-with-label">
             <label>Контактные данные *</label>
-            <input type="text"  class="required">
+            <input type="text"  class="required input_dashed">
           </div>
         </div>
 
         <div class="input-with-label">
           <label>Дополнительная информация</label>
-          <textarea></textarea>
+          <textarea class="textarea_dashed"></textarea>
         </div>
 
         <div class="input-with-label">
           <label class="strong">Файл резюме</label>
-          {% include '../../includes/stdEls/input_file.twig' with {"btnText": "Обзор"} %}
+          {% include '../../includes/stdEls/input_file.twig' with {"btnText": "Обзор", "inputFileClasses": "input_file_dashed"} %}
+        </div>
+        <span class="form-info italic">Прикрепить резюме (допустимые расширения файлов .doc .pdf .jpg .jpeg .rar .zip, до 2 Мб)</span>
+
+        <div class="form-footer">
+          {% include '../../includes/stdEls/checkbox.twig' with {"id": "check1", "text": "Я принимаю <a href='#'>Политику конфиденциальности</a>", "isRequired": true, "checkboxContainerClasses": "checkboxContainer_dashed checkboxContainer_bg-white"} %}
+
+
+          <button type="submit" class="btn btn_colorPrimary submit-element">Отправить</button>
         </div>
       </form>
     </div>

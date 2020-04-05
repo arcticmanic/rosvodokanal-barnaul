@@ -4,6 +4,25 @@
   user-select: none;
   max-height: 50px;
 
+  &.checkboxContainer_bg-white {
+    input[type='checkbox'] {
+      display: none;
+      pointer-events: none;
+
+      & + label {
+
+        svg {
+
+          .box {
+            fill: #fff;
+          }
+        }
+
+      }
+
+    }
+  }
+
   input[type='checkbox'] {
     display: none;
     pointer-events: none;
@@ -67,14 +86,15 @@
 
   .checkboxText {
     font-size: @font-13;
-    font-weight: 600;
+    font-weight: 400;
     line-height: @font-16;
     margin-left: 10px;
+    color: @colorPrimary3;
   }
   .checkboxText {
     a {
       text-decoration: underline;
-      color: @colorPrimary3;
+      color: @colorPrimary;
       cursor: url(../img/cursors/Hand.cur), pointer;
       transition: @transFast;
       @media (min-width: @tabletW) {

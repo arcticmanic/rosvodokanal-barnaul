@@ -27,22 +27,21 @@
     transition: @transFast;
   }
 
-  &-with-file {
-    .input_file-with-file__btn {
-      &_add {
-        display: none;
-      }
-      &_delete {
-        display: table;
-        pointer-events: initial;
-      }
+  &.input_file-with-file {
+    .input_file__btn_add {
+      display: none;
     }
-    &__on-top {
+    .input_file__btn_delete {
+      display: table;
+      pointer-events: initial;
+    }
+    .input_file__btn__on-top {
       z-index: 2;
     }
 
     input[type='file'] {
-      z-index: 1;
+      z-index: -1;
+      
     }
   }
 

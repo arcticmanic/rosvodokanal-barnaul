@@ -50,7 +50,7 @@
   &-info {
     color: #9fa6aa;
     font-size: @font-13;
-    font-weight: 600;
+    font-weight: 400;
     line-height: @font-15;
     font-style: italic;
   }
@@ -117,9 +117,20 @@
   }
 }
 
+html.color-white,
+html.color-black {
+  .form {
+    &_bc-grey {
+      border-bottom: 2px solid @whiteEye;
+      border-left: 2px solid @whiteEye;
+      border-right: 2px solid @whiteEye;
+    }
+  }
+}
 html.color-white {
   .form {
     &_bc-grey {
+      border-color: @blackEye;
       background: @whiteEye;
     }
   }
@@ -128,6 +139,7 @@ html.color-white {
 html.color-black {
   .form {
     &_bc-grey {
+      border-color: @whiteEye;
       background: @blackEye;
     }
   }
