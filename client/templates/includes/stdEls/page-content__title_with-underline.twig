@@ -1,6 +1,9 @@
 <div class="page-content__title-cont page-content__title-cont_with-underline {{ classes }}">
   <h3 class="page-content__title">{{ title }}</h3>
-  {% if btnText is defined %}
+  {% if btnText is defined and btnIcon is not defined %}
     <a href={{btnLink is defined ? btnLink : "#"}} class="btn {{btnClasses is defined ? btnClasses : "btn_colorPrimary"}}">{{btnText}}</a>
+  {% elseif btnText is defined and btnIcon is defined %}
+    {% include './btn_with-icon.twig' with {"btnIcon" : btnIcon, "text": btnText, "classes": btnClasses} %}
   {% endif %}
+
 </div>

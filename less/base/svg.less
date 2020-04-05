@@ -288,7 +288,7 @@ svg.icon-arrow-svg {
     stroke-linecap: round;
     stroke-miterlimit: 10;
   }
-  * {
+  .stroke {
     stroke: #fff;
   }
 }
@@ -627,7 +627,7 @@ svg.icon-mail-svg {
   width: 18px;
   height: 14px;
 
-  .st0 {
+  .fill {
     fill: @colorPrimary2;
   }
 }
@@ -1400,6 +1400,12 @@ html.color-white {
     }
   }
 
+  svg.icon-arrow-svg {
+    .stroke {
+      stroke: @whiteEye;
+    }
+  }
+
   svg.icon-android-svg {
     .st0 {
       fill: @whiteEye;
@@ -1469,7 +1475,7 @@ html.color-white {
   }
 
   svg.icon-mail-svg {
-    .st0 {
+    .fill {
       fill: @blackEye;
     }
   }
@@ -1773,6 +1779,12 @@ html.color-black {
     }
   }
 
+  svg.icon-arrow-svg {
+    .stroke {
+      stroke: @blackEye;
+    }
+  }
+
   svg.icon-wallet-svg {
     .st0 {
       stroke: @whiteEye;
@@ -1934,7 +1946,7 @@ html.color-black {
   }
 
   svg.icon-mail-svg {
-    .st0 {
+    .fill {
       fill: @whiteEye;
     }
   }

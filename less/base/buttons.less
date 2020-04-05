@@ -2,7 +2,7 @@
   display: table;
   text-align: center;
   text-decoration: none;
-  cursor: url(../img/cursors/Hand.cur), pointer;;
+  cursor: url(../img/cursors/Hand.cur), pointer;
   font-size: @font-12;
   font-weight: 300;
   padding: 7px 11px;
@@ -24,8 +24,10 @@
   &__icon {
     margin-left: 14px;
     transition: @transFast;
-    * {
-      stroke: #fff;
+    svg.icon-arrow-svg {
+      .stoke {
+        stroke: #fff;
+      }
     }
   }
 
@@ -99,32 +101,37 @@
     }
   }
 
-  &_colorPrimary {
+  &_colorPrimary,
+  &_colorPrimary2,
+  &_colorPrimary3 {
     border-color: transparent;
-    background: @colorPrimary;
     color: #fff;
+
     .btn__text {
       color: #fff;
     }
     svg.btn__icon.icon-arrow-svg {
-      * {
+      .stroke {
         stroke: #fff;
+      }
+    }
+    svg.btn__icon.icon-mail-svg {
+      .fill {
+        fill: #fff;
       }
     }
   }
 
+  &_colorPrimary {
+    background: @colorPrimary;
+  }
+
   &_colorPrimary2 {
-    border-color: transparent;
     background: @colorPrimary2;
-    color: #fff;
-    .btn__text {
-      color: #fff;
-    }
-    svg.btn__icon.icon-arrow-svg {
-      * {
-        stroke: #fff;
-      }
-    }
+  }
+
+  &_colorPrimary3 {
+    background: @colorPrimary3;
   }
 
   &.btn_boxy {
@@ -170,6 +177,30 @@
     @media (min-width: @hoverW) {
       &:hover {
         .btn__prepend-icon {
+          animation-name: btn__prepend-icon-buzz-out;
+          animation-duration: 0.75s;
+          animation-timing-function: linear;
+          animation-iteration-count: 1;
+        }
+      }
+    }
+  }
+
+  &_append-icon {
+    .btn__text {
+      font-size: @font-14;
+      display: table-cell;
+      vertical-align: middle;
+    }
+
+    .btn__icon {
+      display: table-cell;
+      vertical-align: middle;
+    }
+
+    @media (min-width: @hoverW) {
+      &:hover {
+        .btn__icon {
           animation-name: btn__prepend-icon-buzz-out;
           animation-duration: 0.75s;
           animation-timing-function: linear;
@@ -258,8 +289,10 @@ html.color-white {
     }
 
     &__icon {
-      * {
-        stroke: @whiteEye;
+      svg.icon-arrow-svg {
+        .stroke {
+          stroke: @whiteEye;
+        }
       }
     }
 
@@ -309,13 +342,20 @@ html.color-white {
       }
     }
 
-    &_colorPrimary {
+    &_colorPrimary,
+    &_colorPrimary2,
+    &_colorPrimary3 {
       border-color: transparent;
       background: @blackEye;
       color: @whiteEye;
       svg.btn__icon.icon-arrow-svg {
-        * {
+        .stroke {
           stroke: @whiteEye;
+        }
+      }
+      svg.btn__icon.icon-mail-svg {
+        .fill {
+          fill: @whiteEye;
         }
       }
     }
@@ -365,8 +405,10 @@ html.color-black {
     }
 
     &__icon {
-      * {
-        stroke: @blackEye;
+      svg.icon-arrow-svg {
+        .stroke {
+          stroke: @blackEye;
+        }
       }
     }
 
@@ -416,13 +458,20 @@ html.color-black {
       }
     }
 
-    &_colorPrimary {
+    &_colorPrimary,
+    &_colorPrimary2,
+    &_colorPrimary3 {
       border-color: transparent;
       background: @whiteEye;
       color: @blackEye;
       svg.btn__icon.icon-arrow-svg {
-        * {
+        .stroke {
           stroke: @blackEye;
+        }
+      }
+      svg.btn__icon.icon-mail-svg {
+        .fill {
+          fill: @blackEye;
         }
       }
     }

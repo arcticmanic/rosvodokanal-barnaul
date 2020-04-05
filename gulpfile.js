@@ -249,7 +249,7 @@ const watchFiles = () => {
   )
 
   watch(
-    ['client/templates/**/*.twig', 'client/data/*.twig.json'],
+    ['client/templates/**/*.twig', 'client/data/**/*.twig.json'],
     gulp.series(twigiFy, browserSync.reload)
   )
 }
