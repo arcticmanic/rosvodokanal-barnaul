@@ -1,22 +1,26 @@
 const path = require('path'),
-  fs = require('fs')
+  fs = require('fs'),
+  del = require('del')
 
-const del = require('del'),
-  merge = require('merge-stream'),
-  postcssPresetEnv = require('postcss-preset-env'),
-  browserSync = require('browser-sync')
+const merge = require('merge-stream'),
+  browserSync = require('browser-sync'),
+  pipeline = require('readable-stream').pipeline
 
 const gulp = require('gulp'),
   watch = require('gulp-watch'),
   concat = require('gulp-concat'),
   sourcemaps = require('gulp-sourcemaps'),
+  uglify = require('gulp-uglify'),
   minify = require('gulp-minify'),
   babel = require('gulp-babel')
 
-const autoprefixer = require('gulp-autoprefixer'),
-  cleanCSS = require('gulp-clean-css'),
-  postcss = require('gulp-postcss'),
-  less = require('gulp-less'),
+const postcss = require('gulp-postcss'),
+  autoprefixer = require('autoprefixer'),
+  cssDeclarationSorter = require('css-declaration-sorter'),
+  postcssPresetEnv = require('postcss-preset-env'),
+  cssnano = require('cssnano')
+
+const less = require('gulp-less'),
   sass = require('gulp-sass')
 
 const twig = require('gulp-twig'),
@@ -36,17 +40,33 @@ const paths = {
   srcPolyfillsJS: path.join(__dirname, 'js', 'plugins', 'polyfills'),
   srcCommonJS: path.join(__dirname, 'js', 'common'),
   srcCoreJS: path.join(__dirname, 'js', 'common', 'core'),
-  srcOnTopJS: path.join(__dirname, 'js', 'common', 'core', 'onTop'),
+  srcOnTopJS: path.join(__dirname, 'js', 'common', 'onTop'),
   srcLess: path.join(__dirname, 'less'),
   srcSass: path.join(__dirname, 'scss'),
   distAssets: path.join(__dirname, 'build', 'assets'),
   distJS: path.join(__dirname, 'build', 'assets', 'js'),
-  distCSS: path.join(__dirname, 'build', 'assets', 'css')
+  distCSS: path.join(__dirname, 'build', 'assets', 'css'),
 }
 
-function baseStyles() {
+const postcssPlugins = [
+  cssDeclarationSorter({ order: 'smacss' }),
+  postcssPresetEnv(),
+  cssnano({
+    presets: [
+      'default',
+      {
+        discardComments: {
+          removeAll: true,
+        },
+      },
+    ],
+  }),
+  autoprefixer(),
+]
+
+const baseStyles = () => {
   const info = {
-    name: 'style.css'
+    name: 'style.css',
   }
 
   const lessStream = gulp
@@ -61,14 +81,7 @@ function baseStyles() {
 
   const mergedStream = merge(lessStream, sassStream)
     .pipe(concat(info.name))
-    .pipe(
-      cleanCSS({
-        level: 2,
-        compatibility: 'ie7'
-      })
-    )
-    .pipe(postcss([postcssPresetEnv()]))
-    .pipe(autoprefixer())
+    .pipe(postcss(postcssPlugins))
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest(paths.distCSS))
     .pipe(browserSync.stream())
@@ -76,65 +89,58 @@ function baseStyles() {
   return mergedStream
 }
 
-function resolvePageStyles(info) {
+const resolvePageStyles = (info) => {
   return gulp
     .src(info.src)
     .pipe(sourcemaps.init())
     .pipe(less())
     .pipe(concat(info.name))
-    .pipe(
-      cleanCSS({
-        level: 2,
-        compatibility: 'ie7'
-      })
-    )
-    .pipe(postcss([postcssPresetEnv()]))
-    .pipe(autoprefixer())
+    .pipe(postcss(postcssPlugins))
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest(paths.distCSS))
     .pipe(browserSync.stream())
 }
 
-function styles(cb) {
+const styles = (cb) => {
   gulp.parallel(
     baseStyles,
     resolvePageStyles.bind(this, {
       src: path.join(paths.srcLess, 'main-page-tpl', 'main-page-tpl.less'),
-      name: 'main-page-tpl.css'
+      name: 'main-page-tpl.css',
     }),
     resolvePageStyles.bind(this, {
       src: path.join(paths.srcLess, 'services-tpl', 'services-tpl.less'),
-      name: 'services-tpl.css'
+      name: 'services-tpl.css',
     }),
     resolvePageStyles.bind(this, {
       src: path.join(paths.srcLess, 'purchase-tpl', 'purchase-tpl.less'),
-      name: 'purchase-tpl.css'
+      name: 'purchase-tpl.css',
     }),
     resolvePageStyles.bind(this, {
       src: path.join(paths.srcLess, 'pressroom-tpl', 'pressroom-tpl.less'),
-      name: 'pressroom-tpl.css'
+      name: 'pressroom-tpl.css',
     }),
     resolvePageStyles.bind(this, {
       src: path.join(paths.srcLess, 'about-tpl', 'about-tpl.less'),
-      name: 'about-tpl.css'
+      name: 'about-tpl.css',
     }),
     resolvePageStyles.bind(this, {
       src: path.join(paths.srcLess, 'career-tpl', 'career-tpl.less'),
-      name: 'career-tpl.css'
+      name: 'career-tpl.css',
     }),
     resolvePageStyles.bind(this, {
       src: path.join(paths.srcLess, 'users-tpl', 'users-tpl.less'),
-      name: 'users-tpl.css'
+      name: 'users-tpl.css',
     })
   )()
   cb()
 }
 
-function concatPlugins() {
+const concatPlugins = () => {
   const JSPluginsOrder = [
     path.join(paths.srcPluginsJS, 'jquery-3.4.1.min.js'),
     path.join(paths.srcPluginsJS, '*.js'),
-    path.join(paths.srcPolyfillsJS, '*.js')
+    path.join(paths.srcPolyfillsJS, '*.js'),
   ]
 
   return gulp
@@ -145,92 +151,41 @@ function concatPlugins() {
     .pipe(browserSync.stream())
 }
 
-function resolvePageJS(info) {
-  return gulp
-    .src(info.src)
-    .pipe(sourcemaps.init())
-    .pipe(concat(info.name))
-    .pipe(
-      babel({
-        presets: ['@babel/env']
-      })
-    )
-    .pipe(minify({ ext: { src: '', min: '.js' }, noSource: true }))
-    .pipe(sourcemaps.write('./'))
-    .pipe(gulp.dest(paths.distJS))
-    .pipe(browserSync.stream())
-}
-
-function concatCommonJS() {
+const concatCommonJS = () => {
   const JSCommonOrder = [
     path.join(paths.srcOnTopJS, 'variables.js'),
     path.join(paths.srcOnTopJS, 'functions.js'),
-    path.join(paths.srcCoreJS, '*.js')
+    path.join(paths.srcCoreJS, '*.js'),
+    path.join(paths.srcCommonJS, '**', '*.js'),
   ]
 
-  return gulp
-    .src(JSCommonOrder)
-    .pipe(sourcemaps.init())
-    .pipe(concat('core.js'))
-    .pipe(
-      babel({
-        presets: [['@babel/env', { useBuiltIns: 'entry' }]]
-      })
-    )
-    .pipe(minify({ ext: { src: '', min: '.js' }, noSource: true }))
-    .pipe(sourcemaps.write('./'))
-    .pipe(gulp.dest(paths.distJS))
-    .pipe(browserSync.stream())
+  return pipeline(
+    gulp.src(JSCommonOrder),
+    sourcemaps.init(),
+    concat('core.js'),
+    babel({
+      presets: [['@babel/env', { useBuiltIns: 'entry' }]],
+    }),
+    uglify({ toplevel: true, ie8: true }),
+    sourcemaps.write('./'),
+    gulp.dest(paths.distJS),
+    browserSync.stream()
+  )
 }
 
-function javascript(cb) {
-  gulp.parallel(
-    concatCommonJS,
-    resolvePageJS.bind(this, {
-      src: path.join(paths.srcCommonJS, 'main-page-tpl', '*.js'),
-      name: 'main-page-tpl.js'
-    }),
-    resolvePageJS.bind(this, {
-      src: path.join(paths.srcCommonJS, 'services-tpl', '*.js'),
-      name: 'services-tpl.js'
-    }),
-    resolvePageJS.bind(this, {
-      src: path.join(paths.srcCommonJS, 'purchase-tpl', '*.js'),
-      name: 'purchase-tpl.js'
-    }),
-    resolvePageJS.bind(this, {
-      src: path.join(paths.srcCommonJS, 'pressroom-tpl', '*.js'),
-      name: 'pressroom-tpl.js'
-    }),
-    resolvePageJS.bind(this, {
-      src: path.join(paths.srcCommonJS, 'about-tpl', '*.js'),
-      name: 'about-tpl.js'
-    }),
-    resolvePageJS.bind(this, {
-      src: path.join(paths.srcCommonJS, 'career-tpl', '*.js'),
-      name: 'career-tpl.js'
-    }),
-    resolvePageJS.bind(this, {
-      src: path.join(paths.srcCommonJS, 'users-tpl', '*.js'),
-      name: 'users-tpl.js'
-    })
-  )()
-  cb()
-}
-
-function twigiFy() {
+const twigiFy = () => {
   return gulp
     .src(path.join(paths.srcTwig, '*', '*.twig'))
     .pipe(
       plumber({
-        handleError: function(err) {
+        handleError: function (err) {
           console.log(err)
           this.emit('end')
-        }
+        },
       })
     )
     .pipe(
-      data(function(file) {
+      data(function (file) {
         const firstIndexOfDivider = path.basename(file.path).indexOf('_')
         let prefix = ''
         if (firstIndexOfDivider !== -1) {
@@ -247,7 +202,7 @@ function twigiFy() {
       })
     )
     .pipe(
-      twig().on('error', function(err) {
+      twig().on('error', function (err) {
         process.stderr.write(err.message + '\n')
         this.emit('end')
         console.log(path.basename(file.path))
@@ -258,29 +213,29 @@ function twigiFy() {
     .pipe(gulp.dest(paths.build))
 }
 
-function clean() {
+const clean = () => {
   const cleanFiles = [
     paths.distJS,
     paths.distCSS,
-    path.join(paths.build, '*.html')
+    path.join(paths.build, '*.html'),
   ]
 
   return del(cleanFiles)
 }
 
-function watchFiles() {
+const watchFiles = () => {
   browserSync.init({
     server: {
-      baseDir: './build',
-      index: 'index.html'
+      baseDir: paths.build,
+      index: path.join(paths.build, 'other-pages', 'index.html'),
     },
     ghostMode: false,
-    open: false
+    open: false,
   })
 
   watch(
-    ['./js/common/**/*.js', './js/onTop/*.js'],
-    gulp.series(javascript, browserSync.reload)
+    ['./js/common/**/*.js'],
+    gulp.series(concatCommonJS, browserSync.reload)
   )
 
   watch(
@@ -303,7 +258,7 @@ const watchTask = watchFiles
 
 const build = gulp.series(
   clean,
-  gulp.parallel(styles, concatPlugins, javascript, twigiFy)
+  gulp.parallel(styles, concatPlugins, concatCommonJS, twigiFy)
 )
 
 const dev = gulp.series(build, watchTask)
