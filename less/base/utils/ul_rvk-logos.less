@@ -1,5 +1,5 @@
 .ul_rvk-logos {
-  li {
+  & > li {
     position: relative;
     padding-left: 50px;
     font-size: @font-14;
@@ -23,7 +23,7 @@
 
 @media (max-width: @mobileLandscapeW) {
   .ul_rvk-logos {
-    li {
+    & > li {
       padding-left: 30px;
       font-size: @font-13;
       line-height: @font-19;
@@ -40,7 +40,7 @@
 
 html.color-white {
   .ul_rvk-logos {
-    li {
+    & > li {
       &:before {
         background: url('../../assets/img/svg/logo/logo_black.svg');
       }
@@ -50,7 +50,7 @@ html.color-white {
 
 html.color-black {
   .ul_rvk-logos {
-    li {
+    & > li {
       &:before {
         background: url('../../assets/img/svg/logo/logo_white.svg');
       }

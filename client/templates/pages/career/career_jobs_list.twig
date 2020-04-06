@@ -2,7 +2,7 @@
 
 {% block main %}
 <section class="section-career-jobs-list">
-  {% include '../../includes/stdEls/page-content__title_with-underline.twig' with {"title" : "Руководитель группы по управлению закупками", "btnText": "Откликнуться", "btnClasses": "btn_colorPrimary2 btn_append-icon", "btnIcon": "../svg/icon-mail-svg.twig"} %}
+  {% include '../../includes/stdEls/page-content__title_with-underline.twig' with {"title" : "Руководитель группы по управлению закупками", "btnText": "Откликнуться", "btnClasses": "btn_colorPrimary2 btn_append-icon", "btnIcon": "../svg/icon-mail-svg.twig", "btnLink": "#modal_job", "attributes": "rel='modal:open'"} %}
 
   <article class="text jobs-list__item">
     <p class="strong colorPrimary">
@@ -46,7 +46,7 @@
     </ul>
   </article>
 
-  {% include '../../includes/stdEls/page-content__title_with-underline.twig' with {"title" : "PHP-разработчик", "btnText": "Откликнуться", "btnClasses": "btn_colorPrimary2 btn_append-icon", "btnIcon": "../svg/icon-mail-svg.twig"} %}
+  {% include '../../includes/stdEls/page-content__title_with-underline.twig' with {"title" : "PHP-разработчик", "btnText": "Откликнуться", "btnClasses": "btn_colorPrimary2 btn_append-icon", "btnIcon": "../svg/icon-mail-svg.twig", "btnLink": "#modal_job", "attributes": "rel='modal:open'"} %}
 
   <article class="text jobs-list__item">
     <p class="strong colorPrimary">
@@ -96,7 +96,7 @@
     </ul>
   </article>
 
-  {% include '../../includes/stdEls/page-content__title_with-underline.twig' with {"title" : "Ведущий разработчик Java", "btnText": "Откликнуться", "btnClasses": "btn_colorPrimary2 btn_append-icon", "btnIcon": "../svg/icon-mail-svg.twig"} %}
+  {% include '../../includes/stdEls/page-content__title_with-underline.twig' with {"title" : "Ведущий разработчик Java", "btnText": "Откликнуться", "btnClasses": "btn_colorPrimary2 btn_append-icon", "btnIcon": "../svg/icon-mail-svg.twig", "btnLink": "#modal_job", "attributes": "rel='modal:open'"} %}
 
   <article class="text jobs-list__item">
     <p class="strong colorPrimary">
@@ -147,4 +147,39 @@
   </article>
   
 </section>
+
+  <div id="modal_job" class="modal modal_job">
+    <form action="" class="form form_job {{ classes }}">
+      <p class="form-subtitle colorPrimary strong_M font-15">Отклик на вакансию:</p>
+      <h4 class="form-title colorPrimary strong_M form-title_without-space">Руководитель группы по управлению закупками</h4>
+
+      <hr class="colorPrimary hr_space-S">
+
+      <div class="input-with-label">
+        <label>Ваше имя *</label>
+        <input type="text" class="required input_grey"></input>
+      </div>
+
+      <div class="input-with-label">
+        <label>Контактные данные *</label>
+        <input type="text" class="required input_grey"></input>
+      </div>
+
+      <div class="input-with-label">
+        <label>Дополнительная информация</label>
+        <textarea class="input_grey"></textarea>
+      </div>
+
+      <div class="input-with-label">
+        <label>Файл резюме</label>
+        {% include '../../includes/stdEls/input_file.twig' with {"btnText": "Обзор", "inputFileClasses": "input_file-grey"} %}
+      </div>
+        <span class="form-info italic">Прикрепить резюме (допустимые расширения файлов .doc .pdf .jpg .jpeg .rar .zip, до 2 Мб)</span>
+
+      <div class="form-footer">
+        {% include '../../includes/stdEls/checkbox.twig' with {"id": "check3", "text": "Я принимаю <a href='#'>Политику конфиденциальности</a>"} %}
+        <button type="submit" class="btn btn_colorPrimary mx-auto ">Отправить</button>
+      </div>
+    </form>
+  </div>
 {% endblock %}

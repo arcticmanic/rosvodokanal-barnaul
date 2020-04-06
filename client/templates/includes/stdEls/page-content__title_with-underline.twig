@@ -1,9 +1,21 @@
 <div class="page-content__title-cont page-content__title-cont_with-underline {{ classes }}">
   <h3 class="page-content__title">{{ title }}</h3>
   {% if btnText is defined and btnIcon is not defined %}
-    <a href={{btnLink is defined ? btnLink : "#"}} class="btn {{btnClasses is defined ? btnClasses : "btn_colorPrimary"}}">{{btnText}}</a>
+    <a href={{btnLink is defined ? btnLink : "#"}} class="btn {{btnClasses is defined ? btnClasses : "btn_colorPrimary"}}" {{attributes is defined ? attributes : ""}}>{{btnText}}</a>
   {% elseif btnText is defined and btnIcon is defined %}
-    {% include './btn_with-icon.twig' with {"btnIcon" : btnIcon, "text": btnText, "classes": btnClasses} %}
+    {% if btnLink is defined %}
+      {% if attributes is not defined %}
+        {% include './btn_with-icon.twig' with {"btnIcon" : btnIcon, "text": btnText, "classes": btnClasses, "link": btnLink} %}
+      {% elseif attributes is defined %}
+        {% include './btn_with-icon.twig' with {"btnIcon" : btnIcon, "text": btnText, "classes": btnClasses, "link": btnLink, "attributes": attributes} %}
+      {% endif %}
+    {% elseif btnLink is not defined %}  
+      {% if attributes is not defined %}
+        {% include './btn_with-icon.twig' with {"btnIcon" : btnIcon, "text": btnText, "classes": btnClasses} %}
+      {% elseif attributes is defined %}
+        {% include './btn_with-icon.twig' with {"btnIcon" : btnIcon, "text": btnText, "classes": btnClasses, "attributes": attributes} %}
+      {% endif %}
+    {% endif %}  
   {% endif %}
 
 </div>

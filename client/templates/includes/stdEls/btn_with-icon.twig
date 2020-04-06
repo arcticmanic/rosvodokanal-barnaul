@@ -1,4 +1,4 @@
-<a href="#" class="btn btn_with-icon {{classes}}">
+<a href={{link is defined ? link : "#"}} {{attributes is defined ? attributes : ""}} class="btn btn_with-icon {{classes}}">
   <span class="btn__text">{{text}}</span>
   {% include btnIcon with {'classes': 'btn__icon'} %}
 </a>

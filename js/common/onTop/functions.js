@@ -21,3 +21,9 @@ function triggerEvent(elem, event) {
   const clickEvent = new Event(event)
   elem.dispatchEvent(clickEvent)
 }
+
+function clearAllTextInputsAndTextareas(inputs) {
+  inputs.each(function() {
+    $(this).val('')
+  })
+}

@@ -38,10 +38,30 @@ hr {
   display: block;
   height: 2px;
   border: 0;
-  margin: 2em 0;
+  &:not(.hr_only-bottom-space) {
+    margin-top: 2em;
+  }
+  &:not(.hr_only-top-space) {
+    margin-bottom: 2em;
+  }
   padding: 0;
+  border-top: 2px solid #cdcdcd;
+  &.hr_space-S {
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
   &.dashed {
-    border-top: 1px dashed #cdcdcd;
+    border-color: #cdcdcd;
+    border-style: dashed;
+  }
+  &.colorPrimary {
+    border-color: @colorPrimary;
+  }
+  &.colorPrimary2 {
+    border-color: @colorPrimary2;
+  }
+  &.colorPrimary3 {
+    border-color: @colorPrimary3;
   }
 }
 
@@ -57,7 +77,10 @@ hr {
 
 html.color-white {
   hr {
-    &.dashed {
+    &.dashed,
+    &.colorPrimary,
+    &.colorPrimary2,
+    &.colorPrimary3 {
       border-color: @blackEye;
     }
   }
@@ -71,7 +94,10 @@ html.color-white {
 
 html.color-black {
   hr {
-    &.dashed {
+    &.dashed,
+    &.colorPrimary,
+    &.colorPrimary2,
+    &.colorPrimary3 {
       border-color: @whiteEye;
     }
   }

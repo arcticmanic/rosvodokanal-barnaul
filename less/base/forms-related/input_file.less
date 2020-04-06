@@ -27,6 +27,13 @@
     transition: @transFast;
   }
 
+  &-grey {
+    .input_file__on-top {
+      border: 1px solid #dce4e8;
+      background: #f1f3f4;
+    }
+  }
+
   &.input_file-with-file {
     .input_file__btn_add {
       display: none;
@@ -41,7 +48,6 @@
 
     input[type='file'] {
       z-index: -1;
-      
     }
   }
 
@@ -52,6 +58,28 @@
     &_delete {
       display: none;
       pointer-events: none;
+    }
+  }
+}
+
+html.color-white {
+  .input_file {
+    &-grey {
+      .input_file__on-top {
+        border-color: @blackEye;
+        background: @whiteEye;
+      }
+    }
+  }
+}
+
+html.color-black {
+  .input_file {
+    &-grey {
+      .input_file__on-top {
+        border-color: @whiteEye;
+        background: @blackEye;
+      }
     }
   }
 }
