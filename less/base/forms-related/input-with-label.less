@@ -2,6 +2,10 @@
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
+  &_horizontal {
+    align-items: center;
+    flex-direction: row;
+  }
   .checkboxContainer {
     margin-top: 4px;
     margin-left: -2px;
@@ -43,6 +47,24 @@
     &:not(:last-child) {
       margin-bottom: 20px;
     }
+  }
+}
+
+.row-with-label-input-button {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  input {
+    flex-grow: 1;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  label,
+  input,
+  .btn {
+    margin-top: 5px;
+    margin-bottom: 5px;
   }
 }
 

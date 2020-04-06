@@ -15,7 +15,7 @@ $(document).ready(function() {
           },
           {
             iconLayout: 'default#image',
-            iconImageHref: './img/geo_blue.png',
+            iconImageHref: '../../assets/img/geo_blue.png',
             iconImageSize: [40, 50],
             iconImageOffset: [-20, -50]
           }

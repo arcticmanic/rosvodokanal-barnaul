@@ -1,0 +1,39 @@
+{% extends "../../layouts/users.twig" %}
+
+{% block main %}
+  <section class="section-users-individuals-connection-status">
+    {% include '../../includes/stdEls/page-content__title_with-underline.twig' with {"title" : "Проверьте статус исполнения вашего заявления" } %}
+    <article class="text">
+      <p>После отправки заявления и пакета документов вы получаете номер на адрес указанной электронной почты. По этому номеру вы сможете узнавать статус ваших документов онлайн, введя его в окно формы.</p>
+
+      <h5 class="colorCyan">Статусы</h5>
+
+      <ul>
+        <li>Статус «<strong>на рассмотрении</strong>» — специалист проверяет прикрепленные копии документов.</li>
+        <li>Статус «<strong>принято</strong>» — документы оформлены корректно, и вы можете записаться к специалисту для сдачи оригиналов.  </li>
+        <li>Статус «<strong>на доработку</strong>» — представленные документы оформлены с ошибками, которые необходимо устранить в течение 20 рабочих дней. Свои комментарии специалист направит вам по указанной электронной почте или пояснит во время личной встречи.</li>
+        <li>Статус «<strong>к выдаче</strong>» — вы можете получить требуемый документ в Центре обслуживания абонентов в порядке очереди. </li>
+      </ul>
+
+      <hr class="dashed">
+      <p>Введите номер заявления в представленной ниже форме, чтобы узнать статус его исполнения.</p>
+
+      <form action="" class="grid_6-cells">
+        <label class="strong colorPrimary3">Номер заявления:</label>
+        <input type="text" class="input_grey">
+        <button type="submit" class="btn btn_colorPrimary">Проверить статус</button>
+
+        <label class="strong colorPrimary3">Статус заявления:</label>
+        <div class="d-flex justify-content-space-between flex-wrap">
+          <div class="btn btn_boxy btn_wait strong">На рассмотрении</div>
+          <div class="btn btn_boxy btn_accept-light strong">Принято</div>
+          <div class="btn btn_boxy btn_danger strong">На доработку</div>
+          <div class="btn btn_boxy btn_accept strong">К выдаче</div>
+        </div>
+      </form>
+      <hr class="dashed">
+
+      <p>Для оформления документов <a href="#">запишитесь</a> на встречу со специалистом</p> 
+    </article>
+  </section>
+{% endblock %}

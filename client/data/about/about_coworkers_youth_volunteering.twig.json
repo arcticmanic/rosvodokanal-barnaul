@@ -29,12 +29,12 @@
             },
             {
               "title": "Корпоративные программы",
-              "link": "about_coworkers_programms.html",
-              "classes": "current-page"
+              "link": "about_coworkers_programms.html"
             },
             {
               "title": "Молодые специалисты",
               "link": "users_info.html",
+              "classes": "sidemenu__item_active",
               "pages": [
                 {
                   "title": "Совет молодых специалистов",
@@ -42,7 +42,8 @@
                 },
                 {
                   "title": "Волонтерство",
-                  "link": "about_coworkers_youth_volunteering.html"
+                  "link": "about_coworkers_youth_volunteering.html",
+                  "classes": "current-page"
                 }
               ]
             }

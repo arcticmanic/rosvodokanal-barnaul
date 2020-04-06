@@ -1,8 +1,12 @@
+a.btn,
+button.btn,
+input[type='submit'].btn {
+  cursor: url(../img/cursors/Hand.cur), pointer;
+}
 .btn {
   display: table;
   text-align: center;
   text-decoration: none;
-  cursor: url(../img/cursors/Hand.cur), pointer;
   font-size: @font-12;
   font-weight: 300;
   padding: 7px 11px;
@@ -19,6 +23,30 @@
   &.btn_align-to-center {
     margin-left: auto;
     margin-right: auto;
+  }
+
+  &_wait,
+  &_accept,
+  &_accept-light,
+  &_danger {
+    border-color: transparent;
+  }
+
+  &_wait {
+    background: #ffc107;
+  }
+
+  &_accept {
+    background: #b7d5ea;
+    &-light {
+      background: #28a745;
+      color: #fff;
+    }
+  }
+
+  &_danger {
+    background: #dc3545;
+    color: #fff;
   }
 
   &__icon {
@@ -284,6 +312,14 @@ html.color-white {
     color: @whiteEye;
     background: @blackEye;
 
+    &_wait,
+    &_accept,
+    &_accept-light,
+    &_danger {
+      border-color: @blackEye;
+      background: @blackEye;
+    }
+
     .btn__text {
       color: @whiteEye;
     }
@@ -399,6 +435,15 @@ html.color-black {
     border-color: @whiteEye;
     color: @blackEye;
     background: @whiteEye;
+
+    &_wait,
+    &_accept,
+    &_accept-light,
+    &_danger {
+      border-color: @whiteEye;
+      background: @whiteEye;
+    }
+
 
     .btn__text {
       color: @blackEye;

@@ -34,6 +34,25 @@
   .section-jumbotron {
     .chat-bots {
       top: 15px;
+      .wrapper {
+        padding-right: 20px;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+@media (max-width: @mobileW) {
+  .section-jumbotron {
+    .chat-bots {
+      // position: relative;
+      // top: 0;
+      // background: rgba(@colorPrimary, 0.35);
+      // padding-top: 20px;
+      // padding-bottom: 20px;
+      .wrapper {
+        justify-content: flex-start;
+      }
     }
   }
 }
