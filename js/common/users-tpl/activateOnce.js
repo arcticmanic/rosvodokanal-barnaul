@@ -16,4 +16,10 @@ $(document).ready(function() {
     minimumResultsForSearch: Infinity,
     placeholder: 'Выберите район вашего проживания'
   })
+
+  $('#time').select2({
+    language: 'ru',
+    minimumResultsForSearch: Infinity,
+    containerCssClass : "select2_grey"
+  })
 })

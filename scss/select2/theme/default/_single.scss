@@ -2,6 +2,10 @@
   background-color: #fff;
   border-radius: 5px;
   border: 1px solid #dce4e8;
+  &.select2_grey {
+    background: #f1f3f4;
+    border-color: #dce4e8;
+  }
   &:focus {
     outline: none;
   }

@@ -39,7 +39,7 @@
 
   <div id="modal_arrange-appointment" class="modal modal_arrange-appointment">
     <form action="" class="form form_arrange-appointment {{ classes }}">
-      <h6 class="colorPrimary">Запись на встречу со специалистом</h6>
+      <h6 class="form-title form-title_space-bottom colorPrimary">Запись на встречу со специалистом</h6>
 
       <div class="input-with-label">
         <label>Фамилия Имя Отчество *</label>
@@ -58,8 +58,23 @@
 
       <div class="input-with-label">
         <label>Дата *</label>
-        input-with-icon
-        <input type='text' class="datepicker-here input_grey" autocomplete="off"  class="required"/>
+        <div class="input-cont">
+          <input type='text' class="datepicker-here input_grey" autocomplete="off"  class="required"/>
+          {% include '../../includes/svg/icon-calendar-svg.twig' with {"classes": "input__icon"} %}
+        </div>
+      </div>
+
+      <div class="input-with-label">
+        <label>Время</label>
+        <select id="time" class="required">
+          <option value="1">8:00 - 9:00</option>
+          <option value="2">9:00 - 10:00</option>
+          <option value="3">11:00 - 12:00</option>
+          <option value="4" disabled="disabled">13:00 - 14:00</option>
+          <option value="5" disabled="disabled">14:00 - 15:00</option>
+          <option value="7">15:00 - 16:00</option>
+          <option value="8" disabled="disabled">16:00 - 17:00</option>
+        </select>
       </div>
 
       <div class="form-footer form-footer_vertical">
