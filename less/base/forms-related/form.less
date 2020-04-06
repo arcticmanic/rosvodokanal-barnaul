@@ -40,6 +40,23 @@
       margin-top: 5px;
       margin-bottom: 5px;
     }
+    &__p {
+      color: @colorPrimary3;
+      font-size: @font-13;
+      font-weight: 500;
+      line-height: @font-20;
+      margin-bottom: 15px;
+      a {
+        color: @colorPrimary;
+        text-decoration: underline;
+        @media (min-width: @hoverW) {
+          &:hover {
+            color: @red;
+            text-decoration: none;
+          }
+        }
+      }
+    }
   }
 
   &-title {

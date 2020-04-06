@@ -25,7 +25,7 @@
             <p class="jumbo-icons__p">Оформить заявление через сайт</p>
           </a>
 
-          <a href="services_type_meters_application.html" class="jumbo-icons__item">
+          <a href="#modal_arrange-appointment" class="jumbo-icons__item" rel="modal:open">
             {% include '../../includes/svg/woman-svg.twig' with {"classes": "jumbo-icons__icon"} %}
             <p class="jumbo-icons__p">Записаться на встречу</p>
           </a>
@@ -36,4 +36,37 @@
       <p>Прием заявлений без предварительной записи в Центре обслуживания абонентов пр. Калинина, 116  с 8.00 до 12.00 и с 13.00 до 17.00, тел. 28-29-70.</p>
     </div>
   </section>
+
+  <div id="modal_arrange-appointment" class="modal modal_arrange-appointment">
+    <form action="" class="form form_arrange-appointment {{ classes }}">
+      <h6 class="colorPrimary">Запись на встречу со специалистом</h6>
+
+      <div class="input-with-label">
+        <label>Фамилия Имя Отчество *</label>
+        <input type="text" class="required input_grey"></input>
+      </div>
+
+      <div class="input-with-label">
+        <label>Ваш телефон *</label>
+        <input type="text" class="required input_grey input_phone"></input>
+      </div>
+
+      <div class="input-with-label">
+        <label>Ваш е-mail *</label>
+        <input type="text" class="required input_grey"></input>
+      </div>
+
+      <div class="input-with-label">
+        <label>Дата *</label>
+        input-with-icon
+        <input type='text' class="datepicker-here input_grey" autocomplete="off"  class="required"/>
+      </div>
+
+      <div class="form-footer form-footer_vertical">
+        <p class="form-footer__p">Записываясь на встречу, я соглашаюсь на обработку <a href="#">персональных данных</a>, в соответствии c политикой конфиденциальности.</p>
+        <button type="submit" class="btn btn_colorPrimary mr-auto ">Отправить</button>
+      </div>
+    </form>
+  </div>
+
 {% endblock %}

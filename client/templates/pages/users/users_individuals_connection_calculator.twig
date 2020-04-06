@@ -1,0 +1,25 @@
+{% extends "../../layouts/users.twig" %}
+
+{% block main %}
+  <section class="section-users-faq">
+    {% include '../../includes/stdEls/page-content__title_with-underline.twig' with {"title" : "Частые вопросы", "classes": "page-content__title-cont_without-spacing"} %}
+    <article class="text">
+      <ol class="faq-list">
+        {% for question in questions %}
+          <li class="faq-list__item">
+            <span class="faq-list__text">{{question.question}}</span>
+            <div class="faq-list__answer-block">
+              <span class="faq-list__hor-div"></span>
+              <span class="faq-list__answer-text">{{question.answer}}</span>
+            </div>
+            <div class="faq-list__switch">
+              <span class="faq-list__switch-text faq-list__switch-hide">Скрыть ответ</span>
+              <span class="faq-list__switch-text faq-list__switch-show">Посмотреть ответ</span>
+              {% include "../../includes/svg/icon-arrow-accord.twig" with {"classes": "faq-list__switch-icon"} %}
+            </div>
+          </li>
+        {% endfor %}
+      </ol>
+    </article>
+  </section>
+{% endblock %}
