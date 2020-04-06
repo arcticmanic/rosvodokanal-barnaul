@@ -13,6 +13,7 @@
         {
           "title": "Общая информация",
           "link": "users_info.html",
+          "classes": "sidemenu__item_active",
           "pages": [
             {
               "title": "Отключения",
@@ -20,7 +21,8 @@
             },
             {
               "title": "Часто задаваемые вопросы",
-              "link": "users_faq.html"
+              "link": "users_faq.html",
+              "classes": "current-page"
             },
             {
               "title": "Подать заявку",
@@ -52,7 +54,6 @@
         {
           "title": "Частные лица",
           "link": "users_individuals_data.html",
-          "classes": "sidemenu__item_active",
           "pages": [
             {
               "title": "Личный кабинет",
@@ -104,7 +105,6 @@
             {
               "title": "Подключение к системам водоснабжения и водоотведения",
               "link": "users_individuals_connection.html",
-              "classes": "sidemenu__item_active",
               "extra_sketches": [
                 "users_individuals_connection_popup",
                 "users_individuals_connection_popup_day",
@@ -118,7 +118,6 @@
                 {
                   "title": "Калькулятор",
                   "link": "users_individuals_connection_calculator.html",
-                  "classes": "current-page",
                   "extra_sketches": [
                     "users_individuals_connection_calculator_popup "
                   ]

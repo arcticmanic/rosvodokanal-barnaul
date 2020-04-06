@@ -7,12 +7,12 @@
   "pages": [
     {
       "title": "О водоканале",
-      "link": "services_text_page.html",
+      "link": "users_info.html",
       "withoutArrow": true,
       "pages": [
         {
           "title": "История",
-          "link": "services_text_page.html"
+          "link": "users_info.html"
         },
         {
           "title": "Руководство",
@@ -33,7 +33,7 @@
             },
             {
               "title": "Молодые специалисты",
-              "link": "services_text_page.html",
+              "link": "users_info.html",
               "classes": "sidemenu__item_active",
               "pages": [
                 {
@@ -85,7 +85,7 @@
                 },
                 {
                   "title": "Состав совета",
-                  "link": "services_text_page.html"
+                  "link": "users_info.html"
                 },
                 {
                   "title": "Прошедшие советы",

@@ -16,11 +16,11 @@
     },
     {
       "title": "Абонентам",
-      "link": "services_text_page.html",
+      "link": "users_info.html",
       "pages": [
         {
           "title": "Общая информация",
-          "link": "services_text_page.html",
+          "link": "users_info.html",
           "pages": [
             {
               "title": "Отключения",
@@ -41,7 +41,7 @@
             },
             {
               "title": "Справочная служба",
-              "link": "services_text_page.html"
+              "link": "users_info.html"
             },
             {
               "title": "Режим работы",
@@ -119,7 +119,7 @@
               "pages": [
                 {
                   "title": "Глоссарий",
-                  "link": "services_text_page.html"
+                  "link": "users_info.html"
                 },
                 {
                   "title": "Калькулятор",
@@ -286,7 +286,7 @@
             },
             {
               "title": "Прочие услуги",
-              "link": "services_text_page.html"
+              "link": "users_info.html"
             },
             {
               "title": "Образцы документов",
@@ -294,7 +294,7 @@
             },
             {
               "title": "Тарифы и нормативы",
-              "link": "services_text_page.html"
+              "link": "users_info.html"
             },
             {
               "title": "Нормативные акты",
@@ -302,7 +302,7 @@
             },
             {
               "title": "Изменения и уведомления",
-              "link": "services_text_page.html"
+              "link": "users_info.html"
             },
             {
               "title": "Задать вопрос",
@@ -320,33 +320,33 @@
             },
             {
               "title": "Передать показания приборов",
-              "link": "services_text_page.html"
+              "link": "users_info.html"
             },
             {
               "title": "Оплатить",
-              "link": "services_text_page.html"
+              "link": "users_info.html"
             },
             {
               "title": "Тарифы",
-              "link": "services_text_page.html"
+              "link": "users_info.html"
             },
             {
               "title": "Договор на оказание услуг",
-              "link": "services_text_page.html",
+              "link": "users_info.html",
               "pages": [
                 {
                   "title": "Порядок заключения",
-                  "link": "services_text_page.html"
+                  "link": "users_info.html"
                 }
               ]
             },
             {
               "title": "Электронный документооборот",
-              "link": "services_text_page.html"
+              "link": "users_info.html"
             },
             {
               "title": "Формы документов",
-              "link": "services_text_page.html"
+              "link": "users_info.html"
             },
             {
               "title": "Нормативные акты",
@@ -354,11 +354,11 @@
             },
             {
               "title": "Декларация",
-              "link": "services_text_page.html"
+              "link": "users_info.html"
             },
             {
               "title": "Расчет НДС",
-              "link": "services_text_page.html"
+              "link": "users_info.html"
             },
             {
               "title": "Приборы учета воды",
@@ -392,7 +392,7 @@
               "pages": [
                 {
                   "title": "Глоссарий",
-                  "link": "services_text_page.html"
+                  "link": "users_info.html"
                 },
                 {
                   "title": "Калькулятор",
@@ -561,19 +561,19 @@
             },
             {
               "title": "Прочие услуги",
-              "link": "services_text_page.html"
+              "link": "users_info.html"
             }
           ]
         },
         {
           "title": "Противодействие коррупции",
-          "link": "services_text_page.html"
+          "link": "users_info.html"
         }
       ]
     },
     {
       "title": "Услуги",
-      "link": "services_types.html",
+      "link": "services.html",
       "pages": [
         {
           "title": "Частные лица",
@@ -724,7 +724,7 @@
             },
             {
               "title": "Прочие услуги",
-              "link": "services_text_page.html"
+              "link": "users_info.html"
             }
           ]
         },
@@ -877,7 +877,7 @@
             },
             {
               "title": "Прочие услуги",
-              "link": "services_text_page.html"
+              "link": "users_info.html"
             }
           ]
         }
@@ -885,11 +885,11 @@
     },
     {
       "title": "О водоканале",
-      "link": "services_text_page.html",
+      "link": "users_info.html",
       "pages": [
         {
           "title": "История",
-          "link": "services_text_page.html"
+          "link": "users_info.html"
         },
         {
           "title": "Руководство",
@@ -909,7 +909,7 @@
             },
             {
               "title": "Молодые специалисты",
-              "link": "services_text_page.html",
+              "link": "users_info.html",
               "pages": [
                 {
                   "title": "Совет молодых специалистов",
@@ -959,7 +959,7 @@
                 },
                 {
                   "title": "Состав совета",
-                  "link": "services_text_page.html"
+                  "link": "users_info.html"
                 },
                 {
                   "title": "Прошедшие советы",
@@ -999,15 +999,15 @@
         },
         {
           "title": "Положение о закупках",
-          "link": "services_text_page.html"
+          "link": "users_info.html"
         },
         {
           "title": "ЭТП",
-          "link": "services_text_page.html"
+          "link": "users_info.html"
         },
         {
           "title": "Контакты",
-          "link": "pressroom_contacts_page.html"
+          "link": "pressroom_news_contacts.html"
         }
       ]
     },
@@ -1074,7 +1074,7 @@
         },
         {
           "title": "Контакты для СМИ",
-          "link": "pressroom_contacts_page.html"
+          "link": "pressroom_news_contacts.html"
         }
       ]
     },

@@ -7,7 +7,7 @@
   "pages": [
     {
       "title": "Услуги",
-      "link": "services_types.html",
+      "link": "services.html",
       "withoutArrow": true,
       "pages": [
         {
@@ -162,7 +162,7 @@
             },
             {
               "title": "Прочие услуги",
-              "link": "services_text_page.html"
+              "link": "users_info.html"
             }
           ]
         },
@@ -315,7 +315,7 @@
             },
             {
               "title": "Прочие услуги",
-              "link": "services_text_page.html"
+              "link": "users_info.html"
             }
           ]
         }
