@@ -1,4 +1,4 @@
-{% extends "../../layouts/users.twig" %}
+  {% extends "../../layouts/users.twig" %}
 
 {% block main %}
   {% include '../../includes/stdEls/page-content__title_with-underline.twig' with {"title" : "Подать заявление ", "btnText": "Проверить статус"} %}
@@ -82,24 +82,37 @@
 
       <ol>
         <li>
-          <span class="li-head strong">Копия паспорта заявителя</span>
-          <span class="li-text">Копия паспорта заявителя, заверенная нотариусом. Оригинал предъявляется при сдаче пакета документов специалисту.</span>
+          <span class="li-head strong">Копия устава предприятия</span>
+          <span class="li-text">Копия устава предприятия, заверенная нотариусом. Оригинал предъявляется при сдаче пакета документов специалисту.</span>
         </li>
 
         <li>
-          <span class="li-head strong">Копия ИНН</span>
+          <span class="li-head strong">Копия ИНН/КПП</span>
           <span class="li-text">Оригинал предъявляется при сдаче пакета документов специалисту. Индивидуальные Предприниматели дополнительно предоставляют Свидетельство о внесении записи в ЕГРИП. </span>
         </li>
 
         <li>
+          <span class="li-head strong">Копия свидетельства о государственной регистрации юридического лица</span>
+          <span class="li-text">Оригинал предъявляется при сдаче пакета документов специалисту.</span>
+        </li>
+
+        <li>
+          <span class="li-head strong">Выписка из протокола общего собрания (собрания участников)</span>
+          <span class="li-text">Выписка из протокола общего собрания (собрания участников) или приказ о назначении руководителя, заверенная печатью руководителя.</span>
+        </li>
+
+        <li>
           <span class="li-head"><strong>Нотариально заверенная копия</strong> одного из нижеперечисленных <strong>правоустанавливающих документов на земельный участок</strong> установленного образца</span>
-          <ul class="li-text">
-            <li>Свидетельство о государственной регистрации права</li>
-            <li>Договор аренды/субаренды</li>
-            <li>Договор дарения или наследования</li>
-            <li>Распоряжение об установление сервитута</li>
-            <li>Выписка из ЕГРН (дополнительно при подаче пакета документов предъявляется оригинал, документ можно получить в МФЦ)</li>
-          </ul>
+          <span class="li-text">
+            <ul>
+              <li>Свидетельство о государственной регистрации права</li>
+              <li>Договор аренды/субаренды</li>
+              <li>Договор дарения или наследования</li>
+              <li>Распоряжение об установление сервитута</li>
+              <li>Выписка из ЕГРН (дополнительно при подаче пакета документов предъявляется оригинал, документ можно получить в МФЦ)</li>
+            </ul>
+            <p>Документ должен содержать информацию о разрешенном использовании земельного участка. Такие сведения можно запросить в муниципальном образовании (копию распоряжения), либо указать дополнительно при получении выписки из градостроительного плана.  </p>
+          </span>
         </li>
 
         <li>
@@ -109,7 +122,7 @@
 
         <li>
           <span class="li-head strong">Ситуационный план расположения объекта</span>
-          <span class="li-text">Ситуационный план расположения объекта с привязкой к территории населенного пункта. Карта распечатывается из Интернет- ресурса Яндекс-карты, 2 ГИС.</span>
+          <span class="li-text">Ситуационный план расположения объекта с привязкой к территории населенного пункта. Карта распечатывается из Интернет- ресурса <a href="#">Яндекс-карты</a>, <a href="#>"2 ГИС</a>.</span>
         </li>
 
         <li>
@@ -139,6 +152,7 @@
               <li>Банковские реквизиты заявителя.</li>
               <li>Кадастровый паспорт земельного участка.</li>
               <li>Письма-согласования владельцев частных сетей, в случае такого подключения, с приложением копии проекта или исполнительной съемки (запрашивается у владельцев частных сетей). Пример <a href="#" >письма – согласования</a>.</li>
+              <li>Гарантийное письмо об оплате услуг. Образец <a href="#">гарантийного письма</a>.</li>
             </ul>
           </span>
         </li>
@@ -149,26 +163,43 @@
       <h5 class="colorCyan">Сформировать пакет документов</h5>
 
       <form action="" class="form form_flex-vertical form-in-text">
-        <h6 class="strong form-title">Личные данные</h6>
 
         <div class="input-with-label">
-          <label>Фамилия, Имя, Отчество *</label>
+          <label>Наименование организации *</label>
           <input type="text" class="required">
         </div>
 
         <div class="input-with-label__row input-with-label__row_2">
           <div class="input-with-label">
-            <label>Ваш телефон *</label>
-            <input type="text"  class="required input_phone">
+            <label>ИНН организации *</label>
+            <input type="text"  class="required">
           </div>
           <div class="input-with-label">
-            <label>Ваш е-mail *</label>
+            <label>КПП *</label>
             <input type="text"  class="required">
           </div>
         </div>
 
         <div class="input-with-label">
-          <label>Район Вашего проживания *</label>
+          <label>Фамилия, Имя, Отчество представителя *</label>
+          <input type="text" class="required">
+        </div>
+        
+        <div class="input-with-label__row input-with-label__row_2">
+          <div class="input-with-label">
+            <label>Контактный телефон *</label>
+            <input type="text"  class="required input_phone">
+          </div>
+          <div class="input-with-label">
+            <label>Контактный е-mai *</label>
+            <input type="text"  class="required">
+          </div>
+        </div>
+
+        <h6 class="strong form-title">Адрес нового подключения</h6>
+
+        <div class="input-with-label">
+          <label>Район *</label>
           <select id="city-district"  class="required">
             <option></option> 
             <option value="1">- Железнодорожный район</option>
@@ -178,8 +209,6 @@
             <option value="5">- Центральный район </option>
           </select>
         </div>
-
-        <h6 class="strong form-title">Адрес Вашей регистрации</h6>
 
         <div class="input-with-label__row input-with-label__row_2">
           <div class="input-with-label">
@@ -220,27 +249,32 @@
         </div>
         
         <div class="input-with-label">
-          <label>Заявление на получение ТУ *</label>
+          <label>Заявление на подключение *</label>
           {% include '../../includes/stdEls/input_file.twig' with {"btnText": "Обзор"} %}
         </div>
         
         <div class="input-with-label">
-          <label>Копия паспорта *</label>
+          <label>Копия устава предприятия *</label>
           {% include '../../includes/stdEls/input_file.twig' with {"btnText": "Обзор"} %}
         </div>
         
         <div class="input-with-label">
-          <label>Копия ИНН *</label>
+          <label>Копия ИНН/КПП *</label>
           {% include '../../includes/stdEls/input_file.twig' with {"btnText": "Удалить"} %}
         </div>
         
         <div class="input-with-label">
-          <label>Нотариально заверенная копия правоустанавливающего документа *</label>
+          <label>Копия свидетельства о государственной регистрации юридического лица *</label>
           {% include '../../includes/stdEls/input_file.twig' with {"btnText": "Обзор"} %}
         </div>
         
         <div class="input-with-label">
-          <label>Ситуационный план расположения объекта *</label>
+          <label>Выписка из протокола общего собрания *</label>
+          {% include '../../includes/stdEls/input_file.twig' with {"btnText": "Обзор"} %}
+        </div>
+        
+        <div class="input-with-label">
+          <label>Нотариально заверенная копия одного из правоустанавливающих документов на земельный участок *</label>
           {% include '../../includes/stdEls/input_file.twig' with {"btnText": "Обзор"} %}
         </div>
         
@@ -256,6 +290,31 @@
           {% include '../../includes/stdEls/checkbox.twig' with {"id": "check2", "text": "У меня нет нужного документа, я хочу заказать Баланс водопотребления и водоотведения у вас"} %}
         </div>
         
+        <div class="input-with-label">
+          <label>Нотариально заверенная доверенность, если заявитель представляет интересы предприятия или организации *</label>
+          {% include '../../includes/stdEls/input_file.twig' with {"btnText": "Обзор"} %}
+        </div>
+
+        <div class="input-with-label">
+          <label>Банковские реквизиты заявителя *</label>
+          {% include '../../includes/stdEls/input_file.twig' with {"btnText": "Обзор"} %}
+        </div>
+
+        <div class="input-with-label">
+          <label>Копия кадастрового паспорта земельного участка *</label>
+          {% include '../../includes/stdEls/input_file.twig' with {"btnText": "Обзор"} %}
+        </div>
+
+        <div class="input-with-label">
+          <label>Копии писем-согласования владельцев частных сетей *</label>
+          {% include '../../includes/stdEls/input_file.twig' with {"btnText": "Обзор"} %}
+        </div>
+
+        <div class="input-with-label">
+          <label>Гарантийное письмо об оплате услуг *</label>
+          {% include '../../includes/stdEls/input_file.twig' with {"btnText": "Обзор"} %}
+        </div>
+
         <div class="input-with-label" data-add-input-file-on-end="true">
           <label class="strong">
             <span class="block">Дополнительные документы</span>
@@ -273,6 +332,7 @@
         Если все документы успешно прошли проверку, то в течение 14 рабочих дней специалисты предприятия подготовят Технические условия на основании вашего заявления.</p>
 
         <hr class="dashed">
+
 
         <div class="form-footer">
           {% include '../../includes/stdEls/checkbox.twig' with {"id": "check1", "text": "Я принимаю <a href='#'>Политику конфиденциальности</a>", "isRequired": true} %}
