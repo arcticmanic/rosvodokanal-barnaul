@@ -30,13 +30,23 @@
           <h4 class="banner-form__title"><strong>Проверка приборов учета</strong></h4>
           <div class="banner-form__content">
             <div class="input-with-label">
-              <label>Вид работ *</label>
-              <select id="work-type" class="required">
-                <option></option> 
-                <option value="1">- Установка приборов учёта</option>
-                <option value="2">- Проверка приборов учета</option>
-                <option value="3">- Опломбировка </option>
+              <label>Тип техники *</label>
+              <select id="vehicle-type" class="required">
+                <option value="1">КАМАЗ автоцистерна</option>
+                <option value="2">КАМАЗ автоцистерна</option>
+                <option value="3">КАМАЗ автоцистерна</option>
               </select>
+            </div>
+
+            <div class="input-with-label__row input-with-label__row_2">
+              <div class="input-with-label">
+                <label>Период аренды *</label>
+                <input type='text' class="datepicker-here" autocomplete="off"  class="required" placeholder="с"/>
+              </div>
+
+              <div class="input-with-label">
+                <input type='text' class="datepicker-here" autocomplete="off"  class="required" placeholder="до"/>
+              </div>
             </div>
 
             <div class="input-with-label">

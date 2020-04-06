@@ -10,4 +10,21 @@ $(document).ready(function() {
     minimumResultsForSearch: Infinity,
     placeholder: 'Выберите район проживания'
   })
+
+  $('#vehicle-type').select2({
+    language: 'ru',
+    minimumResultsForSearch: Infinity
+  })
+
+  $('#date-from').select2({
+    language: 'ru',
+    minimumResultsForSearch: Infinity,
+    placeholder: 'с'
+  })
+
+  $('#date-to').select2({
+    language: 'ru',
+    minimumResultsForSearch: Infinity,
+    placeholder: 'до'
+  })
 })
