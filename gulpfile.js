@@ -217,7 +217,7 @@ const clean = () => {
   const cleanFiles = [
     paths.distJS,
     paths.distCSS,
-    path.join(paths.build, '*.html'),
+    path.join(paths.build, '**', '*.html'),
   ]
 
   return del(cleanFiles)

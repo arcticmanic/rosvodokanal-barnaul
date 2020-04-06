@@ -12,7 +12,7 @@
       "pages": [
         {
           "title": "Частные лица",
-          "link": "services_type.html",
+          "link": "services_individual.html",
           "pages": [
             {
               "title": "Скачать мобильные приложение",
@@ -20,140 +20,140 @@
             },
             {
               "title": "Приборы учета",
-              "link": "services_type_meters.html",
+              "link": "services_individual_meters.html",
               "pages": [
                 {
                   "title": "Установка",
-                  "link": "services_type_meters_application.html",
-                  "extra_sketches": ["services_type_meters_application_3b"]
+                  "link": "services_individual_meters_application.html",
+                  "extra_sketches": ["services_individual_meters_application_3b"]
                 },
                 {
                   "title": "Повторная опломбировка",
-                  "link": "services_type_meters_application.html",
-                  "extra_sketches": ["services_type_meters_application_3b"]
+                  "link": "services_individual_meters_application.html",
+                  "extra_sketches": ["services_individual_meters_application_3b"]
                 },
                 {
                   "title": "Поверка",
-                  "link": "services_type_meters_application.html",
-                  "extra_sketches": ["services_type_meters_application_3b"]
+                  "link": "services_individual_meters_application.html",
+                  "extra_sketches": ["services_individual_meters_application_3b"]
                 }
               ]
             },
             {
               "title": "Лаборатория",
-              "link": "services_type_lab.html",
+              "link": "services_individual_lab.html",
               "pages": [
                 {
                   "title": "Анализ воды",
-                  "link": "services_type_meters_application.html",
-                  "extra_sketches": ["services_type_meters_application_3b"]
+                  "link": "services_individual_meters_application.html",
+                  "extra_sketches": ["services_individual_meters_application_3b"]
                 },
                 {
                   "title": "Анализ стоков",
-                  "link": "services_type_meters_application.html",
-                  "extra_sketches": ["services_type_meters_application_3b"]
+                  "link": "services_individual_meters_application.html",
+                  "extra_sketches": ["services_individual_meters_application_3b"]
                 }
               ]
             },
             {
               "title": "Услуги на сетях водоснабжения и водоотведения",
-              "link": "services_type_networks.html",
+              "link": "services_individual_networks.html",
               "pages": [
                 {
                   "title": "Промывка систем водоснабжения и водоотведения",
-                  "link": "services_type_meters_application.html",
-                  "extra_sketches": ["services_type_meters_application_3b"]
+                  "link": "services_individual_meters_application.html",
+                  "extra_sketches": ["services_individual_meters_application_3b"]
                 },
                 {
                   "title": "Обследование сетей",
-                  "link": "services_type_meters_application.html",
-                  "extra_sketches": ["services_type_meters_application_3b"]
+                  "link": "services_individual_meters_application.html",
+                  "extra_sketches": ["services_individual_meters_application_3b"]
                 },
                 {
                   "title": "Обслуживание водопроводных и канализационных сетей",
-                  "link": "services_type_meters_application.html",
-                  "extra_sketches": ["services_type_meters_application_3b"]
+                  "link": "services_individual_meters_application.html",
+                  "extra_sketches": ["services_individual_meters_application_3b"]
                 },
                 {
                   "title": "Ремонт и чистка колодцев",
-                  "link": "services_type_meters_application.html",
-                  "extra_sketches": ["services_type_meters_application_3b"]
+                  "link": "services_individual_meters_application.html",
+                  "extra_sketches": ["services_individual_meters_application_3b"]
                 }
               ]
             },
             {
               "title": "Сантехнические услуги",
-              "link": "services_type_plumbing.html",
+              "link": "services_individual_plumbing.html",
               "pages": [
                 {
                   "title": "Ограничение и возобновление приема сточных вод на внутридомовых сетях",
-                  "link": "services_type_meters_application.html",
-                  "extra_sketches": ["services_type_meters_application_3b"]
+                  "link": "services_individual_meters_application.html",
+                  "extra_sketches": ["services_individual_meters_application_3b"]
                 }
               ]
             },
             {
               "title": "Вывоз стоков",
-              "link": "services_type_waste.html",
+              "link": "services_individual_waste.html",
               "pages": [
                 {
                   "title": "Откачка и вывоз стоков",
-                  "link": "services_type_meters_application.html",
-                  "extra_sketches": ["services_type_meters_application_3b"]
+                  "link": "services_individual_meters_application.html",
+                  "extra_sketches": ["services_individual_meters_application_3b"]
                 }
               ]
             },
             {
               "title": "Проектирование и строительство",
-              "link": "services_type_construction.html",
+              "link": "services_individual_construction.html",
               "pages": [
                 {
                   "title": "Проектирование водопровода и канализации",
-                  "link": "services_type_meters_application.html",
-                  "extra_sketches": ["services_type_meters_application_3b"]
+                  "link": "services_individual_meters_application.html",
+                  "extra_sketches": ["services_individual_meters_application_3b"]
                 },
                 {
                   "title": "Строительство сетей водоснабжения и водоотведения",
-                  "link": "services_type_meters_application.html",
-                  "extra_sketches": ["services_type_meters_application_3b"]
+                  "link": "services_individual_meters_application.html",
+                  "extra_sketches": ["services_individual_meters_application_3b"]
                 },
                 {
                   "title": "Проектирование узлов учета",
-                  "link": "services_type_meters_application.html",
-                  "extra_sketches": ["services_type_meters_application_3b"]
+                  "link": "services_individual_meters_application.html",
+                  "extra_sketches": ["services_individual_meters_application_3b"]
                 }
               ]
             },
             {
               "title": "Специальная техника",
-              "link": "services_type_specialEquipment.html",
+              "link": "services_individual_specialEquipment.html",
               "pages": [
                 {
                   "title": "Доставка воды",
-                  "link": "services_type_meters_application.html",
-                  "extra_sketches": ["services_type_meters_application_3b"]
+                  "link": "services_individual_meters_application.html",
+                  "extra_sketches": ["services_individual_meters_application_3b"]
                 },
                 {
                   "title": "Аренда автотранспорта и спецтехники",
-                  "link": "services_type_specialEquipment_application.html"
+                  "link": "services_individual_specialEquipment_application.html"
                 }
               ]
             },
             {
               "title": "Локальные очистные сооружения",
-              "link": "services_type_treatmentFacilities.html",
+              "link": "services_individual_treatmentFacilities.html",
               "pages": [
                 {
                   "title": "Проектирование",
-                  "link": "services_type_treatmentFacilities_application.html"
+                  "link": "services_individual_treatmentFacilities_application.html"
                 },
                 {
                   "title": "Строительство",
-                  "link": "services_type_treatmentFacilities_application.html"
+                  "link": "services_individual_treatmentFacilities_application.html"
                 },
                 {
                   "title": "Обслуживание",
-                  "link": "services_type_treatmentFacilities_application.html"
+                  "link": "services_individual_treatmentFacilities_application.html"
                 }
               ]
             },
@@ -165,7 +165,7 @@
         },
         {
           "title": "Юридические лица",
-          "link": "services_type.html",
+          "link": "services_individual.html",
           "pages": [
             {
               "title": "Скачать мобильные приложение",
@@ -173,140 +173,140 @@
             },
             {
               "title": "Приборы учета",
-              "link": "services_type_meters.html",
+              "link": "services_individual_meters.html",
               "pages": [
                 {
                   "title": "Установка",
-                  "link": "services_type_meters_application.html",
-                  "extra_sketches": ["services_type_meters_application_3b"]
+                  "link": "services_individual_meters_application.html",
+                  "extra_sketches": ["services_individual_meters_application_3b"]
                 },
                 {
                   "title": "Повторная опломбировка",
-                  "link": "services_type_meters_application.html",
-                  "extra_sketches": ["services_type_meters_application_3b"]
+                  "link": "services_individual_meters_application.html",
+                  "extra_sketches": ["services_individual_meters_application_3b"]
                 },
                 {
                   "title": "Поверка",
-                  "link": "services_type_meters_application.html",
-                  "extra_sketches": ["services_type_meters_application_3b"]
+                  "link": "services_individual_meters_application.html",
+                  "extra_sketches": ["services_individual_meters_application_3b"]
                 }
               ]
             },
             {
               "title": "Лаборатория",
-              "link": "services_type_lab.html",
+              "link": "services_individual_lab.html",
               "pages": [
                 {
                   "title": "Анализ воды",
-                  "link": "services_type_meters_application.html",
-                  "extra_sketches": ["services_type_meters_application_3b"]
+                  "link": "services_individual_meters_application.html",
+                  "extra_sketches": ["services_individual_meters_application_3b"]
                 },
                 {
                   "title": "Анализ стоков",
-                  "link": "services_type_meters_application.html",
-                  "extra_sketches": ["services_type_meters_application_3b"]
+                  "link": "services_individual_meters_application.html",
+                  "extra_sketches": ["services_individual_meters_application_3b"]
                 }
               ]
             },
             {
               "title": "Услуги на сетях водоснабжения и водоотведения",
-              "link": "services_type_networks.html",
+              "link": "services_individual_networks.html",
               "pages": [
                 {
                   "title": "Промывка систем водоснабжения и водоотведения",
-                  "link": "services_type_meters_application.html",
-                  "extra_sketches": ["services_type_meters_application_3b"]
+                  "link": "services_individual_meters_application.html",
+                  "extra_sketches": ["services_individual_meters_application_3b"]
                 },
                 {
                   "title": "Обследование сетей",
-                  "link": "services_type_meters_application.html",
-                  "extra_sketches": ["services_type_meters_application_3b"]
+                  "link": "services_individual_meters_application.html",
+                  "extra_sketches": ["services_individual_meters_application_3b"]
                 },
                 {
                   "title": "Обслуживание водопроводных и канализационных сетей",
-                  "link": "services_type_meters_application.html",
-                  "extra_sketches": ["services_type_meters_application_3b"]
+                  "link": "services_individual_meters_application.html",
+                  "extra_sketches": ["services_individual_meters_application_3b"]
                 },
                 {
                   "title": "Ремонт и чистка колодцев",
-                  "link": "services_type_meters_application.html",
-                  "extra_sketches": ["services_type_meters_application_3b"]
+                  "link": "services_individual_meters_application.html",
+                  "extra_sketches": ["services_individual_meters_application_3b"]
                 }
               ]
             },
             {
               "title": "Сантехнические услуги",
-              "link": "services_type_plumbing.html",
+              "link": "services_individual_plumbing.html",
               "pages": [
                 {
                   "title": "Ограничение и возобновление приема сточных вод на внутридомовых сетях",
-                  "link": "services_type_meters_application.html",
-                  "extra_sketches": ["services_type_meters_application_3b"]
+                  "link": "services_individual_meters_application.html",
+                  "extra_sketches": ["services_individual_meters_application_3b"]
                 }
               ]
             },
             {
               "title": "Вывоз стоков",
-              "link": "services_type_waste.html",
+              "link": "services_individual_waste.html",
               "pages": [
                 {
                   "title": "Откачка и вывоз стоков",
-                  "link": "services_type_meters_application.html",
-                  "extra_sketches": ["services_type_meters_application_3b"]
+                  "link": "services_individual_meters_application.html",
+                  "extra_sketches": ["services_individual_meters_application_3b"]
                 }
               ]
             },
             {
               "title": "Проектирование и строительство",
-              "link": "services_type_construction.html",
+              "link": "services_individual_construction.html",
               "pages": [
                 {
                   "title": "Проектирование водопровода и канализации",
-                  "link": "services_type_meters_application.html",
-                  "extra_sketches": ["services_type_meters_application_3b"]
+                  "link": "services_individual_meters_application.html",
+                  "extra_sketches": ["services_individual_meters_application_3b"]
                 },
                 {
                   "title": "Строительство сетей водоснабжения и водоотведения",
-                  "link": "services_type_meters_application.html",
-                  "extra_sketches": ["services_type_meters_application_3b"]
+                  "link": "services_individual_meters_application.html",
+                  "extra_sketches": ["services_individual_meters_application_3b"]
                 },
                 {
                   "title": "Проектирование узлов учета",
-                  "link": "services_type_meters_application.html",
-                  "extra_sketches": ["services_type_meters_application_3b"]
+                  "link": "services_individual_meters_application.html",
+                  "extra_sketches": ["services_individual_meters_application_3b"]
                 }
               ]
             },
             {
               "title": "Специальная техника",
-              "link": "services_type_specialEquipment.html",
+              "link": "services_individual_specialEquipment.html",
               "pages": [
                 {
                   "title": "Доставка воды",
-                  "link": "services_type_meters_application.html",
-                  "extra_sketches": ["services_type_meters_application_3b"]
+                  "link": "services_individual_meters_application.html",
+                  "extra_sketches": ["services_individual_meters_application_3b"]
                 },
                 {
                   "title": "Аренда автотранспорта и спецтехники",
-                  "link": "services_type_specialEquipment_application.html"
+                  "link": "services_individual_specialEquipment_application.html"
                 }
               ]
             },
             {
               "title": "Локальные очистные сооружения",
-              "link": "services_type_treatmentFacilities.html",
+              "link": "services_individual_treatmentFacilities.html",
               "pages": [
                 {
                   "title": "Проектирование",
-                  "link": "services_type_treatmentFacilities_application.html"
+                  "link": "services_individual_treatmentFacilities_application.html"
                 },
                 {
                   "title": "Строительство",
-                  "link": "services_type_treatmentFacilities_application.html"
+                  "link": "services_individual_treatmentFacilities_application.html"
                 },
                 {
                   "title": "Обслуживание",
-                  "link": "services_type_treatmentFacilities_application.html"
+                  "link": "services_individual_treatmentFacilities_application.html"
                 }
               ]
             },

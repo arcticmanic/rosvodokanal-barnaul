@@ -1,0 +1,31 @@
+{% extends "../../layouts/services.twig" %}
+
+{% block main %}
+  {% include '../../includes/stdEls/page-content__title_with-underline.twig' with {"title" : "Специальная техника"} %}
+
+  <section class="section-services-type-networks">
+    <div class="text">
+      <p>Автопарк «Росводоканал Барнаул» оснащен современной техникой и автомобилями. Кроме того, предприятие сотрудничает с компаниями, которые готовы предоставить нашим клиентам самую различную специальную технику.</p>
+
+      <article class="jumbo-icons__article">
+        <hr class="dashed">
+        <div class="jumbo-icons">
+          <a href="services_individual_meters_application.html" class="jumbo-icons__item">
+            {% include '../../includes/svg/icon-rvk-truck-svg.twig' with {"classes": "jumbo-icons__icon"} %}
+            <p class="jumbo-icons__p">Доставка воды спецтехникой</p>
+          </a>
+
+          <a href="services_individual_specialEquipment_application.html" class="jumbo-icons__item">
+            {% include '../../includes/svg/icon-special-truck-svg.twig' with {"classes": "jumbo-icons__icon"} %}
+            <p class="jumbo-icons__p">Аренда автотранспорта и спецтехники</p>
+          </a>
+        </div>
+        <hr class="dashed">
+        <a href="#" class="btn btn_colorPrimary mx-auto">Прочие услуги раздела</a>
+        <hr class="dashed">
+      </article>
+      
+      <p>Автопарк «Росводоканал Барнаул» оснащен современной техникой и автомобилями. Кроме того, предприятие сотрудничает с компаниями, которые готовы предоставить нашим клиентам самую различную специальную технику.</p>
+    </div>
+  </section>
+{% endblock %}
