@@ -47,11 +47,15 @@
     }
   }
   &-not-list {
+    &:not(.doc-info-not-list_without-dashes) {
+      .doc-info {
+        border-bottom: 1px dashed #e0e0e0;
+      }
+    }
     .doc-info {
       display: flex;
       margin-bottom: 25px;
       padding-bottom: 25px;
-      border-bottom: 1px dashed #e0e0e0;
       user-select: none;
       text-decoration: none;
 

@@ -245,7 +245,7 @@ const watchFiles = () => {
 
   watch(
     ['./less/**/*.less', './scss/**/*.scss'],
-    gulp.series(styles, browserSync.reload)
+    gulp.series(styles)
   )
 
   watch(

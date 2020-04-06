@@ -5,6 +5,7 @@
   h5,
   h6 {
     color: @colorPrimary3;
+    margin-top: 35px;
   }
   h2,
   h3 {
@@ -121,6 +122,14 @@
   .text {
     h2,
     h3,
+    h4,
+    h5,
+    h6 {
+      margin-top: 30px;
+    }
+
+    h2,
+    h3,
     h4 {
       margin-bottom: 15px;
     }
@@ -130,6 +139,12 @@
 @media (max-width: @mobileLandscapeWBig) {
   .inText-row {
     flex-wrap: wrap;
+  }
+}
+
+@media (max-width: @mobileLandscapeW) {
+  .text {
+    
   }
 }
 
@@ -150,9 +165,9 @@
       margin-bottom: 15px;
     }
     li {
-      font-size: @font-15;
-      line-height: @font-24;
-      padding-left: 20px;
+      font-size: @font-14;
+      line-height: @font-20;
+      padding-left: 15px;
     }
   }
 }
