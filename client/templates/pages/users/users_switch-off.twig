@@ -24,63 +24,20 @@
       <div class="form-footer">
         {% include '../../includes/stdEls/checkbox.twig' with {"id": "check1", "text": "Я принимаю <a href='#'>Политику конфиденциальности</a>", "isRequired": true} %}
 
-        <button type="submit" class="btn btn_colorPrimary submit-element">Подписаться</button>
+        <div class="grid_2-cells submit-element">
+          <button class="btn btn_colorCyan">Узнать</button>
+          <button type="submit" class="btn btn_colorPrimary">Подписаться</button>
+        </div>
+
       </div>
     </form>
 
-    {% include '../../includes/stdEls/page-content__title_with-underline.twig' with {"title" : "Отключения", "classes": "page-content__title-cont_without-spacing"} %}
+    {% include '../../includes/stdEls/page-content__title_with-underline.twig' with {"title" : "Информация", "prependIcon": "../svg/icon-warning-svg.twig", "classes": "page-content__title-cont_with-prepended-icon"} %}
 
-    <table>
-      <tr>
-        <th>Адрес</th>
-        <th class="center-text-in-td">Начало работ</th>
-        <th class="center-text-in-td">Окончание работ</th>
-      </tr>
+    <div class="text">
+      <p>В настоящее время «Росводоканал Барнаул» <strong>не проводит</strong> работ, связанных с отключением холодного водоснабжения по этому адресу. В случае отсутствия холодной воды рекомендуем обратиться в управляющую компанию, обслуживающую ваш дом.</p>
+    
+    </div>
 
-      <tr>
-        <td>
-          <span class="inTd-block">Барнаул,</span> 
-          <span class="inTd-block">ул. Союза Республик, 36а</span>
-        </td>
-        <td class="center-text-in-td">
-          <span class="inTd-block">11.12.2019</span>
-          <span class="inTd-block">18:00</span>
-        </td>
-        <td class="center-text-in-td">
-          <span class="inTd-block">11.12.2019</span>
-          <span class="inTd-block">19:00</span>
-        </td>
-      </tr>
-
-      <tr>
-        <td>
-          <span class="inTd-block">Барнаул,</span> 
-          <span class="inTd-block">ул.Короленко, 65</span>
-        </td>
-        <td class="center-text-in-td">
-          <span class="inTd-block">12.12.2019</span>
-          <span class="inTd-block">18:00</span>
-        </td>
-        <td class="center-text-in-td">
-          <span class="inTd-block">15.12.2019</span>
-          <span class="inTd-block">19:00</span>
-        </td>
-      </tr>
-
-      <tr>
-        <td>
-          <span class="inTd-block">Барнаул,</span> 
-          <span class="inTd-block">ул. Молодежная, 1</span>
-        </td>
-        <td class="center-text-in-td">
-          <span class="inTd-block">12.12.2019</span>
-          <span class="inTd-block">18:00</span>
-        </td>
-        <td class="center-text-in-td">
-          <span class="inTd-block">15.12.2019</span>
-          <span class="inTd-block">19:00</span>
-        </td>
-      </tr>
-    </table>
   </section>
 {% endblock %}

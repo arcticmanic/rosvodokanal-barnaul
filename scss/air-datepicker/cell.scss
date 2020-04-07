@@ -87,6 +87,8 @@
     color: #fff;
     border: none;
     background: map_get($datepickerBG, selected);
+    cursor: default;
+    pointer-events: none;
 
     &.-current- {
       color: #fff;
@@ -94,7 +96,7 @@
     }
 
     &.-focus- {
-      background: map_get($datepickerBG, selectedHover);
+      background: map_get($datepickerBG, selected);
     }
   }
 

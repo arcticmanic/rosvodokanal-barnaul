@@ -62,3 +62,15 @@
 
 ---
 1. Название страницы users_application_2 изменено на users_application_form
+
+---
+Используемые плагины:
+1. https://jquerymodal.com/
+2. http://t1m0n.name/air-datepicker/docs/
+3. https://github.com/digitalBush/jquery.maskedinput
+4. https://github.com/verlok/lazyload
+5. https://mmenujs.com/mmenu-light/
+6. https://select2.org/
+7. https://kenwheeler.github.io/slick/
+8. https://github.com/validatorjs/validator.js
+9. https://github.com/josephschmitt/Clamp.js/

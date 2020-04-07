@@ -2,6 +2,10 @@
   width: 65.9%;
   z-index: 2;
 
+  &__icon {
+    margin-right: 20px;
+  }
+
   &__title {
     &-cont {
       display: flex;
@@ -24,6 +28,9 @@
       &_without-spacing {
         margin-bottom: 0px;
         padding-bottom: 20px;
+      }
+      &_with-prepended-icon {
+        justify-content: flex-start;
       }
     }
   }
@@ -53,6 +60,9 @@
 
 @media (max-width: @mobileSSW) {
   .page-content {
+    &__icon {
+      margin-right: 10px;
+    }
     &__title {
       &-cont {
         .btn {
