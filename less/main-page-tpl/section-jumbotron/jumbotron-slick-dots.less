@@ -122,6 +122,43 @@
   }
 }
 
+@media (max-width: @mobileW) {
+  .jumbotron__slider {
+    .slick-dots {
+      display: flex;
+      justify-content: space-between;
+      margin-right: auto;
+      margin-bottom: 10px;
+      width: 70%;
+      li {
+        margin-top: 0;
+        margin-bottom: 0;
+        button {
+          &:before {
+            top: -28px;
+            left: 55%;
+            transform: translateX(-45%);
+            width: 2px;
+            height: 18px;
+            min-width: 0;
+            max-width: 100%;
+            min-height: 0;
+            max-height: 100%;
+          }
+        }
+        &.slick-active {
+          button:before {
+            width: 2px;
+            height: 30px;
+            max-height: 30px;
+            top: -40px;
+          }
+        }
+      }
+    }
+  }
+}
+
 html.color-white {
   .jumbotron__slider {
     .slick-dots {

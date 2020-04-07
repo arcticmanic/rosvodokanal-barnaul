@@ -48,7 +48,7 @@
     &__text {
       color: @colorPrimary3;
       font-size: @font-15;
-      font-weight: 600;
+      font-weight: 400;
       line-height: 25px;
       max-width: 100%;
     }
@@ -133,12 +133,28 @@
             margin-right: 0;
           }
         }
+      }
+    }
+  }
+}
+
+@media (max-width: @mobileW) {
+  .info {
+    &-slider {
+      &__content:not(&__content_vertical) {
+        .info-slider__inner-cont {
+          width: 100%;
+        }
         .info-slider__img {
           position: absolute;
           top: 50%;
-          transform: translateY(-50%);
-          left: 0;
+          left: 50%;
+          transform: translateY(-50%) translateX(-50%);
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
           filter: brightness(1.2);
+          opacity: 0.15 !important;
         }
       }
     }

@@ -94,17 +94,17 @@
                 {
                   "title": "Установка",
                   "link": "services_individual_meters_application.html",
-                  "extra_sketches": ["indiviual_meters_application_3b"]
+                  "extra_sketches": ["individual_meters_application_3b"]
                 },
                 {
                   "title": "Повторная опломбировка",
                   "link": "services_individual_meters_application.html",
-                  "extra_sketches": ["indiviual_meters_application_3b"]
+                  "extra_sketches": ["individual_meters_application_3b"]
                 },
                 {
                   "title": "Проверка",
                   "link": "services_individual_meters_application.html",
-                  "extra_sketches": ["indiviual_meters_application_3b"]
+                  "extra_sketches": ["individual_meters_application_3b"]
                 }
               ]
             },
@@ -581,7 +581,7 @@
           "pages": [
             {
               "title": "Скачать мобильные приложение",
-              "link": "services_indiviual_mobile.html"
+              "link": "services_individual_mobile.html"
             },
             {
               "title": "Приборы учета воды",
@@ -734,7 +734,7 @@
           "pages": [
             {
               "title": "Скачать мобильные приложение",
-              "link": "services_indiviual_mobile.html"
+              "link": "services_individual_mobile.html"
             },
             {
               "title": "Приборы учета воды",

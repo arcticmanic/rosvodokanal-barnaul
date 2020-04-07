@@ -1,4 +1,6 @@
 .section-quick-menu {
+  margin-top: 60px;
+  margin-bottom: 0px;
   &__row {
     display: flex;
     flex-wrap: wrap;
@@ -27,8 +29,11 @@
           margin-bottom: 20px;
           margin-left: 10px;
         }
+        .quick-menu__title{
+          margin-bottom: 3px;
+        }
         .btn:not(:last-child) {
-          margin-bottom: 10px;
+          margin-bottom: 5px;
         }
       }
       &:not(.quick-menu__item_contentfull) {
@@ -71,7 +76,7 @@
     &__p {
       color: #ffffff;
       font-size: @font-14;
-      font-weight: 600;
+      font-weight: 400;
       line-height: 20px;
       margin-bottom: auto;
     }
@@ -82,6 +87,21 @@
   .section-quick-menu {
     &.wrapper {
       max-width: 630px;
+    }
+  }
+}
+
+@media (max-width: @mobileLandscapeWBig) {
+  .section-quick-menu {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: @mobileW) {
+  .section-quick-menu {
+    &__row {
+      margin-right: -10px;
+      margin-left: -10px;
     }
   }
 }
