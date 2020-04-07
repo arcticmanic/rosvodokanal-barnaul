@@ -1,25 +1,106 @@
 {% extends "../../layouts/users.twig" %}
 
 {% block main %}
-  <section class="section-users-faq">
-    {% include '../../includes/stdEls/page-content__title_with-underline.twig' with {"title" : "Частые вопросы", "classes": "page-content__title-cont_without-spacing"} %}
+  <section class="section-users-connection-calc">
+    {% include '../../includes/stdEls/page-content__title_with-underline.twig' with {"title" : "Калькулятор расчета платы за подключение к сетям"} %}
+
+    <form id="viv-calc" action="" class="viv-calc">
+      <div class="viv-calc__left">
+        <div class="viv-calc__checkbox-row">
+          <h6 class="viv-calc__checkbox-prepend-text strong colorPrimary3">Водоснабжения —</h6>
+          {% include '../../includes/stdEls/checkbox.twig' with {"id": "check1"} %}
+        </div> 
+        <div class="input-with-label">
+          <label>Планируемая нагрузка (м3/сут):</label>
+          <input type="text"  class="required input_grey">
+        </div>
+
+        <div class="input-with-label">
+          <label>Диаметр подводящих сетей :</label>
+          <select id="diametr-1"  class="required">
+            <option></option> 
+            <option value="1">- Железнодорожный район</option>
+            <option value="2">- Индустриальный район</option>
+            <option value="3">- Ленинский район </option>
+            <option value="4">- Октябрьский район </option>
+            <option value="5">- Центральный район </option>
+          </select>
+        </div>
+
+        <div class="input-with-label">
+          <label>Ориентировочная протяженность сетей до точки подключения (м) :</label>
+          <input type="text"  class="required input_grey">
+        </div>
+      </div>
+
+      <div class="viv-calc__vertical-divider"></div>
+
+      <div class="viv-calc__right">
+        <div class="viv-calc__checkbox-row">
+          <h6 class="viv-calc__checkbox-prepend-text strong colorPrimary3">Водоотведения —</h6>
+          {% include '../../includes/stdEls/checkbox.twig' with {"id": "check2"} %}
+        </div>
+
+        <div class="input-with-label">
+          <label>Планируемая нагрузка (м3/сут):</label>
+          <input type="text"  class="required input_grey">
+        </div>
+
+        <div class="input-with-label">
+          <label>Диаметр подводящих сетей :</label>
+          <select id="diametr-2"  class="required">
+            <option></option> 
+            <option value="1">- Железнодорожный район</option>
+            <option value="2">- Индустриальный район</option>
+            <option value="3">- Ленинский район </option>
+            <option value="4">- Октябрьский район </option>
+            <option value="5">- Центральный район </option>
+          </select>
+        </div>
+
+        <div class="input-with-label">
+          <label>Ориентировочная протяженность сетей до точки подключения (м) :</label>
+          <input type="text"  class="required input_grey">
+        </div>
+      </div>
+
+      <div class="viv-calc__bottom">
+        <div class="viv-calc__bottom-line"></div>
+        <button type="submit" class="btn btn_colorPrimary btn_big btn_big-text btn_wide">Рассчитать</button>
+      </div>
+    </form>
+
     <article class="text">
-      <ol class="faq-list">
-        {% for question in questions %}
-          <li class="faq-list__item">
-            <span class="faq-list__text">{{question.question}}</span>
-            <div class="faq-list__answer-block">
-              <span class="faq-list__hor-div"></span>
-              <span class="faq-list__answer-text">{{question.answer}}</span>
-            </div>
-            <div class="faq-list__switch">
-              <span class="faq-list__switch-text faq-list__switch-hide">Скрыть ответ</span>
-              <span class="faq-list__switch-text faq-list__switch-show">Посмотреть ответ</span>
-              {% include "../../includes/svg/icon-arrow-accord.twig" with {"classes": "faq-list__switch-icon"} %}
-            </div>
-          </li>
-        {% endfor %}
+      <h6 class="colorCyan">Важно знать:</h6>
+      <hr class="dashed">
+      <ol>
+        <li>Рассчитать размер платы за подключение к сетям можно примерно, так как при точном расчете учитывается более количество исходных данных. </li>
+        <li>Тариф за подключение является двухставочным и состоит из ставки «за нагрузку» и ставки «за протяженность». С информацией о тарифах на подключение можно ознакомиться в <a href="#">решении</a> РЭК города Барнаула.</li>
+        <li>В случае, если объем будущей подключаемой нагрузки объекта превышает 250 кубометров в сутки или диаметр сетей более 250 мм, то плата за подключение будет индивидуальной согласно постановлению <a href="#">Правительства РФ от 24.01.2017 №54</a>.</li>
       </ol>
+
+      <h6 class="colorCyan">Для расчета размера платы за подключение к сетям необходимо знать: </h6>
+      <ul>
+        <li>Объем будущей нагрузки подключаемого объекта (разрешенное потребление объема воды и услуги стоков), который зависит от: назначения объекта, этажности, количества сантехнических узлов и т.д. </li>
+        <li>Протяженность будущей трубопроводной сети водоснабжения и (или) водоотведения, которая зависит от ближайшей точки подключения к централизованной системе ВиВ.</li>
+        <li>Иные факторы, в том числе: глубина залегания, качество грунта, особенности расходов на строительство сети и мероприятия для обеспечения качества подаваемого ресурса и (или) услуги водоотведения в точке подключения для будущего объекта. </li>
+        <li>Вся необходимая информация будет указана в условиях подключения или в технических условиях, которые можно получить, обратившись в центр обслуживания абонентов по адресу: проспект Калинина 116. </li>
+      </ul>
+
+      <h6 class="colorCyan">Технические условия</h6>
+
+      <p>Технические условия - информационный документ. Срок их действия до момента подачи заявки на договор подключения не более года. Срок выдачи технических условий – до 14 рабочих дней с подачи заявки с приложением необходимого <a href="#">перечня документов</a>.</p>
+      
+      <h6 class="colorCyan">Условия подключения</h6>
+
+      <p>Условия подключения являются приложением к договору на подключение. Срок подготовки - до 20 рабочих дней с подачи заявки с приложением необходимого <a href="#">перечня документов</a>.</p>
+
+      <h6 class="colorCyan">Дополнительные услуги</h6>
+
+      <p>Если у вас нет свободного времени на сбор документов, то в водоканале можно получить услугу «<a href="#">техприсоединение под ключ</a>». Специалисты предприятия сформируют весь необходимый пакет документов для оформления заявки на техприсоединение. <br> <br>
+      При возникновении вопросов, связанных с подключением Вы можете обратиться за консультацией в колл- центр по телефону 28-22-00, в центр обслуживания абонентов по адресу проспект Калинина 116 или направить обращение на e-mail: office_brn@rosvodokanal.ru</p>
+
+
     </article>
   </section>
 {% endblock %}

@@ -61,7 +61,9 @@ const postcssPlugins = [
       },
     ],
   }),
-  autoprefixer(),
+  autoprefixer({
+    grid: 'autoplace',
+  }),
 ]
 
 const baseStyles = () => {
@@ -243,10 +245,7 @@ const watchFiles = () => {
     gulp.series(concatPlugins, browserSync.reload)
   )
 
-  watch(
-    ['./less/**/*.less', './scss/**/*.scss'],
-    gulp.series(styles)
-  )
+  watch(['./less/**/*.less', './scss/**/*.scss'], gulp.series(styles))
 
   watch(
     ['client/templates/**/*.twig', 'client/data/**/*.twig.json'],

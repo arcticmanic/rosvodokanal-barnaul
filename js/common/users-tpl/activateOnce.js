@@ -23,4 +23,10 @@ $(document).ready(function () {
     containerCssClass: 'select2_grey',
     placeholder: '',
   })
+
+  $('#datepicker-in-modal_arrange-appointment').datepicker({
+    onSelect: function () {
+      $('#time').prop('disabled', false)
+    },
+  })
 })

@@ -166,8 +166,11 @@ html.color-white {
   }
 
   .select2-selection--single {
-    background: $whiteEye;
-    border-color: $blackEye;
+    &.select2_grey,
+    & {
+      background: $whiteEye;
+      border-color: $blackEye;
+    }
     .select2-selection__rendered {
       color: $blackEye;
     }
@@ -212,8 +215,11 @@ html.color-black {
   }
 
   .select2-selection--single {
-    background: $blackEye;
-    border-color: $whiteEye;
+    &.select2_grey,
+    & {
+      background: $blackEye;
+      border-color: $whiteEye;
+    }
     .select2-selection__rendered {
       color: $whiteEye;
     }
