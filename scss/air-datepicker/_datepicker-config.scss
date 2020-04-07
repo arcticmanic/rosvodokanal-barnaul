@@ -15,14 +15,14 @@ $datepickerTextColor: (
   otherMonth: #dedede,
   otherMonthInRange: #ccc,
   disabled: #aeaeae,
-  currentDate: #4eb5e6,
+  currentDate: $red,
   common: #4a4a4a,
-  dayNames: $red,
+  dayNames: $colorPrimary3,
   navArrows: #9c9c9c
 ) !default;
 
 $datepickerBG: (
-  selected: $colorPrimary,
+  selected: $cyan,
   selectedHover: darken($colorPrimary, 5),
   inRange: rgba($colorPrimary, 0.1),
   hover: #f0f0f0

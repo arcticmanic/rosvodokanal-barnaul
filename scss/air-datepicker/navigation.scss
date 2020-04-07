@@ -44,7 +44,7 @@
 
   path {
     fill: none;
-    stroke: map_get($datepickerTextColor, navArrows);
+    stroke: $colorPrimary;
     stroke-width: 2px;
   }
 }
@@ -52,10 +52,12 @@
 .datepicker--nav-title {
   border-radius: $datepickerBorderRadius;
   padding: 0 8px;
+  font-weight: 600;
+  color: #0b6aa2;
 
   i {
     font-style: normal;
-    color: map_get($datepickerTextColor, navArrows);
+    // color: map_get($datepickerTextColor, navArrows);
     margin-left: 5px;
   }
 

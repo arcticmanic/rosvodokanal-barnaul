@@ -3,7 +3,6 @@ body {
   flex-direction: column;
   transition: @transFast;
   .styled-scrollbar();
-  cursor: url(../img/cursors/Arrow.cur), auto;
 
   .footer {
     margin-top: auto;
@@ -12,15 +11,8 @@ body {
 
 a {
   &:hover {
-    cursor: url(../img/cursors/Hand.cur), pointer;
+    cursor: pointer;
   }
-}
-
-input:hover,
-input:focus,
-textarea:hover,
-textarea:focus {
-  cursor: url(../img/cursors/IBeam.cur), pointer;
 }
 
 ::selection {
