@@ -1,0 +1,26 @@
+{% extends "../../layouts/users.twig" %}
+
+{% block main %}
+  <section class="section-users-connection-calc">
+    {% include '../../includes/stdEls/page-content__title_with-underline.twig' with {"title" : "Передать показания приборов "} %}
+
+    <article class="text">
+      <h5 class="h_bottom-space-S colorCyan">Другие способы передачи показания приборов учета</h5>
+      <hr class="dashed hr_only-bottom-space">
+    </article>
+    
+    <div class="grid-icons_3-cols">
+      <a href="#" class="grid-icons__item">
+        {% include '../../includes/svg/icon-user-svg.twig' with {'classes': 'grid-icons__icon'} %}
+        <p class="grid-icons__p">Личный кабинет</p>
+      </a>
+
+      <a href="#" class="grid-icons__item">
+        {% include '../../includes/svg/icon-mobile-svg.twig' with {'classes': 'grid-icons__icon'} %}
+        <p class="grid-icons__p">РВК. Услуги</p>
+      </a>
+    
+    </div>
+
+  </section>
+{% endblock %}

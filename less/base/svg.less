@@ -48,7 +48,7 @@ svg.icon-eye-svg {
   * {
     transition: inherit;
   }
-  .st0 {
+  .fill {
     fill: @colorPrimary3;
   }
 }
@@ -62,10 +62,15 @@ svg.icon-user {
   }
   .st0 {
     fill: none;
-    stroke: #fff;
     stroke-width: 2;
     stroke-linecap: round;
     stroke-miterlimit: 10;
+  }
+  .stroke {
+    stroke: #fff;
+  }
+  .fill {
+    fill: #fff;
   }
 }
 
@@ -82,7 +87,7 @@ svg.icon-user {
 svg.social-icon {
   height: 24px;
   width: 24px;
-  * {
+  .fill {
     fill: @colorPrimary;
   }
 }
@@ -100,6 +105,9 @@ svg.icon-plus-svg {
 svg.icon-back-svg {
   height: 15px;
   width: 22px;
+  .fill {
+    fill: @colorPrimary
+  }
 }
 
 svg.icon-hambuger-svg {
@@ -164,7 +172,7 @@ svg.siluet-icon-svg {
   height: 27px;
   width: 27px;
   margin-top: -2px;
-  * {
+  .fill {
     fill: @colorPrimary;
   }
 }
@@ -176,7 +184,6 @@ svg.icon-mobile-svg {
   width: 49px;
   .st0 {
     fill: none;
-    stroke: #ffffff;
     stroke-width: 2;
     stroke-linecap: round;
     stroke-miterlimit: 10;
@@ -184,14 +191,18 @@ svg.icon-mobile-svg {
 
   .st1 {
     fill: none;
-    stroke: #ffffff;
     stroke-width: 2;
     stroke-linecap: round;
     stroke-linejoin: round;
     stroke-miterlimit: 10;
   }
 
-  .st2 {
+  .stroke {
+    stroke: #ffffff;
+
+  }
+
+  .fill {
     fill: #ffffff;
   }
 }
@@ -201,14 +212,17 @@ svg.icon-user-svg {
   width: 72px;
   .st0 {
     fill: none;
-    stroke: #ffffff;
     stroke-width: 2;
     stroke-linecap: round;
     stroke-linejoin: round;
     stroke-miterlimit: 10;
   }
 
-  .st1 {
+  .stroke {
+    stroke: #ffffff;
+  }
+
+  .fill {
     fill: #ffffff;
   }
 }
@@ -216,7 +230,7 @@ svg.icon-user-svg {
 svg.icon-waterdevice-svg {
   height: 78px;
   width: 78px;
-  * {
+  .fill {
     fill: #ffffff;
   }
 }
@@ -226,14 +240,18 @@ svg.icon-wallet-svg {
   width: 75px;
   .st0 {
     fill: none;
-    stroke: #ffffff;
     stroke-width: 2;
     stroke-linecap: round;
     stroke-linejoin: round;
     stroke-miterlimit: 10;
   }
 
-  .st1 {
+  .stroke {
+    stroke: #ffffff;
+
+  }
+
+  .fill {
     fill: #ffffff;
   }
 }
@@ -263,17 +281,21 @@ svg.icon-askedo-svg {
 svg.icon-stophand-svg {
   height: 87px;
   width: 87px;
-  .st0 {
-    fill: #d1d1d1;
-  }
 
   .st1 {
     fill: none;
-    stroke: #ea222d;
     stroke-width: 2;
     stroke-linecap: round;
     stroke-linejoin: round;
     stroke-miterlimit: 10;
+  }
+
+  .fill {
+    fill: #d1d1d1;
+  }
+
+  .stroke {
+    stroke: #ea222d;
   }
 }
 
@@ -431,11 +453,15 @@ svg.icon-tools-svg {
   height: 52px;
   .st0 {
     fill: none;
-    stroke: #fff;
     stroke-width: 2;
     stroke-linecap: round;
     stroke-linejoin: round;
     stroke-miterlimit: 10;
+  }
+
+  .stroke {
+    stroke: #fff;
+
   }
 }
 
@@ -452,10 +478,12 @@ svg.icon-cross-svg {
   width: 10px;
   .st0 {
     fill: none;
-    stroke: @colorPrimary3;
     stroke-width: 2;
     stroke-linecap: round;
     stroke-miterlimit: 10;
+  }
+  .stroke {
+    stroke: @colorPrimary3;
   }
 }
 
@@ -474,10 +502,7 @@ svg.icon-arrow-accord {
 svg.icon-family-svg {
   width: 118px;
   height: 126px;
-  .st0 {
-    fill: none;
-  }
-  * {
+  .fill {
     fill: #fff;
   }
 }
@@ -485,16 +510,13 @@ svg.icon-family-svg {
 svg.icon-case-svg {
   width: 121px;
   height: 127px;
-  .st0 {
-    fill: none;
-  }
-  * {
+  .fill {
     fill: #fff;
   }
 }
 
 svg.icon-back-top {
-  * {
+  .fill {
     fill: #fff;
   }
 }
@@ -502,7 +524,7 @@ svg.icon-back-top {
 svg.icon-android-svg {
   height: 24px;
   width: 20px;
-  .st0 {
+  .fill {
     fill: #fff;
   }
 }
@@ -511,7 +533,7 @@ svg.icon-ios-svg {
   height: 24px;
   width: 20px;
 
-  .st0 {
+  .fill {
     fill: #fff;
   }
 }
@@ -521,7 +543,7 @@ svg.icon-waterdevice_2-svg {
   min-height: 80px;
   width: 80px;
   height: 80px;
-  * {
+  .fill {
     fill: #fff;
   }
 }
@@ -550,7 +572,7 @@ svg.icon-pipe-svg {
   height: 43px;
   min-width: 80px;
   min-height: 43px;
-  * {
+  .fill {
     fill: #fff;
   }
 }
@@ -560,7 +582,7 @@ svg.icon-tap-svg {
   height: 74px;
   min-width: 65px;
   min-height: 74px;
-  * {
+  .fill {
     fill: #fff;
   }
 }
@@ -570,7 +592,7 @@ svg.icon-recycle-truck-svg {
   height: 44px;
   min-width: 80px;
   min-height: 44px;
-  * {
+  .fill {
     fill: #fff;
   }
 }
@@ -580,7 +602,7 @@ svg.icon-build-tools-svg {
   height: 65px;
   min-width: 70px;
   min-height: 65px;
-  * {
+  .fill {
     fill: #fff;
   }
 }
@@ -590,7 +612,7 @@ svg.icon-dump-truck-svg {
   height: 51px;
   min-width: 80px;
   min-height: 51px;
-  * {
+  .fill {
     fill: #fff;
   }
 }
@@ -1262,16 +1284,16 @@ html.color-white {
   }
 
   svg.icon-eye-svg {
-    .st0 {
+    .fill {
       fill: @blackEye;
     }
   }
 
   svg.icon-user {
-    g {
+    .fill {
       fill: @whiteEye;
     }
-    .st0 {
+    .stroke {
       stroke: @whiteEye;
     }
   }
@@ -1281,7 +1303,7 @@ html.color-white {
   }
 
   svg.social-icon {
-    * {
+    .fill {
       fill: @blackEye;
     }
   }
@@ -1292,54 +1314,53 @@ html.color-white {
   }
 
   svg.siluet-icon-svg {
-    * {
+    .fill {
       fill: @blackEye;
     }
   }
 
   svg.icon-mobile-svg {
-    .st0 {
+    .stroke {
       stroke: @blackEye;
     }
 
-    .st1 {
-      stroke: @blackEye;
-    }
-
-    .st2 {
+    .fill {
       fill: @blackEye;
     }
   }
 
   svg.icon-user-svg {
-    .st0 {
+    .stroke {
       stroke: @blackEye;
     }
 
-    .st1 {
+    .fill {
       fill: @blackEye;
     }
   }
 
   svg.icon-waterdevice-svg {
-    * {
+    .fill {
       fill: @blackEye;
     }
   }
 
   svg.icon-wallet-svg {
-    .st0 {
+    .stroke {
       stroke: @blackEye;
     }
 
-    .st1 {
+    .fill {
       fill: @blackEye;
     }
   }
 
   svg.icon-stophand-svg {
-    .st1 {
+    .stroke {
       stroke: @blackEye;
+    }
+    .fill {
+      fill: @whiteEye;
     }
   }
 
@@ -1402,8 +1423,14 @@ html.color-white {
   }
 
   svg.icon-tools-svg {
-    .st0 {
+    .stroke {
       stroke: @whiteEye;
+    }
+  }
+
+  svg.icon-cross-svg {
+    .stroke {
+      stroke: @blackEye;
     }
   }
 
@@ -1426,19 +1453,19 @@ html.color-white {
   }
 
   svg.icon-android-svg {
-    .st0 {
+    .fill {
       fill: @whiteEye;
     }
   }
 
   svg.icon-ios-svg {
-    .st0 {
+    .fill {
       fill: @whiteEye;
     }
   }
 
   svg.icon-waterdevice_2-svg {
-    * {
+    .fill {
       fill: @blackEye;
     }
   }
@@ -1454,31 +1481,31 @@ html.color-white {
   }
 
   svg.icon-pipe-svg {
-    * {
+    .fill {
       fill: @blackEye;
     }
   }
 
   svg.icon-tap-svg {
-    * {
+    .fill {
       fill: @blackEye;
     }
   }
 
   svg.icon-recycle-truck-svg {
-    * {
+    .fill {
       fill: @blackEye;
     }
   }
 
   svg.icon-build-tools-svg {
-    * {
+    .fill {
       fill: @blackEye;
     }
   }
 
   svg.icon-dump-truck-svg {
-    * {
+    .fill {
       fill: @blackEye;
     }
   }
@@ -1708,6 +1735,18 @@ html.color-white {
     }
   }
 
+  svg.icon-case-svg {
+    .fill {
+      fill: @blackEye;
+    }
+  }
+
+  svg.icon-family-svg {
+    .fill {
+      fill: @blackEye;
+    }
+  }
+
   svg.info-book-svg {
     .stroke {
       stroke: @blackEye;
@@ -1719,6 +1758,11 @@ html.color-white {
     }
   }
   svg.icon-clip-svg {
+    .fill {
+      fill: @blackEye;
+    }
+  }
+  svg.icon-back-svg {
     .fill {
       fill: @blackEye;
     }
@@ -1735,6 +1779,12 @@ html.color-white {
   }
 
   svg.icon-warning-svg {
+    .fill {
+      fill: @blackEye;
+    }
+  }
+
+  .icon-back-top {
     .fill {
       fill: @blackEye;
     }
@@ -1763,16 +1813,16 @@ html.color-black {
   }
 
   svg.icon-eye-svg {
-    .st0 {
+    .fill {
       fill: @blackEye;
     }
   }
 
   svg.icon-user {
-    g {
+    .fill {
       fill: @blackEye;
     }
-    .st0 {
+    .stroke {
       stroke: @blackEye;
     }
   }
@@ -1782,7 +1832,7 @@ html.color-black {
   }
 
   svg.social-icon {
-    * {
+    .fill {
       fill: @whiteEye;
     }
   }
@@ -1793,43 +1843,40 @@ html.color-black {
   }
 
   svg.icon-back-svg {
-    * {
+    .fill {
       fill: @whiteEye;
     }
   }
 
   svg.siluet-icon-svg {
-    * {
+    .fill {
       fill: @whiteEye;
     }
   }
 
   svg.icon-mobile-svg {
-    .st0 {
+
+    .stroke {
       stroke: @whiteEye;
     }
 
-    .st1 {
-      stroke: @whiteEye;
-    }
-
-    .st2 {
+    .fill {
       fill: @whiteEye;
     }
   }
 
   svg.icon-user-svg {
-    .st0 {
+    .stroke {
       stroke: @whiteEye;
     }
 
-    .st1 {
+    .fill {
       fill: @whiteEye;
     }
   }
 
   svg.icon-waterdevice-svg {
-    * {
+    .fil {
       fill: @whiteEye;
     }
   }
@@ -1841,18 +1888,21 @@ html.color-black {
   }
 
   svg.icon-wallet-svg {
-    .st0 {
+    .stroke {
       stroke: @whiteEye;
     }
 
-    .st1 {
+    .fill {
       fill: @whiteEye;
     }
   }
 
   svg.icon-stophand-svg {
-    .st1 {
+    .stroke {
       stroke: @whiteEye;
+    }
+    .fill {
+      fill: @blackEye;
     }
   }
 
@@ -1915,7 +1965,7 @@ html.color-black {
   }
 
   svg.icon-tools-svg {
-    .st0 {
+    .stroke {
       stroke: @blackEye;
     }
   }
@@ -1933,19 +1983,31 @@ html.color-black {
   }
 
   svg.icon-android-svg {
-    .st0 {
+    .fill {
       fill: @blackEye;
     }
   }
 
   svg.icon-ios-svg {
-    .st0 {
+    .fill {
       fill: @blackEye;
     }
   }
 
   svg.icon-waterdevice_2-svg {
-    * {
+    .fill {
+      fill: @whiteEye;
+    }
+  }
+
+  svg.icon-case-svg {
+    .fill {
+      fill: @whiteEye;
+    }
+  }
+
+  svg.icon-family-svg {
+    .fill {
       fill: @whiteEye;
     }
   }
@@ -1961,31 +2023,31 @@ html.color-black {
   }
 
   svg.icon-pipe-svg {
-    * {
+    .fill {
       fill: @whiteEye;
     }
   }
 
   svg.icon-tap-svg {
-    * {
+    .fill {
       fill: @whiteEye;
     }
   }
 
   svg.icon-recycle-truck-svg {
-    * {
+    .fill {
       fill: @whiteEye;
     }
   }
 
   svg.icon-build-tools-svg {
-    * {
+    .fill {
       fill: @whiteEye;
     }
   }
 
   svg.icon-dump-truck-svg {
-    * {
+    .fill {
       fill: @whiteEye;
     }
   }
@@ -2107,6 +2169,13 @@ html.color-black {
       fill: @whiteEye;
     }
   }
+
+  svg.icon-cross-svg {
+    .stroke {
+      stroke: @whiteEye;
+    }
+  }
+
 
   svg.icon-valve-svg {
     .stroke {
@@ -2237,6 +2306,12 @@ html.color-black {
   }
 
   svg.icon-warning-svg {
+    .fill {
+      fill: @whiteEye;
+    }
+  }
+
+  .icon-back-top {
     .fill {
       fill: @whiteEye;
     }
