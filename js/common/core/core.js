@@ -56,9 +56,9 @@ $(document).ready(function() {
           },
           {
             iconLayout: 'default#image',
-            // iconImageHref: 'img/geo.png',
-            iconImageSize: [45, 50],
-            iconImageOffset: [-22.5, -50]
+            iconImageHref: '../../assets/img/geo_red.png',
+            iconImageSize: [60, 68],
+            iconImageOffset: [-30, -68]
           }
         )
       map.geoObjects.add(contactsPlacemark)

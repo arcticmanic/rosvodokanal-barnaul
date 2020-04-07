@@ -146,15 +146,15 @@
               "link": "services_individual_treatmentFacilities.html",
               "pages": [
                 {
-                  "title": " —Проектирование",
+                  "title": " Проектирование",
                   "link": "services_individual_treatmentFacilities_application.html"
                 },
                 {
-                  "title": " —Строительство",
+                  "title": " Строительство",
                   "link": "services_individual_treatmentFacilities_application.html"
                 },
                 {
-                  "title": " —Обслуживание",
+                  "title": " Обслуживание",
                   "link": "services_individual_treatmentFacilities_application.html"
                 }
               ]
@@ -171,8 +171,7 @@
           "pages": [
             {
               "title": "Скачать мобильные приложение",
-              "link": "services_individual_mobile.html",
-              "classes": "current-page"
+              "link": "services_individual_mobile.html"
             },
             {
               "title": "Приборы учета",
@@ -300,15 +299,15 @@
               "link": "services_individual_treatmentFacilities.html",
               "pages": [
                 {
-                  "title": " —Проектирование",
+                  "title": " Проектирование",
                   "link": "services_individual_treatmentFacilities_application.html"
                 },
                 {
-                  "title": " —Строительство",
+                  "title": " Строительство",
                   "link": "services_individual_treatmentFacilities_application.html"
                 },
                 {
-                  "title": " —Обслуживание",
+                  "title": " Обслуживание",
                   "link": "services_individual_treatmentFacilities_application.html"
                 }
               ]

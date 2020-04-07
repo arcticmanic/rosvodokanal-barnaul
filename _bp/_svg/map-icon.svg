@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 68" style="enable-background:new 0 0 60 68;" xml:space="preserve">
+<style type="text/css">
+	.st0{filter:url(#ae96eeecd750ec2a83543f00c9bc789d__a);}
+	.st1{fill:#F33F33;}
+	.st2{fill:#FFFFFF;}
+	.st3{fill-rule:evenodd;clip-rule:evenodd;fill:#F33F33;}
+	.st4{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}
+</style>
+<filter  height="138.5%" id="ae96eeecd750ec2a83543f00c9bc789d__a" width="143.5%" x="-21.7%" y="-15.4%">
+	<feGaussianBlur  in="SourceGraphic" stdDeviation="3"></feGaussianBlur>
+	<feOffset  dy="2"></feOffset>
+	<feComponentTransfer>
+		<feFuncA  slope=".3" type="linear"></feFuncA>
+	</feComponentTransfer>
+</filter>
+<g>
+	<g transform="translate(7 5)">
+		<g class="st0">
+			<path id="ae96eeecd750ec2a83543f00c9bc789d__b_1_" d="M23.5,51.5c0,0.3-0.2,0.5-0.5,0.5c-0.3,0-0.5-0.2-0.5-0.5
+				c-0.1-3.2-1.8-5.2-4.8-6.1C7.5,43,0,33.9,0,23C0,10.3,10.3,0,23,0s23,10.3,23,23c0,10.9-7.5,20-17.7,22.4
+				C25.3,46.3,23.7,48.4,23.5,51.5L23.5,51.5z"/>
+		</g>
+		<g>
+			<path class="st1" d="M23.5,51.5c0,0.3-0.2,0.5-0.5,0.5c-0.3,0-0.5-0.2-0.5-0.5c-0.1-3.2-1.8-5.2-4.8-6.1C7.5,43,0,33.9,0,23
+				C0,10.3,10.3,0,23,0s23,10.3,23,23c0,10.9-7.5,20-17.7,22.4C25.3,46.3,23.7,48.4,23.5,51.5L23.5,51.5z"/>
+		</g>
+	</g>
+	<path class="st2" d="M30,68c-2.2,0-4-1.8-4-4s1.8-4,4-4s4,1.8,4,4S32.2,68,30,68z"/>
+	<path class="st3" d="M30,66c1.1,0,2-0.8,2-2s-0.8-2-2-2c0,0-0.1,0-0.1,0c-1.1,0-2,0.9-2,2C28.1,65.1,28.9,66,30,66z"/>
+</g>
+<path class="st4" d="M33,23.5v10.7c0,0.2,0.1,0.3,0.3,0.3c0.2,0,0.3-0.1,0.3-0.3c0,0,0,0,0,0l0.4-4.7h4v-1h-3.9l0.2-2H38v-1h-3.7
+	l0.2-2h5c0.3,0,0.6,0.3,0.6,0.6l0,0v13.8c0,0.3-0.3,0.6-0.6,0.6l0,0H28v-4.8c0-0.1-0.1-0.2-0.2-0.2c0,0,0,0,0,0h-2.6
+	c-0.1,0-0.2,0.1-0.2,0.2l0,0v4.8h-4.4c-0.3,0-0.6-0.3-0.6-0.6l0,0v-20c0-0.2,0.2-0.4,0.4-0.4H21v-0.6c0-0.2,0.2-0.4,0.4-0.4h10.2
+	c0.2,0,0.4,0.2,0.4,0.4v0.6h0.6c0.2,0,0.4,0.2,0.4,0.4V23.5z M34.6,21.5h3c0.2,0,0.4,0.2,0.4,0.4v0.6h-3.5
+	C34.5,22.5,34.6,21.5,34.6,21.5z M23.5,24.5v6h2v-6H23.5z M27.5,24.5v6h2v-6H27.5z M23.5,19.5v3h2v-3H23.5z M27.5,19.5v3h2v-3H27.5z
+	 M35,31.5v1h3v-1H35z"/>
+</svg>
