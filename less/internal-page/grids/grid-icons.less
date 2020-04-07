@@ -1,0 +1,89 @@
+.grid-icons {
+  &_3-cols {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .size(3);
+    min-width: 150px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 50px;
+    @media (min-width: @hoverW) {
+      &:hover {
+        .grid-icons__icon {
+          transform: translateY(-10px);
+        }
+      }
+    }
+  }
+  &__icon {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  &__p {
+    color: @colorPrimary3;
+    font-size: @font-13;
+    font-weight: 400;
+    line-height: @font-15;
+    margin-top: 14px;
+    margin-bottom: 0;
+    text-align: center;
+  }
+  svg.grid-icons__icon {
+    transition: @transMid;
+    .stroke {
+      stroke: @colorPrimary;
+    }
+    .fill {
+      fill: @colorPrimary;
+    }
+  }
+}
+
+@media (max-width: @mobileW) {
+  .grid-icons {
+    &__item {
+      margin-bottom: 30px;
+      margin-left: 10px;
+      margin-right: 10px;
+      min-width: 135px;
+    }
+  }
+}
+
+html.color-white {
+  .grid-icons {
+    &__p {
+      color: @blackEye;
+    }
+    svg.grid-icons__icon {
+      .stroke {
+        stroke: @blackEye;
+      }
+      .fill {
+        fill: @blackEye;
+      }
+    }
+  }
+}
+
+html.color-black {
+  .grid-icons {
+    &__p {
+      color: @whiteEye;
+    }
+    svg.grid-icons__icon {
+      .stroke {
+        stroke: @whiteEye;
+      }
+      .fill {
+        fill: @whiteEye;
+      }
+    }
+  }
+}
