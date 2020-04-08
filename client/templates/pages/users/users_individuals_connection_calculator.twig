@@ -8,28 +8,28 @@
       <div class="viv-calc__left">
         <div class="viv-calc__checkbox-row">
           <h6 class="viv-calc__checkbox-prepend-text strong colorPrimary3">Водоснабжения —</h6>
-          {% include '../../includes/stdEls/checkbox.twig' with {"id": "check1"} %}
+          {% include '../../includes/stdEls/checkbox.twig' with {"id": "waterIn-checkbox"} %}
         </div> 
         <div class="input-with-label">
           <label>Планируемая нагрузка (м3/сут):</label>
-          <input type="text"  class="required input_grey">
+          <input type="number" placeholder="50" class="required input_grey">
         </div>
 
         <div class="input-with-label">
           <label>Диаметр подводящих сетей :</label>
-          <select id="diametr-1"  class="required">
+          <select id="diameter-1"  class="required">
             <option></option> 
-            <option value="1">- Железнодорожный район</option>
-            <option value="2">- Индустриальный район</option>
-            <option value="3">- Ленинский район </option>
-            <option value="4">- Октябрьский район </option>
-            <option value="5">- Центральный район </option>
+            <option value="1">до 40</option>
+            <option value="2">40 - 70</option>
+            <option value="3">100 - 150</option>
+            <option value="4">150 - 200</option>
+            <option value="5">200 - 250</option>
           </select>
         </div>
 
         <div class="input-with-label">
           <label>Ориентировочная протяженность сетей до точки подключения (м) :</label>
-          <input type="text"  class="required input_grey">
+          <input type="number" placeholder="50" class="required input_grey">
         </div>
       </div>
 
@@ -38,29 +38,29 @@
       <div class="viv-calc__right">
         <div class="viv-calc__checkbox-row">
           <h6 class="viv-calc__checkbox-prepend-text strong colorPrimary3">Водоотведения —</h6>
-          {% include '../../includes/stdEls/checkbox.twig' with {"id": "check2"} %}
+          {% include '../../includes/stdEls/checkbox.twig' with {"id": "waterOut-checkbox"} %}
         </div>
 
         <div class="input-with-label">
           <label>Планируемая нагрузка (м3/сут):</label>
-          <input type="text"  class="required input_grey">
+          <input type="number" placeholder="50" class="required input_grey">
         </div>
 
         <div class="input-with-label">
           <label>Диаметр подводящих сетей :</label>
-          <select id="diametr-2"  class="required">
+          <select id="diameter-2"  class="required">
             <option></option> 
-            <option value="1">- Железнодорожный район</option>
-            <option value="2">- Индустриальный район</option>
-            <option value="3">- Ленинский район </option>
-            <option value="4">- Октябрьский район </option>
-            <option value="5">- Центральный район </option>
+            <option value="1">до 40</option>
+            <option value="2">40 - 70</option>
+            <option value="3">100 - 150</option>
+            <option value="4">150 - 200</option>
+            <option value="5">200 - 250</option>
           </select>
         </div>
 
         <div class="input-with-label">
           <label>Ориентировочная протяженность сетей до точки подключения (м) :</label>
-          <input type="text"  class="required input_grey">
+          <input type="number" placeholder="50" class="required input_grey">
         </div>
       </div>
 

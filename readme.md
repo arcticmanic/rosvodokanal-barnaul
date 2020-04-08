@@ -72,5 +72,4 @@
 5. https://mmenujs.com/mmenu-light/
 6. https://select2.org/
 7. https://kenwheeler.github.io/slick/
-8. https://github.com/validatorjs/validator.js
 9. https://github.com/josephschmitt/Clamp.js/
