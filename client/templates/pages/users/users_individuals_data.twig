@@ -1,50 +1,101 @@
 {% extends "../../layouts/users.twig" %}
 
 {% block main %}
-  <section class="section-users-connection-calc">
-    {% include '../../includes/stdEls/page-content__title_with-underline.twig' with {"title" : "Передать показания приборов "} %}
+<section class="section_with-payment-widget-and-text section-users-individuals-data">
+  {% include '../../includes/stdEls/page-content__title_with-underline.twig' with {"title" : "Передать показания приборов "} %}
 
-    <article class="text">
-      <h5 class="h_bottom-space-S colorCyan">Другие способы передачи показания приборов учета</h5>
-      <hr class="dashed hr_only-bottom-space">
-    </article>
-    
-    <div class="grid-icons grid-icons_3-cols">
-      <a href="#" class="grid-icons__item">
-        {% include '../../includes/svg/icon-user-svg.twig' with {'classes': 'grid-icons__icon'} %}
-        <p class="grid-icons__p">Личный кабинет</p>
-      </a>
+  <article class="payment-widget-with-text">
+    <div class="payment-widget-with-text__left">
+      <form action="" class="form payment-widget payment-widget-with-text__widget ">
+        <div class="payment-widget__title-and-logo">
+          <h6 class="form-title payment-widget__title">Передать показания</h6>
+          {% include '../../includes/svg/icon-gorod-logo-svg.twig' with {'classes': 'payment-widget__logo'} %}
+        </div>
 
-      <a href="#" class="grid-icons__item">
-        {% include '../../includes/svg/icon-call-center-svg.twig' with {'classes': 'grid-icons__icon'} %}
-        <p class="grid-icons__p">Телефон колл-центра</p>
-      </a>
+        <div class="input-with-label">
+          <label>Лицевой счет *</label>
+          <input type="text" class="required input_grey">
+        </div>
 
-      <a href="#" class="grid-icons__item">
-        {% include '../../includes/svg/icon-sms-svg.twig' with {'classes': 'grid-icons__icon'} %}
-        <p class="grid-icons__p">СМС – сообщение</p>
-      </a>
+        <div class="input-with-label">
+          <label>Фамилия *</label>
+          <input type="text" class="required input_grey">
+        </div>
 
-      <a href="#" class="grid-icons__item">
-        {% include '../../includes/svg/icon-mobile-svg.twig' with {'classes': 'grid-icons__icon'} %}
-        <p class="grid-icons__p">РВК. Услуги</p>
-      </a>
-
-      <a href="#" class="grid-icons__item">
-        {% include '../../includes/svg/icon-robot-svg.twig' with {'classes': 'grid-icons__icon'} %}
-        <p class="grid-icons__p">Голосовой прием</p>
-      </a>
-
-      <a href="#" class="grid-icons__item">
-        {% include '../../includes/svg/icon-rvk-house-svg.twig' with {'classes': 'grid-icons__icon'} %}
-        <p class="grid-icons__p">Центр обслуживания абонентов</p>
-      </a>
-
-      <a href="#" class="grid-icons__item">
-        {% include '../../includes/svg/icon-gorod-logo-svg.twig' with {'classes': 'grid-icons__icon'} %}
-        <p class="grid-icons__p">Система «Город»</p>
-      </a>
+        <div class="form-footer form-footer_spacing-S">
+          <a href="#" class="colorPrimary text-decoration-underline form-footer__link">Узнать лицевой счет</a>
+          <button type="submit" class="btn btn_colorPrimary btn_wide submit-element">Далее</button>
+        </div>
+      </form>
     </div>
 
-  </section>
+    <div class="payment-widget-with-text__right">
+      <p class="payment-widget-with-text__text">Прибор учета – это своеобразный индикатор честных и партнерских
+        взаимоотношений между потребителем и ресурсоснабжающей организацией. Абонент платит только за то, что потребил,
+        экономно расходуя жизненно важный ресурс. Весомый аргумент в пользу счетчика, это стоимость потребления воды по
+        нормативу, которая гораздо выше, чем расчеты по прибору.</p>
+    </div>
+  </article>
+
+  <article class="text">
+    <h5 class="h_bottom-space-S colorCyan">Другие способы передачи показания приборов учета</h5>
+    <hr class="dashed hr_only-bottom-space">
+  </article>
+
+  <article class="grid-icons grid-icons_3-cols">
+    <a href="#" class="grid-icons__item">
+      {% include '../../includes/svg/icon-user-svg.twig' with {'classes': 'grid-icons__icon'} %}
+      <p class="grid-icons__p">Личный кабинет</p>
+    </a>
+
+    <div class="grid-icons__item">
+      {% include '../../includes/svg/icon-call-center-svg.twig' with {'classes': 'grid-icons__icon'} %}
+      <p class="grid-icons__p">Телефон колл-центра</p>
+      <div class="grid-icons__item-hint">
+        <p class="grid-icons__item-text">Появляется окно с кратким описанием как передать – по аналогии с услугами</p>
+      </div>
+    </div>
+
+    <div class="grid-icons__item">
+      {% include '../../includes/svg/icon-sms-svg.twig' with {'classes': 'grid-icons__icon'} %}
+      <p class="grid-icons__p">СМС – сообщение</p>
+      <div class="grid-icons__item-hint">
+        <p class="grid-icons__item-text">Появляется окно с кратким описанием как передать – по аналогии с услугами</p>
+      </div>
+    </div>
+
+    <a href="#" class="grid-icons__item">
+      {% include '../../includes/svg/icon-mobile-svg.twig' with {'classes': 'grid-icons__icon'} %}
+      <p class="grid-icons__p">РВК. Услуги</p>
+    </a>
+
+    <div class="grid-icons__item">
+      {% include '../../includes/svg/icon-robot-svg.twig' with {'classes': 'grid-icons__icon'} %}
+      <p class="grid-icons__p">Голосовой прием</p>
+      <div class="grid-icons__item-hint">
+        <p class="grid-icons__item-text">Появляется окно с кратким описанием как передать – по аналогии с услугами</p>
+      </div>
+    </div>
+
+    <div class="grid-icons__item">
+      {% include '../../includes/svg/icon-rvk-house-svg.twig' with {'classes': 'grid-icons__icon'} %}
+      <p class="grid-icons__p">Центр обслуживания абонентов</p>
+      <div class="grid-icons__item-hint">
+        <p class="grid-icons__item-text">Появляется окно с кратким описанием как передать – по аналогии с услугами</p>
+      </div>
+    </div>
+
+    <div class="grid-icons__item">
+      {% include '../../includes/svg/icon-gorod-logo-svg.twig' with {'classes': 'grid-icons__icon'} %}
+      <p class="grid-icons__p">Система «Город»</p>
+      <div class="grid-icons__item-hint">
+        <p class="grid-icons__item-text">Появляется окно с кратким описанием как передать – по аналогии с услугами</p>
+      </div>
+    </div>
+  </article>
+</section>
+{% endblock %}
+
+{% block customJS %}
+<!-- {<script src=https://lk.sistemagorod.ru/wgtest/js/app.js></script> -->
 {% endblock %}

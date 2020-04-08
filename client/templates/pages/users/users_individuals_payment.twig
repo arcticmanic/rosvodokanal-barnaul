@@ -1,0 +1,97 @@
+{% extends "../../layouts/users.twig" %}
+
+{% block main %}
+  <section class="section_with-payment-widget-and-text section-users-individuals-payment">
+    {% include '../../includes/stdEls/page-content__title_with-underline.twig' with {"title" : "Оплатить услуги "} %}
+
+    <article class="payment-widget-with-text">
+      <div class="payment-widget-with-text__left">
+        <form action="" class="form payment-widget payment-widget-with-text__widget ">
+          <div class="payment-widget__title-and-logo">
+            <h6 class="form-title payment-widget__title">Передать показания</h6>
+            {% include '../../includes/svg/icon-gorod-logo-svg.twig' with {'classes': 'payment-widget__logo'} %}
+          </div>
+
+          <div class="input-with-label">
+            <label>Лицевой счет *</label>
+            <input type="text" class="required input_grey">
+          </div>
+
+          <div class="input-with-label">
+            <label>Фамилия *</label>
+            <input type="text" class="required input_grey">
+          </div>
+
+          <div class="form-footer form-footer_spacing-S">
+            <a href="#" class="colorPrimary text-decoration-underline form-footer__link">Узнать лицевой счет</a>
+            <button type="submit" class="btn btn_colorPrimary btn_wide submit-element">Далее</button>
+          </div>
+        </form>
+      </div>
+      
+      <div class="payment-widget-with-text__right">
+        <p class="payment-widget-with-text__text">Прибор учета – это своеобразный индикатор честных и партнерских взаимоотношений между потребителем и ресурсоснабжающей организацией. Абонент платит только за то, что потребил, экономно расходуя жизненно важный ресурс. Весомый аргумент в пользу счетчика, это стоимость потребления воды по нормативу, которая гораздо выше, чем расчеты по прибору.</p>
+      </div>
+    </article>
+
+    <article class="text">
+      <h5 class="h_bottom-space-S colorCyan">Другие способы передачи показания приборов учета</h5>
+      <hr class="dashed hr_only-bottom-space">
+    </article>
+    
+    <article class="grid-icons grid-icons_4-cols">
+      <a href="#" class="grid-icons__item">
+        {% include '../../includes/svg/icon-mobile-svg.twig' with {'classes': 'grid-icons__icon'} %}
+        <p class="grid-icons__p">РВК. Услуги</p>
+      </a>
+
+      <a href="#" class="grid-icons__item">
+        {% include '../../includes/svg/icon-user-svg.twig' with {'classes': 'grid-icons__icon'} %}
+        <p class="grid-icons__p">Личный кабинет</p>
+      </a>
+
+      <div class="grid-icons__item">
+        {% include '../../includes/svg/icon-rvk-house-svg.twig' with {'classes': 'grid-icons__icon'} %}
+        <p class="grid-icons__p">Центр обслуживания абонентов</p>
+        <div class="grid-icons__item-hint">
+          <p class="grid-icons__item-text">Появляется окно с кратким описанием как передать – по аналогии с услугами</p>
+        </div>
+      </div>
+
+      <a href="http://www.sistemagorod.ru/banks.php" class="grid-icons__item">
+        {% include '../../includes/svg/icon-bank-svg.twig' with {'classes': 'grid-icons__icon'} %}
+        <p class="grid-icons__p">Банки</p>
+      </a>
+
+      <div class="grid-icons__item">
+        {% include '../../includes/svg/icon-atm-svg.twig' with {'classes': 'grid-icons__icon'} %}
+        <p class="grid-icons__p">Банкоматы и терминалы</p>
+        <div class="grid-icons__item-hint">
+          <p class="grid-icons__item-text">Появляется окно с кратким описанием как передать – по аналогии с услугами</p>
+        </div>
+      </div>
+
+      <a href="http://www.sistemagorod.ru/paywhere.php" class="grid-icons__item">
+        {% include '../../includes/svg/icon-gorod-logo-svg.twig' with {'classes': 'grid-icons__icon'} %}
+        <p class="grid-icons__p">Система «Город»</p>
+      </a>
+
+      <a href="http://www.online.sberbank.ru" class="grid-icons__item">
+        {% include '../../includes/svg/sberbank-logo.twig' with {'classes': 'grid-icons__icon grid-icons__icon_without-color'} %}
+        <p class="grid-icons__p">Автоплатеж Сбербанк</p>
+      </a>
+
+      <div class="grid-icons__item">
+        <img data-src="../assets/img/почта-россии.png" alt="" class="lazy">
+        <p class="grid-icons__p">Банкоматы и терминалы</p>
+        <div class="grid-icons__item-hint">
+          <p class="grid-icons__item-text">Появляется окно с кратким описанием как передать – по аналогии с услугами</p>
+        </div>
+      </div>
+    </article>
+  </section>
+{% endblock %}
+
+{% block customJS %}
+  <!-- {<script src=https://lk.sistemagorod.ru/wgtest/js/app.js></script> -->
+{% endblock %}

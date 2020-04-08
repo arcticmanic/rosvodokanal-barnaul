@@ -47,13 +47,21 @@
   margin-left: auto;
 }
 
-
 .ml-0 {
   margin-left: 0;
 }
 
 .mb-0 {
   margin-bottom: 0 !important;
+}
+
+.text-decoration-underline {
+  text-decoration: underline;
+  @media (min-width: @hoverW) {
+    &:hover {
+      text-decoration: none;
+    }
+  }
 }
 
 hr {

@@ -66,10 +66,26 @@
         text-decoration: underline;
         @media (min-width: @hoverW) {
           &:hover {
-            color: @red;
             text-decoration: none;
           }
         }
+      }
+    }
+    &__link {
+      color: @colorPrimary3;
+      font-size: @font-13;
+      font-weight: 500;
+      line-height: @font-20;
+      text-decoration: underline;
+      @media (min-width: @hoverW) {
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+    &_spacing {
+      &-S {
+        margin-top: 10px;
       }
     }
   }

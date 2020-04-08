@@ -1,0 +1,40 @@
+.payment-widget {
+  padding: 25px;
+  border-radius: 5px;
+  border: 1px solid #dce4e8;
+  background: #fff;
+
+  &__title-and-logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  svg.payment-widget__logo {
+    width: 47px;
+    height: 48px;
+  }
+  & &__title {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+}
+
+html.scale {
+  .payment-widget {
+    padding: 10px;
+  }
+}
+
+html.color-white {
+  .payment-widget {
+    border-color: @blackEye;
+    background: @whiteEye;
+  }
+}
+
+html.color-black {
+  .payment-widget {
+    border-color: @whiteEye;
+    background: @blackEye;
+  }
+}

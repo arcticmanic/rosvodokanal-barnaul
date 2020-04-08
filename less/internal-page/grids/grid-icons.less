@@ -1,24 +1,66 @@
 .grid-icons {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
   &_3-cols {
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
+    .grid-icons__item {
+      .size(3);
+    }
+  }
+  &_4-cols {
+    .grid-icons__item {
+      .size(2);
+    }
   }
   &__item {
     display: flex;
     flex-direction: column;
     align-items: center;
-    .size(3);
     min-width: 150px;
     margin-left: 20px;
     margin-right: 20px;
     margin-bottom: 50px;
-    @media (min-width: @hoverW) {
-      &:hover {
-        .grid-icons__icon {
-          transform: translateY(-10px);
-        }
+    position: relative;
+
+    &:hover {
+      .grid-icons__item-hint {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: all;
       }
+      .grid-icons__icon {
+        transform: translateY(-10px);
+      }
+    }
+
+    &-hint {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      background: @colorPrimary;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      width: 190px;
+      height: 190px;
+      z-index: 1;
+      box-shadow: 0 3px 15px rgba(0, 0, 0, 0.15);
+      border-radius: 5px;
+      transition: @transSlow;
+      cursor: default;
+    }
+
+    &-text {
+      color: #fff;
+      padding: 20px;
+      font-size: @font-15;
+      font-weight: 100;
+      line-height: @font-20;
+      cursor: default;
     }
   }
   &__icon {
@@ -34,8 +76,10 @@
     margin-bottom: 0;
     text-align: center;
   }
-  svg.grid-icons__icon {
+  .grid-icons__icon {
     transition: @transMid;
+  }
+  .grid-icons__icon:not(.grid-icons__icon_without-color) {
     .stroke {
       stroke: @colorPrimary;
     }
@@ -61,7 +105,7 @@ html.color-white {
     &__p {
       color: @blackEye;
     }
-    svg.grid-icons__icon {
+    .grid-icons__icon:not(.grid-icons__icon_without-color) {
       .stroke {
         stroke: @blackEye;
       }
@@ -77,7 +121,7 @@ html.color-black {
     &__p {
       color: @whiteEye;
     }
-    svg.grid-icons__icon {
+    .grid-icons__icon:not(.grid-icons__icon_without-color) {
       .stroke {
         stroke: @whiteEye;
       }
