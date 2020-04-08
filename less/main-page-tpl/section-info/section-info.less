@@ -20,15 +20,16 @@
     &_left {
       .size(8);
       background: #f4f4f4;
-    border-radius: 5px;
-
+      border-radius: 5px;
     }
     &_right {
       .size(4);
     }
     .slick-dots {
       bottom: 30px;
-      padding-right: 130px;
+      display: flex;
+      align-items: flex-start;
+      padding-left: 260px;
       li {
         margin-left: 0;
         margin-right: 0;
@@ -45,7 +46,6 @@
 @media (max-width: @wrapperMaxWidth) {
   .info {
     &__item {
-
       .slick-dots {
         bottom: 20px;
       }
@@ -78,6 +78,18 @@
   }
 }
 
+@media (max-width: @mobileLandscapeW) {
+  .info {
+    &__item {
+      .slick-dots {
+        justify-content: flex-end;
+        padding-left: 0;
+        padding-right: 20px;
+      }
+    }
+  }
+}
+
 html.scale {
   .info {
     &__item {
@@ -92,7 +104,7 @@ html.color-white {
     &__item {
       &_left {
         background: @whiteEye;
-      .border-card-like_black();
+        .border-card-like_black();
       }
       .slick-dots {
         li {

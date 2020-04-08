@@ -56,7 +56,7 @@ $(document).ready(function() {
           },
           {
             iconLayout: 'default#image',
-            iconImageHref: '../../assets/img/geo_red.png',
+            iconImageHref: '../assets/img/geo_red.png',
             iconImageSize: [60, 68],
             iconImageOffset: [-30, -68]
           }

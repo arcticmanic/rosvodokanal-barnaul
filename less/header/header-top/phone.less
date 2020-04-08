@@ -1,29 +1,3 @@
-html.color-white {
-  .header {
-    .phone {
-      &__top-text {
-        color: @blackEye;
-      }
-      &__bottom-text {
-        color: @blackEye;
-      }
-    }
-  }
-}
-
-html.color-black {
-  .header {
-    .phone {
-      &__top-text {
-        color: @whiteEye;
-      }
-      &__bottom-text {
-        color: @whiteEye;
-      }
-    }
-  }
-}
-
 .header {
   .phone {
     &__top-text {
@@ -49,6 +23,48 @@ html.color-black {
       &:hover {
         .phone__top-text {
           color: @colorPrimary3;
+        }
+      }
+    }
+  }
+}
+
+html.color-white {
+  .header {
+    .phone {
+      &__top-text {
+        color: @blackEye;
+      }
+      &__bottom-text {
+        color: @blackEye;
+      }
+      @media (min-width: @hoverW) {
+        &:hover {
+          .phone__top-text {
+            color: @blackEye;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
+
+html.color-black {
+  .header {
+    .phone {
+      &__top-text {
+        color: @whiteEye;
+      }
+      &__bottom-text {
+        color: @whiteEye;
+      }
+      @media (min-width: @hoverW) {
+        &:hover {
+          .phone__top-text {
+            color: @whiteEye;
+            text-decoration: underline;
+          }
         }
       }
     }

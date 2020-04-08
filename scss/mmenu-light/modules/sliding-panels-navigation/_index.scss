@@ -186,23 +186,33 @@ html.color-black {
     }
   }
 
-  hr {
-    width: 90%;
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid rgba(#fff, 0.2);
-    margin: 1em 0;
-    padding: 0;
-    margin-left: auto;
-    margin-right: auto;
+  .mobile-menu__items {
+    hr {
+      width: 90%;
+      display: block;
+      height: 1px;
+      border: 0;
+      border-top: 1px solid rgba(#fff, 0.2);
+      padding: 0;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 8px;
+      margin-bottom: 8px;
+    }
   }
 
   a.mobile-menu__link {
     @extend %mmspn-reset;
-
+    text-transform: uppercase;
     position: relative;
     z-index: 1;
+    font-size: 13px;
+    &:not(.mobile-menu__link_thin) {
+      font-weight: 600;
+    }
+    &.mobile-menu__link_thin {
+      font-weight: 200;
+    }
     margin-top: (($mmspn_item_height - $mmspn_line_height) / 2);
     margin-bottom: (($mmspn_item_height - $mmspn_line_height) / 2);
     padding-right: $mmspn_item_indent; // IE11 fallback

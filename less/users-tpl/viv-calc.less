@@ -5,7 +5,7 @@
     'bottom bottom bottom';
   grid-template-columns: 1fr auto 1fr;
   column-gap: 55px;
-  row-gap: 20px;
+  row-gap: 40px;
   margin-top: 50px;
   &__left {
     grid-area: left;
@@ -38,7 +38,7 @@
     &-row {
       display: flex;
       align-items: center;
-      margin-bottom: 30px;
+      margin-bottom: 28px;
     }
     &-prepend-text {
       margin-right: 10px;
@@ -46,11 +46,15 @@
   }
   .input-with-label {
     &:not(:last-child) {
-      margin-bottom: 27px;
+      margin-bottom: 25px;
     }
   }
   label {
     font-size: @font-15;
+  }
+  .btn {
+    padding-right: 45px;
+    padding-left: 45px;
   }
 }
 

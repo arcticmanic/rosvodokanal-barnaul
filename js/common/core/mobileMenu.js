@@ -1,25 +1,31 @@
-$(document).ready(function() {
+$(document).ready(function () {
   const menu = new MmenuLight(document.querySelector('#my-menu'))
 
   const navigator = menu.navigation({
-    title: 'logo'
+    title: 'logo',
   })
   const drawer = menu.offcanvas({
-    position: 'right'
+    position: 'right',
   })
-
   document
     .querySelector("a[href='#my-menu']")
-    .addEventListener('click', evnt => {
+    .addEventListener('click', (evnt) => {
       evnt.preventDefault()
       drawer.open()
+    })
+  document
+    .querySelector('#close-mobile-menu-btn')
+    .addEventListener('click', (evnt) => {
+      evnt.preventDefault()
+      drawer.close()
     })
 
   $(document).on(
     'click',
-    '.mobile-menu .all-sites .all-sites__text',
-    function() {
+    '.mm-spn .mobile-menu__footer .all-sites__text',
+    function () {
       const it = $(this)
+      console.log(it)
       it.closest('.all-sites').toggleClass('active')
       $('.city-list').fadeToggle(500)
     }
