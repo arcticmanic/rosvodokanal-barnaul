@@ -7,7 +7,6 @@
 ├──build
 │  ├──assets
 │  │  ├──assets/fonts шрифты
-│  │  ├──assets/fonts шрифты
 │  │  ├──favlike иконки для различных устройств
 │  │  ├──assets/css prod-ready css файлы
 │  │  ├──assets/js prod-ready js файлы
@@ -67,9 +66,10 @@
 Используемые плагины:
 1. https://jquerymodal.com/
 2. http://t1m0n.name/air-datepicker/docs/
-3. https://github.com/digitalBush/jquery.maskedinput
+3. https://igorescobar.github.io/jQuery-Mask-Plugin/docs
 4. https://github.com/verlok/lazyload
 5. https://mmenujs.com/mmenu-light/
 6. https://select2.org/
 7. https://kenwheeler.github.io/slick/
 9. https://github.com/josephschmitt/Clamp.js/
+10. https://createjs.com/

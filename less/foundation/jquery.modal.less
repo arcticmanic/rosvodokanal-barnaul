@@ -66,8 +66,35 @@
     }
   }
 
+  &_viv-calc {
+    padding: 30px;
+    .modal-title {
+      font-weight: 400 !important;
+    }
+    &__block {
+      display: none;
+    }
+    #waterIn-results-block {
+      margin-bottom: 15px;
+    }
+  }
+
   a.close-modal {
     display: none;
+  }
+
+  &-title {
+    font-size: @font-24;
+    font-weight: 300;
+    line-height: @font-30;
+    &:not(.form-title_space-bottom) {
+      margin-top: 30px;
+    }
+    margin-bottom: 10px;
+    &.modal-title_without-space {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
   }
 }
 

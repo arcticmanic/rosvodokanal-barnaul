@@ -5,68 +5,68 @@
     {% include '../../includes/stdEls/page-content__title_with-underline.twig' with {"title" : "Калькулятор расчета платы за подключение к сетям"} %}
 
     <form id="viv-calc" action="" class="viv-calc">
-      <div class="viv-calc__left">
+      <div class="viv-calc__block viv-calc__left">
         <div class="viv-calc__checkbox-row">
           <h6 class="viv-calc__checkbox-prepend-text strong colorPrimary3">Водоснабжения —</h6>
-          {% include '../../includes/stdEls/checkbox.twig' with {"id": "waterIn-checkbox", "isRequired": true} %}
+          {% include '../../includes/stdEls/checkbox.twig' with {"id": "waterIn-checkbox"} %}
         </div> 
         <div class="input-with-label">
           <label>Планируемая нагрузка (м3/сут):</label>
-          <input type="number" placeholder="50" class="required input_grey">
+          <input id="waterIn-load" type="number" placeholder="50" class=" input_grey">
         </div>
 
         <div class="input-with-label">
           <label>Диаметр подводящих сетей :</label>
-          <select id="diameter-1"  class="required">
+          <select id="waterIn-diameter"  class="">
             <option></option> 
-            <option value="1">до 40</option>
-            <option value="2">40 - 70</option>
-            <option value="3">100 - 150</option>
-            <option value="4">150 - 200</option>
-            <option value="5">200 - 250</option>
+            <option value="option1">до 40</option>
+            <option value="option2">40 - 70</option>
+            <option value="option3">100 - 150</option>
+            <option value="option4">150 - 200</option>
+            <option value="option5">200 - 250</option>
           </select>
         </div>
 
         <div class="input-with-label">
           <label>Ориентировочная протяженность сетей до точки подключения (м) :</label>
-          <input type="number" placeholder="50" class="required input_grey">
+          <input id="waterIn-length" type="number" placeholder="50" class=" input_grey">
         </div>
       </div>
 
       <div class="viv-calc__vertical-divider"></div>
 
-      <div class="viv-calc__right">
+      <div class="viv-calc__block viv-calc__right">
         <div class="viv-calc__checkbox-row">
           <h6 class="viv-calc__checkbox-prepend-text strong colorPrimary3">Водоотведения —</h6>
-          {% include '../../includes/stdEls/checkbox.twig' with {"id": "waterOut-checkbox", "isRequired": true} %}
+          {% include '../../includes/stdEls/checkbox.twig' with {"id": "waterOut-checkbox"} %}
         </div>
 
         <div class="input-with-label">
           <label>Планируемая нагрузка (м3/сут):</label>
-          <input type="number" placeholder="50" class="required input_grey">
+          <input id="waterOut-load" type="number" placeholder="50" class=" input_grey">
         </div>
 
         <div class="input-with-label">
           <label>Диаметр подводящих сетей :</label>
-          <select id="diameter-2"  class="required">
+          <select id="waterOut-diameter">
             <option></option> 
-            <option value="1">до 40</option>
-            <option value="2">40 - 70</option>
-            <option value="3">100 - 150</option>
-            <option value="4">150 - 200</option>
-            <option value="5">200 - 250</option>
+            <option value="option1">до 40</option>
+            <option value="option2">40 - 70</option>
+            <option value="option3">100 - 150</option>
+            <option value="option4">150 - 200</option>
+            <option value="option5">200 - 250</option>
           </select>
         </div>
 
         <div class="input-with-label">
           <label>Ориентировочная протяженность сетей до точки подключения (м) :</label>
-          <input type="number" placeholder="50" class="required input_grey">
+          <input id="waterOut-length" type="number" placeholder="50" class=" input_grey">
         </div>
       </div>
 
       <div class="viv-calc__bottom">
         <div class="viv-calc__bottom-line"></div>
-        <button type="submit" class="btn btn_colorPrimary btn_big btn_big-text btn_wide">Рассчитать</button>
+        <a id="viv-calc-submit-btn" href="#modal_viv-calc" class="btn btn_colorPrimary btn_big btn_big-text btn_wide">Рассчитать</a>
       </div>
     </form>
 
@@ -103,4 +103,27 @@
 
     </article>
   </section>
+
+  <div id="modal_viv-calc" class="modal modal_viv-calc">
+    <h4 class="modal-title colorPrimary strong_M modal-title_without-space">Расчет стоимости подключения</h4>
+    <hr class="colorPrimary hr_space-S">
+    <div id="waterIn-results-block" class="modal_viv-calc__block">
+      <p class="modal_viv-calc__title strong colorPrimary">Водоснабжение</p>
+      <p class="modal_viv-calc__text colorPrimary3">
+        Плата за подключение —
+        <span class="modal_viv-calc__result strong colorPrimary"></span>
+        руб.
+      </p>
+    
+    </div>
+    <div id="waterOut-results-block" class="modal_viv-calc__block">
+      <p class="modal_viv-calc__title strong colorPrimary">Водоотведение</p>
+      <p class="modal_viv-calc__text colorPrimary3">
+        Плата за подключение —
+        <span class="modal_viv-calc__result strong colorPrimary"></span>
+        руб.
+      </p>
+    
+    </div>
+  </div>
 {% endblock %}

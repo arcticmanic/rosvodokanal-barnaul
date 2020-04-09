@@ -6,27 +6,7 @@
 
     <article class="payment-widget-with-text">
       <div class="payment-widget-with-text__left">
-        {# <form action="" class="form payment-widget payment-widget-with-text__widget ">
-          <div class="payment-widget__title-and-logo">
-            <h6 class="form-title payment-widget__title">Передать показания</h6>
-            {% include '../../includes/svg/icon-gorod-logo-svg.twig' with {'classes': 'payment-widget__logo'} %}
-          </div>
-
-          <div class="input-with-label">
-            <label>Лицевой счет *</label>
-            <input type="text" class="required input_grey">
-          </div>
-
-          <div class="input-with-label">
-            <label>Фамилия *</label>
-            <input type="text" class="required input_grey">
-          </div>
-
-          <div class="form-footer form-footer_spacing-S">
-            <a href="#" class="colorPrimary text-decoration-underline form-footer__link">Узнать лицевой счет</a>
-            <button type="submit" class="btn btn_colorPrimary btn_wide submit-element">Далее</button>
-          </div>
-        </form> #}
+        <div class="sgb-widget" type=payments provider='8E931B3B-2F14-0658-E054-000B5DE5C284' compact></div>
       </div>
       
       <div class="payment-widget-with-text__right">
@@ -93,5 +73,5 @@
 {% endblock %}
 
 {% block customJS %}
-  <!-- {<script src=https://lk.sistemagorod.ru/wgtest/js/app.js></script> -->
+  <script src="https://lk.sistemagorod.ru/wgtest/js/app.js"></script>
 {% endblock %}

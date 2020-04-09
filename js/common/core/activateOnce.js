@@ -18,7 +18,7 @@ $(document).ready(function () {
     minimumResultsForSearch: Infinity,
   })
 
-  $('a.open-modal').click(function (event) {
+  $("a[rel='modal:open']").click(function (event) {
     $(this).modal({
       fadeDuration: 250,
     })
