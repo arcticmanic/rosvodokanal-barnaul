@@ -33,9 +33,6 @@ input:not([type='submit']),
 textarea {
   &[data-isValid='false'] {
     border-color: @invalidBorderColor !important;
-    animation-name: invalidInputBlinking;
-    animation-duration: 1.5s;
-    animation-iteration-count: 2;
   }
 }
 
@@ -43,9 +40,6 @@ textarea {
   input[data-isValid='false'] {
     & ~ .input_file__on-top {
       border-color: @invalidBorderColor !important;
-      animation-name: invalidInputBlinking;
-      animation-duration: 1.5s;
-      animation-iteration-count: 2;
     }
   }
 
@@ -56,21 +50,6 @@ textarea {
         background: #f1f3f4;
       }
     }
-  }
-}
-
-@keyframes invalidInputBlinking {
-  0% {
-    background: #f1f3f4;
-    color: @colorPrimary3;
-  }
-  50% {
-    color: #fff;
-    background: @invalidBcColor;
-  }
-  100% {
-    background: #f1f3f4;
-    color: @colorPrimary3;
   }
 }
 

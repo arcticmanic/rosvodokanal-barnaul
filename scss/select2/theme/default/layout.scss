@@ -105,24 +105,10 @@ select.select2-hidden-accessible {
   &[data-isValid='false'] ~ .select2.select2-container--default {
     .select2-selection--single {
       border-color: $invalidBorderColor;
-      animation-name: invalidSelectBlinking;
-      animation-duration: 1.5s;
-      animation-iteration-count: 2;
     }
   }
 }
 
-@keyframes invalidSelectBlinking {
-  0% {
-    background: #f1f3f4;
-  }
-  50% {
-    background: $invalidBcColor;
-  }
-  100% {
-    background: #f1f3f4;
-  }
-}
 
 
 html.color-white,
