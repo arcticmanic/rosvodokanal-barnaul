@@ -12,37 +12,43 @@ $(document).ready(function () {
     placeholder: '— выбрать',
   })
 
-  const vivCalcDiameterOption = {
+  const vivCalcInfo = {
     waterIn: {
-      option1: 1767.74,
-      option2: 1767.74,
-      option3: 2054.45,
-      option4: 2420.16,
-      option5: 2787.35,
+      options: {
+        option1: 1767.74,
+        option2: 1767.74,
+        option3: 2054.45,
+        option4: 2420.16,
+        option5: 2787.35,
+      },
+      loadRate: 11350,
     },
     waterOut: {
-      option1: 3078.34,
-      option2: 3078.34,
-      option3: 3078.34,
-      option4: 3108.43,
-      option5: 3108.43,
+      options: {
+        option1: 3078.34,
+        option2: 3078.34,
+        option3: 3078.34,
+        option4: 3108.43,
+        option5: 3108.43,
+      },
+      loadRate: 20680,
     },
   }
 
-  const form = $('#viv-calc-submit-btn').closest('form'),
-    waterInCheckbox = form.find('#waterIn-checkbox'),
-    waterOutCheckbox = form.find('#waterIn-checkbox'),
-    bothCheckboxes = form.find('#waterIn-checkbox, #waterOut-checkbox'),
-    waterInInputs = form.find('.viv-calc__left input'),
-    waterInSelect = form.find('.viv-calc__left select'),
-    waterOutInputs = form.find('.viv-calc__right input'),
-    waterOutSelect = form.find('.viv-calc__right select')
+  let form = $('#viv-calc-submit-btn').closest('form'),
+    bothCheckboxes = form.find('#waterIn-checkbox, #waterOut-checkbox')
+
+  let waterInCheckbox = form.find('#waterIn-checkbox'),
+    waterOutCheckbox = form.find('#waterOut-checkbox')
 
   bothCheckboxes.each(function () {
     $(this).on('click', function () {
-      const allInputs = $(this).closest('.viv-calc__block').find('input')
+      const allInputs = $(this)
+        .closest('.viv-calc__block')
+        .find('input:not([type="checkbox"])')
+
       const selectEl = $(this).closest('.viv-calc__block').find('select')
-      if ($(this).prop('checked') === true) {
+      if (isCheckBoxChecked($(this))) {
         selectEl.addClass('required')
         allInputs.each(function () {
           $(this).addClass('required')
@@ -52,68 +58,78 @@ $(document).ready(function () {
         allInputs.each(function () {
           $(this).removeClass('required')
         })
+        const prefix = $(this)
+          .attr('id')
+          .slice(0, $(this).attr('id').indexOf('-'))
+        $(`#modal_viv-calc #${prefix}-results-block`).removeClass('block')
       }
     })
   })
 
   $('#viv-calc-submit-btn').on('click', function (event) {
+    const submitBtn = $(this)
     if (
-      waterInCheckbox.prop('checked') === false &&
-      waterOutCheckbox.prop('checked') === false
+      !isCheckBoxChecked(waterInCheckbox) &&
+      !isCheckBoxChecked(waterOutCheckbox)
     ) {
       $('.viv-calc__checkbox-prepend-text').addClass('blink-text')
       setTimeout(function () {
         $('.viv-calc__checkbox-prepend-text').removeClass('blink-text')
       }, 2000)
     } else {
-      $(this).modal()
-      return false
-    }
+      bothCheckboxes = form.find('#waterIn-checkbox, #waterOut-checkbox')
 
-    if (waterInCheckbox.prop('checked')) {
-      const load = form.find('#waterIn-load'),
-        length = form.find('#waterIn-length'),
-        diameter = form.find('#waterIn-diameter')
-      allInputs = form.find
+      let invalidInputsCounter = 1
 
-      allInputs.each(function () {})
+      bothCheckboxes.each(function () {
+        invalidInputsCounter = 0
+        if (isCheckBoxChecked($(this))) {
+          const block = $(this).closest('.viv-calc__block'),
+            inputsInsideBlock = block.find('input.required'),
+            selectInsideBlock = block.find('select.required'),
+            allInputsInsideBlock = block.find('input.required, select.required')
 
-      // if () {
+          validateInputs(inputsInsideBlock)
 
-      // } else {
-      //   $('#modal_viv-calc #waterIn-results-block').addClass('block')
-      //   $('#modal_viv-calc #waterIn-results-block .modal_viv-calc__result').text(
-      //     getPriceConnection(
-      //       getInputVal(load),
-      //       11350,
-      //       getInputVal(length),
-      //       vivCalcDiameterOption.waterIn[getSelectVal(diameter)]
-      //     )
-      //   )
-      // }
-    }
+          validateSelects(selectInsideBlock)
 
-    if (form.find('#waterOut-checkbox').prop('checked')) {
-      const load = form.find('#waterOut-load'),
-        length = form.find('#waterOut-length'),
-        diameter = form.find('#waterOut-diameter')
+          allInputsInsideBlock.each(function () {
+            if (!resolveSingleInputValidity($(this), invalidInputsCounter)) {
+              invalidInputsCounter++
+            }
+          })
 
-      $('#modal_viv-calc #waterOut-results-block').addClass('block')
-      $('#modal_viv-calc #waterOut-results-block .modal_viv-calc__result').text(
-        getPriceConnection(
-          getInputVal(load),
-          20680,
-          getInputVal(length),
-          vivCalcDiameterOption.waterIn[getSelectVal(diameter)]
-        )
-      )
+          if (invalidInputsCounter === 0) {
+            const load = block.find('[data-viv-calc="load"]'),
+              length = block.find('[data-viv-calc="length"]'),
+              diameter = block.find('[data-viv-calc="diameter"]'),
+              prefix = block.attr('id'),
+              invokedModalBlocks = $(`#modal_viv-calc #${prefix}-results-block`)
+
+            invokedModalBlocks.each(function () {
+              invokedModalBlocks.addClass('block')
+              invokedModalBlocks
+                .find('.modal_viv-calc__result')
+                .text(
+                  getPriceConnection(
+                    getInputVal(load),
+                    vivCalcInfo[prefix].loadRate,
+                    getInputVal(length),
+                    vivCalcInfo[prefix].options[getSelectVal(diameter)]
+                  )
+                )
+            })
+          }
+        }
+      })
+
+      if (invalidInputsCounter === 0) {
+        submitBtn.modal()
+        return false
+      }
     }
   })
 })
 
 const getPriceConnection = (load, loadRate, length, lengthRate) =>
   load * loadRate + length * lengthRate
-
-const getSelectVal = (select) => select.select2('data')[0].id
-
-const getInputVal = (input) => input.val()

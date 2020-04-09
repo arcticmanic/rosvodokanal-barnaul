@@ -5,19 +5,19 @@
     {% include '../../includes/stdEls/page-content__title_with-underline.twig' with {"title" : "Калькулятор расчета платы за подключение к сетям"} %}
 
     <form id="viv-calc" action="" class="viv-calc">
-      <div class="viv-calc__block viv-calc__left">
+      <div id="waterIn" class="viv-calc__block viv-calc__left">
         <div class="viv-calc__checkbox-row">
           <h6 class="viv-calc__checkbox-prepend-text strong colorPrimary3">Водоснабжения —</h6>
           {% include '../../includes/stdEls/checkbox.twig' with {"id": "waterIn-checkbox"} %}
         </div> 
         <div class="input-with-label">
           <label>Планируемая нагрузка (м3/сут):</label>
-          <input id="waterIn-load" type="number" placeholder="50" class=" input_grey">
+          <input id="waterIn-load" type="number" placeholder="50" class="input_grey" data-viv-calc="load">
         </div>
 
         <div class="input-with-label">
           <label>Диаметр подводящих сетей :</label>
-          <select id="waterIn-diameter"  class="">
+          <select id="waterIn-diameter" data-viv-calc="diameter">
             <option></option> 
             <option value="option1">до 40</option>
             <option value="option2">40 - 70</option>
@@ -29,13 +29,13 @@
 
         <div class="input-with-label">
           <label>Ориентировочная протяженность сетей до точки подключения (м) :</label>
-          <input id="waterIn-length" type="number" placeholder="50" class=" input_grey">
+          <input id="waterIn-length" type="number" placeholder="50" class="input_grey" data-viv-calc="length">
         </div>
       </div>
 
       <div class="viv-calc__vertical-divider"></div>
 
-      <div class="viv-calc__block viv-calc__right">
+      <div id="waterOut" class="viv-calc__block viv-calc__right">
         <div class="viv-calc__checkbox-row">
           <h6 class="viv-calc__checkbox-prepend-text strong colorPrimary3">Водоотведения —</h6>
           {% include '../../includes/stdEls/checkbox.twig' with {"id": "waterOut-checkbox"} %}
@@ -43,12 +43,12 @@
 
         <div class="input-with-label">
           <label>Планируемая нагрузка (м3/сут):</label>
-          <input id="waterOut-load" type="number" placeholder="50" class=" input_grey">
+          <input id="waterOut-load" type="number" placeholder="50" class="input_grey" data-viv-calc="load">
         </div>
 
         <div class="input-with-label">
           <label>Диаметр подводящих сетей :</label>
-          <select id="waterOut-diameter">
+          <select id="waterOut-diameter" data-viv-calc="diameter">
             <option></option> 
             <option value="option1">до 40</option>
             <option value="option2">40 - 70</option>
@@ -60,7 +60,7 @@
 
         <div class="input-with-label">
           <label>Ориентировочная протяженность сетей до точки подключения (м) :</label>
-          <input id="waterOut-length" type="number" placeholder="50" class=" input_grey">
+          <input id="waterOut-length" type="number" placeholder="50" class="input_grey" data-viv-calc="length">
         </div>
       </div>
 

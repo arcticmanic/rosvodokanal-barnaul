@@ -25,7 +25,6 @@ $(document).ready(function () {
     '.mm-spn .mobile-menu__footer .all-sites__text',
     function () {
       const it = $(this)
-      console.log(it)
       it.closest('.all-sites').toggleClass('active')
       $('.city-list').fadeToggle(500)
     }

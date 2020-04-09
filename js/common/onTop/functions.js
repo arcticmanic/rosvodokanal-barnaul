@@ -45,7 +45,6 @@ const validateInputs = (allInputs) => {
   allInputs.each(function () {
     $(this).on('input', function () {
       if ($(this).is('input:not([type="checkbox"]')) {
-        console.log('input')
         if (isInputValid($(this))) {
           setValidityAttr($(this), true)
         } else {
@@ -57,7 +56,7 @@ const validateInputs = (allInputs) => {
         } else {
           setValidityAttr($(this), false)
         }
-      } else  if ($(this).is('textarea')) {
+      } else if ($(this).is('textarea')) {
         if (isTextareaValid($(this))) {
           setValidityAttr($(this), true)
         } else {
@@ -117,3 +116,7 @@ const isTextareaValid = (textarea) => textarea.val().trim() !== ''
 const isCheckBoxChecked = (checkboxInput) => checkboxInput.prop('checked')
 
 const setValidityAttr = (input, bool) => input.attr('data-isValid', bool)
+
+const getSelectVal = (select) => select.select2('data')[0].id
+
+const getInputVal = (input) => input.val()
