@@ -20,7 +20,7 @@ $(document).ready(function () {
 
   if ($('#viv-calc').length > 0) {
     const allInputsInsideForm = $('#viv-calc').find(
-      "input[type='text'].required, input[type='number'].required, select"
+      "input:not([type='submit']).required, textarea.required, select"
     )
 
     const allSelects = $('#viv-calc').find('select')
@@ -31,22 +31,28 @@ $(document).ready(function () {
 
     $('#viv-calc').on('submit', function (e) {
       let invalidInputsCounter = 0
-      console.log(allInputsInsideForm)
 
       allInputsInsideForm.each(function () {
-        if ($(this).is('input')) {
+        if ($(this).is('input:not([type="checkbox"])')) {
           if (isInputValid($(this))) {
             $(this).attr('data-valid', true)
-            invalidInputsCounter++
           } else {
             $(this).attr('data-valid', false)
+            invalidInputsCounter++
+          }
+        } else if ($(this).is('input[type="checkbox"]')) {
+          if (isCheckBoxChecked($(this))) {
+            $(this).attr('data-valid', true)
+          } else {
+            $(this).attr('data-valid', false)
+            invalidInputsCounter++
           }
         } else if ($(this).is('select')) {
           if (isSelectValid($(this))) {
             $(this).attr('data-valid', true)
-            invalidInputsCounter++
           } else {
             $(this).attr('data-valid', false)
+            invalidInputsCounter++
           }
         }
       })
@@ -62,9 +68,9 @@ const validateSelects = (selects) => {
   selects.each(function () {
     $(this).on('select2:select', function () {
       if (isSelectValid($(this))) {
-        $(this).attr('data-valid', true)
-      } else if (!isSelectValid($(this))) {
-        $(this).attr('data-valid', false)
+        setValidityAttr($(this), true)
+      } else {
+        setValidityAttr($(this), false)
       }
     })
   })
@@ -73,27 +79,27 @@ const validateSelects = (selects) => {
 const validateInputs = (allInputs) => {
   allInputs.each(function () {
     $(this).on('input', function () {
-      if ($(this).val() !== '') {
-        $(this).attr('data-valid', true)
-      } else if ($(this).val() === '') {
-        $(this).attr('data-valid', false)
+      if ($(this).is('input:not([type="checkbox"]')) {
+        if (isInputValid($(this))) {
+          setValidityAttr($(this), true)
+        } else {
+          setValidityAttr($(this), false)
+        }
+      } else {
+        if (isCheckBoxChecked($(this))) {
+          setValidityAttr($(this), true)
+        } else {
+          setValidityAttr($(this), false)
+        }
       }
     })
   })
 }
 
-const isSelectValid = (select) => {
-  if (select.select2('data')[0].id !== '') {
-    return true
-  } else {
-    return false
-  }
-}
+const isSelectValid = (select) => select.select2('data')[0].id !== ''
 
-const isInputValid = (input) => {
-  if (input.trim().val() !== '') {
-    return true
-  } else {
-    return false
-  }
-}
+const isInputValid = (input) => input.val().trim() !== ''
+
+const isCheckBoxChecked = (checkboxInput) => checkboxInput.prop('checked')
+
+const setValidityAttr = (input, bool) => input.attr('data-valid', bool)

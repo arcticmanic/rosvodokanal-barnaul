@@ -8,7 +8,7 @@
       <div class="viv-calc__left">
         <div class="viv-calc__checkbox-row">
           <h6 class="viv-calc__checkbox-prepend-text strong colorPrimary3">Водоснабжения —</h6>
-          {% include '../../includes/stdEls/checkbox.twig' with {"id": "waterIn-checkbox"} %}
+          {% include '../../includes/stdEls/checkbox.twig' with {"id": "waterIn-checkbox", "isRequired": true} %}
         </div> 
         <div class="input-with-label">
           <label>Планируемая нагрузка (м3/сут):</label>
@@ -38,7 +38,7 @@
       <div class="viv-calc__right">
         <div class="viv-calc__checkbox-row">
           <h6 class="viv-calc__checkbox-prepend-text strong colorPrimary3">Водоотведения —</h6>
-          {% include '../../includes/stdEls/checkbox.twig' with {"id": "waterOut-checkbox"} %}
+          {% include '../../includes/stdEls/checkbox.twig' with {"id": "waterOut-checkbox", "isRequired": true} %}
         </div>
 
         <div class="input-with-label">

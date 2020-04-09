@@ -73,11 +73,12 @@
         stroke-dashoffset: 0;
       }
     }
-    &.error {
+
+    &[data-valid='false'] {
       & + label {
         svg {
           * {
-            stroke: @red;
+            stroke: @invalidBcColor;
           }
         }
       }
