@@ -26,7 +26,7 @@ $(document).ready(function () {
       if (!$(this)[0].files[0]) {
         return
       } else {
-        let file = $(this)[0].files[0],
+        const file = $(this)[0].files[0],
           fileSize = (file.size / 1000000).toPrecision(2),
           fileNameField = $(this)
             .closest('.input_file')
@@ -34,17 +34,19 @@ $(document).ready(function () {
           inputStructureCont = $(this).closest('.input-with-label'),
           actualInputCont = $(this).closest('.input_file')
 
-        if (fileSize <= 20) {
-          fileNameField.text(file.name)
-          if (inputStructureCont.data().addInputFileOnEnd) {
-            const emptyInput = actualInputCont.clone()
-            clearInputTypeFile(emptyInput)
-            inputStructureCont.append(emptyInput)
+        const allowedFileSize = $(this).attr('data-max-file-size')
 
-            actualInputCont.addClass('input_file-with-file')
-          }
-        } else {
+        if (allowedFileSize && fileSize > allowedFileSize) {
           fileNameField.text($(this).data().fileIsTooBigMessage)
+          return
+        } 
+        fileNameField.text(file.name)
+        setValidityAttr($(this), true)
+        if (inputStructureCont.data().addInputFileOnEnd) {
+          const emptyInput = actualInputCont.clone()
+          clearInputTypeFile(emptyInput)
+          inputStructureCont.append(emptyInput)
+          actualInputCont.addClass('input_file-with-file')
         }
       }
     })

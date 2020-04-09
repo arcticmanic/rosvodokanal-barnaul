@@ -149,7 +149,7 @@
 </section>
 
   <div id="modal_job" class="modal modal_job">
-    <form action="" class="form form_job {{ classes }}">
+    <form action="" class="form form_job {{ classes }}" data-isValidate="true">
       <p class="form-subtitle colorPrimary strong_M font-15">Отклик на вакансию:</p>
       <h4 class="form-title colorPrimary strong_M form-title_without-space">Руководитель группы по управлению закупками</h4>
 
@@ -177,7 +177,7 @@
         <span class="form-info italic">Прикрепить резюме (допустимые расширения файлов .doc .pdf .jpg .jpeg .rar .zip, до 2 Мб)</span>
 
       <div class="form-footer">
-        {% include '../../includes/stdEls/checkbox.twig' with {"id": "check3", "text": "Я принимаю <a href='#'>Политику конфиденциальности</a>"} %}
+        {% include '../../includes/stdEls/checkbox.twig' with {"id": "check3", "text": "Я принимаю <a href='#'>Политику конфиденциальности</a>", "isRequired": true} %}
         <button type="submit" class="btn btn_colorPrimary mx-auto ">Отправить</button>
       </div>
     </form>

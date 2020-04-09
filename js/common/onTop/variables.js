@@ -5,3 +5,6 @@ const laptopW = 1400,
   mobileLandscapeW = 768,
   mobileW = 500,
   mobileSSW = 350
+  
+const eyeVersionScale = localStorage.getItem('eyeVersionScale'),
+  eyeVersionColor = localStorage.getItem('eyeVersionColor')

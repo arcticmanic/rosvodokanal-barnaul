@@ -130,7 +130,7 @@
 
       <h5 class="colorCyan">Сформировать пакет документов</h5>
 
-      <form action="" class="form form_flex-vertical form-in-text">
+      <form action="" class="form form_flex-vertical form-in-text" data-isValidate="true">
         <div class="input-with-label">
           <label>Наименование организации *</label>
           <input type="text" class="required">
@@ -197,15 +197,15 @@
           <div class="input-with-label__row input-with-label__row_3">
             <div class="input-with-label">
               <label>Дом *</label>
-              <input type="text"  class="required">
+              <input type="number"  class="required">
             </div>
             <div class="input-with-label">
               <label>Корпус</label>
-              <input type="text">
+              <input type="number">
             </div>
             <div class="input-with-label">
               <label>Квартира *</label>
-              <input type="text"  class="required">
+              <input type="number"  class="required">
             </div>
           </div>
         </div>
@@ -215,7 +215,7 @@
           <span class="form-info italic">Допустимые расширения файлов .doc .pdf .jpg .jpeg .rar .zip, до 20 Мб</span>
         </div>
         
-        <div class="input-with-label">
+        {# <div class="input-with-label">
           <label>Заявление на получение ТУ *</label>
           {% include '../../includes/stdEls/input_file.twig' with {"btnText": "Обзор"} %}
         </div>
@@ -227,7 +227,7 @@
         
         <div class="input-with-label">
           <label>Копия ИНН/КПП *</label>
-          {% include '../../includes/stdEls/input_file.twig' with {"btnText": "Удалить"} %}
+          {% include '../../includes/stdEls/input_file.twig' with {"btnText": "Обзор"} %}
         </div>
         
         <div class="input-with-label">
@@ -249,7 +249,7 @@
           <label class="strong">Топографическая карта участка в масштабе 1:500 *</label>
           {% include '../../includes/stdEls/input_file.twig' with {"btnText": "Обзор"} %}
           {% include '../../includes/stdEls/checkbox.twig' with {"id": "check3", "text": "У меня нет нужного документа, я хочу заказать топографическую карту у вас"} %}
-        </div>
+        </div> #}
         
         <div class="input-with-label">
           <label class="strong">Баланс водопотребления и водоотведения подключаемого объекта *</label>
@@ -257,7 +257,7 @@
           {% include '../../includes/stdEls/checkbox.twig' with {"id": "check2", "text": "У меня нет нужного документа, я хочу заказать Баланс водопотребления и водоотведения у вас"} %}
         </div>
 
-        <div class="input-with-label">
+        {# <div class="input-with-label">
           <label>Нотариально заверенная доверенность, если заявитель представляет интересы предприятия или организации *</label>
           {% include '../../includes/stdEls/input_file.twig' with {"btnText": "Обзор"} %}
         </div>
@@ -284,8 +284,8 @@
         
         <div class="input-with-label" data-add-input-file-on-end="true">
           <label class="strong">Дополнительные документы</label>
-          {% include '../../includes/stdEls/input_file.twig' with {"btnText": "Обзор"} %}
-        </div>
+          {% include '../../includes/stdEls/input_file.twig' with {"btnText": "Обзор", "isNotRequired": false} %}
+        </div> #}
 
         <hr class="dashed">
 

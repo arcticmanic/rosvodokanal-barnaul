@@ -116,9 +116,8 @@
   }
 }
 
-html.color-white {
+html.color-white, html.color-black {
   .bage {
-    // background: @whiteEye;
     &__overlay {
       background: linear-gradient(to right, @blackEye, rgba(@blackEye, 0.1));
     }
@@ -131,13 +130,6 @@ html.color-white {
 
 html.color-black {
   .bage {
-    // background: @blackEye;
-    &__overlay {
-      background: linear-gradient(to right, @whiteEye, rgba(@whiteEye, 0.1));
-    }
-    .title,
-    .subtitle {
-      color: @blackEye;
-    }
+    .border-section-like_white()
   }
 }

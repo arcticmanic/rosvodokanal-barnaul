@@ -389,7 +389,19 @@ if ($('#animatedCanvasParent').length > 0) {
   var stage = new createjs.StageGL('animatedCanvas', {
     antialias: true,
   })
-  stage.setClearColor('#1caaf2')
+  let animatedCanvasColor = '#1caaf2'
+  if (eyeVersionColor) {
+    animatedCanvasColor = '#000'
+  }
+  $('#eye-version-btn, #eye-version-item_back').on('click', function () {
+    if (!$('html').hasClass('eye-version-active')) {
+      animatedCanvasColor = '#000'
+    } else {
+      animatedCanvasColor = '#1caaf2'  
+    }
+    stage.setClearColor(animatedCanvasColor)
+  })
+  stage.setClearColor(animatedCanvasColor)
   var canvasWidth = window.innerWidth
   var canvasHeight = parent.offsetHeight + 10
   stage.canvas.width = canvasWidth

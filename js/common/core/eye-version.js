@@ -1,8 +1,5 @@
 $(document).ready(function() {
-  const eyeVersionScale = localStorage.getItem('eyeVersionScale'),
-    eyeVersionColor = localStorage.getItem('eyeVersionColor')
-
-  setTimeout(function() {
+setTimeout(function() {
     if (eyeVersionScale || eyeVersionColor) {
       $('#eye-version-btn').trigger('click')
       if (eyeVersionScale) {

@@ -4,7 +4,7 @@
   <section class="section-users-questions">
     {% include '../../includes/stdEls/page-content__title_with-underline.twig' with {"title" : "Задать вопрос"} %}
     <article class="text">
-      <form action="" class="form form_flex-vertical form-in-text">
+      <form action="" class="form form_flex-vertical form-in-text" data-isValidate="true">
         <div class="input-with-label__row input-with-label__row_2">
           <div class="input-with-label">
             <label>Ваше имя *</label>
@@ -30,7 +30,7 @@
 
         <div class="input-with-label input-with-label_extra-mb">
           <label class="strong">Тема *</label>
-          <select class="select-item_general select-item_in-text">
+          <select class="select-item_general select-item_in-text required">
             <option value="1">Услуги на сетях водоснабжения и водоотведения</option>
             <option value="2">Услуги вне сетей</option>
             <option value="3">Сетевые дела</option>
@@ -45,7 +45,7 @@
         <div class="form-footer">
           <div class="input-with-label">
             <label>Предпочтительная форма ответа *</label>
-            <select class="select-item_general select-item_in-text">
+            <select class="select-item_general select-item_in-text required">
               <option value="1">Ответа не требует</option>
               <option value="2">Услуги вне сетей</option>
               <option value="3">Сетевые дела</option>
