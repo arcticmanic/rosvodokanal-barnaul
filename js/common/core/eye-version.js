@@ -1,7 +1,7 @@
-$(document).ready(function() {
-setTimeout(function() {
+$(document).ready(function () {
+  setTimeout(function () {
     if (eyeVersionScale || eyeVersionColor) {
-      $('#eye-version-btn').trigger('click')
+      $('.eye-version-btn').trigger('click')
       if (eyeVersionScale) {
         $(`span[data-scale="${eyeVersionScale}"]`).trigger('click')
       }
@@ -11,13 +11,14 @@ setTimeout(function() {
     }
   }, 0)
 
-  const eyeVersion = (function() {
+
+  const eyeVersion = (function () {
     const rootElement = $('html'),
       eyeVersionPanel = $('.eye-version-panel')
 
     return {
-      init: function() {
-        $('#eye-version-btn').on('click', function() {
+      init: function () {
+        $('.eye-version-btn').on('click', function () {
           eyeVersionPanel.slideToggle()
 
           $('.eye-version').toggleClass('eye-version-active')
@@ -54,7 +55,7 @@ setTimeout(function() {
           }
         })
 
-        $('.eye-version__scale').on('click', function(e) {
+        $('.eye-version__scale').on('click', function (e) {
           var $this = $(this)
           if (
             rootElement.hasClass('eye-version-active') &&
@@ -78,7 +79,7 @@ setTimeout(function() {
           }
         })
 
-        $('.eye-version__color').on('click', function(e) {
+        $('.eye-version__color').on('click', function (e) {
           if (rootElement.hasClass('eye-version-active')) {
             var $this = $(this)
 
@@ -94,7 +95,7 @@ setTimeout(function() {
           }
         })
 
-        $('.eye-version-item_back').on('click', function(e) {
+        $('.eye-version-item_back').on('click', function (e) {
           $('.eye-version-active').removeClass('eye-version-active')
 
           $('.eye-version__scale.m--current').removeClass('m--current')
@@ -115,14 +116,14 @@ setTimeout(function() {
 
         $('.eye-version, .eye-version__scale, .eye-version-item_back').on(
           'click',
-          function() {
+          function () {
             adjustElSize()
           }
         )
       },
-      save: function(type, value) {
+      save: function (type, value) {
         console.log(type, value)
-      }
+      },
     }
   })()
   eyeVersion.init()

@@ -24,6 +24,4 @@ $(document).ready(function () {
     })
     return false
   })
-
-  $('.bage .bage__overlay').ClipPath('0 0, 100% 0, 90% 100%, 0% 100%')
 })

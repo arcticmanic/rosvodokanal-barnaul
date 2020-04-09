@@ -20,13 +20,10 @@ $(document).ready(function () {
       drawer.close()
     })
 
-  $(document).on(
-    'click',
-    '.mm-spn .mobile-menu__footer .all-sites__text',
-    function () {
-      const it = $(this)
-      it.closest('.all-sites').toggleClass('active')
-      $('.city-list').fadeToggle(500)
-    }
-  )
+  $('.mm-spn .mobile-menu__footer .all-sites__text').on('click', function () {
+    const it = $(this)
+    console.log(it)
+    it.closest('.all-sites').toggleClass('active')
+    $('.city-list').fadeToggle(500)
+  })
 })

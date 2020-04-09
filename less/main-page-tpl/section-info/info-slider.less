@@ -56,7 +56,12 @@
     &__img {
       height: auto;
       width: 245px;
-      object-fit: cover;
+      object-fit: contain;
+    }
+    #slick-slide01, #slick-slide02 {
+      .info-slider__img {
+        object-fit: cover;
+      }
     }
     .slick-dots {
       &_dark {

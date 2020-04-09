@@ -19,7 +19,7 @@
       @colorPrimary,
       rgba(@colorPrimary, 0.1)
     );
-    // clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
     width: 55%;
     height: 100%;
     z-index: 1;
@@ -118,6 +118,7 @@
 
 html.color-white, html.color-black {
   .bage {
+    background: @blackEye;
     &__overlay {
       background: linear-gradient(to right, @blackEye, rgba(@blackEye, 0.1));
     }
@@ -131,5 +132,13 @@ html.color-white, html.color-black {
 html.color-black {
   .bage {
     .border-section-like_white()
+  }
+}
+
+
+_:-ms-fullscreen,
+:root .bage {
+  .bage__overlay {
+    transform: skewX(-26deg);
   }
 }

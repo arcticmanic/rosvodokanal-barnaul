@@ -1,0 +1,32 @@
+.styledYandexMap {
+  .ymaps-2-1-76-balloon__tail {
+    display: none !important;
+  }
+
+  .ymaps-2-1-76-balloon__close {
+    display: none !important;
+  }
+
+  .ymaps-2-1-76-balloon__close + .ymaps-2-1-76-balloon__content {
+    margin-right: 0 !important;
+    padding: 1px 4px !important;
+  }
+
+  .ymaps-2-1-76-balloon {
+    box-shadow: none !important;
+  }
+
+  .ymaps-2-1-76-balloon__layout {
+    border-radius: 8px;
+  }
+
+  .ymaps-2-1-76-balloon__content {
+    * {
+      font-weight: 500;
+    }
+    & > * {
+      max-height: fit-content !important;
+      height: fit-content !important;
+    }
+  }
+}

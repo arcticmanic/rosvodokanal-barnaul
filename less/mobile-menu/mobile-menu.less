@@ -114,17 +114,30 @@
               fill: @colorPrimary3;
             }
           }
+          // &:hover {
+          //   & ~ .city-list {
+          //     display: block;
+          //   }
+          // }
         }
         .city-list {
-          position: relative;
-          margin-top: -30px;
-          padding-top: 45px;
-          padding-left: 10px;
-          padding-right: 10px;
+          position: absolute;
+          width: 104%;
+          left: 49%;
+          transform: translateX(-52%);
+          top: -272px;
+          padding-top: 10px;
+          padding-left: 9px;
+          padding-right: 9px;
+          padding-bottom: 30px;
+          height: fit-content;
           &__link {
-            margin-bottom: 0;
+            margin-bottom: 10px;
             .city-list__city {
               padding-left: 1px;
+            }
+            .city-list__gerb {
+              max-height: 27px;
             }
           }
         }

@@ -391,11 +391,11 @@ if ($('#animatedCanvasParent').length > 0) {
   })
   let animatedCanvasColor = '#1caaf2'
   if (eyeVersionColor) {
-    animatedCanvasColor = '#000'
+    animatedCanvasColor = '#161616'
   }
-  $('#eye-version-btn, #eye-version-item_back').on('click', function () {
+  $('.eye-version-btn, #eye-version-item_back').on('click', function () {
     if (!$('html').hasClass('eye-version-active')) {
-      animatedCanvasColor = '#000'
+      animatedCanvasColor = '#161616'
     } else {
       animatedCanvasColor = '#1caaf2'  
     }
