@@ -77,12 +77,10 @@ $(document).ready(function () {
         $('.viv-calc__checkbox-prepend-text').removeClass('blink-text')
       }, 2000)
     } else {
-      bothCheckboxes = form.find('#waterIn-checkbox, #waterOut-checkbox')
-
-      let invalidInputsCounter = 1
-
+      let invalidCheckboxesCounter = 0
+      
       bothCheckboxes.each(function () {
-        invalidInputsCounter = 0
+        let invalidInputsCounter = 0
         if (isCheckBoxChecked($(this))) {
           const block = $(this).closest('.viv-calc__block'),
             inputsInsideBlock = block.find('input.required'),
@@ -96,6 +94,7 @@ $(document).ready(function () {
           allInputsInsideBlock.each(function () {
             if (!resolveSingleInputValidity($(this), invalidInputsCounter)) {
               invalidInputsCounter++
+              console.log(invalidInputsCounter)
             }
           })
 
@@ -119,12 +118,16 @@ $(document).ready(function () {
                   )
                 )
             })
+          } else {
+            invalidCheckboxesCounter++
           }
         }
       })
 
-      if (invalidInputsCounter === 0) {
-        submitBtn.modal()
+      if (invalidCheckboxesCounter === 0) {
+        submitBtn.modal({
+          fadeDuration: 250,
+        })
         return false
       }
     }

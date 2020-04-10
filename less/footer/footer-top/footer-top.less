@@ -81,7 +81,7 @@
     box-sizing: content-box;
     padding: 4px;
     transition: @transFast;
-    .st0 {
+    .fill {
       fill: #fff;
     }
   }
@@ -208,6 +208,11 @@ html.color-white {
     &__title {
       color: @blackEye;
     }
+    svg.footer-top__title-icon {
+      .fill {
+        fill: @blackEye;
+      }
+    }
     &__hot-line-tel {
       @media (min-width: @hoverW) {
         &:hover {
@@ -236,6 +241,11 @@ html.color-black {
     }
     &__title {
       color: @whiteEye;
+    }
+    svg.footer-top__title-icon {
+      .fill {
+        fill: @whiteEye;
+      }
     }
     &__hot-line-tel {
       @media (min-width: @hoverW) {

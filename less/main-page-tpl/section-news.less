@@ -1,7 +1,7 @@
 .section-news {
   position: relative;
   z-index: 2;
-  margin-bottom: 0px
+  margin-bottom: 0px;
 }
 
 .news {
@@ -45,7 +45,7 @@
   &__item &__icon {
     margin-left: 8px;
     transition: @transFast;
-    .st0 {
+    .stroke {
       stroke: @colorPrimary;
     }
   }
@@ -113,6 +113,20 @@
   }
 }
 
+@media (max-width: @mobileW) {
+  .news {
+    &__item {
+      width: 100%;
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+    &__row {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+}
+
 html.color-white,
 html.color-black {
   .news {
@@ -146,16 +160,16 @@ html.color-white {
   .news {
     &__item {
       .border-card-like_black();
-    }
-
-    &__date {
-      color: @blackEye;
-    }
-    &__icon {
-      .st0 {
-        stroke: @blackEye;
+      .news__icon {
+        .stroke {
+          stroke: @blackEye;
+        }
+      }
+      .news__date {
+        color: @blackEye;
       }
     }
+
     &__title {
       color: @blackEye;
     }
@@ -170,16 +184,16 @@ html.color-black {
   .news {
     &__item {
       .border-card-like_white();
-    }
-
-    &__date {
-      color: @whiteEye;
-    }
-    &__icon {
-      .st0 {
-        stroke: @whiteEye;
+      .news__icon {
+        .stroke {
+          stroke: @whiteEye;
+        }
+      }
+      .news__date {
+        color: @whiteEye;
       }
     }
+
     &__title {
       color: @whiteEye;
     }

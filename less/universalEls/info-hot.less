@@ -172,6 +172,19 @@
   }
 }
 
+@media (max-width: @mobileW) {
+  .info-hot {
+    &:not(.info-hot_horizontal) {
+      height: auto;
+      padding: 20px !important;
+      .info-hot__text {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+
 html.scale {
   .info-hot {
     &:not(.info-hot_horizontal) {
