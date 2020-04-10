@@ -114,7 +114,7 @@ $(document).ready(function () {
                     vivCalcInfo[prefix].loadRate,
                     getInputVal(length),
                     vivCalcInfo[prefix].options[getSelectVal(diameter)]
-                  )
+                  ).toFixed(2)
                 )
             })
           } else {
