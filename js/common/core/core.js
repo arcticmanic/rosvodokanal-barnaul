@@ -77,8 +77,8 @@ $(document).ready(function () {
         {
           iconLayout: 'default#image',
           iconImageHref: '../assets/img/geo_red.png',
-          iconImageSize: [60, 68],
-          iconImageOffset: [-30, -68],
+          iconImageSize: [50, 68],
+          iconImageOffset: [-25, -68],
           hintLayout: HintLayout,
         }
       )
