@@ -94,7 +94,6 @@ $(document).ready(function () {
           allInputsInsideBlock.each(function () {
             if (!resolveSingleInputValidity($(this), invalidInputsCounter)) {
               invalidInputsCounter++
-              console.log(invalidInputsCounter)
             }
           })
 
