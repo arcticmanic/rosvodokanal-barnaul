@@ -1,7 +1,7 @@
 $(document).ready(function () {
   setTimeout(function () {
     if (eyeVersionScale || eyeVersionColor) {
-      $('.eye-version-btn').trigger('click')
+      $('#eye-version-btn_in-header').trigger('click')
       if (eyeVersionScale) {
         $(`span[data-scale="${eyeVersionScale}"]`).trigger('click')
       }
@@ -10,7 +10,6 @@ $(document).ready(function () {
       }
     }
   }, 0)
-
 
   const eyeVersion = (function () {
     const rootElement = $('html'),
