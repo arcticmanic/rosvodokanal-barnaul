@@ -1,8 +1,8 @@
 {
-  "title": "Наши ценности",
+  "title": "Стандарты раскрытия",
   "bage": {
-    "title": "Наши ценности",
-    "subtitle": "О водоканале"
+    "title": "Стандарты раскрытия",
+    "subtitle": "Раскрытие информации"
   },
   "pages": [
     {
@@ -21,12 +21,10 @@
         {
           "title": "Сотрудникам",
           "link": "about_coworkers_values.html",
-          "classes": "sidemenu__item_active",
           "pages": [
             {
               "title": "Наши ценности",
-              "link": "about_coworkers_values.html",
-              "classes": "current-page"
+              "link": "about_coworkers_values.html"
             },
             {
               "title": "Корпоративные программы",
@@ -97,6 +95,7 @@
         {
           "title": "Раскрытие информации",
           "link": "about_openInfo_finReports.html",
+          "classes": "sidemenu__item_active",
           "pages": [
             {
               "title": "Финансовая отчетность",
@@ -105,6 +104,7 @@
             {
               "title": "Стандарты раскрытия",
               "link": "about_openInfo_standarts.html",
+              "classes": "current-page sidemenu__item_active",
               "pages": [
                 {
                   "title": "Раскрытие информации в сфере водоснабжения",

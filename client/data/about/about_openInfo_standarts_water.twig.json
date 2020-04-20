@@ -1,7 +1,7 @@
 {
-  "title": "Финансовая отчетность",
+  "title": "Стандарты раскрытия",
   "bage": {
-    "title": "Финансовая отчетность",
+    "title": "Стандарты раскрытия",
     "subtitle": "Раскрытие информации"
   },
   "pages": [
@@ -99,12 +99,12 @@
           "pages": [
             {
               "title": "Финансовая отчетность",
-              "link": "about_openInfo_finReports.html",
-              "classes": "current-page"
+              "link": "about_openInfo_finReports.html"
             },
             {
               "title": "Стандарты раскрытия",
               "link": "about_openInfo_standarts.html",
+              "classes": "current-page sidemenu__item_active",
               "pages": [
                 {
                   "title": "Раскрытие информации в сфере водоснабжения",

@@ -105,7 +105,17 @@
             },
             {
               "title": "Стандарты раскрытия",
-              "link": "about_openInfo_finReports.html"
+              "link": "about_openInfo_standarts.html",
+              "pages": [
+                {
+                  "title": "Раскрытие информации в сфере водоснабжения",
+                  "link": "about_openInfo_standarts_water.html"
+                },
+                {
+                  "title": "Раскрытие информации в сфере водоотведения",
+                  "link": "about_openInfo_standarts_water.html"
+                }
+              ]
             }
           ]
         },

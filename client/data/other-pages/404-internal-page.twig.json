@@ -95,14 +95,38 @@
         {
           "title": "Раскрытие информации",
           "link": "about_openInfo_finReports.html",
+          "classes": "sidemenu__item_active",
           "pages": [
             {
               "title": "Финансовая отчетность",
-              "link": "about_openInfo_finReports.html"
+              "link": "about_openInfo_finReports.html",
+              "classes": "current-page"
             },
             {
               "title": "Стандарты раскрытия",
-              "link": "about_openInfo_finReports.html"
+              "link": "about_openInfo_finReports.html",
+              "pages": [
+                {
+                  "title": "Раскрытие информации в сфере водоснабжения",
+                  "link": "about_openInfo_standarts_water.html"
+                },
+                {
+                  "title": "Раскрытие информации в сфере водоотведения",
+                  "link": "about_openInfo_standarts_water.html"
+                },
+                {
+                  "title": "Раскрытие информации в сфере горячего водоснабжения",
+                  "link": "about_openInfo_standarts_water.html"
+                },
+                {
+                  "title": "Раскрытие информации в сфере теплоснабжения",
+                  "link": "about_openInfo_standarts_water.html"
+                },
+                {
+                  "title": "Раскрытие информации по передаче электроэнергии",
+                  "link": "about_openInfo_standarts_water.html"
+                }
+              ]
             }
           ]
         },

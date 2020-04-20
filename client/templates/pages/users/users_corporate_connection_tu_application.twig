@@ -215,7 +215,7 @@
           <span class="form-info italic">Допустимые расширения файлов .doc .pdf .jpg .jpeg .rar .zip, до 20 Мб</span>
         </div>
         
-        {# <div class="input-with-label">
+        <div class="input-with-label">
           <label>Заявление на получение ТУ *</label>
           {% include '../../includes/stdEls/input_file.twig' with {"btnText": "Обзор"} %}
         </div>
@@ -249,7 +249,7 @@
           <label class="strong">Топографическая карта участка в масштабе 1:500 *</label>
           {% include '../../includes/stdEls/input_file.twig' with {"btnText": "Обзор"} %}
           {% include '../../includes/stdEls/checkbox.twig' with {"id": "check3", "text": "У меня нет нужного документа, я хочу заказать топографическую карту у вас"} %}
-        </div> #}
+        </div>
         
         <div class="input-with-label">
           <label class="strong">Баланс водопотребления и водоотведения подключаемого объекта *</label>
@@ -257,7 +257,7 @@
           {% include '../../includes/stdEls/checkbox.twig' with {"id": "check2", "text": "У меня нет нужного документа, я хочу заказать Баланс водопотребления и водоотведения у вас"} %}
         </div>
 
-        {# <div class="input-with-label">
+        <div class="input-with-label">
           <label>Нотариально заверенная доверенность, если заявитель представляет интересы предприятия или организации *</label>
           {% include '../../includes/stdEls/input_file.twig' with {"btnText": "Обзор"} %}
         </div>
@@ -285,7 +285,7 @@
         <div class="input-with-label" data-add-input-file-on-end="true">
           <label class="strong">Дополнительные документы</label>
           {% include '../../includes/stdEls/input_file.twig' with {"btnText": "Обзор", "isNotRequired": false} %}
-        </div> #}
+        </div>
 
         <hr class="dashed">
 
@@ -298,7 +298,7 @@
         <hr class="dashed hr_only-top-space-S">
 
         <div class="form-footer">
-          {% include '../../includes/stdEls/checkbox.twig' with {"id": "check1", "text": "Я принимаю <a href='#'>Политику конфиденциальности</a>", "isRequired": true} %}
+          {% include '../../includes/stdEls/checkbox.twig' with {"id": "check1", "text": "Я соглашаюсь с <a href='#'>условиями работы сайта</a>", "isRequired": true} %}
 
 
           <button type="submit" class="btn btn_colorPrimary submit-element">Отправить</button>
