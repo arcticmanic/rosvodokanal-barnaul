@@ -67,7 +67,7 @@
         font-size: @font-17;
         font-weight: 400;
         line-height: @font-25;
-        margin-bottom: 10px;
+        margin-bottom: 8px;
       }
       &__meta {
         &-item {
@@ -97,6 +97,31 @@
       }
     }
   }
+  &-standarts {
+    &__heading {
+      margin-bottom: 35px;
+      font-weight: 600;
+      line-height: @font-30;
+      &:not(:first-child) {
+        margin-top: 24px;
+        padding-top: 32px;
+        border-top: 1px dashed #e0e0e0;
+      }
+    }
+    .doc-info {
+      margin-bottom: 5px;
+      padding-bottom: 5px;
+      &__title {
+        font-size: @font-15;
+        line-height: @font-25;
+        margin-bottom: 1px;
+      }
+      &__meta {
+        font-size: @font-13;
+        line-height: @font-25;
+      }
+    }
+  }
 }
 
 @keyframes hvr-doc-icon {
@@ -113,6 +138,62 @@
 @keyframes hvr-doc-icon-float {
   100% {
     transform: translateY(-8px);
+  }
+}
+
+@media (max-width: @mobileLandscapeW) {
+  .doc-info {
+    &-standarts {
+      &__heading {
+        margin-bottom: 15px;
+        font-size: @font-18;
+        line-height: @font-24;
+        &:not(:first-child) {
+          margin-top: 20px;
+          padding-top: 20px;
+        }
+      }
+      .doc-info {
+        &__title {
+          font-size: @font-13;
+          line-height: @font-22;
+        }
+        &__meta {
+          font-size: @font-10;
+          line-height: @font-20;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: @mobileW) {
+  .doc-info {
+    &-standarts {
+      &__heading {
+        font-size: @font-16;
+        line-height: @font-18;
+        margin-bottom: 10px;
+        &:not(:first-child) {
+          margin-top: 15px;
+          padding-top: 15px;
+        }
+      }
+      .doc-info {
+        &:last-child {
+          margin-bottom: 0px;
+          padding-bottom: 0px;
+        }
+        &__title {
+          font-size: @font-13;
+          line-height: @font-22;
+        }
+        &__meta {
+          font-size: @font-10;
+          line-height: @font-20;
+        }
+      }
+    }
   }
 }
 

@@ -64,9 +64,16 @@ input[type='submit'].btn {
     }
   }
 
-  &__text {
+  & &__text {
     transition: @transFast;
     user-select: none;
+    &.btn__text_colorPrimary {
+      color: @colorPrimary;
+    }
+  }
+
+  &_borderless {
+    border: none;
   }
 
   &_big {

@@ -17,19 +17,22 @@
                 </div>
               </div>
 
-              <div class="accord-item__body doc-info-not-list">
-                {% for doc in accordItem.docs %}
-                  <a href="#скачать_документ" class="doc-info">
-                    {% include "../../includes/svg/icon-doc-svg.twig" with {"classes": "doc-info__icon"} %}
-                    <div class="doc-info__body">
-                      <p class="doc-info__title"><strong>{{doc.title}}</strong></p>
-                      <div class="doc-info__meta">
-                        <span class="doc-info__meta-item doc-info__name colorCyan">{{doc.name}}</span>
-                        <span class="doc-info__meta-item divider colorCyan">|</span>
-                        <span class="doc-info__meta-item doc-info__size colorCyan">{{doc.size}}</span>
+              <div class="accord-item__body doc-info-not-list doc-info-not-list_without-dashes doc-info-standarts">
+                {% for docSection in accordItem.docSections %}
+                  <h6 class="doc-info-standarts__heading colorCyan">{{docSection.title}}</h6>
+                  {% for doc in docSection.docs %}
+                    <a href="#скачать_документ" class="doc-info">
+                      {% include "../../includes/svg/icon-doc-svg.twig" with {"classes": "doc-info__icon"} %}
+                      <div class="doc-info__body">
+                        <p class="doc-info__title"><strong>{{doc.title}}</strong></p>
+                        <div class="doc-info__meta">
+                          <span class="doc-info__meta-item doc-info__name colorCyan">{{doc.name}}</span>
+                          <span class="doc-info__meta-item divider colorCyan">|</span>
+                          <span class="doc-info__meta-item doc-info__size colorCyan">{{doc.size}}</span>
+                        </div>
                       </div>
-                    </div>
-                  </a>
+                    </a>
+                  {% endfor %}
                 {% endfor %}
               </div>
             </div>
