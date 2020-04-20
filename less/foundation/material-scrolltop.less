@@ -26,7 +26,16 @@
   border-radius: 50%;
   background: @colorBeautifulBlue;
   transition: all 0.3s cubic-bezier(0.25, 0.25, 0, 1);
-  z-index: @zBackTop;
+  z-index: 6;
+
+  &:not(.accept-block-dismissed) {
+    background: #fff;
+    .icon-back-top {
+      .fill {
+        fill: @colorBeautifulBlue;
+      }
+    }
+  }
 
   .icon-back-top {
     transition: @transFast;
@@ -94,15 +103,27 @@ html.color-black {
 }
 
 html.color-white {
-  .material-scrolltop {
+  .material-scrolltop,
+  &:not(.accept-block-dismissed) {
     background: @whiteEye;
     border-color: @blackEye;
+    .icon-back-top {
+      .fill {
+        fill: @blackEye;
+      }
+    }
   }
 }
 
 html.color-black {
-  .material-scrolltop {
+  .material-scrolltop,
+  &:not(.accept-block-dismissed) {
     background: @blackEye;
     border-color: @whiteEye;
+    .icon-back-top {
+      .fill {
+        fill: @whiteEye;
+      }
+    }
   }
 }
