@@ -1,0 +1,116 @@
+.accept-cookies {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 5;
+  overflow: hidden;
+  height: 250px;
+  min-height: fit-content;
+  background: #8ac1cf;
+
+  &__inner-cont {
+    position: absolute;
+    top: 60%;
+    transform: translateY(-40%);
+    left: 0;
+    width: 100%;
+    z-index: 4;
+    padding: 5px;
+  }
+  &__btn-row {
+    display: flex;
+    margin-top: 8px;
+    .btn {
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
+    }
+  }
+  &__p {
+    color: #fff;
+    // font-size: 15px;
+  }
+  .ocean {
+    height: 5%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #015871;
+  }
+
+  .wave {
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg)
+      repeat-x;
+    position: absolute;
+    top: -198px;
+    width: 6400px;
+    height: 198px;
+    animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+    transform: translate3d(0, 0, 0);
+  }
+
+  .wave:nth-of-type(2) {
+    top: -175px;
+    animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.125s infinite,
+      swell 7s ease -1.25s infinite;
+    opacity: 1;
+  }
+
+  @keyframes wave {
+    0% {
+      margin-left: 0;
+    }
+    100% {
+      margin-left: -1600px;
+    }
+  }
+
+  @keyframes swell {
+    0%,
+    100% {
+      transform: translate3d(0, -25px, 0);
+    }
+    50% {
+      transform: translate3d(0, 5px, 0);
+    }
+  }
+}
+
+@media (max-width: @mobileLandscapeW) {
+  .accept-cookies {
+    &__inner-cont {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+@media (max-width: @mobileW) {
+  .accept-cookies {
+    &__p {
+      font-size: 16px;
+    }
+  }
+}
+
+@media (max-width: @mobileSSW) {
+  .accept-cookies {
+    height: 280px;
+    &__p {
+      font-size: 15px;
+    }
+  }
+}
+
+html.color-white,
+html.color-black {
+  .accept-cookies {
+    background: @blackEye;
+    .wave {
+      filter: grayscale(1);
+    }
+  }
+}
