@@ -20,10 +20,14 @@
       <article class="jumbo-icons__article">
         <hr class="dashed">
         <div class="jumbo-icons">
-          <a href="services_individual_meters_application.html" class="jumbo-icons__item">
+          <div class="jumbo-icons__item" data-hint-visible="false">
             {% include '../../includes/svg/icon-site-svg.twig' with {"classes": "jumbo-icons__icon"} %}
             <p class="jumbo-icons__p">Оформить заявление через сайт</p>
-          </a>
+            <div class="jumbo-icons__item-hint">
+              <a href="#" class="jumbo-icons__item-text">Технические условия</a>
+              <a href="#" class="jumbo-icons__item-text">Новое подключение</a>
+            </div>
+          </div>
 
           <a href="#modal_arrange-appointment" class="jumbo-icons__item" rel="modal:open">
             {% include '../../includes/svg/woman-svg.twig' with {"classes": "jumbo-icons__icon"} %}
