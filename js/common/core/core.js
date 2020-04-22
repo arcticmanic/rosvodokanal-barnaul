@@ -86,10 +86,4 @@ $(document).ready(function () {
       map.behaviors.disable('scrollZoom')
     }
   }
-
-  $(document).on('click', '.jumbo-icons__item[data-hint-visible="false"]', function() {
-    $(this).attr('data-hint-visible', true)
-  }).on('mouseleave', '.jumbo-icons__item[data-hint-visible="true"]', function () {
-    $(this).attr('data-hint-visible', false)
-  })
 })

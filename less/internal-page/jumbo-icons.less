@@ -39,6 +39,14 @@
     margin-bottom: 15px;
     transition: @transFast;
 
+    &:hover {
+      .jumbo-icons__item-hint {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: all;
+      }
+    }
+
     @media (min-width: @hoverW) {
       &:hover {
         .jumbo-icons__icon {
@@ -50,14 +58,6 @@
           animation-fill-mode: forwards;
           animation-direction: normal, alternate;
         }
-      }
-    }
-
-    &[data-hint-visible='true'] {
-      .jumbo-icons__item-hint {
-        opacity: 1;
-        visibility: visible;
-        pointer-events: all;
       }
     }
 
@@ -80,17 +80,20 @@
       box-shadow: 0 3px 15px rgba(0, 0, 0, 0.15);
       border-radius: 5px;
       transition: @transSlow;
-      cursor: default;
+      padding: 10px;
     }
 
     &-text {
       color: #fff;
-      padding: 5px;
       font-size: @font-15;
       font-weight: 100;
-      line-height: @font-20;
+      line-height: @font-21;
       cursor: default;
       margin-bottom: 0;
+      text-align: center;
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
     }
 
     a.jumbo-icons__item-text {
@@ -185,6 +188,36 @@ html.scale {
     }
     & &__p {
       margin-top: 25px;
+    }
+  }
+}
+
+html.color-white {
+  .jumbo-icons {
+    &__item {
+      &-hint {
+        background: @whiteEye;
+        box-shadow: none;
+        .border-card-like_black();
+      }
+      &-text {
+        color: @blackEye;
+      }
+    }
+  }
+}
+
+html.color-black {
+  .jumbo-icons {
+    &__item {
+      &-hint {
+        background: @blackEye;
+        box-shadow: none;
+        .border-card-like_white();
+      }
+      &-text {
+        color: @whiteEye;
+      }
     }
   }
 }
