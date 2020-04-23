@@ -24,4 +24,52 @@
 
 {% block indvidualPageJS %}
   <script src="https://api-maps.yandex.ru/2.1/?apikey=8e7ca4bf-0e6c-4f83-a757-531abebea7b5&lang=ru_RU" type="text/javascript"></script>
+  <script>
+    if ($('#contacts-map').length > 0) {
+      ymaps.ready(init)
+      function init() {
+        const map = new ymaps.Map('contacts-map', {
+            center: [53.388919, 83.74414],
+            zoom: 17,
+            controls: ['zoomControl'],
+          }),
+          HintLayout = ymaps.templateLayoutFactory.createClass(
+            `<div class='styled-hint-on-map'>
+                {{ properties.address }}
+              </div>`,
+            {
+              getShape: function () {
+                var el = this.getElement(),
+                  result = null
+                if (el) {
+                  var firstChild = el.firstChild
+                  result = new ymaps.shape.Rectangle(
+                    new ymaps.geometry.pixel.Rectangle([
+                      [0, 0],
+                      [firstChild.offsetWidth, firstChild.offsetHeight],
+                    ])
+                  )
+                }
+                return result
+              },
+            }
+          )
+        var contactsPlacemark = new ymaps.Placemark(
+          [53.388919, 83.74414],
+          {
+            address: 'проспект Калинина, 116',
+          },
+          {
+            iconLayout: 'default#image',
+            iconImageHref: '../assets/img/geo_red.png',
+            iconImageSize: [50, 68],
+            iconImageOffset: [-25, -68],
+            hintLayout: HintLayout,
+          }
+        )
+        map.geoObjects.add(contactsPlacemark)
+        map.behaviors.disable('scrollZoom')
+      }
+    }
+  </script>
 {% endblock %}
