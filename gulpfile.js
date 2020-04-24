@@ -91,53 +91,6 @@ const baseStyles = () => {
   return mergedStream
 }
 
-const resolvePageStyles = (info) => {
-  return gulp
-    .src(info.src)
-    .pipe(sourcemaps.init())
-    .pipe(less())
-    .pipe(concat(info.name))
-    .pipe(postcss(postcssPlugins))
-    .pipe(sourcemaps.write('./'))
-    .pipe(gulp.dest(paths.distCSS))
-    .pipe(browserSync.stream())
-}
-
-const styles = (cb) => {
-  gulp.parallel(
-    baseStyles,
-    resolvePageStyles.bind(this, {
-      src: path.join(paths.srcLess, 'main-page-tpl', 'main-page-tpl.less'),
-      name: 'main-page-tpl.css',
-    }),
-    resolvePageStyles.bind(this, {
-      src: path.join(paths.srcLess, 'services-tpl', 'services-tpl.less'),
-      name: 'services-tpl.css',
-    }),
-    resolvePageStyles.bind(this, {
-      src: path.join(paths.srcLess, 'purchase-tpl', 'purchase-tpl.less'),
-      name: 'purchase-tpl.css',
-    }),
-    resolvePageStyles.bind(this, {
-      src: path.join(paths.srcLess, 'pressroom-tpl', 'pressroom-tpl.less'),
-      name: 'pressroom-tpl.css',
-    }),
-    resolvePageStyles.bind(this, {
-      src: path.join(paths.srcLess, 'about-tpl', 'about-tpl.less'),
-      name: 'about-tpl.css',
-    }),
-    resolvePageStyles.bind(this, {
-      src: path.join(paths.srcLess, 'career-tpl', 'career-tpl.less'),
-      name: 'career-tpl.css',
-    }),
-    resolvePageStyles.bind(this, {
-      src: path.join(paths.srcLess, 'users-tpl', 'users-tpl.less'),
-      name: 'users-tpl.css',
-    })
-  )()
-  cb()
-}
-
 const concatPlugins = () => {
   const JSPluginsOrder = [
     path.join(paths.srcPluginsJS, 'jquery-3.4.1.min.js'),
@@ -245,7 +198,7 @@ const watchFiles = () => {
     gulp.series(concatPlugins, browserSync.reload)
   )
 
-  watch(['./less/**/*.less', './scss/**/*.scss'], gulp.series(styles))
+  watch(['./less/**/*.less', './scss/**/*.scss'], gulp.series(baseStyles))
 
   watch(
     ['client/templates/**/*.twig', 'client/data/**/*.twig.json'],
@@ -257,7 +210,7 @@ const watchTask = watchFiles
 
 const build = gulp.series(
   clean,
-  gulp.parallel(styles, concatPlugins, concatCommonJS, twigiFy)
+  gulp.parallel(baseStyles, concatPlugins, concatCommonJS, twigiFy)
 )
 
 const dev = gulp.series(build, watchTask)
