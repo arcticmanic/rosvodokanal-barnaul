@@ -93,7 +93,6 @@ const baseStyles = () => {
 
 const concatPlugins = () => {
   const JSPluginsOrder = [
-    path.join(paths.srcPluginsJS, 'jquery-3.4.1.min.js'),
     path.join(paths.srcPluginsJS, '*.js'),
     path.join(paths.srcPolyfillsJS, '*.js'),
   ]
@@ -170,7 +169,8 @@ const twigiFy = () => {
 
 const clean = () => {
   const cleanFiles = [
-    paths.distJS,
+    path.join(paths.distJS, '*.js'),
+    path.join(paths.distJS, '!jquery-3.4.1.min.js'),
     paths.distCSS,
     path.join(paths.build, '**', '*.html'),
   ]
