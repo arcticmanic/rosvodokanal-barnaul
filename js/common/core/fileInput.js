@@ -27,19 +27,19 @@ $(document).ready(function () {
         return
       } else {
         const file = $(this)[0].files[0],
-          fileSize = (file.size / 1000000).toPrecision(2),
+          fileSize = Number((file.size / 1000000).toPrecision(2)),
           fileNameField = $(this)
             .closest('.input_file')
             .find('.input_file__filename'),
           inputStructureCont = $(this).closest('.input-with-label'),
           actualInputCont = $(this).closest('.input_file')
 
-        const allowedFileSize = $(this).attr('data-max-file-size')
+        const allowedFileSize = Number($(this).attr('data-max-file-size'))
 
         if (allowedFileSize && fileSize > allowedFileSize) {
           fileNameField.text($(this).data().fileIsTooBigMessage)
           return
-        } 
+        }
         fileNameField.text(file.name)
         setValidityAttr($(this), true)
         if (inputStructureCont.data().addInputFileOnEnd) {

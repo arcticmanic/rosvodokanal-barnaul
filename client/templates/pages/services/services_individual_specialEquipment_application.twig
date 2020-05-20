@@ -2,7 +2,11 @@
 
 {% block main %}
   {% include '../../includes/stdEls/page-content__title_with-underline.twig' with {"title" : "Заказ услуги"} %}
-
+<script type="text/javascript">
+   $(function() {
+       $("#date_from").datepicker().data('datepicker').selectDate(new Date(2020, 4, 15));
+    });
+</script>
 <section class="section-services-type-specialEquipment-application">
     <article class="banner-with-form">
       <div class="banner-left card__bg_primary">
@@ -12,7 +16,7 @@
 
           <img data-src="../assets/img/banner-left-img.png" alt="" class="lazy banner-left__img" width="244" height="184">
 
-          <ul  class="banner-left__ul ul_rvk-logos"> 
+          <ul class="banner-left__ul ul_rvk-logos"> 
             <li>Объем цистерны – 10 м3</li>
             <li>Стоимость аренды 500 руб/час (минимальный заказ 2 часа)</li> 
           </ul>
@@ -41,11 +45,11 @@
             <div class="input-with-label__row input-with-label__row_2">
               <div class="input-with-label">
                 <label>Период аренды *</label>
-                <input type='text' class="datepicker-here" autocomplete="off"  class="required" placeholder="с"/>
+                <input type='text' id="date_from" autocomplete="off"  class="datepicker-here required" placeholder="с"/>
               </div>
 
               <div class="input-with-label">
-                <input type='text' class="datepicker-here" autocomplete="off"  class="required" placeholder="до"/>
+                <input type='text' class="datepicker-here required" autocomplete="off" placeholder="до"/>
               </div>
             </div>
 

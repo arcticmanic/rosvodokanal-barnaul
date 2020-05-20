@@ -169,8 +169,9 @@ const twigiFy = () => {
 
 const clean = () => {
   const cleanFiles = [
-    path.join(paths.distJS, '*.js'),
-    path.join(paths.distJS, '!jquery-3.4.1.min.js'),
+    path.join(paths.distJS, 'core.js'),
+    path.join(paths.distJS, 'core.js.map'),
+    path.join(paths.distJS, 'plugins.js'),
     paths.distCSS,
     path.join(paths.build, '**', '*.html'),
   ]
