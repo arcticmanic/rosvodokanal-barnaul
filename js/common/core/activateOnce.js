@@ -6,6 +6,16 @@ $(document).ready(function () {
   $('.datepicker-here').datepicker({
     language: 'ru',
     minDate: new Date(),
+    onRenderCell: function (date, cellType) {
+      if (cellType == 'day') {
+        var day = date.getDay(),
+          isDisabled = [0, 6].indexOf(day) != -1
+
+        return {
+          disabled: isDisabled,
+        }
+      }
+    },
     onSelect: function (formattedDate, date, inst) {
       if (inst.el.classList.contains('required')) {
         inst.el.setAttribute('data-isValid', true)
