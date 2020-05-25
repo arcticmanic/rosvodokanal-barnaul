@@ -7,7 +7,7 @@ $(document).ready(function () {
     language: 'ru',
     minDate: new Date(),
     onRenderCell: function (date, cellType) {
-      const disabledDays = ['26.05.2020', '27.05.2020']
+      const disabledDays = []
 
       if (cellType == 'day') {
         var day = date.getDay(),
