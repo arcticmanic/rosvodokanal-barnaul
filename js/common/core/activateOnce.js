@@ -7,9 +7,13 @@ $(document).ready(function () {
     language: 'ru',
     minDate: new Date(),
     onRenderCell: function (date, cellType) {
+      const disabledDays = ['26.05.2020', '27.05.2020']
+
       if (cellType == 'day') {
         var day = date.getDay(),
-          isDisabled = [0, 6].indexOf(day) != -1
+          isDisabled =
+            [0, 6].indexOf(day) != -1 ||
+            disabledDays.indexOf(date.toLocaleDateString('ru-Ru')) != -1
 
         return {
           disabled: isDisabled,

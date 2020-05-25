@@ -36,3 +36,37 @@ $(document).ready(function () {
     })
   }
 })
+
+window.validateForm = form => {
+  let allInputsInsideForm = form.find(
+    "input[type='text'].required, input[type='number'].required, textarea.required, select.required, input[type='file'].required, input[type='checkbox'].required"
+  )
+
+  const allSelects = form.find('select')
+
+  const allFileInputs = form.find('input[type="file"]')
+
+  validateInputs(allInputsInsideForm)
+
+  validateSelects(allSelects)
+
+  validateFileInputs(allFileInputs)
+
+  form.on('submit', function (e) {
+    let invalidInputsCounter = 0
+
+    allInputsInsideForm = form.find(
+      "input[type='text'].required, input[type='number'].required, textarea.required, select.required, input[type='file'].required, input[type='checkbox'].required"
+    )
+
+    allInputsInsideForm.each(function () {
+      if (!resolveSingleInputValidity(form, invalidInputsCounter)) {
+        invalidInputsCounter++
+      }
+    })
+
+    if (invalidInputsCounter > 0) {
+      e.preventDefault()
+    }
+  })
+}
