@@ -6,7 +6,7 @@
 /**
  * Globals and Imports
  */
-if ($('#animatedCanvasParent').length > 0) {
+if (document.querySelector('#animatedCanvasParent')) {
   function _typeof(obj) {
     if (typeof Symbol === 'function' && typeof Symbol.iterator === 'symbol') {
       _typeof = function _typeof(obj) {

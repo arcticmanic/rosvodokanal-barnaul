@@ -19,6 +19,27 @@
       margin-bottom: 30px;
     }
   }
+
+  &-small {
+    & > li {
+      padding-left: 33px;
+
+      &:not(:last-child) {
+        margin-bottom: 22px;
+      }
+    }
+  }
+
+  &-blue {
+    & > li {
+      &:before {
+        width: 15px;
+        height: 20px;
+
+        background: url('../../assets/img/svg/logo/logo_blue.svg');
+      }
+    }
+  }
 }
 
 @media (max-width: @mobileLandscapeW) {
