@@ -11,7 +11,9 @@
 //     .on('modal:after-close', '.modal_job', function (event, modal) {
 //       clearInputTypeFile($('.modal_job .input_file'))
 //       modal.$elm.first().find('.form-title').text('')
-//       const allInputsInModal = modal.$elm.first().find('input[type="text"], textarea')
+//       const allInputsInModal = modal.$elm
+//         .first()
+//         .find('input[type="text"], textarea')
 //       clearAllTextInputsAndTextareas(allInputsInModal)
 //     })
 // })

@@ -10,6 +10,13 @@ function setClamps(object) {
   }
 }
 
+window.clearInputTypeFile = nonEmptyInput => {
+  const actualInput = nonEmptyInput.find('input[type="file"]'),
+    fileNameField = nonEmptyInput.find('.input_file__filename')
+  fileNameField.text('')
+  actualInput.val('')
+}
+
 function clearInputTypeFile(nonEmptyInput) {
   const actualInput = nonEmptyInput.find('input[type="file"]'),
     fileNameField = nonEmptyInput.find('.input_file__filename')
@@ -22,14 +29,19 @@ function triggerEvent(elem, event) {
   elem.dispatchEvent(clickEvent)
 }
 
-function clearAllTextInputsAndTextareas(inputs) {
-  inputs.each(function() {
+window.clearAllTextInputsAndTextareas = inputs => {
+  inputs.each(function () {
     $(this).val('')
   })
 }
 
+function clearAllTextInputsAndTextareas(inputs) {
+  inputs.each(function () {
+    $(this).val('')
+  })
+}
 
-const validateSelects = (selects) => {
+const validateSelects = selects => {
   selects.each(function () {
     $(this).on('select2:select', function () {
       if (isSelectValid($(this))) {
@@ -41,7 +53,7 @@ const validateSelects = (selects) => {
   })
 }
 
-const validateInputs = (allInputs) => {
+const validateInputs = allInputs => {
   allInputs.each(function () {
     $(this).on('input', function () {
       if ($(this).is('input:not([type="checkbox"]')) {
@@ -67,7 +79,7 @@ const validateInputs = (allInputs) => {
   })
 }
 
-const validateFileInputs = (allFileInputs) => {
+const validateFileInputs = allFileInputs => {
   allFileInputs.each(function () {
     $(this).on('change', function () {
       if ($(this)[0].files[0]) {
@@ -79,7 +91,7 @@ const validateFileInputs = (allFileInputs) => {
   })
 }
 
-const resolveSingleInputValidity = (input) => {
+const resolveSingleInputValidity = input => {
   if (
     input.is('input[type="text"]') ||
     input.is('input[type="number"]') ||
@@ -105,18 +117,18 @@ const setValidityAttrBasedOnCondition = (element, condition) => {
   }
 }
 
-const isFileInputValid = (fileInput) => fileInput[0].files[0]
+const isFileInputValid = fileInput => fileInput[0].files[0]
 
-const isSelectValid = (select) => select.select2('data')[0].id !== ''
+const isSelectValid = select => select.select2('data')[0].id !== ''
 
-const isInputValid = (input) => input.val().trim() !== ''
+const isInputValid = input => input.val().trim() !== ''
 
-const isTextareaValid = (textarea) => textarea.val().trim() !== ''
+const isTextareaValid = textarea => textarea.val().trim() !== ''
 
-const isCheckBoxChecked = (checkboxInput) => checkboxInput.prop('checked')
+const isCheckBoxChecked = checkboxInput => checkboxInput.prop('checked')
 
 const setValidityAttr = (input, bool) => input.attr('data-isValid', bool)
 
-const getSelectVal = (select) => select.select2('data')[0].id
+const getSelectVal = select => select.select2('data')[0].id
 
-const getInputVal = (input) => input.val()
+const getInputVal = input => input.val()
