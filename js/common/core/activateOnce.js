@@ -6,6 +6,7 @@ $(document).ready(function () {
   $('.datepicker-here').datepicker({
     language: 'ru',
     minDate: new Date(),
+    autoClose: true,
     onRenderCell: function (date, cellType) {
       const disabledDays = []
 

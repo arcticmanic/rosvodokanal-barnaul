@@ -1,30 +1,30 @@
-$(document).ready(function() {
+$(document).ready(function () {
   $('#work-type').select2({
     language: 'ru',
     minimumResultsForSearch: Infinity,
-    placeholder: 'Выберите вид работ'
+    placeholder: 'Выберите вид работ',
   })
 
   $('#city-district').select2({
     language: 'ru',
     minimumResultsForSearch: Infinity,
-    placeholder: 'Выберите район проживания'
+    placeholder: '',
   })
 
   $('#vehicle-type').select2({
     language: 'ru',
-    minimumResultsForSearch: Infinity
+    minimumResultsForSearch: Infinity,
   })
 
   $('#date-from').select2({
     language: 'ru',
     minimumResultsForSearch: Infinity,
-    placeholder: 'с'
+    placeholder: 'с',
   })
 
   $('#date-to').select2({
     language: 'ru',
     minimumResultsForSearch: Infinity,
-    placeholder: 'до'
+    placeholder: 'до',
   })
 })
