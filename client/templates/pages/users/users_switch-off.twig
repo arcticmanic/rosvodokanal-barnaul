@@ -8,24 +8,24 @@
       <div class="input-with-label__row">
         <div class="input-with-label input-with-label_9">
           <label>Улица *</label>
-          <input type="text"  class="required">
+          <input type="text" name="street" class="required">
         </div>
         <div class="input-with-label input-with-label_3">
           <label>Номер дома *</label>
-          <input type="text"  class="required">
+          <input type="text" name="house" class="required">
         </div>
       </div>
 
       <div class="input-with-label">
         <label>E-mail для рассылки *</label>
-        <input type="text" class="required">
+        <input type="text" name="email" class="required">
       </div>
 
       <div class="form-footer">
         {% include '../../includes/stdEls/checkbox.twig' with {"id": "check1", "text": "Я соглашаюсь с <a href='#'>условиями работы сайта</a>", "isRequired": true} %}
 
         <div class="grid_2-cells submit-element">
-          <button class="btn btn_colorCyan">Узнать</button>
+          <button class="btn btn_colorCyan" data-selected-validation="street, house">Узнать</button>
           <button type="submit" class="btn btn_colorPrimary">Подписаться</button>
         </div>
 

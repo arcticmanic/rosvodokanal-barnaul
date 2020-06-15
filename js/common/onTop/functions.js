@@ -132,3 +132,7 @@ const setValidityAttr = (input, bool) => input.attr('data-isValid', bool)
 const getSelectVal = select => select.select2('data')[0].id
 
 const getInputVal = input => input.val()
+
+const resetValidity = input => {
+  input.removeAttr('data-isValid')
+}

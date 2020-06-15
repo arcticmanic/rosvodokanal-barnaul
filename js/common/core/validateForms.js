@@ -17,8 +17,92 @@ $(document).ready(function () {
       validateFileInputs(allFileInputs)
 
       $(this).on('submit', function (e) {
-        let invalidInputsCounter = 0
+        const submitter = e.originalEvent.submitter
 
+        if (submitter) {
+          const selectedValidation = submitter.getAttribute(
+            'data-selected-validation'
+          )
+
+          let invalidInputsCounter = 0
+
+          if (!selectedValidation) {
+            allInputsInsideForm = $(this).find(
+              "input[type='text'].required, input[type='number'].required, textarea.required, select.required, input[type='file'].required, input[type='checkbox'].required"
+            )
+
+            allInputsInsideForm.each(function () {
+              if (!resolveSingleInputValidity($(this), invalidInputsCounter)) {
+                invalidInputsCounter++
+              }
+            })
+          } else {
+            allInputsInsideForm = $(this).find(
+              "input[type='text'].required, input[type='number'].required, textarea.required, select.required, input[type='file'].required"
+            )
+
+            allInputsInsideForm.each(function () {
+              resetValidity($(this))
+            })
+
+            const inputsToValidateNames = selectedValidation.split(',')
+
+            inputsToValidateNames?.forEach(inputName => {
+              if (
+                !resolveSingleInputValidity(
+                  $(this).find(`input[name=${inputName.trim()}]`),
+                  invalidInputsCounter
+                )
+              ) {
+                invalidInputsCounter++
+              }
+            })
+
+            if (
+              !resolveSingleInputValidity(
+                $(this).find(`input[type='checkbox'].required`),
+                invalidInputsCounter
+              )
+            ) {
+              invalidInputsCounter++
+            }
+          }
+
+          if (invalidInputsCounter > 0) {
+            e.preventDefault()
+          }
+        }
+      })
+    })
+  }
+})
+
+window.validateForm = form => {
+  let allInputsInsideForm = $(this).find(
+    "input[type='text'].required, input[type='number'].required, textarea.required, select.required, input[type='file'].required, input[type='checkbox'].required"
+  )
+
+  const allSelects = $(this).find('select')
+
+  const allFileInputs = $(this).find('input[type="file"]')
+
+  validateInputs(allInputsInsideForm)
+
+  validateSelects(allSelects)
+
+  validateFileInputs(allFileInputs)
+
+  form.on('submit', function (e) {
+    const submitter = e.originalEvent.submitter
+
+    if (submitter) {
+      const selectedValidation = submitter.getAttribute(
+        'data-selected-validation'
+      )
+
+      let invalidInputsCounter = 0
+
+      if (!selectedValidation) {
         allInputsInsideForm = $(this).find(
           "input[type='text'].required, input[type='number'].required, textarea.required, select.required, input[type='file'].required, input[type='checkbox'].required"
         )
@@ -28,45 +112,41 @@ $(document).ready(function () {
             invalidInputsCounter++
           }
         })
+      } else {
+        allInputsInsideForm = $(this).find(
+          "input[type='text'].required, input[type='number'].required, textarea.required, select.required, input[type='file'].required"
+        )
 
-        if (invalidInputsCounter > 0) {
-          e.preventDefault()
+        allInputsInsideForm.each(function () {
+          resetValidity($(this))
+        })
+
+        const inputsToValidateNames = selectedValidation.split(',')
+
+        inputsToValidateNames?.forEach(inputName => {
+          if (
+            !resolveSingleInputValidity(
+              $(this).find(`input[name=${inputName.trim()}]`),
+              invalidInputsCounter
+            )
+          ) {
+            invalidInputsCounter++
+          }
+        })
+
+        if (
+          !resolveSingleInputValidity(
+            $(this).find(`input[type='checkbox'].required`),
+            invalidInputsCounter
+          )
+        ) {
+          invalidInputsCounter++
         }
-      })
-    })
-  }
-})
-
-window.validateForm = form => {
-  let allInputsInsideForm = form.find(
-    "input[type='text'].required, input[type='number'].required, textarea.required, select.required, input[type='file'].required, input[type='checkbox'].required"
-  )
-
-  const allSelects = form.find('select')
-
-  const allFileInputs = form.find('input[type="file"]')
-
-  validateInputs(allInputsInsideForm)
-
-  validateSelects(allSelects)
-
-  validateFileInputs(allFileInputs)
-
-  form.on('submit', function (e) {
-    let invalidInputsCounter = 0
-
-    allInputsInsideForm = form.find(
-      "input[type='text'].required, input[type='number'].required, textarea.required, select.required, input[type='file'].required, input[type='checkbox'].required"
-    )
-
-    allInputsInsideForm.each(function () {
-      if (!resolveSingleInputValidity(form, invalidInputsCounter)) {
-        invalidInputsCounter++
       }
-    })
 
-    if (invalidInputsCounter > 0) {
-      e.preventDefault()
+      if (invalidInputsCounter > 0) {
+        e.preventDefault()
+      }
     }
   })
 }
