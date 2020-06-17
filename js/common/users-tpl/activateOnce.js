@@ -28,6 +28,7 @@ $(document).ready(function () {
 
   select.select2({
     language: 'ru',
+    minimumInputLength: 2,
     containerCssClass: 'select2_white select2_without-arrow',
     ajax: {
       url: 'https://reqres.in/api/users?page=2',
@@ -56,7 +57,6 @@ $(document).ready(function () {
   // const inputData = {
   //     id: 1,
   //     name: 'Что-то'
-    
   // }
 
   // var newOption = new Option(inputData.name, inputData.id, false, false)
