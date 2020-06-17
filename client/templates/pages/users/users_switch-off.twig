@@ -8,7 +8,10 @@
       <div class="input-with-label__row">
         <div class="input-with-label input-with-label_9">
           <label>Улица *</label>
-          <input type="text" name="street" class="required">
+          <input type="hidden" name="street" />
+          <select name="street" id="street" data-placeholder="Выберите улицу">
+            <option value=""></option>
+          </select>
         </div>
         <div class="input-with-label input-with-label_3">
           <label>Номер дома *</label>
