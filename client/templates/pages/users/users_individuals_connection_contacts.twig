@@ -29,7 +29,7 @@
           }),
           HintLayout = ymaps.templateLayoutFactory.createClass(
             `<div class='styled-hint-on-map'>
-            {{ properties.address }}
+            $[properties.address]
           </div>`,
             {
               getShape: function () {

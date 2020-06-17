@@ -1,13 +1,17 @@
 <div class="chat-bots">
   <div class="wrapper">
+    <div class="jumbotron-links">
+      <p class="jumbotron-links__text">Установите мобильное приложение РВК.Услуги и наши <br> водоканалы будут всегда с вами на связи!</p>
 
-    <a href="#" class="chat-bot__link chat-bot__link_telegram">
-      {% include '../../../includes/svg/icon-telegram-chat-svg.twig' %}
-    </a>
+      <a href="https://play.google.com/store/apps/details?id=com.rosvodokanal.services&amp;hl=ru" class="btn btn_prepend-icon btn_frost">
+        {% include "../../../includes/svg/icon-ios-svg.twig" with {"classes": "btn__prepend-icon"} %}
+        <span class="btn__text">Google Play</span>
+      </a>
 
-    <a href="#" class="chat-bot__link chat-bot__link_viber">
-      {% include '../../../includes/svg/icon-viber-chat-svg.twig' %}
-    </a>
-    
+      <a href="https://apps.apple.com/ru/app/%D1%80%D0%B2%D0%BA-%D1%83%D1%81%D0%BB%D1%83%D0%B3%D0%B8/id1419476207" class="btn btn_prepend-icon btn_frost">
+        {% include "../../../includes/svg/icon-android-svg.twig" with {"classes": "btn__prepend-icon"}  %}
+        <span class="btn__text">App Store</span>
+      </a>
+    </div>
   </div>
 </div>

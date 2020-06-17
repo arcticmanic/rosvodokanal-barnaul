@@ -1,0 +1,46 @@
+.jumbotron-links {
+  z-index: 1;
+  
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+  pointer-events: none;
+
+  > * {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .btn {
+    pointer-events: all;
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+
+  .btn_prepend-icon .btn__prepend-icon {
+    margin-right: 10px;
+  }
+
+  &__text {
+    margin-top: 0;
+    margin-right: 27px;
+    margin-bottom: 0;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 19px;
+
+    @media (max-width: @mobileLandscapeW) {
+      font-size: 14px;
+      line-height: 16px;
+
+      br {
+        display: none;
+      }
+    }
+  }
+}

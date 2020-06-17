@@ -1,14 +1,16 @@
 @import 'jumbotron-slider.less';
 @import 'jumbotron-slides.less';
 @import 'jumbotron-slick-dots.less';
+@import 'jumbotron-links.less';
 
 .section-jumbotron {
   min-height: 520px;
   max-height: 520px;
   position: relative;
+
   .chat-bots {
     position: absolute;
-    top: 32px;
+    top: 26px;
     z-index: 1;
     width: 100%;
     .wrapper {
@@ -17,6 +19,7 @@
     }
   }
 }
+
 .jumbotron {
   margin-bottom: 0 !important;
   & .wrapper {
@@ -32,7 +35,7 @@
 @media (max-width: @mobileLandscapeW) {
   .section-jumbotron {
     .chat-bots {
-      top: 15px;
+      top: 10px;
       .wrapper {
         justify-content: center;
       }
