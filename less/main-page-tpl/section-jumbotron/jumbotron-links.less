@@ -1,6 +1,6 @@
 .jumbotron-links {
   z-index: 1;
-  
+
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -40,6 +40,32 @@
 
       br {
         display: none;
+      }
+    }
+  }
+}
+
+html.color-white {
+  .jumbotron-links {
+    .btn_prepend-icon .btn__prepend-icon {
+      .fill {
+        fill: @blackEye;
+      }
+    }
+
+    &__text {
+      color: @blackEye;
+      font-weight: 700;
+    }
+  }
+}
+
+html.color-black {
+  .jumbotron-links {
+    .btn_prepend-icon .btn__prepend-icon {
+      .fill {
+        fill: @whiteEye;
+
       }
     }
   }

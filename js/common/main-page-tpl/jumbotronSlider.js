@@ -23,40 +23,40 @@ $(document).ready(function() {
     `)
   })
 
-  jumbotronSlider.on('init reInit afterChange', function(
-    event,
-    slick,
-    currentSlide,
-    nextSlide
-  ) {
-    const jumobtronSlide = jumbotronSlider.find('.slick-current')
+  // jumbotronSlider.on('init reInit afterChange', function(
+  //   event,
+  //   slick,
+  //   currentSlide,
+  //   nextSlide
+  // ) {
+  //   const jumobtronSlide = jumbotronSlider.find('.slick-current')
 
-    if (jumobtronSlide.hasClass('jumbotron-slide_dark')) {
-      jumbotronSlider.find('.slick-dots').addClass('slick-dots_dark')
-      $('.section-jumbotron .chat-bots').addClass('chat-bots_dark')
-    } else {
-      jumbotronSlider.find('.slick-dots').removeClass('slick-dots_dark')
-      $('.section-jumbotron .chat-bots').removeClass('chat-bots_dark')
-    }
+  //   if (jumobtronSlide.hasClass('jumbotron-slide_dark')) {
+  //     jumbotronSlider.find('.slick-dots').addClass('slick-dots_dark')
+  //     $('.section-jumbotron .chat-bots').addClass('chat-bots_dark')
+  //   } else {
+  //     jumbotronSlider.find('.slick-dots').removeClass('slick-dots_dark')
+  //     $('.section-jumbotron .chat-bots').removeClass('chat-bots_dark')
+  //   }
 
-    if (jumobtronSlide.hasClass('jumbotron-slide_milk-bc')) {
-      jumbotronSlider.find('.slick-dots').addClass('slick-dots_dark')
-      $('.section-jumbotron .chat-bots').addClass('chat-bots_dark')
-    } else {
-      jumbotronSlider.find('.slick-dots').removeClass('slick-dots_dark')
-      $('.section-jumbotron .chat-bots').removeClass('chat-bots_dark')
-    }
+  //   if (jumobtronSlide.hasClass('jumbotron-slide_milk-bc')) {
+  //     jumbotronSlider.find('.slick-dots').addClass('slick-dots_dark')
+  //     $('.section-jumbotron .chat-bots').addClass('chat-bots_dark')
+  //   } else {
+  //     jumbotronSlider.find('.slick-dots').removeClass('slick-dots_dark')
+  //     $('.section-jumbotron .chat-bots').removeClass('chat-bots_dark')
+  //   }
 
-    if (jumobtronSlide.hasClass('jumbotron-slide_poor-visible-telegram')) {
-      $('.section-jumbotron .chat-bots .icon-telegram-chat-svg').addClass(
-        'icon-telegram-chat-svg_dark'
-      )
-    } else {
-      $('.section-jumbotron .chat-bots .icon-telegram-chat-svg').removeClass(
-        'icon-telegram-chat-svg_dark'
-      )
-    }
-  })
+  //   if (jumobtronSlide.hasClass('jumbotron-slide_poor-visible-telegram')) {
+  //     $('.section-jumbotron .chat-bots .icon-telegram-chat-svg').addClass(
+  //       'icon-telegram-chat-svg_dark'
+  //     )
+  //   } else {
+  //     $('.section-jumbotron .chat-bots .icon-telegram-chat-svg').removeClass(
+  //       'icon-telegram-chat-svg_dark'
+  //     )
+  //   }
+  // })
 
   jumbotronSlider.slick({
     slidesToShow: 1,
@@ -65,13 +65,16 @@ $(document).ready(function() {
     arrows: false,
     autoplay: true,
     autoplaySpeed: 5000,
-    verticalSwiping: true,
+    fade: true,
+    speed: 500,
+    cssEase: 'ease',
     pauseOnHover: true,
     dots: true,
     adaptiveHeight: false,
-    vertical: true,
-    lazyLoad: 'ondemand'
+    lazyLoad: 'ondemand',
+    swipe: false
   })
+
 
   $('.jumbotron__slider-left', '.jumbotron__nav').click(function(e) {
     e.preventDefault()
