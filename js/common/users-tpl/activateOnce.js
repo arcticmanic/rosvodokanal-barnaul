@@ -23,4 +23,11 @@ $(document).ready(function () {
     containerCssClass: 'select2_grey',
     placeholder: '',
   })
+
+  // $('#street').select2({
+  //   language: 'ru',
+  //   minimumResultsForSearch: Infinity,
+  //   containerCssClass: 'select2_white',
+  //   placeholder: '',
+  // })
 })

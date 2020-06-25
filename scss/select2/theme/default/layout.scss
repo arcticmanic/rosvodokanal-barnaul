@@ -102,7 +102,7 @@
 }
 
 select.select2-hidden-accessible {
-  &.required[data-isValid='false'] ~ .select2.select2-container--default {
+  &[data-isValid='false'] ~ .select2.select2-container--default {
     .select2-selection--single {
       border-color: $invalidBorderColor;
     }

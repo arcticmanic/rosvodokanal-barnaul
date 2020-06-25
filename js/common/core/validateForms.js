@@ -25,6 +25,7 @@ $(document).ready(function () {
           )
 
           let invalidInputsCounter = 0
+          debugger
 
           if (!selectedValidation) {
             allInputsInsideForm = $(this).find(
@@ -36,7 +37,7 @@ $(document).ready(function () {
                 invalidInputsCounter++
               }
             })
-          } else {
+          } else if (selectedValidation) {
             allInputsInsideForm = $(this).find(
               "input[type='text'].required, input[type='number'].required, textarea.required, select.required, input[type='file'].required"
             )
@@ -50,7 +51,7 @@ $(document).ready(function () {
             inputsToValidateNames?.forEach(inputName => {
               if (
                 !resolveSingleInputValidity(
-                  $(this).find(`input[name=${inputName.trim()}]`),
+                  $(this).find(`[name=${inputName.trim()}]`),
                   invalidInputsCounter
                 )
               ) {
@@ -101,6 +102,7 @@ window.validateForm = form => {
       )
 
       let invalidInputsCounter = 0
+      debugger
 
       if (!selectedValidation) {
         allInputsInsideForm = $(this).find(
@@ -112,7 +114,7 @@ window.validateForm = form => {
             invalidInputsCounter++
           }
         })
-      } else {
+      } else if (selectedValidation) {
         allInputsInsideForm = $(this).find(
           "input[type='text'].required, input[type='number'].required, textarea.required, select.required, input[type='file'].required"
         )
@@ -126,7 +128,7 @@ window.validateForm = form => {
         inputsToValidateNames?.forEach(inputName => {
           if (
             !resolveSingleInputValidity(
-              $(this).find(`input[name=${inputName.trim()}]`),
+              $(this).find(`[name=${inputName.trim()}]`),
               invalidInputsCounter
             )
           ) {
