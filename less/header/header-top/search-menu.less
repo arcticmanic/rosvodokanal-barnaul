@@ -24,6 +24,23 @@
     position: absolute;
     right: 10px;
     top: 5px;
+    background: none;
+    border: none;
+    padding: 0;
+
+    cursor: pointer;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:hover {
+      .icon-search-svg {
+        * {
+          stroke: @colorPrimary3;
+        }
+      }
+    }
 
     .icon-search-svg {
       * {
