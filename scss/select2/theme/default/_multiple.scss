@@ -90,7 +90,7 @@
 
 &.select2-container--disabled {
   .select2-selection--multiple {
-    background-color: #eee;
+    opacity: 0.4;
     cursor: default;
   }
 
