@@ -122,7 +122,7 @@ html.color-black {
   }
 }
 
-.form-in-text {
+.form.form-in-text {
   .select2-container--default {
     .select2-results__option {
       color: $blackEye;
@@ -139,7 +139,7 @@ html.color-black {
     }
   }
 
-  .select2-selection--single:not(.select2_white) {
+  .select2-selection--single {
     background: #f1f3f4;
     border-color: #dce4e8;
     .select2-selection__rendered {
