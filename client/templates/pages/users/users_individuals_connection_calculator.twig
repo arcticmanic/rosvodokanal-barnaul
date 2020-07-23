@@ -9,7 +9,7 @@
         <div class="viv-calc__checkbox-row">
           <h6 class="viv-calc__checkbox-prepend-text strong colorPrimary3">Водоснабжения —</h6>
           {% include '../../includes/stdEls/checkbox.twig' with {"id": "waterIn-checkbox"} %}
-        </div> 
+        </div>
         <div class="input-with-label">
           <label>Планируемая нагрузка (м3/сут):</label>
           <input id="waterIn-load" type="number" placeholder="50" class="input_grey" data-viv-calc="load">
@@ -18,7 +18,7 @@
         <div class="input-with-label">
           <label>Диаметр подводящих сетей :</label>
           <select id="waterIn-diameter" data-viv-calc="diameter">
-            <option></option> 
+            <option></option>
             <option value="option1">до 40</option>
             <option value="option2">40 - 70</option>
             <option value="option3">100 - 150</option>
@@ -32,8 +32,6 @@
           <input id="waterIn-length" type="number" placeholder="50" class="input_grey" data-viv-calc="length">
         </div>
       </div>
-
-      <div class="viv-calc__vertical-divider"></div>
 
       <div id="waterOut" class="viv-calc__block viv-calc__right">
         <div class="viv-calc__checkbox-row">
@@ -49,7 +47,7 @@
         <div class="input-with-label">
           <label>Диаметр подводящих сетей :</label>
           <select id="waterOut-diameter" data-viv-calc="diameter">
-            <option></option> 
+            <option></option>
             <option value="option1">до 40</option>
             <option value="option2">40 - 70</option>
             <option value="option3">100 - 150</option>
@@ -90,7 +88,7 @@
       <h5 class="colorCyan">Технические условия</h5>
 
       <p>Технические условия - информационный документ. Срок их действия до момента подачи заявки на договор подключения не более года. Срок выдачи технических условий – до 14 рабочих дней с подачи заявки с приложением необходимого <a href="#">перечня документов</a>.</p>
-      
+
       <h5 class="colorCyan">Условия подключения</h5>
 
       <p>Условия подключения являются приложением к договору на подключение. Срок подготовки - до 20 рабочих дней с подачи заявки с приложением необходимого <a href="#">перечня документов</a>.</p>
@@ -114,7 +112,7 @@
         <span class="modal_viv-calc__result strong colorPrimary"></span>
         руб.
       </p>
-    
+
     </div>
     <div id="waterOut-results-block" class="modal_viv-calc__block">
       <p class="modal_viv-calc__title strong colorPrimary">Водоотведение</p>
@@ -123,7 +121,7 @@
         <span class="modal_viv-calc__result strong colorPrimary"></span>
         руб.
       </p>
-    
+
     </div>
   </div>
 {% endblock %}
