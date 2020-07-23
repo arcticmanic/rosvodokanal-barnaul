@@ -14,7 +14,7 @@
           <p class="contacts-row__title">Приемная</p>
           {% include "../../includes/contacts-blocks/contacts-block.twig" with {"address": "656037, г. Барнаул, проспект Калинина, 116", "addressLink": "https://yandex.ru/maps/?pt=83.744140,53.388919&z=17&l=map", "email": "office_brn@rosvodokanal.ru", "phone": "+7 (3852) 28-29-10", "fax": "+7 (3852) 35-77-10"} %}
         </div>
- 
+
         <div class="contacts-row__item">
           <p class="contacts-row__title">Центр обслуживания абонентов</p>
           {% include "../../includes/contacts-blocks/contacts-block.twig" with {"address": "656037, г. Барнаул, проспект Калинина, 116", "addressLink": "https://yandex.ru/maps/?pt=83.744140,53.388919&z=17&l=map", "phone": "+7 (3852) 28-22-00 "} %}
@@ -26,7 +26,7 @@
         </div>
       </div>
     </article>
- 
+
   </section>
 {% endblock %}
 
@@ -34,68 +34,45 @@
   <script src="https://api-maps.yandex.ru/2.1/?apikey=8e7ca4bf-0e6c-4f83-a757-531abebea7b5&lang=ru_RU" type="text/javascript"></script>
   <script>
     if ($('#about-contacts-map').length > 0) {
-      ymaps.ready(init)
+      ymaps.ready(init);
+
       function init() {
-        const map = new ymaps.Map('about-contacts-map', {
-            center: [53.388919, 83.74414],
-            zoom: 17,
-            controls: ['zoomControl'],
-          }),
-          HintLayout = ymaps.templateLayoutFactory.createClass(
-            `<div class='styled-hint-on-map'>
-            $[properties.address]
-          </div>`,
-            {
-              getShape: function () {
-                var el = this.getElement(),
-                  result = null
-                if (el) {
-                  var firstChild = el.firstChild
-                  result = new ymaps.shape.Rectangle(
-                    new ymaps.geometry.pixel.Rectangle([
-                      [0, 0],
-                      [firstChild.offsetWidth, firstChild.offsetHeight],
-                    ])
-                  )
-                }
-                return result
-              },
+        var map = new ymaps.Map('about-contacts-map', {
+          center: [53.388919, 83.74414],
+          zoom: 17,
+          controls: ['zoomControl']
+        }),
+            HintLayout = ymaps.templateLayoutFactory.createClass("<div class='styled-hint-on-map'>\n            $[properties.address]\n          </div>", {
+          getShape: function getShape() {
+            var el = this.getElement(),
+                result = null;
+
+            if (el) {
+              var firstChild = el.firstChild;
+              result = new ymaps.shape.Rectangle(new ymaps.geometry.pixel.Rectangle([[0, 0], [firstChild.offsetWidth, firstChild.offsetHeight]]));
             }
-          )
+
+            return result;
+          }
+        });
         var iconLayoutObj = {
           iconLayout: 'default#image',
           iconImageHref: '../assets/img/geo_blue.png',
           iconImageSize: [40, 50],
           iconImageOffset: [-20, -50],
-          hintLayout: HintLayout,
-        }
-        var geoArr = [
-          new ymaps.Placemark(
-            [53.38895, 83.74105],
-            {
-              address: 'проспект Калинина, 112',
-            },
-            iconLayoutObj
-          ),
-          new ymaps.Placemark(
-            [53.38825, 83.74405],
-            {
-              address: 'проспект Калинина, 113',
-            },
-            iconLayoutObj
-          ),
-          new ymaps.Placemark(
-            [53.388919, 83.74414],
-            {
-              address: 'проспект Калинина, 116',
-            },
-            iconLayoutObj
-          ),
-        ]
-        geoArr.forEach((el) => {
-          map.geoObjects.add(el)
-        })
-        map.behaviors.disable('scrollZoom')
+          hintLayout: HintLayout
+        };
+        var geoArr = [new ymaps.Placemark([53.38895, 83.74105], {
+          address: 'проспект Калинина, 112'
+        }, iconLayoutObj), new ymaps.Placemark([53.38825, 83.74405], {
+          address: 'проспект Калинина, 113'
+        }, iconLayoutObj), new ymaps.Placemark([53.388919, 83.74414], {
+          address: 'проспект Калинина, 116'
+        }, iconLayoutObj)];
+        geoArr.forEach(function (el) {
+          map.geoObjects.add(el);
+        });
+        map.behaviors.disable('scrollZoom');
       }
     }
   </script>
