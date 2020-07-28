@@ -1,9 +1,10 @@
 .payment-widget-with-text {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 32px;
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
 
   &__left {
+    width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,6 +15,7 @@
   }
 
   &__right {
+    width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -30,12 +32,13 @@
 
 @media (max-width: @mobileLandscapeW) {
   .payment-widget-with-text {
-    row-gap: 25px;
-    grid-template-rows: 1fr auto;
-    grid-template-columns: none;
-
     &__right {
-      padding-left: 0;
+      width: auto;
+    }
+
+    &__left {
+      width: auto;
+      margin-bottom: 20px;
     }
   }
 }
